@@ -1,0 +1,2006 @@
+﻿ID,英文名稱,中文名稱,圖片,更新日期
+721473,reduced stress,等效应力,,2012-11-26
+721474,reduced moment,等效矩,,2012-11-26
+721475,reduced mass of a mechanism,机构之等效质量,,2012-11-26
+721476,reduced force,等效力,,2012-11-26
+721477,rectilinear translation,直线平移,,2012-11-26
+721478,rectilinear motion,直线运动,,2012-11-26
+721479,reciprocating motion,往复运动,,2012-11-26
+721480,reciprocating cam follower,往复从动件,,2012-11-26
+721481,receptance,位移响应（振动）,,2012-11-26
+721482,receding side,退出侧（皮带轮）,,2012-11-26
+721483,real part of dual quantity,双量之实部,,2012-11-26
+721484,reaction,反作用，反作用力,,2012-11-26
+721485,Rayleigh dissipation function,Rayleigh散逸函数,,2012-11-26
+721486,ratio,比，比率,,2012-11-26
+721487,ratchet wheel,棘轮,,2012-11-26
+721488,ratchet mechanism,棘轮机构,,2012-11-26
+721489,ratchet,棘轮,,2012-11-26
+721490,Rapson slide,Rapson滑行装置,,2012-11-26
+721492,random vibration,随机振动,,2012-11-26
+721493,random process,随机程序,,2012-11-26
+721494,random,随机的,,2012-11-26
+721495,ram,撞锤,,2012-11-26
+721496,radius of the throat,喉半径（蜗轮）,,2012-11-26
+721497,radius of gyration,回转半径,,2012-11-26
+721498,radius of curvature,曲率半径,,2012-11-26
+721499,radius,半径,,2012-11-26
+721500,radian,弪，弪度,,2012-11-26
+721501,radial component,径〔向〕分量,,2012-11-26
+721502,radial cam follower,径向从动件,,2012-11-26
+721503,rack,齿条,,2012-11-26
+721504,r.m.s. value,均方根值,,2012-11-26
+721505,quinary link,五接头杆,,2012-11-26
+721506,quick-return mechanism,急回机构,,2012-11-26
+721507,quaternion,四数,,2012-11-26
+721508,quaternary link,四接头杆,,2012-11-26
+721509,quartic of derivative curvature,导数曲率四次曲线,,2012-11-26
+721510,quantity,量,,2012-11-26
+721511,quality factor,品质因子，品质因数（振动）,,2012-11-26
+721513,quadratic transformation,二次变换,,2012-11-26
+721514,Q-factor,品质因子，品质因数（振动）,,2012-11-26
+721515,pulsating load,脉动负载,,2012-11-26
+721516,pulley,1.皮带轮；2.滑轮,,2012-11-26
+721517,proximity sense,近接感度（机器人）,,2012-11-26
+721518,proximal,近躯端（机器人）,,2012-11-26
+721519,prosthetic device,义肢,,2012-11-26
+721520,proportional mechanism,比例机构,,2012-11-26
+721521,proportional control,比例控制,,2012-11-26
+721522,proper vector,固有振动模态,,2012-11-26
+721523,pronation,内下运动（机器人）,,2012-11-26
+721524,prolate trochoid,长次摆线,,2012-11-26
+721525,programming,1.程式设计；2.规划,,2012-11-26
+721526,programmable manipulator,可程式机械臂,,2012-11-26
+721528,profile,轮廓，外形,,2012-11-26
+721529,product of inertia,惯性积,,2012-11-26
+721530,process,程序,,2012-11-26
+721531,prismatic pair,棱柱〔运动〕对,,2012-11-26
+721532,principle of virtual work,虚功原理,,2012-11-26
+721533,principle of motion of centre/center of mass,质心运动原理,,2012-11-26
+721534,principle of motion of centre of mass,质心运动原理,,2012-11-26
+721535,principle of momentum,动量原理,,2012-11-26
+721536,principle of moment of momentum,角动量原理,,2012-11-26
+721537,principle of energy,能量原理,,2012-11-26
+721538,principle of conservation of momentum,动量守恒原理,,2012-11-26
+721539,principle of conservation of moment of momentum,角动量守恒原理,,2012-11-26
+721540,principle of conservation of energy,能量守恒原理,,2012-11-26
+721541,principle,原理,,2012-11-26
+721542,principal moment of inertia,主惯性矩,,2012-11-26
+721543,principal axis of inertia,惯性主轴线,,2012-11-26
+721544,principal,主要的,,2012-11-26
+721545,prime mover,原动机,,2012-11-26
+721546,prime circle,主圆（凸轮）,,2012-11-26
+721547,primary feedback,主回馈,,2012-11-26
+721548,primary axes,位置轴线（机器人），主轴线,,2012-11-26
+721549,primary,主要的,,2012-11-26
+721550,pressure angle,压力角,,2012-11-26
+721551,precision point,精确点,,2012-11-26
+721552,precision,精确度,,2012-11-26
+721553,precession,进动，扰转,,2012-11-26
+721554,power transmission chain,传力链,,2012-11-26
+721555,power screw,动力螺杆,,2012-11-26
+721556,power of a force,力之功率,,2012-11-26
+721557,power,1.功率；2.动力的,,2012-11-26
+721558,potential energy of particle,质点之位能,,2012-11-26
+721559,potential energy of a system,系统之位能,,2012-11-26
+721560,potential energy of a particle,质点之位能,,2012-11-26
+721561,potential,位，势,,2012-11-26
+721562,positive motion cam,确动凸轮,,2012-11-26
+721563,positive drive cam,确动凸轮,,2012-11-26
+721564,positional axes,位置轴线（机器人）,,2012-11-26
+721565,positional accuracy,位置准确度,,2012-11-26
+721566,position vector,位置向量,,2012-11-26
+721567,position angle,位置角,,2012-11-26
+721568,position analysis,位置分析,,2012-11-26
+721569,position,位置,,2012-11-26
+721570,pose-to-pose control,逐位控制,,2012-11-26
+721571,pose,姿势,,2012-11-26
+721572,polynomial curve,多项式曲线,,2012-11-26
+721573,polygon,多边形,,2012-11-26
+721574,polode tangent,极心线切线，瞬心线切线,,2012-11-26
+721575,polode method,极心线法，瞬心线法,,2012-11-26
+721576,polode,极心线，瞬心线,,2012-11-26
+721577,pole-tangent,极心切线,,2012-11-26
+721578,pole-normal,极心法线,,2012-11-26
+721579,pole velocity,极心〔改换〕速度,,2012-11-26
+721580,pole triangle,极心三角形,,2012-11-26
+721581,pole of a great circle,大圆之极心,,2012-11-26
+721582,pole changing velocity,极心改换速度,,2012-11-26
+721583,pole,极心,,2012-11-26
+721584,polar moment of inertia of body,物体之极惯性矩,,2012-11-26
+721585,polar moment of inertia of a lamina,一平面区域之极惯性矩,,2012-11-26
+721586,polar moment of inertia of a body,物体之极惯性矩,,2012-11-26
+721587,polar line,极线,,2012-11-26
+721588,point-to-point control,逐点控制,,2012-11-26
+721589,point-to point control,逐点控制,,2012-11-26
+721590,point-position reduction method,点位置缩减法,,2012-11-26
+721591,pointed tooth,尖端齿,,2012-11-26
+721592,pointed cam follower,尖头从动件,,2012-11-26
+721593,point mass,质点,,2012-11-26
+721594,point contact,点接触,,2012-11-26
+721595,point,点,,2012-11-26
+721596,Poinsot ellipsoid of inertia,惯性椭球面,,2012-11-26
+721597,Poinsot ellipsoid,惯性椭球面,,2012-11-26
+721598,playback robot,重现型机器人,,2012-11-26
+721599,playback accuracy,重现准确度,,2012-11-26
+721600,playback,重现,,2012-11-26
+721601,plate cam,平板凸轮,,2012-11-26
+721602,plate,板,,2012-11-26
+721603,plasticity,1.塑性；2.塑性力学,,2012-11-26
+721604,plastic strain,塑性应变,,2012-11-26
+721605,plastic deformation,塑性变形,,2012-11-26
+721606,plastic,塑性的,,2012-11-26
+721607,planetary gear train,行星齿轮系,,2012-11-26
+721608,planetary gear,行星齿轮,,2012-11-26
+721609,planetary bevel gear train,行星伞齿轮系,,2012-11-26
+721610,planetary,行星的,,2012-11-26
+721611,planet gear,行星齿轮,,2012-11-26
+721613,plane of rotation,旋转平面,,2012-11-26
+721614,plane of motion,运动平面,,2012-11-26
+721615,plane motion,平面运动,,2012-11-26
+721616,plane mechanism,平面机构,,2012-11-26
+721617,plane indicatrix,平面指标机构,,2012-11-26
+721618,plane algebraic curve,平面代数曲线,,2012-11-26
+721619,plane,平面,,2012-11-26
+721620,planar system,平面系统,,2012-11-26
+721621,planar pair,平面〔运动〕对,,2012-11-26
+721622,planar motion,平面运动,,2012-11-26
+721623,planar mechanism,平面机构,,2012-11-26
+721624,planar linkage,平面连杆组,,2012-11-26
+721625,planar contact pair,平面〔运动〕对,,2012-11-26
+721626,planar cam,平面凸轮,,2012-11-26
+721627,planar,平面的,,2012-11-26
+721628,pivot-point curve,瞬时圆心点曲线,,2012-11-26
+721629,pivoting friction,枢转摩擦,,2012-11-26
+721630,pivot,枢轴,,2012-11-26
+721631,pitch surface,节曲面,,2012-11-26
+721632,pitch spiral,节蜗线,,2012-11-26
+721633,pitch radius,节半径,,2012-11-26
+721634,pitch profile,节轮廓,,2012-11-26
+721635,pitch point,节点,,2012-11-26
+721636,pitch plane,节平面,,2012-11-26
+721637,pitch of screw,螺距,,2012-11-26
+721638,pitch line,节线,,2012-11-26
+721639,pitch helix,节螺旋线,,2012-11-26
+721640,pitch diameter,节径,,2012-11-26
+721641,pitch cylinder,节圆柱面,,2012-11-26
+721642,pitch curve,节曲线,,2012-11-26
+721643,pitch cone radius,节圆锥半径,,2012-11-26
+721644,pitch cone angle,节圆锥角,,2012-11-26
+721645,pitch cone,节圆锥,,2012-11-26
+721646,pitch circle,节圆,,2012-11-26
+721647,pitch angle,周节角，俯仰角,,2012-11-26
+721648,pitch,节，节距，螺距，俯仰,,2012-11-26
+721649,pintle chain,销链,,2012-11-26
+721650,pinion,小齿轮，齿辁,,2012-11-26
+721651,pinch zone,危险区,,2012-11-26
+721652,pin joint,销子接头,,2012-11-26
+721653,pin gearing,销子轮传动,,2012-11-26
+721654,pin gear,销子轮,,2012-11-26
+721655,pin,销子,,2012-11-26
+721656,pilgrim-step motion,朝圣者步伐运动,,2012-11-26
+721657,pilgrim-step mechanism,朝圣者步伐机构,,2012-11-26
+721658,pilgrim-step,朝圣者步伐,,2012-11-26
+721659,pick-and-place robot,取放型机器人,,2012-11-26
+721660,pick-and place robot,取放型机器人,,2012-11-26
+721661,phase margin,相位边限,,2012-11-26
+721662,phase crossover,相位交越点,,2012-11-26
+721663,phase angle,相位角,,2012-11-26
+721664,phase,相,,2012-11-26
+721665,perturbation,微扰，扰动,,2012-11-26
+721666,perpendicular bisector,中垂线,,2012-11-26
+721667,permanent set,永久应变,,2012-11-26
+721668,permanent load,固定负载,,2012-11-26
+721669,periodic motion,周期运动,,2012-11-26
+721670,period of motion,运动周期,,2012-11-26
+721671,period of a motion,运动周期,,2012-11-26
+721672,period,周期,,2012-11-26
+721673,percussion， centre/center of pendulum,撞心，撞击中心,,2012-11-26
+721674,pendulum,摆,,2012-11-26
+721675,pedipulator,机械腿,,2012-11-26
+721676,peak-to-peak value,峰间值,,2012-11-26
+721677,peak-to peak value,峰间值,,2012-11-26
+721678,peak value,峰值,,2012-11-26
+721679,pawl,爪，棘爪,,2012-11-26
+721680,path-generating mechanism,路径演生机构,,2012-11-26
+721681,path of contact,接触路径（齿轮）,,2012-11-26
+721682,path generator,路径演生机构,,2012-11-26
+721683,path generation,路径之演生,,2012-11-26
+721684,path generating mechanism,路径演生机构,,2012-11-26
+721685,path,路径,,2012-11-26
+721686,passive system,被动系统,,2012-11-26
+721687,passive device,被动装置,,2012-11-26
+721688,passive degree of freedom,无效自由度,,2012-11-26
+721689,passive accommodation,被动补偿,,2012-11-26
+721690,passive,被动的,,2012-11-26
+721691,particle,质点,,2012-11-26
+721692,parallelogram law,平行四边形定律,,2012-11-26
+721693,parallel-crank mechanism,平行曲柄机构,,2012-11-26
+721694,parallel motion mechanism,平行运动机构,,2012-11-26
+721695,parallel force system,平行力系,,2012-11-26
+721696,parallel equal crank linkage,平行等曲柄四连杆组,,2012-11-26
+721697,parallel axes theorem,平行轴线定理,,2012-11-26
+721698,pantograph,缩放仪,,2012-11-26
+721699,pairing element,成运动对元件,,2012-11-26
+721700,pair,运动对，对偶,,2012-11-26
+721701,overtones,泛音,,2012-11-26
+721702,overshoot,超越，过越量,,2012-11-26
+721703,over-constrained kinematic chain,过度拘束运动链,,2012-11-26
+721704,outside diameter,外径,,2012-11-26
+721705,output torque,输出扭矩,,2012-11-26
+721706,output link,输出杆,,2012-11-26
+721707,output,输出,,2012-11-26
+721708,outer frame position,外机架位置,,2012-11-26
+721709,outer dead-centre position,外死点位置,,2012-11-26
+721710,osculating ellipse,密切椭圆,,2012-11-26
+721711,osculating curve,密切曲线,,2012-11-26
+721712,osculating,密切的,,2012-11-26
+721713,oscillation,振荡,,2012-11-26
+721714,oscillating motion,摇摆运动,,2012-11-26
+721715,oscillating follower,摇摆从动件,,2012-11-26
+721716,oscillating cylinder linkage,摆动汽缸连杆组,,2012-11-26
+721717,oscillating cylinder angle,摆动汽缸角,,2012-11-26
+721718,oscillating cam follower,摇摆从动件,,2012-11-26
+721719,oscillating arm,摇臂,,2012-11-26
+721720,oscillating,摇摆的,,2012-11-26
+721721,orthogonal velocity,正交速度,,2012-11-26
+721722,orthogonal matrix,正交矩阵,,2012-11-26
+721723,orthogonal,正交的,,2012-11-26
+721724,origin,原点,,2012-11-26
+721725,orientational axes,方位轴线（机器人）,,2012-11-26
+721726,orientation,方位,,2012-11-26
+721727,ordinary gear train,普通齿轮系,,2012-11-26
+721728,order-type synthesis,阶式合成,,2012-11-26
+721729,order,阶数，阶,,2012-11-26
+721730,optimization,最佳化,,2012-11-26
+721731,opposite-pole quadrilateral,对顶极心四边形,,2012-11-26
+721732,opposite-pole,对顶极心,,2012-11-26
+721733,opposite pole,对顶极心,,2012-11-26
+721734,operating pressure angle,作用压力角,,2012-11-26
+721735,open-loop harmonic response,开回路谐波响应,,2012-11-26
+721736,open-loop control,开回路控制,,2012-11-26
+721737,open-loop,开回路,,2012-11-26
+721738,open spherical curve,开口球面曲线,,2012-11-26
+721739,open pair,力闭式运动对,,2012-11-26
+721740,open kinematic chain,开运动链，开放运动链,,2012-11-26
+721741,open belt,开口皮带,,2012-11-26
+721743,Oldham coupling,Oldham联结器,,2012-11-26
+721744,offset slider-crank,偏位滑件曲柄机构,,2012-11-26
+721745,offset oscillating cylinder linkage,偏位摆动汽缸连杆组,,2012-11-26
+721746,offset link,偏连钣,,2012-11-26
+721747,offset follower,偏位从动件,,2012-11-26
+721748,offset error,补偿误差，偏位误差,,2012-11-26
+721749,offset distance/length,偏位距离，偏位长度,,2012-11-26
+721750,offset cross-slider,偏位交叉滑件,,2012-11-26
+721751,offset circle,偏位圆,,2012-11-26
+721752,offset cam follower,偏位从动件,,2012-11-26
+721753,offset,偏距，偏位,,2012-11-26
+721754,off-line programming,离线规划,,2012-11-26
+721755,odontograph,画齿规,,2012-11-26
+721756,octoid tooth,8字齿,,2012-11-26
+721757,oblique impact,斜冲击,,2012-11-26
+721758,oblique cross-slider,斜交叉滑件,,2012-11-26
+721759,oak-tanned belt,栎皮鞣制皮带,,2012-11-26
+721760,nutation,旋摆、章动（天体力学）,,2012-11-26
+721761,nut,螺帽,,2012-11-26
+721762,numerical solution,数值解,,2012-11-26
+721763,numerical analysis method,数值分析法,,2012-11-26
+721764,number synthesis,数目合成,,2012-11-26
+721765,number of teeth,齿数,,2012-11-26
+721766,nose circle,鼻圆,,2012-11-26
+721767,normalized,正规化的，无因次化的,,2012-11-26
+721768,normal vibration,固有振动,,2012-11-26
+721769,normal stress,正应力，垂直应力,,2012-11-26
+721770,normal reaction,法线反作用力,,2012-11-26
+721772,normal pressure angle,法压力角,,2012-11-26
+721773,normal plane,法平面,,2012-11-26
+721774,normal pitch,法径节,,2012-11-26
+721775,normal module,法模数,,2012-11-26
+721776,normal mode of vibration,固有振动模态,,2012-11-26
+721778,normal mode,固有模态,,2017-07-28
+721780,normal helix,法螺旋线,,2012-11-26
+721782,normal diametral pitch,法径节,,2012-11-26
+721783,normal curvature,法曲率,,2012-11-26
+721784,normal cone,法圆锥,,2012-11-26
+721786,normal circular pitch,法周节,,2012-11-26
+721787,normal acceleration,法线加速度,,2012-11-26
+721788,non-parallel equal crank linkage normal,不平行等曲柄四连杆组,,2012-11-26
+721789,non-parallel equal crank linkage,不平行等曲柄四连杆组,,2012-11-26
+721790,non-holonomic system,不可积分拘束系统,,2012-11-26
+721791,non-holonomic constraint,不可积分拘束,,2012-11-26
+721792,non-holonomic,不可积分的,,2012-11-26
+721793,non-Grashof double-rocker,非Grashof双摇杆,,2012-11-26
+721794,non-Grashof chain,非Grashof运动链,,2012-11-26
+721795,non-conservative force,非保守力，非守恒力,,2012-11-26
+721796,non-circular gear,非圆形齿轮,,2012-11-26
+721797,nominal pitch diameter,横〔向〕周节,,2012-11-26
+721798,noise,噪音，杂讯,,2012-11-26
+721799,node,结点，节点（振动）,,2012-11-26
+721800,Newton's third law (of motion),Newton第三定律,,2012-11-26
+721801,Newton's second law (of motion),Newton第二定律,,2012-11-26
+721802,Newton's first law (of motion),Newton第一定律,,2012-11-26
+721803,neutral surface,中立面,,2012-11-26
+721804,neutral equilibrium,中立平衡，随遇平衡,,2012-11-26
+721806,neutral axis,中立轴线，中性轴线,,2012-11-26
+721807,neutral,中立的，中性的,,2012-11-26
+721808,natural mode,固有模态（振动）,,2012-11-26
+721810,natural frequency,固有频率，自然频率,,2012-11-26
+721811,mushroom cam follower,蕈状从动件,,2012-11-26
+721812,multiple thread,复螺纹,,2012-11-26
+721813,multiple strand chain,多排链,,2012-11-26
+721814,multi-loop mechanism,多回路机构,,2012-11-26
+721815,multi-layered structure,多层结构,,2012-11-26
+721816,multi-degree-of-freedom system,多自由度系统,,2012-11-26
+721818,mule pulley,导轮,,2012-11-26
+721819,moving polode,运动极心线，运动瞬心线,,2012-11-26
+721820,moving pivot,运动枢轴,,2012-11-26
+721821,moving member,运动件,,2012-11-26
+721822,moving centrode,运动极心线，运动瞬心线,,2012-11-26
+721823,moving axode,运动轴线面,,2012-11-26
+721824,moving,运动的,,2012-11-26
+721825,movable pulley,动滑轮,,2012-11-26
+721826,motion program,运动规划,,2012-11-26
+721827,motion of a rigid body,刚体运动,,2012-11-26
+721828,motion,运动,,2012-11-26
+721829,motion of a point,点运动,,2012-11-26
+721830,momentum,动量,,2012-11-26
+721831,momentary dwell,瞬时暂停,,2012-11-26
+721832,momental ellipsoid,惯性椭球面,,2012-11-26
+721833,moment of momentum,动量矩，角动量,,2012-11-26
+721834,moment of inertia,惯性矩,,2012-11-26
+721835,moment of force about an axis,绕一轴线之力矩,,2012-11-26
+721836,moment of force about a point,绕一点之力矩,,2012-11-26
+721837,moment of couple,力偶矩,,2012-11-26
+721839,moment of a force about axis,绕一轴线之力矩,,2012-11-26
+721840,moment of a force about a point,绕一点之力矩,,2012-11-26
+721841,moment of a couple,力偶矩,,2012-11-26
+721843,moment arm,力臂,,2012-11-26
+721844,moment,力矩，矩,,2012-11-26
+721845,modulus of rigidity,刚性模数,,2012-11-26
+721846,modulus,模数,,2012-11-26
+721847,module,模组（机器人），模数（齿轮）,,2012-11-26
+721848,mode of vibration,振动模态,,2012-11-26
+721849,mode,模态,,2012-11-26
+721850,modal vector,固有模态（振动）,,2012-11-26
+721851,mobility of mechanism,机构之可动度,,2012-11-26
+721852,mobility of kinematic chain,运动链之可动度,,2012-11-26
+721853,mobility of a kinematic chain,运动链之可动度,,2012-11-26
+721854,mobility,可动度，自由度,,2012-11-26
+721855,mobile robot,可移动型机器人,,2012-11-26
+721856,mobile,树状运动链,,2012-11-26
+721857,mitre/miter gear,斜方齿轮,,2012-11-26
+721858,miter/mitre gear,斜方齿轮,,2012-11-26
+721859,mirror pole,镜像极心,,2012-11-26
+721860,mirror image,镜像,,2012-11-26
+721861,minor/secondary axes,方位轴线，次轴线（机器人）,,2012-11-26
+721862,minor axes,方位轴线（机器人）,,2012-11-26
+721863,minimax theorem,极小极大理论,,2012-11-26
+721864,middle surface of plate,板之中分面,,2012-11-26
+721865,middle surface of a plate,板之中分面,,2012-11-26
+721866,membrane,薄膜,,2012-11-26
+721869,member,件,,2012-11-26
+721870,mechanism topology matrix,机构拓朴构造矩阵,,2012-11-26
+721871,mechanism element,机构元件,,2012-11-26
+721872,mechanism design,机构设计,,2012-11-26
+721873,mechanism and machine theory,机构与机器原理,,2012-11-26
+721874,mechanism,机构,,2012-11-26
+721875,mechanical system,机械系统,,2012-11-26
+721876,mechanical shock,机械陡震,,2012-11-26
+721877,mechanical mobility,机械速度响应（振动）,,2012-11-26
+721878,mechanical engineering design,机械工程设计,,2012-11-26
+721879,mechanical energy,机械能,,2012-11-26
+721880,mechanical efficiency,机械效率,,2012-11-26
+721881,mechanical design,机械设计,,2012-11-26
+721882,mechanical advantage,机械利益,,2012-11-26
+721883,mechanical,机械的,,2012-11-26
+721884,mean-square value,均方值,,2012-11-26
+721885,matrix method,矩阵法,,2012-11-26
+721886,mathematical programming,数学规划,,2012-11-26
+721887,master-slave manipulator,主从式机械臂,,2012-11-26
+721888,master cam,母凸轮,,2012-11-26
+721889,mass of particle,质点之质量,,2012-11-26
+721890,mass of body,物体质量,,2012-11-26
+721891,mass of a particle,质点之质量,,2012-11-26
+721892,mass,质量,,2012-11-26
+721893,mass of a body,物体之质量,,2012-11-26
+721894,margin,边限,,2012-11-26
+721895,manual transmission,手动变速器，手排变速箱（车辆）,,2012-11-26
+721896,manual manipulator,手动机械臂,,2012-11-26
+721897,manual,手动的,,2012-11-26
+721898,manoeuvrability,可调遣性,,2012-11-26
+721899,manipulator,机械臂，操纵器,,2012-11-26
+721900,manipulated variable,受控变数,,2012-11-26
+721901,major/primary axes,位置轴线，主轴线（机器人）,,2012-11-26
+721902,major axis and minor axis of an ellipse,椭圆之长短轴线,,2012-11-26
+721903,major axes,位置轴线（机器人）．主轴线,,2012-11-26
+721904,main-and-return cam,主凸轮与回凸轮,,2012-11-26
+721905,main pitch circle,法周节,,2012-11-26
+721906,magnitude of force,力之大小,,2012-11-26
+721907,magnitude of a force,力之大小,,2012-11-26
+721908,machine member,机件,,2012-11-26
+721909,machine design,机器设计,,2012-11-26
+721910,machine,机器,,2012-11-26
+721911,lumped-parameter system,集块参数系统，离散系统,,2012-11-26
+721912,lower pair,低对,,2012-11-26
+721913,loose sheave,游轮,,2012-11-26
+721914,loose pulley,游轮,,2012-11-26
+721915,Loop ratio,回路比,,2012-11-26
+721916,Loop phase,回路相位,,2012-11-26
+721917,loop gain,回路增益,,2012-11-26
+721918,loop equation,回路方程式,,2012-11-26
+721919,Loop,回路,,2012-11-26
+721920,longitudinal wave,纵〔向〕波,,2012-11-26
+721921,longitudinal vibration,纵向振动,,2012-11-26
+721922,longitudinal strain,纵向应变,,2012-11-26
+721923,longitudinal rigidity,纵向刚度,,2012-11-26
+721924,longitudinal impact,纵向冲击,,2012-11-26
+721925,longitudinal force,纵向力,,2012-11-26
+721926,longitudinal,纵向的,,2012-11-26
+721927,long and short addendum system,长短齿冠制,,2012-11-26
+721928,logarithmic spiral,对数蜗线,,2012-11-26
+721929,logarithmic decrement,对数减量,,2012-11-26
+721930,locus,轨迹,,2012-11-26
+721931,locked chain,呆链,,2012-11-26
+721932,lobed wheels,叶子轮,,2012-11-26
+721933,load capacity,负载容量,,2012-11-26
+721934,load,负载,,2012-11-26
+721935,live load,活动负载,,2012-11-26
+721936,linkwork,连杆组,,2012-11-26
+721937,linkage mechanism,连杆机构,,2012-11-26
+721938,linkage,连杆组,,2012-11-26
+721939,link,连杆,,2012-11-26
+721940,linearization,线性化,,2012-11-26
+721941,linear velocity matrix,线速度矩阵,,2012-11-26
+721942,linear velocity,线速度,,2012-11-26
+721943,linear system,线性系统,,2012-11-26
+721944,linear speed,线速率,,2012-11-26
+721945,linear motion,线运动,,2012-11-26
+721946,linear momentum,线动量,,2012-11-26
+721947,linear jerk,线急跳度,,2012-11-26
+721948,linear displacement,线位移,,2012-11-26
+721949,linear acceleration,线加速度,,2012-11-26
+721950,linear,线性的,,2012-11-26
+721951,line of contact,接触线,,2012-11-26
+721952,line of centres/centers,联心线,,2012-11-26
+721953,line of action of force,力作用线,,2012-11-26
+721954,line of action of a force,力之作用线,,2012-11-26
+721955,line of action,作用线,,2012-11-26
+721956,line equation,线方程式,,2012-11-26
+721957,line coordinates,线坐标,,2012-11-26
+721958,line contact,线接触,,2012-11-26
+721959,line at infinity,无穷远处线,,2012-11-26
+721960,line,直线,,2012-11-26
+721961,limiting friction,极限摩擦力，静摩擦限界,,2012-11-26
+721962,limit position of a mechanism,机构之极限位置,,2012-11-26
+721963,limit position of a link,杆之极限位置,,2012-11-26
+721964,limit position,极限位置,,2012-11-26
+721965,limit,极限,,2012-11-26
+721966,limacon,蚶线,,2012-11-26
+721967,lift,升程,,2012-11-26
+721968,lever,摇杆,,2012-11-26
+721969,left-handed thread,左旋螺纹,,2012-11-26
+721970,left handed screw,左手螺旋,,2012-11-26
+721971,leading end,前端,,2012-11-26
+721972,lead screw,导螺杆,,2012-11-26
+721973,lead of spiral bevel gear,齿扭距（蜗线伞齿轮）,,2012-11-26
+721974,lead number,导程数，车床螺旋常数,,2012-11-26
+721975,lead angle,导程角,,2012-11-26
+721976,lead,导程,,2012-11-26
+721977,lazy tongs,伸缩铁,,2012-11-26
+721978,law of (universal) gravitation,万有引力定律,,2012-11-26
+721979,law,定律,,2012-11-26
+721980,lathe screw constant,车床螺旋常数，导程数,,2012-11-26
+721981,lateral buckling of a beam,梁之侧向屈曲,,2012-11-26
+721983,latent vector,固有模态（振动）,,2012-11-26
+721984,latch,闩扣，搭扣,,2012-11-26
+721985,lantern wheel,灯轮,,2012-11-26
+721986,lamina， polar moment of inertia of,一平面区域之极惯性矩,,2012-11-26
+721987,Lagrangian function,Lagrange函数,,2012-11-26
+721988,Lagrange multiplier,Lagrange乘子,,2012-11-26
+721989,lag,滞后,,2012-11-26
+721990,knife edge follower,刃状从动件,,2012-11-26
+721991,knife edge cam follower,刃状从动件,,2012-11-26
+721992,kite linkage,筝形连杆组,,2012-11-26
+721993,kinetostatics,动力学,,2012-11-26
+721994,kinetics,运动力学,,2012-11-26
+721995,kinetic potential,Lagrange函数,,2012-11-26
+721996,kinetic friction,动摩擦,,2012-11-26
+721997,kinetic energy of particle,质点之动能,,2012-11-26
+721998,kinetic energy of a system,系统之动能,,2012-11-26
+721999,kinetic energy of a rigid body,刚体之动能,,2012-11-26
+722000,kinetic energy of a particle,质点之动能,,2012-11-26
+722001,kinetic,动力的,,2012-11-26
+722002,kinematics of machinery,机械运动学,,2012-11-26
+722003,kinematics,运动学,,2012-11-26
+722004,kinematic synthesis,运动合成,,2012-11-26
+722005,kinematic sketch,运动简图,,2012-11-26
+722006,kinematic representation,运动表示法,,2012-11-26
+722007,kinematic pair,运动对,,2012-11-26
+722008,kinematic joint,运动接头,,2012-11-26
+722009,kinematic inversion,运动学上之倒置,,2012-11-26
+722010,kinematic chain,运动链,,2012-11-26
+722011,kinematic analysis,运动分析,,2012-11-26
+722012,kinematic,运动学的,,2012-11-26
+722013,journal,轴颈,,2012-11-26
+722014,joint space,关节空间,,2012-11-26
+722015,joint of belt,皮带接头,,2012-11-26
+722016,joint coordinate system,接头坐标系，关节坐标系,,2012-11-26
+722017,joint,接头，关节,,2012-11-26
+722018,jerk,急跳度,,2012-11-26
+722019,isotropy,等向性,,2012-11-26
+722020,isotropic line,迷向线,,2012-11-26
+722021,isotropic body,等向性体,,2012-11-26
+722022,isosceles turning block linkage,等腰回转块连杆组,,2012-11-26
+722023,isosceles linkage,等腰连杆组,,2012-11-26
+722024,isosceles double crank linkage,等腰双曲柄连杆组,,2012-11-26
+722025,isomorphism,同构〔性〕,,2012-11-26
+722026,isomorphic,同构的,,2012-11-26
+722027,isolated point,孤立点,,2012-11-26
+722028,involute spiraloid,渐开蜗线面,,2012-11-26
+722029,involute helical,渐开螺旋面,,2012-11-26
+722030,involute gear,渐开线齿轮,,2012-11-26
+722031,involute function,渐开线函数,,2012-11-26
+722032,involute cam,渐开线凸轮,,2012-11-26
+722033,involute,渐开线,,2012-11-26
+722034,inverted tooth chain,倒齿链,,2012-11-26
+722035,inverted slider-crank,倒置之滑件曲柄机构,,2012-11-26
+722036,inversors,倒数器,,2012-11-26
+722037,inversion of pairs,运动对的倒置,,2012-11-26
+722038,inversion of pair,运动对的倒置,,2012-11-26
+722039,inversion,倒置,,2012-11-26
+722040,inverse task,反向计算（机器人）,,2012-11-26
+722041,inverse motion,倒置运动，反运动,,2012-11-26
+722042,inverse cam,反凸轮,,2012-11-26
+722043,inverse,倒置的，反的,,2012-11-26
+722044,invariant system,不变系统,,2012-11-26
+722045,intersecting axes,相交轴线,,2012-11-26
+722046,internal gear,内齿轮,,2012-11-26
+722047,internal force,内力,,2012-11-26
+722048,internal bevel gear,内伞齿轮,,2012-11-26
+722049,intermittent motion mechanism,间歇运动机构,,2012-11-26
+722050,intermittent motion,间歇运动,,2012-11-26
+722051,intermediate cases,中间情形,,2012-11-26
+722052,interferometer,干涉计,,2012-11-26
+722053,interference point,干涉点,,2012-11-26
+722054,interference of involute gears,渐开线齿轮的干涉,,2012-11-26
+722055,interference,干涉,,2012-11-26
+722056,interchangeable gear set,可互换齿轮组,,2012-11-26
+722057,intelligent robot,智慧型机器人,,2012-11-26
+722058,integral control,积分控制,,2012-11-26
+722059,instantaneous velocity,瞬时速度,,2012-11-26
+722060,instantaneous screw axis,瞬时螺旋轴线,,2012-11-26
+722061,instantaneous rotation,瞬时旋转,,2012-11-26
+722062,instantaneous invariants,瞬时不变量,,2012-11-26
+722063,instantaneous dwell,瞬时暂停,,2012-11-26
+722064,instantaneous centre/center of velocity,瞬时速度中心,,2012-11-26
+722065,instantaneous centre/center of acceleration,瞬时加速度中心,,2012-11-26
+722066,instantaneous centre,瞬心，瞬时中心,,2012-11-26
+722067,instantaneous center/centre of velocity,瞬时速度中心,,2012-11-26
+722068,instantaneous center/centre of  rotation,瞬时旋转中心,,2012-11-26
+722069,instantaneous center,瞬心，瞬时中心,,2012-11-26
+722070,instantaneous axis of rotation,瞬时旋转轴线,,2012-11-26
+722071,instantaneous,瞬时的,,2012-11-26
+722072,instant center/centre method,瞬心法,,2012-11-26
+722073,instant center/centre,瞬心,,2012-11-26
+722074,input torque,输入扭矩,,2012-11-26
+722075,input link,轮入杆,,2012-11-26
+722076,input,输入,,2012-11-26
+722077,inner frame position,内机架位置,,2012-11-26
+722078,inner dead centre/center position,内死点位置,,2012-11-26
+722079,initial tension,初张力，初拉力,,2012-11-26
+722081,initial condition,初始条件,,2012-11-26
+722082,inflection pole,反曲点中心,,2012-11-26
+722083,inflection point,反曲点,,2012-11-26
+722084,inflection curve,反曲点曲线（球面）,,2012-11-26
+722085,inflection circle,反曲点圆,,2012-11-26
+722086,inflection cintre/center,反曲点中心,,2012-11-26
+722087,inflection center/centre,反曲点中心,,2012-11-26
+722088,infinitesimally separated positions,无穷接近位置,,2012-11-26
+722089,infinite resolution,无段解析度,,2012-11-26
+722090,inertial system,惯性坐标系,,2012-11-26
+722091,inertia tensor,惯性张量,,2012-11-26
+722092,inertia force,惯性力,,2012-11-26
+722093,inertia couple,惯性力偶,,2012-11-26
+722094,inertia,惯性,,2012-11-26
+722095,inelastic impact,非弹性冲击,,2012-11-26
+722096,indirect contact,间接接触,,2012-11-26
+722097,indicator,指示器，示功器,,2012-11-26
+722098,indexing follower,分度从动件,,2012-11-26
+722099,independent loop,独立回路,,2012-11-26
+722100,incomplete pair,不完全运动对,,2012-11-26
+722101,impulsive force,脉冲力,,2012-11-26
+722102,impulse,脉冲,,2012-11-26
+722103,impedance,阻抗,,2012-11-26
+722104,impact force,冲击力,,2012-11-26
+722105,impact,冲击,,2012-11-26
+722106,image pole,镜像极心,,2012-11-26
+722107,image,像,,2012-11-26
+722108,idler,惰轮,,2012-11-26
+722109,idle pulley,惰轮,,2012-11-26
+722110,idle gear,惰轮,,2012-11-26
+722112,hypoid gear,戟齿轮,,2012-11-26
+722113,hypocycloid,内摆线,,2012-11-26
+722114,hypocyclic epicyclic,内周转轮系,,2012-11-26
+722115,hyperstatic system,静不定力系,,2012-11-26
+722116,hyperboloidal gear,双曲面齿轮,,2012-11-26
+722117,hyperbolic mechanism,双曲线机构,,2012-11-26
+722118,hypcoycloidal straight line motion,内摆线直线运动,,2012-11-26
+722119,hunting tooth,追逐齿,,2012-11-26
+722120,hub,轮毂,,2012-11-26
+722121,hourglass worm,滴漏形蜗杆,,2012-11-26
+722122,Hooke's universal joint,万向接头，十字接头,,2012-11-26
+722123,Hooke's law,Hooke定律,,2012-11-26
+722124,Hooke's joint,十字接头,,2012-11-26
+722125,hook joint chain,钩节链,,2012-11-26
+722126,homologous positions,相关位置,,2012-11-26
+722127,homologous points,相关点,,2012-11-26
+722128,homologous lines,相关线,,2012-11-26
+722129,homogeneous coordinates,齐次坐标,,2012-11-26
+722130,homogeneous body,均质体,,2012-11-26
+722131,holonomic system,可积分拘束系统,,2012-11-26
+722132,holonomic constraint,可积分拘束,,2012-11-26
+722133,holonomic,可积分的,,2012-11-26
+722134,hold,停驻（机器人）,,2012-11-26
+722135,hoisting tackles,起重滑车,,2012-11-26
+722137,hobbing machine,滚齿机,,2012-11-26
+722138,hob,滚齿刀,,2012-11-26
+722140,hinge,铰链,,2012-11-26
+722141,higher pair,高对,,2012-11-26
+722142,higher order synthesis,高阶合成,,2012-11-26
+722143,higher order path curvature,高阶路径曲率,,2012-11-26
+722144,higher order,高阶的,,2012-11-26
+722145,heterogeneous body,非均质体,,2012-11-26
+722146,herring-bone gear,人字齿轮,,2012-11-26
+722147,helix angle,螺旋角,,2012-11-26
+722148,helix,螺旋线,,2012-11-26
+722149,helicoid,螺旋面,,2012-11-26
+722150,helical pair,螺旋〔运动〕对,,2012-11-26
+722151,helical motion,螺旋运动,,2012-11-26
+722152,helical gear,螺旋齿轮,,2012-11-26
+722153,helical,螺旋的,,2012-11-26
+722154,heart cam,心形凸轮,,2012-11-26
+722155,head end dead center/centre position,顶端死点位置,,2012-11-26
+722156,Hartmann construction,Hartmann构图法,,2012-11-26
+722157,harmonic vibration,谐波振动,,2012-11-26
+722158,harmonic analysis,调和分析,,2012-11-26
+722159,harmonic,谐波，调和的,,2012-11-26
+722160,Hamilton's principle,Hamilton原理,,2012-11-26
+722161,Hamiltonian variable,Hamilton变数，正准变数,,2012-11-26
+722162,Hamiltonian function,Hamilton函数,,2012-11-26
+722163,gyroscopic effect,回转效应,,2012-11-26
+722164,gyroscope,回转仪,,2012-11-26
+722165,gyro effect,回转效应,,2012-11-26
+722167,guide pulley,导轮,,2012-11-26
+722168,guide,导件,,2012-11-26
+722169,guidance mechanism,导引机构,,2012-11-26
+722170,Grubler-Kutzbach criteria,Grubler-Kutzbach判别准则（自由度／可动度）,,2012-11-26
+722172,ground,地，接地,,2012-11-26
+722173,gripper,夹持器,,2012-11-26
+722174,grillage,栅，格,,2012-11-26
+722175,grid,栅，格,,2012-11-26
+722176,great circle,大圆,,2012-11-26
+722177,gravity,重力,,2012-11-26
+722178,gravitational field,重力场,,2012-11-26
+722180,Grashof rule,Grashof定则,,2012-11-26
+722181,Grashof double-rocker,Grashof双摇杆,,2012-11-26
+722182,Grashof chain,Grashof运动链,,2012-11-26
+722183,graphical method,图解法,,2012-11-26
+722184,graphical integration,图解积分,,2012-11-26
+722185,graphical differentiation,图解微分,,2012-11-26
+722186,graphical,图解的,,2012-11-26
+722187,graph theory,图论,,2012-11-26
+722188,Graham escapement,Graham擒纵器,,2012-11-26
+722189,gradient,梯度,,2012-11-26
+722190,governor,调速器,,2012-11-26
+722191,gorge radius,隘半径,,2012-11-26
+722192,gorge circle,隘圆,,2012-11-26
+722193,gnomonic projection,心射图形,,2012-11-26
+722194,globoidal cam,桶状凸轮,,2012-11-26
+722195,geometric constraint,几何拘束,,2012-11-26
+722196,geodetic torsion,测地扭率,,2012-11-26
+722197,geodetic curvature,测地曲率,,2012-11-26
+722198,Geneva stop,日内瓦停止机构,,2012-11-26
+722199,Geneva mechanism,日内瓦机构,,2012-11-26
+722200,Geneva escapement,日内瓦擒纵器,,2012-11-26
+722201,Geneva drive,日内瓦驱动机构,,2012-11-26
+722202,generating curve,演生曲线,,2012-11-26
+722203,generating circle,演生圆，创成圆,,2012-11-26
+722204,generating,演生,,2012-11-26
+722205,generalized Oldham coupling,广义Oldham联结器,,2012-11-26
+722206,generalized momentum,广义动量,,2012-11-26
+722207,generalized force,广义力,,2012-11-26
+722208,generalized coordinate,广义坐标,,2012-11-26
+722209,generalized,广义的,,2012-11-26
+722210,gearing,齿轮啮合,,2012-11-26
+722211,geared linkage,齿轮连杆组,,2012-11-26
+722212,geared five-bar linkage,齿轮五连杆组,,2012-11-26
+722213,gear transmission,齿轮传动,,2012-11-26
+722214,gear train,齿轮系,,2012-11-26
+722215,gear shaper,刨齿机,,2012-11-26
+722216,gear set,齿轮组,,2012-11-26
+722217,gear segment,齿轮段,,2012-11-26
+722218,gear sector,齿轮段,,2012-11-26
+722220,gear ratio,齿轮比,,2012-11-26
+722221,gear pair,齿轮对,,2012-11-26
+722222,gear mechanism,齿轮机构,,2012-11-26
+722223,gear blank,齿轮毛胚,,2012-11-26
+722224,gear  cutting,齿轮切制,,2012-11-26
+722225,gear,齿轮,,2012-11-26
+722226,gantry,高架,,2012-11-26
+722227,Galileo's law of relativity,Galileo相对论定律,,2012-11-26
+722228,gain stability,增益稳定性,,2012-11-26
+722229,gain margin,增益边限,,2012-11-26
+722230,gain crossover,增益交越点,,2012-11-26
+722231,gain,增益,,2012-11-26
+722232,fundamental vibration,基本振动,,2012-11-26
+722233,fundamental mode,基本模态（振动）,,2012-11-26
+722234,fundamental law of gearing,齿轮啮合基本定律,,2012-11-26
+722235,fundamental frequency,基本频率,,2012-11-26
+722236,fundamental,基本的,,2012-11-26
+722237,function-generating mechanism,函数机构,,2012-11-26
+722238,function generator,函数机构,,2012-11-26
+722239,function cognates,函数同族连杆组,,2012-11-26
+722240,function,函数,,2012-11-26
+722241,full scale,足尺,,2012-11-26
+722242,full depth tooth,全深齿,,2012-11-26
+722243,front,锋,,2012-11-26
+722244,frictional force,摩擦力,,2012-11-26
+722245,friction wheel,摩擦轮,,2012-11-26
+722246,friction gearing,摩擦轮传动,,2012-11-26
+722247,friction drive,摩擦传动,,2012-11-26
+722248,friction,摩擦,,2012-11-26
+722249,Freudenstein equation,Freudenstein方程式,,2012-11-26
+722250,frequency-modulated signal,调频讯号,,2012-11-26
+722251,frequency response function,频率响应函数,,2012-11-26
+722252,frequency,频率,,2012-11-26
+722253,free vibration,自由振动,,2012-11-26
+722254,free support,简支座,,2012-11-26
+722255,free,自由的,,2012-11-26
+722256,frame-work,桁架，构架,,2012-11-26
+722257,frame velocity,运动坐标之点速度,,2012-11-26
+722258,frame motion,运动坐标之运动,,2012-11-26
+722259,frame acceleration,运动坐标之点加速度,,2012-11-26
+722260,frame,机架，坐标系,,2012-11-26
+722261,Fourier component,谐波,,2012-11-26
+722263,four-bar mechanism,四连杆机构,,2012-11-26
+722265,four-bar linkage,四连杆组,,2012-11-26
+722266,four-bar,四连杆组,,2012-11-26
+722267,foundation,基座,,2012-11-26
+722268,fouling,干犯（齿轮）,,2012-11-26
+722269,formed milling cutter,成形铣刀,,2012-11-26
+722270,form-closed pair,形闭式运动对,,2012-11-26
+722271,formative number of teeth,虚齿数,,2012-11-26
+722272,forearm,前臂，小臂,,2012-11-26
+722273,forced vibration,强迫振动,,2012-11-26
+722274,force-closed pair,力闭式运动对,,2012-11-26
+722275,force sense,力感度（机器人）,,2012-11-26
+722276,force polygon,力多边形,,2012-11-26
+722277,force of gravity,重力,,2012-11-26
+722278,force function,力函数,,2012-11-26
+722279,force diagram,力线图,,2012-11-26
+722280,force,力,,2012-11-26
+722281,follower load,定向负载,,2012-11-26
+722282,follower,从动件,,2012-11-26
+722283,focus,焦点,,2012-11-26
+722284,flywheel,飞轮,,2012-11-26
+722285,floating link,浮杆,,2012-11-26
+722286,flexural rigidity,抗挠刚度,,2012-11-26
+722287,flexural centre,挠曲中心,,2012-11-26
+722288,flexural center,挠曲中心,,2012-11-26
+722289,flexural,挠曲的,,2012-11-26
+722290,flexible member,挠性件,,2012-11-26
+722291,flexible,可挠的,,2012-11-26
+722292,flexibility,可挠性，挠度，顺从度,,2012-11-26
+722293,flat pair,平面〔运动〕对,,2012-11-26
+722294,flat face follower,平面从动件,,2012-11-26
+722295,flat face cam follower,平面从动件,,2012-11-26
+722296,flat belting,平皮带传动,,2012-11-26
+722297,flat belt,平皮带,,2012-11-26
+722298,flat,平的,,2012-11-26
+722300,flank,齿腹,,2012-11-26
+722301,fixed-stop robot,固定停止点机器人,,2012-11-26
+722303,fixed-sequence manipulator,固定顺序机械臂,,2012-11-26
+722304,fixed pulley,定滑轮,,2012-11-26
+722305,fixed pivot,固定枢轴,,2012-11-26
+722306,fixed member,固定件,,2012-11-26
+722307,fixed load,固定负载,,2012-11-26
+722308,fixed link,固定杆,,2012-11-26
+722309,fixed polode,固定极心线，固定瞬心线,,2012-11-26
+722310,fixed centrode,固定极心线，固定瞬心线,,2012-11-26
+722311,fixed axode,固定轴线面,,2012-11-26
+722312,fixed,固定的,,2012-11-26
+722313,five-point dwell,五点暂停,,2012-11-26
+722314,finitely separated positions,有限分离位置,,2012-11-26
+722315,fine pitch,基节〔距〕,,2012-11-26
+722316,fillet,内圆角,,2012-11-26
+722317,field of force,力场,,2012-11-26
+722318,field,场,,2012-11-26
+722319,Ferguson's paradox,Ferguson奇轮,,2012-11-26
+722320,Ferguson index,Ferguson分度机构,,2012-11-26
+722321,feedback element,回馈元件,,2012-11-26
+722322,feedback,回馈,,2012-11-26
+722323,feedback control system,回馈控制系统,,2012-11-26
+722324,feed mechanism,进给机构,,2012-11-26
+722325,factor,因子，因数,,2012-11-26
+722326,face width of gear,齿轮厚度,,2012-11-26
+722327,face width,齿轮厚度,,2012-11-26
+722328,face gear,面齿轮,,2012-11-26
+722329,face contact ratio,面接触率,,2012-11-26
+722330,face cone,面圆锥,,2012-11-26
+722331,face cam,面凸轮,,2012-11-26
+722332,face angle,齿面角,,2012-11-26
+722333,face advance,齿扭距（蜗线伞齿轮）,,2012-11-26
+722334,face,面,,2012-11-26
+722335,extreme position,极限位置,,2012-11-26
+722336,external gear,外齿轮,,2012-11-26
+722337,external force,外力,,2012-11-26
+722338,external,外部的,,2012-11-26
+722339,exoskeleton,连身机器人,,2012-11-26
+722340,excitation,激励，激发,,2012-11-26
+722341,excess,超额,,2012-11-26
+722342,evolute,渐屈线,,2012-11-26
+722343,Evan's friction cones,Evan摩擦圆锥,,2012-11-26
+722344,Euler-Savary equation,Euler-Savary方程式,,2012-11-26
+722345,Eulerian angles,Euler角,,2012-11-26
+722346,escapement,擒纵器,,2012-11-26
+722347,escape wheel,擒纵轮,,2012-11-26
+722348,error signal ratio,误差讯号比,,2012-11-26
+722349,error signal,误差讯号,,2012-11-26
+722350,error,误差,,2012-11-26
+722351,ergodic process,遍历性程序,,2012-11-26
+722352,equivalent viscous damping,等值黏性阻尼,,2012-11-26
+722353,equivalent moment of inertia,等效惯性矩,,2012-11-26
+722354,equivalent moment,等效力矩,,2012-11-26
+722355,equivalent mechanism,等效机构,,2012-11-26
+722356,equivalent mass of a mechanism,机构之等效质量,,2012-11-26
+722357,equivalent linkage,等效连杆组,,2012-11-26
+722358,equivalent instantaneous four-bar,等效瞬时四连杆组,,2012-11-26
+722359,equivalent force system,等效力系,,2012-11-26
+722360,equivalent force,等效力,,2012-11-26
+722361,equivalent buckling length of a bar,棒之等效屈曲长度,,2012-11-26
+722362,equivalent,等效的，等值的，当量,,2012-11-26
+722363,equilibrium configuration,平衡构形，平衡组态,,2012-11-26
+722364,equilibrium,平衡,,2012-11-26
+722365,equatorial curve,赤道曲线,,2012-11-26
+722366,equations of equilibrium,平衡方程式组,,2012-11-26
+722367,equal stepped pulleys,等塔轮组,,2012-11-26
+722368,equal crank linkage,等曲柄连杆组,,2012-11-26
+722369,epicycloid,外摆线,,2012-11-26
+722370,epicyclic value,周转值,,2012-11-26
+722371,epicyclic gear train,周转齿轮系，行星齿轮系,,2012-11-26
+722372,epicyclic gear,周转齿轮，行星齿轮,,2012-11-26
+722373,epicyclic,周转的，外周转的,,2012-11-26
+722374,envelope method,包络线法,,2012-11-26
+722375,envelope equation,包络线方程式,,2012-11-26
+722376,envelope,包络线，包烙面,,2012-11-26
+722377,engineering strain,应变,,2012-11-26
+722378,engine,发动机，引擎,,2012-11-26
+722379,energy,能量,,2012-11-26
+722380,endless belt,无端皮带,,2012-11-26
+722381,end-effector,端接器,,2012-11-26
+722382,end cam,端凸轮,,2012-11-26
+722383,elliptic trammel,椭圆规,,2012-11-26
+722384,elliptic mechanism,椭圆机构,,2012-11-26
+722385,elliptic gear,椭圆齿轮,,2012-11-26
+722386,elliptic chuck,制椭圆用夹头,,2012-11-26
+722387,elliptic,椭圆的,,2012-11-26
+722388,ellipsoid of inertia,惯性椭球面,,2012-11-26
+722389,ellipsoid,椭球体，椭球面,,2012-11-26
+722390,ellipsograph,椭圆规,,2012-11-26
+722391,ellipse,椭圆,,2012-11-26
+722392,elevation,1.仰角 ； 2.高度,,2012-11-26
+722393,elementary work,基本功,,2012-11-26
+722394,element,元件,,2012-11-26
+722395,elbow,肘关节,,2012-11-26
+722396,elasticity,弹性,,2012-11-26
+722397,elastic support,弹性支座,,2012-11-26
+722398,elastic strain,弹性应变,,2012-11-26
+722399,elastic line,弹性轴线,,2012-11-26
+722400,elastic impact,弹性冲击,,2012-11-26
+722401,elastic hysteresis,弹性迟滞,,2012-11-26
+722402,elastic foundation,弹性基座,,2012-11-26
+722403,elastic force,弹性力,,2012-11-26
+722404,elastic deformation,弹性变形,,2012-11-26
+722405,elastic body,弹性体,,2012-11-26
+722406,elastic axis,弹性轴线,,2012-11-26
+722407,elastic,弹性的,,2012-11-26
+722408,eigen-mode,固有模态（振动）,,2012-11-26
+722409,efficiency,效率,,2012-11-26
+722410,effective pull,有效拉力,,2012-11-26
+722411,effective pressure angle,有效压力角,,2012-11-26
+722413,effective power,有效功力,,2012-11-26
+722414,effective force,有效力,,2012-11-26
+722415,effective,有效的,,2012-11-26
+722416,effective diameter,有效直径,,2012-11-26
+722417,effect,效应,,2012-11-26
+722418,eccentricity,偏心距,,2012-11-26
+722419,eccentric positive return cam,偏心确动凸轮,,2012-11-26
+722421,eccentric impact,偏心冲击,,2012-11-26
+722422,eccentric,偏心的，偏心轮,,2012-11-26
+722423,dynamics of machinery,机器动力学,,2012-11-26
+722424,dynamics,动力学,,2012-11-26
+722425,dynamic stiffness,动态刚性,,2012-11-26
+722426,dynamic spring constant,动态刚性,,2012-11-26
+722427,dynamic load,动态负载,,2012-11-26
+722429,dynamic error band,动态误差带,,2012-11-26
+722430,dynamic balance of rotating body,旋转体之动态平衡,,2012-11-26
+722431,dynamic balance,动态均衡，动 〔态〕 平衡,,2012-11-26
+722432,dynamic,动力的，动态的,,2012-11-26
+722433,dyad,双连杆,,2012-11-26
+722434,dwell mechanism,暂停机构,,2012-11-26
+722435,dwell,暂停,,2012-11-26
+722436,duality,对偶性,,2012-11-26
+722437,dual vector,双向量,,2012-11-26
+722438,dual quantity,双量,,2012-11-26
+722439,dual part of dual quantity,双量之双部,,2012-11-26
+722440,dual numbert,双数,,2012-11-26
+722441,dual angle,双角,,2012-11-26
+722442,dual,1.双的 2.对偶,,2012-11-26
+722443,drum cam,鼓状凸轮,,2012-11-26
+722444,drum,绞盘，鼓轮，圆筒,,2012-11-26
+722445,driving-point mobility,直接速度响应（振动）,,2012-11-26
+722446,driving wheel,主动轮,,2012-11-26
+722447,driving link,主动杆,,2012-11-26
+722448,driving,主动的,,2012-11-26
+722449,driver,主动件,,2012-11-26
+722450,driven wheel,从动轮,,2012-11-26
+722451,driven shaft,从动轴,,2012-11-26
+722452,driven link,从动杆,,2012-11-26
+722453,driven,从动的,,2012-11-26
+722454,drive shaft,主动轴，驱动轴,,2012-11-26
+722455,drive,主动，驱动,,2012-11-26
+722456,drift,漂移,,2012-11-26
+722457,drag-link mechanism,牵杆机构,,2012-11-26
+722458,drag-link,牵杆机构,,2012-11-26
+722459,double-slider mechanism,双滑件机构,,2012-11-26
+722460,double-rocker,双摇杆机构,,2012-11-26
+722461,double-rocker mechanism,双摇杆机构,,2012-11-26
+722462,double-helical gear,人字齿轮,,2012-11-26
+722463,double-crank mechanism,双曲柄机构,,2012-11-26
+722464,double thread,双螺纹,,2012-11-26
+722465,double slider-crank mechanism,双滑件曲柄机构,,2012-11-26
+722466,double point,二重点,,2012-11-26
+722467,double pendulum,双摆,,2012-11-26
+722468,double Hooke's joint,双十字接头,,2012-11-26
+722469,double acting click,双动掣子,,2012-11-26
+722470,double,双的,,2012-11-26
+722471,distributed load,分布负载，连续负载,,2012-11-26
+722472,distributed force,分布力，连续力,,2012-11-26
+722473,distributed,分布的,,2012-11-26
+722474,distance,距离,,2012-11-26
+722475,distal,末端,,2012-11-26
+722476,dissipative force,散逸力,,2012-11-26
+722477,dissipation function,散逸函数,,2012-11-26
+722478,dissipation,散逸,,2012-11-26
+722479,displacement transducer,位移讯号转换器,,2012-11-26
+722480,displacement matrix,位移矩阵,,2012-11-26
+722481,displacement equation,位移方程式,,2012-11-26
+722482,displacement,位移,,2012-11-26
+722483,displacement diagram,位移线图,,2012-11-26
+722484,disk friction wheel,圆盘摩擦轮,,2012-11-26
+722485,disk cam,平板凸轮，盘形凸轮,,2012-11-26
+722486,disk,圆盘,,2012-11-26
+722487,discrete system,离散系统，集块参数系统,,2012-11-26
+722488,disc cam,平板凸轮,,2012-11-26
+722489,direction,方向,,2012-11-26
+722490,direct task,正向计算（机器人）,,2012-11-26
+722491,direct strain,正应变,,2012-11-26
+722492,direct receptance,直接位移响应（振动）,,2012-11-26
+722493,direct mobility,直接速度响应（振动）,,2012-11-26
+722494,direct impact,直接碰撞，直接冲击,,2012-11-26
+722495,direct contact,直接接触,,2012-11-26
+722496,direct,直接的,,2012-11-26
+722497,dimensional synthesis,尺度合成,,2012-11-26
+722498,differential windlass,差动绞盘,,2012-11-26
+722499,differential transmission,差动传动,,2012-11-26
+722500,differential screw,差动螺旋,,2012-11-26
+722501,differential mechanism,差动机构,,2012-11-26
+722502,differential constraint,微分拘束,,2012-11-26
+722503,differential,微分的，差动的,,2012-11-26
+722504,diametral plane,径平面,,2012-11-26
+722506,diametral pitch,径节,,2012-11-26
+722507,diameter,直径,,2012-11-26
+722508,diagram,图，线图,,2012-11-26
+722509,device,装置,,2012-11-26
+722510,developed surface,展开曲面,,2012-11-26
+722511,detuner,变谐器,,2012-11-26
+722512,deterministic force,可定力,,2012-11-26
+722513,detent,掣子,,2012-11-26
+722514,detachable chain,活钩链,,2012-11-26
+722515,describing point,演生点,,2012-11-26
+722516,describing circle,演生圆,,2012-11-26
+722517,derivative control,微分控制,,2012-11-26
+722518,density,密度,,2012-11-26
+722519,delay,迟延,,2012-11-26
+722520,degree of freedom of a mechanism,机构之自由度,,2012-11-26
+722521,degree of freedom of a kinematic pair,运动对之自由度,,2012-11-26
+722522,degree of freedom of a kinematic chain,运动链之自由度,,2012-11-26
+722523,degree of freedom,自由度，可动度,,2012-11-26
+722524,degree of constraint,拘束度,,2012-11-26
+722525,degree,度，次,,2012-11-26
+722526,deformation,变形,,2012-11-26
+722527,deflection of plate,板之挠曲，板之变位,,2012-11-26
+722528,deflection of beam,梁之挠曲，梁之变位,,2012-11-26
+722529,deflection of a plate,板之挠曲，板之变位,,2012-11-26
+722530,deflection of a beam,梁之挠曲，梁之变位,,2012-11-26
+722531,deflection,挠曲，变位,,2012-11-26
+722532,dedendum circle,齿根圆,,2012-11-26
+722533,dedendum angle,齿根角,,2012-11-26
+722534,dedendum,齿根,,2012-11-26
+722535,decay,衰变，衰减,,2012-11-26
+722536,dead point,死点,,2012-11-26
+722537,dead load,固定负载,,2012-11-26
+722538,dead center/centre position,死点位置,,2012-11-26
+722539,dead beat escapement,无幌擒纵器,,2012-11-26
+722540,dead band,死带,,2012-11-26
+722541,damping ratio,减振比,,2012-11-26
+722542,damping coefficient,阻尼系数,,2012-11-26
+722543,damping,阻尼,,2012-11-26
+722544,damper,阻尼器,,2012-11-26
+722545,d'Alembert's principle,d'Alembert 原理,,2012-11-26
+722546,d'Alembert force,惯性力,,2012-11-26
+722547,d'Alembert couple,惯性力偶,,2012-11-26
+722548,cylindrical shell,圆筒壳（力学）,,2012-11-26
+722549,cylindrical pair,圆柱〔运动〕对,,2012-11-26
+722550,cylindrical gear,圆柱齿轮,,2012-11-26
+722551,cylindrical friction wheel,圆柱形摩擦轮,,2012-11-26
+722552,cylindrical coordinate robot,圆柱坐标机器人,,2012-11-26
+722553,cylindrical cam,圆柱凸轮,,2012-11-26
+722554,cylindrical,圆柱形的,,2012-11-26
+722555,cylinder escapement,圆柱形擒纵器,,2012-11-26
+722556,cylinder,圆柱,,2012-11-26
+722557,cycloidal motion,摆线运动,,2012-11-26
+722558,cycloidal gear,摆线齿轮,,2012-11-26
+722559,cycloid/cycloidal curve,摆线,,2012-11-26
+722561,cyclic ignorable coordinate,可省略坐标,,2012-11-26
+722562,cyclic efficiency of machine,机器之循环效率,,2012-11-26
+722563,cyclic efficiency of a machine,机器之循环效率,,2012-11-26
+722565,cyclic coordinate,可省略坐标,,2012-11-26
+722566,cyclic,循环的,,2012-11-26
+722567,cycle,循环,,2012-11-26
+722568,cutting stroke,切削行程,,2012-11-26
+722569,cutting angle,切削角,,2012-11-26
+722570,cut-link,切杆，剪切杆,,2012-11-26
+722571,cusp circle,尖点圆,,2012-11-26
+722572,cusp,尖点,,2012-11-26
+722573,curvilinear motion,曲线运动,,2012-11-26
+722574,curved face cam follower,曲面从动件,,2012-11-26
+722575,curved bar,曲棒,,2012-11-26
+722576,curve family,曲线族,,2012-11-26
+722577,curve cognates,曲线同族连杆组,,2012-11-26
+722578,curve,曲线,,2012-11-26
+722579,curvature,曲率,,2012-11-26
+722580,curtate trochoid,短次摆线,,2012-11-26
+722581,cubic spline,三次样条曲线,,2012-11-26
+722582,cubic of stationary curvature,瞬时圆周点曲线／具稳定曲率之三次曲线,,2012-11-26
+722583,cubic curve,三次曲线,,2012-11-26
+722584,cubic,三次的，三次曲线,,2012-11-26
+722585,crowning of pulley,皮带轮面的隆起,,2012-11-26
+722586,crowned pulley,隆面皮带轮,,2012-11-26
+722587,crown gear,冠齿轮,,2012-11-26
+722588,cross-slider,交叉滑件,,2012-11-26
+722589,crossover,交越,,2012-11-26
+722590,crosshead,十字头,,2012-11-26
+722591,crossed helical gear,交错螺旋齿轮,,2012-11-26
+722592,crossed belt,交叉皮带,,2012-11-26
+722593,crossed,交叉的，交错的,,2012-11-26
+722594,cross receptance,交叉位移响应（振动）,,2012-11-26
+722595,critical speed,临界速率,,2012-11-26
+722596,critical load,临界负载,,2012-11-26
+722597,critical force,临界力,,2012-11-26
+722598,critical damping,临界阻尼,,2012-11-26
+722599,critical,临界的,,2012-11-26
+722600,crescent chain,月牙形链,,2012-11-26
+722601,creep,潜变,,2012-11-26
+722602,crank-gear dwell mechanism,曲柄齿轮暂停机构（球面）,,2012-11-26
+722603,crank-and-rocker mechanism/crank-rocker,曲柄摇杆机构/曲柄摇杆,,2012-11-26
+722604,crank-and-rocker mechanism,曲柄摇杆机构,,2012-11-26
+722605,crank end dead center/centre position,曲柄端死点位置,,2012-11-26
+722606,crank,曲柄,,2012-11-26
+722607,coupling,联结器，联轴器,,2012-11-26
+722608,coupler point,耦杆点,,2012-11-26
+722609,coupler link,耦杆,,2012-11-26
+722610,coupler dwell mechanism,耦杆暂停机构,,2012-11-26
+722611,coupler point curve,耦杆点曲线,,2012-11-26
+722612,coupler curve,耦杆点曲线,,2012-11-26
+722613,coupler cognates,耦杆同族连杆组,,2012-11-26
+722614,coupler,耦杆,,2012-11-26
+722615,coupled modes,耦合模态（振动）,,2012-11-26
+722616,couple,力偶,,2012-11-26
+722617,counter shaft,对轴，副轴，中间轴,,2012-11-26
+722618,correlated positions,相关位置,,2012-11-26
+722619,correlated points,相关点,,2012-11-26
+722620,correlated lines,相关线,,2012-11-26
+722621,correlated,相关的,,2012-11-26
+722622,Coriolis force,Coriolis力,,2012-11-26
+722623,Coriolis acceleration,Coriolis加速度,,2012-11-26
+722624,cord,绳，索,,2012-11-26
+722626,coplanar system,共面系统,,2012-11-26
+722628,coplanar force system,共面力系,,2012-11-26
+722629,coplanar,共面,,2012-11-26
+722630,coordinate system,坐标系,,2012-11-26
+722631,coordinate,坐标,,2012-11-26
+722632,conveyor chain,输送链,,2012-11-26
+722633,controller,控制器,,2012-11-26
+722634,controlled variable,控制变数,,2012-11-26
+722635,control ratio,控制比，闭回路谐波响应,,2012-11-26
+722637,control element,控制元件,,2012-11-26
+722638,control,控制,,2012-11-26
+722639,continuum,连体,,2012-11-26
+722640,continuous-path control,连续路径控制,,2012-11-26
+722641,continuous variable speed transmission,无段变速器,,2012-11-26
+722642,continuous variable speed,无段变速,,2012-11-26
+722643,continuous system (continuum),连续系统（连体）,,2012-11-26
+722644,continuous system,连续系统,,2012-11-26
+722645,continuous motion,连续运动,,2012-11-26
+722646,continuous load,连续负载，分布负载,,2012-11-26
+722647,continuous force,连续力，分布力,,2012-11-26
+722648,continuous beam,连续梁,,2012-11-26
+722649,continuous,连续的,,2012-11-26
+722650,contingence angle,切线角,,2012-11-26
+722651,contact ratio,接触率,,2012-11-26
+722652,contact length,接触线长度,,2012-11-26
+722653,contact,接触,,2012-11-26
+722654,constraint,拘束,,2012-11-26
+722655,constrained motion,拘束运动,,2012-11-26
+722656,constrained kinematic chain,拘束运动链,,2012-11-26
+722657,constrained,拘束的,,2012-11-26
+722658,constant speed curve,等速曲线（球面）,,2012-11-26
+722659,constant diameter cam,定径凸轮,,2012-11-26
+722661,constant breadth cam,定宽凸轮,,2012-11-26
+722662,constant,不变（的）,,2012-11-26
+722663,conservative force,守恒力，保守力,,2012-11-26
+722665,conservative field of force,守恒力场,,2012-11-26
+722666,conservative,守恒的,,2012-11-26
+722667,conservation,守恒,,2012-11-26
+722668,connectivity of kinematic pair,运动对之自由度,,2012-11-26
+722669,connectivity of a kinematic pair,运动对之自由度,,2012-11-26
+722670,connecting shaft,联接轴,,2012-11-26
+722671,connecting rod,联接杆,,2012-11-26
+722672,connecting link,联接杆，耦杆,,2012-11-26
+722673,conjugate position,共轭位置,,2012-11-26
+722674,conjugate curves,共轭曲线,,2012-11-26
+722675,conjugate curve,共轭曲线,,2012-11-26
+722676,conjugate action,共轭作用,,2012-11-26
+722677,conjugate,共轭的,,2012-11-26
+722678,conical gear,锥形齿轮,,2012-11-26
+722679,conical friction wheel,锥形摩擦轮,,2012-11-26
+722680,conical cam,锥形凸轮,,2012-11-26
+722681,conical,锥形的,,2012-11-26
+722682,conic section point curve,圆锥曲线点曲线,,2012-11-26
+722683,configuration,构形，组态,,2012-11-26
+722684,cone pulley,圆锥轮,,2012-11-26
+722685,cone of friction,摩擦力圆锥,,2012-11-26
+722686,cone distance,圆锥距离,,2012-11-26
+722687,cone,圆锥,,2012-11-26
+722688,condition,条件,,2012-11-26
+722689,concurrent force system,共点力系,,2012-11-26
+722690,concentrated force,集中力,,2012-11-26
+722691,concealed motion,隐藏运动,,2012-11-26
+722692,compressor,压缩机,,2012-11-26
+722693,compressive force,压缩力,,2012-11-26
+722694,compression wave,压缩波，应力波,,2012-11-26
+722695,compression period,压缩期,,2012-11-26
+722696,compression member,压缩件,,2012-11-26
+722697,compression,压缩,,2012-11-26
+722698,compound screw,复式螺旋,,2012-11-26
+722699,compound pendulum,复摆,,2012-11-26
+722700,compound gear train,复系齿轮系,,2012-11-26
+722704,compound  gear,复式齿轮,,2012-11-26
+722705,compound,复式,,2012-11-26
+722706,component,分量,,2012-11-26
+722707,compliance,顺从性,,2012-11-26
+722709,complex response,1.复数响应；2.阻尼线性系统之谐波响应,,2012-11-26
+722710,complex number,复数,,2012-11-26
+722711,complex linkage mechanism,复合连杆机构,,2012-11-26
+722712,complex excitation,复数激励，复数激发,,2012-11-26
+722714,complex,复数,,2012-11-26
+722715,compatibility equation,相容方程式,,2012-11-26
+722716,column,柱,,2012-11-26
+722717,command,指令,,2012-11-26
+722718,Columb friction,Columb摩擦,,2012-11-26
+722719,collineation great circle,直射大圆（球面）,,2012-11-26
+722720,collineation axis,直射轴线,,2012-11-26
+722721,collar,轴环,,2012-11-26
+722722,coil chain,套环链,,2012-11-26
+722723,cognate mechanism,同族机构,,2012-11-26
+722724,cognate linkages,同族连杆组,,2012-11-26
+722725,cognate,同族的,,2012-11-26
+722726,coefficient of static friction,静摩擦系数,,2012-11-26
+722727,coefficient of restitution,恢复系数,,2012-11-26
+722728,coefficient of profile shifting,齿廓移位系数,,2012-11-26
+722730,coefficient of non-uniformity of motion,不等速运动系数,,2012-11-26
+722731,coefficient of kinetic friction,动摩擦系数,,2012-11-26
+722732,coefficient of friction,摩擦系数,,2012-11-26
+722733,coefficient,系数,,2012-11-26
+722734,coarse pitch,粗牙（螺纹），粗齿（齿轮）径节,,2012-11-26
+722735,clutch,离合器,,2012-11-26
+722736,closure of kinematic pair,运动对之闭合,,2012-11-26
+722737,closure of a kinematic pair,运动对之闭合,,2012-11-26
+722738,close-loop control system,闭回路控制系统,,2012-11-26
+722740,closed-loop harmonic response,控制比，闭回路谐波响应,,2012-11-26
+722741,closed-loop control system,闭回路控制系统,,2012-11-26
+722742,closed-loop control,闭回路控制,,2012-11-26
+722743,closed-loop,闭回路,,2012-11-26
+722744,closed-form solution,闭合解,,2012-11-26
+722745,closed spherical curve,球面闭曲线,,2012-11-26
+722746,closed kinematic chain,闭运动链，封闭运动链,,2012-11-26
+722748,closed curve,闭曲线，封闭曲线,,2012-11-26
+722749,closed chain,闭链，封闭链,,2012-11-26
+722750,close joint chain,紧节链,,2012-11-26
+722751,clearance circle,底隙圆,,2012-11-26
+722752,click,掣子，扣夹,,2012-11-26
+722754,clearance,间隙，余隙，底隙,,2012-11-26
+722755,class,类,,2012-11-26
+722756,circular quartic,圆点四次曲线,,2012-11-26
+722757,circular point,圆点,,2012-11-26
+722759,circular pitch,周节,,2012-11-26
+722760,circular motion,圆周运动,,2012-11-26
+722761,circular curve,圆点曲线,,2012-11-26
+722762,circular cubic,圆点三次曲线,,2012-11-26
+722763,circular arc cam,圆弧确动凸轮,,2012-11-26
+722765,circling-point curve,瞬时圆周点曲线,,2012-11-26
+722766,circle-point curve,圆周点曲线,,2012-11-26
+722767,circle-point circle,圆周点圆,,2012-11-26
+722768,circle-point,圆周点,,2012-11-26
+722769,circle point,圆周点,,2012-11-26
+722770,circle of curvature,曲率圆,,2012-11-26
+722771,circle,圆,,2012-11-26
+722772,chronometer escapement,精密时计擒纵器,,2012-11-26
+722773,chrome-tanned belt,铬鞣制皮带,,2012-11-26
+722774,chordal action,弦线作用,,2012-11-26
+722775,Chebyshev spacing of precision points,精确点之Chebyshev分布,,2012-11-26
+722776,Chebyshev polynomial,Chebyshev多项式,,2012-11-26
+722777,Chebyshev minimax theorem,Chebyshev极小极大原理,,2012-11-26
+722778,characteristic number,特征数，示性数,,2012-11-26
+722780,characteristic mode,特征模态，固有模态,,2017-07-28
+722781,characteristic,特征的,,2012-11-26
+722782,change point mechanism,可变构机构,,2012-11-26
+722783,change point,变构点,,2012-11-26
+722784,chain tightener,紧链器,,2012-11-26
+722785,chain tensioner,紧链器,,2012-11-26
+722786,chain pitch,链节〔距〕,,2012-11-26
+722787,chain hoist,链吊车,,2012-11-26
+722788,chain drive,链条传动,,2012-11-26
+722789,chain,链，链条,,2012-11-26
+722790,centroid,形心,,2012-11-26
+722791,centrode tangent,极心线切线，瞬心线切线,,2012-11-26
+722792,centrode,极心线，瞬心线,,2012-11-26
+722793,centro polygon,瞬心多边形,,2012-11-26
+722794,centro,极心，瞬心,,2012-11-26
+722795,centripetal force,向心力,,2012-11-26
+722796,centripetal acceleration,向心加速度,,2012-11-26
+722797,centripetal,向心的,,2012-11-26
+722798,centring-point/centering-point curve,瞬时圆心点曲线,,2012-11-26
+722799,centrifugal force,离心力,,2012-11-26
+722800,centrifugal acceleration,离心加速度,,2012-11-26
+722801,centre-point/center-point curve,圆心点曲线,,2012-11-26
+722802,centre-point/center-point circle,圆心点圆,,2012-11-26
+722803,centre-point/center-point,圆心点,,2012-11-26
+722804,centre/center point,圆心点,,2012-11-26
+722805,centre/center of twist,扭转中心,,2012-11-26
+722806,centre of mass,质量中心，质心,,2012-11-26
+722807,centre of gravity / center of gravity,重心,,2012-11-26
+722808,central swinging block linkage,中央摇块连杆组,,2012-11-26
+722809,central slider-crank mechanism,心央滑件曲柄机构,,2012-11-26
+722810,central slider-crank,中央滑件曲柄机构,,2012-11-26
+722811,central oscillating cylinder linkage,中央摆动汽缸连杆组,,2012-11-26
+722812,central motion,中心运动,,2012-11-26
+722814,central impact,中心碰撞，中心冲击,,2012-11-26
+722815,central force,中心力,,2012-11-26
+722816,central ellipsoid of inertia,质心惯性椭球面,,2012-11-26
+722817,central curve,中央曲线（球面）,,2012-11-26
+722818,central crank-rocker,中央曲柄摇杆,,2012-11-26
+722819,central crank,中央曲柄摇杆,,2012-11-26
+722820,central axis,中心轴线,,2012-11-26
+722821,central,中心的,,2012-11-26
+722822,centering-point/centring-point curve,瞬时圆心点曲线,,2012-11-26
+722823,centering-point curve,瞬时圆心点曲线,,2012-11-26
+722825,center/centre of twist,扭转中心,,2012-11-26
+722826,center/centre of percussion,撞心，撞击中心,,2012-11-26
+722828,center/centre of mass,质心，质量中心,,2012-11-26
+722829,center/centre of gravity,重心,,2012-11-26
+722830,center/centre distance,中心距,,2012-11-26
+722831,center/centre,中心,,2012-11-26
+722832,Cartesian space,直角坐标空间,,2012-11-26
+722833,Cartesian rectangular coordinate system,直角坐标系,,2012-11-26
+722834,Cartesian coordinate robot,直角坐标机器人,,2012-11-26
+722835,Carter-Hall circle,Carter-Hall圆,,2012-11-26
+722836,carrier,行星〔托〕架,,2012-11-26
+722837,cardioid motion,心脏线运动,,2012-11-26
+722838,cardioid,心脏线,,2012-11-26
+722839,cardinal point,主点,,2012-11-26
+722840,cardinal line,主线,,2012-11-26
+722841,Cardan shaft,Cardan轴,,2012-11-26
+722842,Cardan position,Cardan位置,,2012-11-26
+722844,Cardan joint,Cardan万向接头,,2012-11-26
+722845,Cardan circles,Cardan圆组,,2012-11-26
+722846,Cardan circle pair,Cardan圆组,,2012-11-26
+722847,cantilever beam,悬臂梁,,2012-11-26
+722848,canonical variable,正准变数,,2012-11-26
+722850,canonical system,正准坐标系，正则坐标系,,2012-11-26
+722851,camshaft,凸轮轴,,2012-11-26
+722852,cam-linkage mechanism,凸轮连杆机构,,2012-11-26
+722853,cam profile,凸轮轮廓,,2012-11-26
+722854,cam pair,凸轮对,,2012-11-26
+722855,cam mechanism,凸轮机构,,2012-11-26
+722856,cam follower,凸轮从动件,,2012-11-26
+722857,cam flank,凸轮腹,,2012-11-26
+722858,cam,凸轮，𫐘,,2012-11-26
+722859,cable,索，缆,,2012-11-26
+722860,bushing chain,套筒链,,2012-11-26
+722861,Burmester point-pair,Burmester点组,,2012-11-26
+722862,Burmester point,Burmester点,,2012-11-26
+722864,Burmester curves,Burmester曲线,,2012-11-26
+722865,Burmester centre/center,Burmester圆心点,,2012-11-26
+722866,buckling of plate,板之皱曲,,2012-11-26
+722867,buckling of bar,棒之屈曲,,2012-11-26
+722868,buckling of a plate,板之皱曲,,2012-11-26
+722869,buckling of a bar,棒之屈曲,,2012-11-26
+722870,buckling,屈曲，皱曲，侧溃,,2012-11-26
+722871,Bresse's circles,Bresse圆,,2012-11-26
+722872,Bresse normal circle,切线圆,,2012-11-26
+722873,break-ups,分解,,2012-11-26
+722874,boundary condition,边界条件,,2012-11-26
+722875,bottom land,齿底,,2012-11-26
+722876,body force,物体力,,2012-11-26
+722877,Bobillier construction,Bobillier构图法,,2012-11-26
+722878,block chain,块环链,,2012-11-26
+722879,bitangent,双切线,,2012-11-26
+722880,bipolar coordinates,双极坐标,,2012-11-26
+722881,binary link,双接头杆,,2012-11-26
+722882,bilateral manipulator,等力主从式机械臂,,2012-11-26
+722883,bilateral constraint,双向拘束，可逆拘束,,2012-11-26
+722884,bicursal coupler curve,两段式耦杆点曲线,,2012-11-26
+722885,bicircular curve,二重圆点曲线,,2012-11-26
+722886,bias,偏差值，预设值,,2012-11-26
+722887,bevel gear differential,斜齿轮差速器；伞齿轮差速器,,2012-11-26
+722888,bevel gear,伞齿轮,,2012-11-26
+722889,bending stiffness,抗弯刚性，抗弯劲度,,2012-11-26
+722891,bending moment,弯曲力矩,,2012-11-26
+722892,bending,弯曲,,2012-11-26
+722893,belt,皮带,,2012-11-26
+722894,belting,皮带传动,,2012-11-26
+722895,bell crank lever,双臂曲柄杆,,2012-11-26
+722896,beat,拍（振动）,,2012-11-26
+722897,bearing force,接头力，轴承力,,2012-11-26
+722898,bearing,轴承,,2012-11-26
+722899,beam,梁,,2012-11-26
+722900,beak cusp,鸟嘴状尖点,,2012-11-26
+722901,basic rack,基准齿条,,2012-11-26
+722902,basic pole,基本极心,,2012-11-26
+722903,base point,基点,,2012-11-26
+722905,base pitch,基节,,2012-11-26
+722906,base cylinder,基圆柱面,,2012-11-26
+722907,base curve,基曲线,,2012-11-26
+722908,base coordinate system,基座坐标系,,2012-11-26
+722909,base circle of cam,凸轮的基圆,,2012-11-26
+722910,base circle of an involute,渐开线的基圆,,2012-11-26
+722911,base circle,基圆,,2012-11-26
+722912,base,基座，机座，底座,,2012-11-26
+722913,barrel cam,圆桶凸轮,,2012-11-26
+722914,bar,杆，棒,,2012-11-26
+722915,bandwidth,频宽,,2012-11-26
+722916,band,带,,2012-11-26
+722917,ball screw,滚珠螺杆,,2012-11-26
+722918,Ball point,Ball点,,2012-11-26
+722919,Ball curve,Ball曲线,,2012-11-26
+722920,Ball centre/center,Ball圆心点,,2012-11-26
+722921,balancing,均衡，平衡,,2012-11-26
+722922,balanced mechanism,已均衡机构，已平衡机构,,2012-11-26
+722923,balance,均衡，平衡,,2012-11-26
+722924,backlash,背隙,,2012-11-26
+722925,back gear,背齿轮,,2012-11-26
+722926,back cone radius,背圆锥半径,,2012-11-26
+722927,back cone distance,背圆锥距离,,2012-11-26
+722928,back cone,背圆锥,,2012-11-26
+722929,back component,背圆锥距离（齿轮）,,2012-11-26
+722930,azimuth,方位角,,2012-11-26
+722931,axode,轴线面,,2012-11-26
+722932,axis of symmetry,对称轴线,,2012-11-26
+722933,axis of rotation,旋转轴线,,2012-11-26
+722934,axis,轴线,,2012-11-26
+722935,axial thrust,轴向推力,,2012-11-26
+722936,axial tension,轴向拉力,,2012-11-26
+722937,axial pitch,轴向节距,,2012-11-26
+722938,axial force,轴向力,,2012-11-26
+722939,axial,轴向,,2012-11-26
+722940,axes,轴线,,2012-11-26
+722941,average,平均 〔的〕,,2012-11-26
+722942,automatic transmission,自动变速器，自排变速箱（车辆）,,2012-11-26
+722943,automatic controller,自动控制器,,2012-11-26
+722944,automatic control system,自动控制系统,,2012-11-26
+722945,automatic,自动 〔的〕,,2012-11-26
+722946,attenuation,衰减,,2012-11-26
+722947,asymptote,渐近线,,2012-11-26
+722948,Assur group,Assur群,,2012-11-26
+722949,assembly position,组合位置,,2012-11-26
+722950,Aronhold-Kennedy theorem,Aronhold-Kennedy定理，三心定理,,2012-11-26
+722951,arm,臂，行星架（齿轮组）,,2012-11-26
+722952,Archimedes spiral,Archimedes蜗线,,2012-11-26
+722953,arch,拱形件,,2012-11-26
+722954,arc of recess,渐远弧,,2012-11-26
+722955,arc of contact,接触弧,,2012-11-26
+722956,arc of approach,渐近弧,,2012-11-26
+722957,arc of action,作用弧,,2012-11-26
+722958,arc,弧,,2012-11-26
+722959,approaching side,进入侧，渐近侧（齿轮）,,2012-11-26
+722961,applied force,作用力，外力,,2012-11-26
+722962,apparent motion,显现运动,,2012-11-26
+722963,aperiodic motion,非周期性运动,,2012-11-26
+722965,antipode,对跖点（球面）,,2012-11-26
+722966,antinode,反节点，波腹,,2012-11-26
+722967,anthropomorphic robot,拟人关节型机器人,,2012-11-26
+722968,annulus,环齿轮，内齿轮,,2012-11-26
+722969,annular gear,环齿轮,,2012-11-26
+722970,anisotropy,异向性,,2012-11-26
+722971,angular velocity vector,角速度向量,,2012-11-26
+722972,angular velocity tetrahedron,角速度四面体（球面）,,2012-11-26
+722973,angular velocity ratio,角速比,,2012-11-26
+722974,angular velocity polygon,角速度多边形,,2012-11-26
+722975,angular velocity,角速度,,2012-11-26
+722976,angular speed,角速率,,2012-11-26
+722977,angular motion,角运动,,2012-11-26
+722978,angular momentum,角动量,,2012-11-26
+722979,angular displacement,角位移,,2012-11-26
+722980,angular acceleration,角加速度,,2012-11-26
+722981,angular,角(的),,2012-11-26
+722982,angle of twist,扭转角,,2012-11-26
+722983,angle of torsion,扭转角,,2012-11-26
+722984,angle of rotation,旋转角,,2012-11-26
+722985,angle of recess,渐远角,,2012-11-26
+722986,angle of friction,摩擦角,,2012-11-26
+722987,angle of deformation,变形角,,2012-11-26
+722988,angle of contact,接触角,,2012-11-26
+722989,angle of approach,渐近角,,2012-11-26
+722990,angle of action,作用角,,2012-11-26
+722991,angle,角,,2012-11-26
+722992,android,类人形机器人,,2012-11-26
+722993,anchor escapement,锚形擒纵器,,2012-11-26
+722994,analysis,分析,,2012-11-26
+722995,analytical method,解析法,,2012-11-26
+722996,amplitude,振幅,,2012-11-26
+722997,alternating load,交变负载,,2012-11-26
+722998,algebraic envelope,代数包络线,,2012-11-26
+722999,adjustable mechanism,可调整机构,,2012-11-26
+723000,addendum circle,齿冠圆,,2012-11-26
+723001,addendum angle,齿冠角,,2012-11-26
+723002,addendum,齿冠,,2012-11-26
+723003,adaptive control,适应控制,,2012-11-26
+723004,actuator,致动器,,2012-11-26
+723005,actuating signal ratio,致动讯号比,,2012-11-26
+723006,actuating signal,致动讯号,,2012-11-26
+723007,actuating,致动,,2012-11-26
+723008,active system,主动系统,,2012-11-26
+723009,active force,（主动）作用力,,2012-11-26
+723010,active device,主动装置,,2012-11-26
+723011,active accommodation,主动补偿,,2012-11-26
+723012,active,主动,,2012-11-26
+723013,acting pressure angle,作用压力角,,2012-11-26
+723014,acting pitch diameter,作用节径,,2012-11-26
+723015,acting pitch circle,作用节圆,,2012-11-26
+723016,acting flank,作用齿腹,,2012-11-26
+723017,acting circular pitch,作用周节,,2012-11-26
+723018,accuracy,精度，准确度,,2012-11-26
+723019,accommodation,补偿,,2012-11-26
+723020,accelerometer,加速规，加速度计,,2012-11-26
+723021,acceleration polygon,加速度多边形,,2012-11-26
+723022,acceleration pole,加速度中心,,2012-11-26
+723023,acceleration of pole,极心加速度,,2012-11-26
+723024,acceleration matrix,加速度矩阵,,2012-11-26
+723025,acceleration image,加速度像,,2012-11-26
+723026,acceleration due to gravity,重力加速度,,2012-11-26
+723027,acceleration diagram,加速度向量图,,2012-11-26
+723028,acceleration curve,加速度曲线,,2012-11-26
+723029,acceleration axis,加速度轴线,,2012-11-26
+723030,acceleration analysis,加速度分析,,2012-11-26
+723031,acceleration,加速度,,2012-11-26
+723032,absorber,避震器，减震器,,2012-11-26
+723033,absolute velocity,绝对速度,,2012-11-26
+723034,absolute motion,绝对运动,,2012-11-26
+723035,absolute acceleration,绝对加速度,,2012-11-26
+723036,absolute,绝对,,2012-11-26
+940634,redundant,多余的,,2012-11-26
+940635,redundant constraint,多余拘束,,2012-11-26
+940636,redundant degree of freedom,多余自由度,,2012-11-26
+940637,redundant mobility of a robot,机器人之多余可动度,,2012-11-26
+940638,redundant mobility of robot,机器人之多余可动度,,2012-11-26
+940639,reference circle,基准圆（齿轮）,,2012-11-26
+940640,reference input,基准输入,,2012-11-26
+940641,reference point,基准点,,2012-11-26
+940642,regular precession,等速进动，等速扰转,,2012-11-26
+940643,regulator,调整器,,2012-11-26
+940644,relative,相对的,,2012-11-26
+940645,relative acceleration,相对加速度,,2012-11-26
+940646,relative Burmester point,相对Burmester点,,2012-11-26
+940648,relative centre/center-point curve,相对圆心点曲线,,2012-11-26
+940649,relative centre-point/center-point curve,相对圆心点曲线,,2012-11-26
+940650,relative circle-point curve,相对圆周点曲线,,2012-11-26
+940651,relative coordinate system,相对坐标系,,2012-11-26
+940652,relative displacement,相对位移,,2012-11-26
+940653,relative force,相对力,,2012-11-26
+940654,relative motion,相对运动,,2012-11-26
+940655,relative pole,相对极心,,2012-11-26
+940656,relative polode,相对极心线，相对瞬心线,,2012-11-26
+940657,relative screw motion,相对螺旋运动,,2012-11-26
+940658,relative velocity,相对速度,,2012-11-26
+940660,relaxation time,松弛时间,,2012-11-26
+940661,remote centre/center compliance,终端对位顺从器（机器人）,,2012-11-26
+940662,repeatability,重现性（机器人）,,2012-11-26
+940663,resolution,解析度,,2012-11-26
+940665,resolved-motion rate control,轴关节速率控制（机器人）,,2012-11-26
+940666,resonance,共振,,2012-11-26
+940667,resonance frequency,共振频率,,2012-11-26
+940668,response,响应,,2012-11-26
+940669,response time,响应时间,,2012-11-26
+940671,restitution period,恢复期,,2012-11-26
+940672,resultant force,合力,,2012-11-26
+940673,resultant moment,合力矩,,2012-11-26
+940674,retaining click,羁留掣子，定位扣夹,,2012-11-26
+940675,retaining pawl,羁留爪,,2012-11-26
+940676,retardation,减速度,,2012-11-26
+940677,return circle,折返圆,,2012-11-26
+940678,return curve,折返曲线（球面）,,2012-11-26
+940679,return pole,折返中心,,2012-11-26
+940680,return spring,回动弹簧,,2012-11-26
+940681,return stroke,退回行程,,2012-11-26
+940682,reverted gear train,回归齿轮系,,2012-11-26
+940683,revolute pair,旋转〔运动〕对,,2012-11-26
+940684,rheonomic constraint,时间性拘束,,2012-11-26
+940685,rheonomic system,时间性拘束系统,,2012-11-26
+940686,right hand rule,右手定则,,2012-11-26
+940687,right handed screw,右手螺旋,,2012-11-26
+940688,right-handed thread,右旋螺旋,,2012-11-26
+940689,rigid body,刚体,,2012-11-26
+940690,rigid body guidance,刚体导引,,2012-11-26
+940691,rigid member,刚性件,,2012-11-26
+940692,rigidity,刚性，刚度,,2012-11-26
+940693,ring gear,环齿轮,,2012-11-26
+940694,rise time,上升时间,,2012-11-26
+940695,robot,机器人,,2012-11-26
+940696,robot system,机器人系统,,2012-11-26
+940697,robotics,机器人学,,2012-11-26
+940698,rocker,摇杆,,2012-11-26
+940699,rod,杆,,2012-11-26
+940700,roller,滚子,,2012-11-26
+940701,roller [cam]follower,滚子从动件,,2012-11-26
+940702,roller chain,滚子链,,2012-11-26
+940703,roller friction wheel,滚子摩擦轮,,2012-11-26
+940704,roller support,滚子支座,,2012-11-26
+940705,roller-gear cam mechanism,滚子齿轮凸轮机构,,2012-11-26
+940706,rolling,滚动的,,2012-11-26
+940707,rolling contact,滚动接触,,2012-11-26
+940708,rolling friction,滚动摩擦,,2012-11-26
+940709,rolling load,滚动负载,,2012-11-26
+940710,rolling motion,滚动,,2012-11-26
+940711,root,1.根；2.齿根（齿轮）,,2012-11-26
+940712,root angle,齿根角,,2012-11-26
+940713,root circle,齿根圆,,2012-11-26
+940714,root cone,齿根圆锥,,2012-11-26
+940715,root diameter,根径,,2012-11-26
+940716,root-mean-square value,均方根值,,2012-11-26
+940717,rope,绳索　,,2012-11-26
+940718,rope drive,绳传动,,2012-11-26
+940719,rotary cylinder engine,旋缸式引擎,,2012-11-26
+940720,rotating,旋转的,,2012-11-26
+940721,rotation,旋转,,2012-11-26
+940722,sag,松垂,,2012-11-26
+940723,sandwich,夹层,,2012-11-26
+940724,sandwich pair,平面〔运动〕对,,2012-11-26
+940725,sandwich structure,夹层结构,,2012-11-26
+940726,scalar,纯量,,2012-11-26
+940727,scalar quantity,纯量,,2012-11-26
+940728,scale,1.天平；2.比例尺,,2012-11-26
+940729,scale factor,比例因子，比例因数,,2012-11-26
+940730,sceleronomic constraint,非时间性拘束,,2012-11-26
+940731,sceleronomic system,非时间性拘束系统,,2012-11-26
+940732,Scotch-yoke mechanism,苏格兰轭机构,,2012-11-26
+940733,screw,1.螺旋；2.螺杆；3.螺钉,,2012-11-26
+940734,screw axis,螺旋轴线,,2012-11-26
+940735,screw gearing,螺旋齿轮传动,,2012-11-26
+940736,screw mechanism,螺旋机构,,2012-11-26
+940737,screw motion,螺旋运动,,2012-11-26
+940738,screw pair,螺旋〔运动〕对,,2012-11-26
+940740,screw pitch,螺距,,2012-11-26
+940741,screw thread,螺纹,,2012-11-26
+940742,screw thread diameter,螺纹直径,,2012-11-26
+940743,second acceleration,次加速度，急跳度,,2012-11-26
+940744,second angular acceleration,次角加速度，角急跳度,,2012-11-26
+940745,second order synthesis,二阶合成,,2012-11-26
+940746,secondary axes,方位轴线（机器人）,,2012-11-26
+940747,self-locking mechanism,自锁机构,,2012-11-26
+940748,sense,1.指向；2.感度（机器人）,,2012-11-26
+940749,sensitivity,敏感度,,2012-11-26
+940750,sensor,感测器,,2012-11-26
+940751,sequential control,顺序控制,,2012-11-26
+940752,servomechanism,伺服机构,,2012-11-26
+940753,servosystem,伺服系统,,2012-11-26
+940755,settling time,安定时间,,2012-11-26
+940756,shaft,轴,,2012-11-26
+940757,shaft angle,轴交角,,2012-11-26
+940758,shake,摇动,,2012-11-26
+940759,shaking force,摇撼力,,2012-11-26
+940760,shear,剪,,2012-11-26
+940761,shear center,剪力中心,,2012-11-26
+940762,shear centre,剪力中心,,2012-11-26
+940763,shear force,剪力,,2012-11-26
+940764,shear modulus,刚性模数,,2012-11-26
+940765,shear strain,剪应变,,2012-11-26
+940766,shear stress,剪应力,,2012-11-26
+940767,shear wave,剪力波,,2012-11-26
+940768,shearing force,剪力,,2012-11-26
+940769,sheave,槽轮,,2012-11-26
+940771,shock,陡震,,2012-11-26
+940772,shock wave,陡震波,,2012-11-26
+940773,short addendum system,短齿冠制,,2012-11-26
+940774,shoulder,肩接头（机器人）,,2012-11-26
+940775,shuttle shaped cam follower,梭状从动件,,2012-11-26
+940776,signal,讯号,,2012-11-26
+940777,silent chain,无声链,,2012-11-26
+940778,simple,简单的,,2012-11-26
+940779,simple closed kinematic chain,单回路运动炼,,2012-11-26
+940780,simple gear train,单式齿轮系,,2012-11-26
+940781,simple harmonic motion,简谐运动,,2012-11-26
+940782,simple harmonic quantity,简谐量,,2012-11-26
+940783,simple pendulum,单摆,,2012-11-26
+940784,simple support,简支座,,2012-11-26
+940785,simply-supported beam,简支梁,,2012-11-26
+940786,single thread,单螺纹,,2012-11-26
+940787,singular configuration,奇异构形,,2012-11-26
+940788,singular focus,奇焦点,,2012-11-26
+940789,singular point,奇点,,2012-11-26
+940790,sinusoidal vibration,正弦振动,,2012-11-26
+940791,six-bar linkage,六连杆组,,2012-11-26
+940792,six-bar mechanism,六连杆机构,,2012-11-26
+940793,skeleton,机构骨架图,,2012-11-26
+940794,skew bevel gear,歪伞齿轮,,2012-11-26
+940795,slack side,松边,,2012-11-26
+940796,slenderness ratio of a bar,棒之细长比,,2012-11-26
+940797,slenderness ratio of bar,棒之细长比,,2012-11-26
+940798,slide,导轨,,2012-11-26
+940799,slider,滑件,,2012-11-26
+940800,slider-crank,滑件曲柄,,2012-11-26
+940801,slider-crank mechanism,滑件曲柄机构,,2012-11-26
+940802,sliding,滑动,,2012-11-26
+940803,sliding block,滑块,,2012-11-26
+940804,sliding block linkage,滑块连杆组,,2012-11-26
+940805,sliding contact,滑动接触,,2012-11-26
+940806,sliding friction,动摩擦,,2012-11-26
+940807,sliding motion,滑动,,2012-11-26
+940808,sliding pair,滑动对,,2012-11-26
+940809,sliding slot linkage,滑槽连杆组,,2012-11-26
+940810,slip,滑移,,2012-11-26
+940811,slip sense,滑移感度（机器人）,,2012-11-26
+940812,smooth support,光滑支座,,2012-11-26
+940813,snubber,减震器,,2012-11-26
+940814,source linkage,起源连杆组,,2012-11-26
+940815,source mechanism,起源机构,,2012-11-26
+940816,space mechanism,空间机构,,2012-11-26
+940817,span of a beam,梁之跨距,,2012-11-26
+940818,span of beam,梁之跨距,,2012-11-26
+940819,spatial cam,空间凸轮,,2012-11-26
+940820,spatial cam mechanism,空间凸轮机构,,2012-11-26
+940821,spatial mechanism,空间机构,,2012-11-26
+940822,spatial force system,空间力系,,2012-11-26
+940823,spatial linkage,空间连杆组,,2012-11-26
+940824,spatial mechanism,空间机构,,2012-11-26
+940825,spatial motion,空间运动,,2012-11-26
+940826,spatial system,空间系统,,2012-11-26
+940827,specific sliding,滑率（齿轮）,,2012-11-26
+940828,spectrum,光谱，频谱,,2012-11-26
+940829,speed,速率,,2012-11-26
+940830,speed cone,锥形皮带轮,,2012-11-26
+940831,speed ratio,速比,,2012-11-26
+940832,speed reducer,减速器,,2012-11-26
+940833,speed reduction ratio,减速比,,2012-11-26
+940834,spherical,球面的,,2012-11-26
+940835,spherical cam,球面凸轮,,2012-11-26
+940836,spherical coordinate robot,球面坐标机器人,,2012-11-26
+940837,spherical cycloid,球面摆线,,2012-11-26
+940838,spherical ellipse,球面椭圆,,2012-11-26
+940839,spherical epicycloid,球面外摆线,,2012-11-26
+940840,spherical four-bar,球面四连杆组,,2012-11-26
+940841,spherical four-bar linkage,球面四连杆组,,2012-11-26
+940842,spherical hypocycloid,球面内摆线,,2012-11-26
+940843,spherical involute,球面渐开线,,2012-11-26
+940844,spherical linkage,球面连杆组,,2012-11-26
+940845,spherical mechanism,球面机构,,2012-11-26
+940846,spherical motion,球面运动,,2012-11-26
+940847,spherical pair,球面〔运动〕对,,2012-11-26
+940848,spherical pendulum,球面摆,,2012-11-26
+940849,spherical velocity,球面速度,,2012-11-26
+940850,spin,自转,,2012-11-26
+940851,spin friction,枢转摩擦,,2012-11-26
+940852,spin motion,自旋运动,,2012-11-26
+940853,spindle,心轴，主轴,,2012-11-26
+940854,spiral,蜗线,,2012-11-26
+940855,spiral angle,蜗线角,,2012-11-26
+940856,spiral bevel gear,蜗线伞齿轮,,2012-11-26
+940857,spiral of Archimedes,Archimedes蜗线,,2012-11-26
+940858,spiral-bevel gear,蜗线伞齿轮,,2012-11-26
+940859,spiral-bevel gearing,蜗线伞齿轮传动,,2012-11-26
+940860,spring,弹簧,,2012-11-26
+940861,spring constant,弹簧常数,,2012-11-26
+940862,springback,回弹,,2012-11-26
+940863,sprocket,链轮,,2012-11-26
+940864,sprocket tooth profile,链轮齿廓,,2012-11-26
+940865,sprocket wheel,链轮,,2012-11-26
+940866,spur gear,正齿轮,,2012-11-26
+940867,stability,稳定性,,2012-11-26
+940868,stable equilibrium,稳定平衡,,2012-11-26
+940869,staggered tooth,交错齿,,2012-11-26
+940870,standard gear,标准齿轮,,2012-11-26
+940871,standing pulley,定滑轮,,2012-11-26
+940872,standing wave,驻波,,2012-11-26
+940873,starting regime of a machine,机器之起动阶段,,2012-11-26
+940874,starting regime of machine,机器之启动阶段,,2012-11-26
+940875,static,静态的,,2012-11-26
+940876,static balance,静态均衡．静 〔态〕 平衡,,2012-11-26
+940877,static balance of rotating body,旋转体之静态平衡,,2012-11-26
+940878,static error band,静误差带,,2012-11-26
+940879,static friction,静摩擦,,2012-11-26
+940880,static load,静态负载,,2012-11-26
+940881,statically determinate system,静定系统,,2012-11-26
+940882,statically indeterminate system,静不定系统,,2012-11-26
+940883,statics,静力学,,2012-11-26
+940884,stationary process,稳定程序,,2012-11-26
+940885,stationary value,平稳值,,2012-11-26
+940886,steady-state,稳态,,2012-11-26
+940887,steady-state error,稳态误差,,2012-11-26
+940888,steady-state motion of a machine,机器之稳态运转,,2012-11-26
+940889,steady-state vibration,稳态振动,,2012-11-26
+940890,step function,步阶函数,,2012-11-26
+940891,step mechanism,间歇机构,,2012-11-26
+940892,step motion,间歇运动,,2012-11-26
+940893,stepped gear,阶级齿轮,,2012-11-26
+940894,stepped pulley,塔轮,,2012-11-26
+940895,stiffness,刚性,,2012-11-26
+940896,stiffness [coefficient],刚性〔系数〕,,2012-11-26
+940897,stimulus,激励,,2012-11-26
+940898,stochastic force,随机力,,2012-11-26
+940899,stochastic process,随机程序,,2012-11-26
+940900,stop,触止,,2012-11-26
+940901,stopping regime of a machine,机器之停车阶段,,2012-11-26
+940902,stopping regime of machine,机器之停车阶段,,2012-11-26
+940903,straight bevel gear,直齿伞齿轮,,2012-11-26
+940905,straight line [motion] mechanism,直线运动机构,,2012-11-26
+940906,straight line motion,直线运动,,2012-11-26
+940907,strain,应变,,2012-11-26
+940908,strain energy,应变能,,2012-11-26
+940909,strength,强度,,2012-11-26
+940910,stress,应力,,2012-11-26
+940911,stretch and rotation,缩放与旋转,,2012-11-26
+940912,string,弦,,2012-11-26
+940913,stroboscope,闪频器,,2012-11-26
+940914,stroke,冲程，行程,,2012-11-26
+940915,structural analysis,构造分析,,2012-11-26
+940916,structural calculation,结构计算,,2012-11-26
+940917,structural design,结构设计,,2012-11-26
+940918,structural error,结构误差,,2012-11-26
+940919,structural sketch,构造简图,,2012-11-26
+940920,structural synthesis,构造合成,,2012-11-26
+940921,structure,结构，构造,,2012-11-26
+940922,structure of a mechanism,机构之构造,,2012-11-26
+940923,structure of mechanism,机构之构造,,2012-11-26
+940924,strut,支柱，枝杆，抗压构件,,2012-11-26
+940925,stub tooth,短齿,,2012-11-26
+940926,stub-link chain,柱圜链,,2012-11-26
+940927,stud gear,柱齿轮,,2012-11-26
+940928,stud link chain,柱环链,,2012-11-26
+940929,sub-assembly,次组合,,2012-11-26
+940930,subharmonic,次谐波,,2012-11-26
+940931,subharmonic response,次谐波响应,,2012-11-26
+940932,subharmonic-response,次谐波响应,,2012-11-26
+940933,substitution of pairs,运动对的置换,,2012-11-26
+940934,sun gear,太阳齿轮,,2012-11-26
+940935,superposition angle,叠加角,,2012-11-26
+940936,superposition principle,叠加原理,,2012-11-26
+940937,supplementary linkages,补连杆组（球面）,,2012-11-26
+940938,support,支座,,2012-11-26
+940939,surface contact,面接触,,2012-11-26
+940940,surface force,表面力,,2012-11-26
+940941,swash plate,旋转斜板,,2012-11-26
+940942,swinging block linkage,摇块连杆组,,2012-11-26
+940943,swinging or rocking block linkage,摇块连杆组,,2012-11-26
+940944,symmetrical coupler curve,对称耦杆点曲线,,2012-11-26
+940945,synchronous vibration,同步振动,,2012-11-26
+940946,synthesis,合成,,2012-11-26
+940947,system,系统,,2012-11-26
+940948,system error,系统误差,,2012-11-26
+940949,tactile sense,触感（机器人）,,2012-11-26
+940950,tangent,切线，正切,,2012-11-26
+940951,tangent cam,切线凸轮,,2012-11-26
+940952,tangential acceleration,切线加速度,,2012-11-26
+940953,tangential circle,切线圆,,2012-11-26
+940954,tangential effort,切线效力,,2012-11-26
+940955,tangential reaction,切线反作用力,,2012-11-26
+940956,task coordinate system,工作坐标系,,2012-11-26
+940957,teach control,教导式控制,,2012-11-26
+940958,teach pendant,教导器,,2012-11-26
+940959,teach restrict,教导时之速限,,2012-11-26
+940960,teach-in programming,教导式规划,,2012-11-26
+940961,teleoperator,遥控者,,2012-11-26
+940962,tendon,腱,,2012-11-26
+940963,tendon drive,腱驱动器,,2012-11-26
+940964,tensile force,拉力,,2012-11-26
+940965,tension,拉力，张力,,2012-11-26
+940967,tension centrifugal,离心张力,,2012-11-26
+940968,tension sheave,张力槽轮,,2012-11-26
+940970,ternary link,三接头杆,,2012-11-26
+940971,theorem of three centros,三心定理,,2012-11-26
+940972,thick plate,厚板,,2012-11-26
+940973,thin plate,薄板,,2012-11-26
+940974,thread,螺纹,,2012-11-26
+940975,thread angle,螺纹角,,2012-11-26
+940976,three-point dwell,三点暂停,,2012-11-26
+940977,throat diameter,喉径,,2012-11-26
+940978,tight side,紧边,,2012-11-26
+940979,time,时间,,2012-11-26
+940980,time constant,时间常数,,2012-11-26
+940981,time history,时间函数,,2012-11-26
+940982,time ratio,时间比,,2012-11-26
+940983,time response,时间响应,,2012-11-26
+940984,timing belt,正时皮带，时限皮带，确动皮带,,2012-11-26
+940985,timing chain,正时链条,,2012-11-26
+940986,toggle arrangement,肘节装置,,2012-11-26
+940987,toggle clamp,肘节夹,,2012-11-26
+940988,toggle effect,肘节效应,,2012-11-26
+940989,toggle mechanism,肘节机构,,2012-11-26
+940990,toggle position,肘节位置,,2012-11-26
+940991,tooth face,齿面,,2012-11-26
+940992,tooth flank,齿腹,,2012-11-26
+940993,tooth profile,齿形,,2012-11-26
+940994,tooth space,齿间,,2012-11-26
+940995,tooth thickness,齿厚,,2012-11-26
+940996,top land,齿顶,,2012-11-26
+940997,topological structure,拓朴构造,,2012-11-26
+940998,torque,扭矩,,2012-11-26
+940999,torsion,1.扭转；2.扭率,,2012-11-26
+941000,torsional moment,扭矩,,2012-11-26
+941001,torsional rigidity,抗扭刚度,,2012-11-26
+941002,torsional vibration,扭转振动,,2012-11-26
+941003,total depth of tooth,齿的总深度,,2012-11-26
+941004,total lift,总升程,,2012-11-26
+941005,total slip,总滑脱,,2012-11-26
+941006,trace point,循迹点,,2012-11-26
+941007,trailing end,后端,,2012-11-26
+941008,train,轮系，系,,2012-11-26
+941009,train value,轮系值，系值,,2012-11-26
+941010,trajectory,轨迹,,2012-11-26
+941011,transducer,讯号转换器,,2012-11-26
+941012,transfer function,转移函数,,2012-11-26
+941013,transformation matrix,变换矩阵,,2012-11-26
+941014,transient error,暂态误差,,2012-11-26
+941015,transient vibration,暂态振动,,2012-11-26
+941016,transition curve,过渡曲线，分界曲线,,2012-11-26
+941017,translation,平移,,2012-11-26
+941018,translation cam,平移凸轮,,2012-11-26
+941019,translation follower,平移式从动件,,2012-11-26
+941020,transmissibility,1.可传动性；2.传递率,,2012-11-26
+941021,transmission,1.传动；2.变速箱,,2012-11-26
+941022,transmission angle,传动角，传力角,,2012-11-26
+941023,transmission function,传动函数,,2012-11-26
+941024,transmission index,传动指数，传力指数,,2012-11-26
+941025,transmission ratio,速比,,2012-11-26
+941026,transmittance,转移函数,,2012-11-26
+941027,transportation,运动坐标之运动,,2012-11-26
+941028,transportation acceleration,运动坐标之点加速度,,2012-11-26
+941029,transportation force,惯性力,,2012-11-26
+941030,transportation velocity,运动坐标之点速度,,2012-11-26
+941031,transverse,横向的,,2012-11-26
+941032,transverse circular pitch,横周节,,2012-11-26
+941033,transverse component,横〔向〕分量,,2012-11-26
+941034,transverse diametral pitch,横径节,,2012-11-26
+941035,transverse force,横向力，剪力,,2012-11-26
+941036,transverse impact,横向冲击,,2012-11-26
+941037,transverse pressure angle,横〔向〕压力角,,2012-11-26
+941039,transverse vibration,横向振动,,2012-11-26
+941040,transverse wave,横〔向〕波,,2012-11-26
+941041,travel， total,总行程,,2012-11-26
+941042,tree,树状运动链,,2012-11-26
+941044,triangular cam,三角凸轮,,2012-11-26
+941045,triple rocker mechanism,三摇杆机构,,2012-11-26
+941046,trochoid,次摆线,,2012-11-26
+941047,true strain,真应变,,2012-11-26
+941048,truss,构架，桁架,,2012-11-26
+941049,tumblers,换向齿轮,,2012-11-26
+941050,turning block linkage,回转块连杆组,,2012-11-26
+941051,turning pair,旋转〔运动〕对,,2012-11-26
+941052,turret,转塔,,2012-11-26
+941053,twist,扭转,,2012-11-26
+941054,twisted spur gear,正扭齿轮,,2012-11-26
+941055,twisting moment,扭矩,,2012-11-26
+941056,twisting momentum,扭矩,,2012-11-26
+941057,type of contact,接触方式,,2012-11-26
+941058,type of motion,运动方式,,2012-11-26
+941059,type synthesis,类型合成,,2012-11-26
+941060,ultimate strength,抗拉强度,,2012-11-26
+941061,ultraharmonic,超谐波,,2012-11-26
+941062,uncertainty configuration,不定构形,,2012-11-26
+941063,unconstrained kinematic chain,无拘束运动链,,2012-11-26
+941064,unconstrained mechanism,无拘束机构,,2012-11-26
+941065,uncoupled modes,非耦合模态,,2012-11-26
+941066,undercutting,过切,,2012-11-26
+941067,undershoot,不足，不足量,,2012-11-26
+941068,undulation point,起伏点,,2012-11-26
+941069,unicursal coupler curve,一段式耦杆点曲线,,2012-11-26
+941070,uniform load,均布负载,,2012-11-26
+941071,uniform motion,等速运动,,2012-11-26
+941072,uniformly distributed load,均布负载,,2012-11-26
+941073,unilateral constraint,单向拘束,,2012-11-26
+941074,unit vector,单位向量,,2012-11-26
+941075,universal coupling,万向接头,,2012-11-26
+941076,universal joint,万向接头，十字接头,,2012-11-26
+941077,unstable equilibrium,不稳定平衡,,2012-11-26
+941078,upperarm,上臂,,2012-11-26
+941079,useful power,有效功率,,2012-11-26
+941080,V belt,三角皮带,,2012-11-26
+941082,value,值,,2012-11-26
+941083,variable,1.变数；2.可变的,,2012-11-26
+941084,variable lead cylindrical cam,变导程圆柱凸轮,,2012-11-26
+941085,variable lead screw,变导程螺杆,,2012-11-26
+941086,variable speed cone,变速圆锥,,2012-11-26
+941087,variable speed V belt drive,变速三角皮带传动,,2012-11-26
+941088,variable-mass system,可变质量系统,,2012-11-26
+941089,vari-pitch sheave,可变节径槽轮,,2012-11-26
+941090,vector,向量,,2012-11-26
+941091,vector field,向量场,,2012-11-26
+941092,vector function,向量函数,,2012-11-26
+941093,vector loop equation,向量回路方程式,,2012-11-26
+941094,vector loop method,向量回路法,,2012-11-26
+941095,vector method,向量法,,2012-11-26
+941096,vector quantity,向量,,2012-11-26
+941097,velocity,速度,,2012-11-26
+941098,velocity analysis,速度分析,,2012-11-26
+941099,velocity curve,速度曲线,,2012-11-26
+941100,velocity diagram,速度向量图,,2012-11-26
+941101,velocity hodograph,速度端点曲线,,2012-11-26
+941102,velocity image,速度像,,2012-11-26
+941103,velocity matrix,速度矩阵,,2012-11-26
+941104,velocity pole,速度极心,,2012-11-26
+941105,velocity polygon,速度多边形,,2012-11-26
+941106,velocity ratio,速比,,2012-11-26
+941107,velocity transducer,速度讯号转换器,,2012-11-26
+941108,vernier,游标,,2012-11-26
+941109,vertex distance,圆锥顶距离,,2012-11-26
+941110,vibration,振动,,2012-11-26
+941111,virtual deformation,虚变形,,2012-11-26
+941112,virtual displacement,虚位移,,2012-11-26
+941113,virtual number of teeth,虚齿数,,2012-11-26
+941114,virtual reality,虚拟实境,,2012-11-26
+941115,virtual work,虚功,,2012-11-26
+941116,viscous damping,黏性阻尼,,2012-11-26
+941118,walking machine,步行机,,2012-11-26
+941119,wave,波,,2012-11-26
+941120,wave front,波前，波锋,,2012-11-26
+941121,wavelength,波长,,2012-11-26
+941122,wedge,楔,,2012-11-26
+941123,wedge cam,楔形凸轮,,2012-11-26
+941124,wedge mechanism,全棱柱对机构,,2012-11-26
+941125,weight,重量,,2012-11-26
+941126,wheel,轮,,2012-11-26
+941127,whole depth,总齿深,,2012-11-26
+941128,wire rope,钢索，纲丝绳,,2012-11-26
+941129,wobble-plate,摇晃板,,2012-11-26
+941130,work,功,,2012-11-26
+941131,work of deformation,变形功,,2012-11-26
+941132,working curve,工作曲线,,2012-11-26
+941133,working depth,工作齿深,,2012-11-26
+941134,working depth of tooth,齿的工作深度,,2012-11-26
+941135,working envelope,工作包络面,,2012-11-26
+941136,working radius,工作半径,,2012-11-26
+941137,working range,工作范围（机器人）,,2012-11-26
+941138,working space,工作空间（机器人）,,2012-11-26
+941139,working volume,工作空间（机器人）,,2012-11-26
+941141,world coordinate system,大地坐标系统,,2012-11-26
+941142,worm gear,蜗杆,,2012-11-26
+941143,worm gearing,蜗轮传动,,2012-11-26
+941144,worm wheel,蜗轮,,2012-11-26
+941145,wrench,1.螺旋力；2.扳手,,2012-11-26
+941146,wrist,腕,,2012-11-26
+941147,yoke cam,轭式凸轮,,2012-11-26
+941148,yoke follower,轭式从动件,,2012-11-26
+941149,Young's modulus,弹性模数,,2012-11-26
+941150,Young's modulus of elasticity,弹性模数,,2012-11-26
+941151,Zerol bevel gear,零蜗线角伞齿轮,,2012-11-26
+941152,zero-line stability,零线稳定性,,2012-11-26
