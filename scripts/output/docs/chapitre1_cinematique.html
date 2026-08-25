@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学案译文</title>
+    <style>
+/* ============================================
+   Foreign Academic Translator - HTML 样式表
+   适用于双语对照、概念高亮及打印输出
+   ============================================ */
+
+/* ---------- 全局重置与字体 ---------- */
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px 30px;
+    background: #fafbfc;
+    color: #1e2a3a;
+    line-height: 1.8;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+/* ---------- 标题层级 ---------- */
+/* h1 大标题：最醒目 —— 浅蓝渐变背景 + 左侧粗竖条 + 圆角 + 轻投影 */
+h1 {
+    color: #0b2a4a;
+    font-size: 1.9em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.35;
+    background: linear-gradient(135deg, #eaf3fa, #f8fbfd);
+    border-left: 8px solid #2a7a9c;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(11, 42, 74, 0.10);
+    padding: 18px 24px;
+    margin: 0 0 30px 0;
+}
+/* h2 章标题：次醒目 —— 浅色背景块 + 左侧竖条 + 底部细线 + 圆角 */
+h2 {
+    color: #0e3a55;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+    background: #e3f0f7;
+    border-left: 7px solid #2a7a9c;
+    border-bottom: 2px solid #c3d8e6;
+    border-radius: 6px;
+    padding: 12px 16px;
+}
+/* h3 节标题：再次级 —— 左侧琥珀色小圆点 + 向右浅渐变背景 */
+h3 {
+    position: relative;
+    color: #124a6b;
+    font-size: 1.24em;
+    font-weight: 700;
+    margin-top: 26px;
+    margin-bottom: 12px;
+    padding: 8px 14px 8px 28px;
+    background: linear-gradient(to right, #e8f3f9, #ffffff);
+    border-radius: 6px;
+}
+h3::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f5b86e;
+}
+
+/* ---------- 段落与分割线 ---------- */
+p {
+    margin: 1em 0;
+    text-align: justify;
+}
+hr {
+    border: none;
+    border-top: 2px dashed #d0d7de;
+    margin: 25px 0;
+}
+
+/* ---------- 双语对照专用布局 ---------- */
+.bilingual-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 15px 0 25px 0;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    overflow: hidden;
+}
+
+/* 在 Flex 中同时控制两列，默认各占 50% */
+.bilingual-container > .source-col,
+.bilingual-container > .translation-col {
+    flex: 1 1 45%;
+    padding: 18px 22px;
+    min-width: 280px;
+    box-sizing: border-box;
+}
+
+/* 原文列样式（左侧/上方） */
+.source-col {
+    background: #f3f6fa;
+    border-right: 1px solid #e1e8ed;
+    font-family: 'Times New Roman', 'Georgia', serif;
+    font-size: 0.98em;
+    color: #1c2e40;
+}
+.source-col::before {
+    content: "📄 原文";
+    display: block;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #4a6a8a;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 译文列样式（右侧/下方） */
+.translation-col {
+    background: #f2faf5;
+    font-size: 1.02em;
+    color: #0f2e1e;
+}
+.translation-col::before {
+    content: "🌐 译文";
+    display: block;
+    font-size: 0.75em;
+    font-weight: 700;
+    color: #2a7a5a;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* 移动端适配：堆叠显示，取消边框 */
+@media (max-width: 700px) {
+    .bilingual-container {
+        flex-direction: column;
+    }
+    .bilingual-container > .source-col,
+    .bilingual-container > .translation-col {
+        flex: 1 1 100%;
+        border-right: none;
+        border-bottom: 1px solid #e1e8ed;
+    }
+    .bilingual-container > .translation-col {
+        border-bottom: none;
+    }
+}
+
+/* ---------- 术语高亮（concept_highlight 模式） ---------- */
+.highlight-term {
+    background: #fff1d6;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+    color: #8a5a1a;
+    border-bottom: 2px solid #f5b86e;
+    white-space: nowrap;
+}
+
+/* ---------- 重要概念汇总表 ---------- */
+.concept-table-wrapper {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 4px double #b0c4d8;
+}
+.concept-table-wrapper h2 {
+    border-left-color: #d48a3a;
+    color: #5a3a1a;
+}
+
+.concept-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.concept-table th {
+    background: #1a3c5e;
+    color: #ffffff;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.concept-table td {
+    border: 1px solid #d8e0e8;
+    padding: 10px 15px;
+    background: #ffffff;
+}
+.concept-table tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* ---------- 打印样式（导出 PDF 时兼容） ---------- */
+@media print {
+    body {
+        background: white;
+        box-shadow: none;
+        margin: 0.5in;
+        padding: 0;
+        font-size: 11pt;
+    }
+    .bilingual-container {
+        break-inside: avoid;
+        border: 1px solid #ccc;
+        box-shadow: none;
+    }
+    .source-col {
+        background: #f4f6f8;
+    }
+    .translation-col {
+        background: #f4faf6;
+    }
+    .concept-table th {
+        background: #1a3c5e !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .highlight-term {
+        background: #fff1d6 !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+    </style>
+    <style>
+html, body { height: 100%; margin: 0; padding: 0; }
+body { max-width: none; background: #fafbfc; }
+.layout-wrapper { display: flex; max-width: 1200px; margin: 0 auto; min-height: 100vh; }
+.content-area { flex: 1; max-width: calc(100% - 280px); padding: 20px 40px 40px 20px; overflow-x: auto; }
+.toc-sidebar { width: 260px; flex-shrink: 0; position: sticky; top: 0; height: 100vh; overflow-y: auto; padding: 24px 16px; border-left: 1px solid #e8ecf0; background: #f8f9fa; box-sizing: border-box; }
+.toc-header { font-weight: 700; color: #1a3c5e; font-size: 16px; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid #2a7a9c; }
+table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+th, td { border: 1px solid #d8e0e8; padding: 8px 12px; }
+img { max-width: 100%; height: auto; display: block; margin: 15px 0; }
+span[data-en] { background: #fff1d6; padding: 2px 6px; border-radius: 4px; font-weight: 600; color: #8a5a1a; border-bottom: 2px solid #f5b86e; cursor: help; }
+    </style>
+    <script>
+        MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\(', '\)']], displayMath: [['$$', '$$'], ['\[', '\]']] },
+            svg: { fontCache: 'global' }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<div class="layout-wrapper">
+    <main class="content-area">
+<!-- DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill -->
+
+<h1>第1章 质点运动学</h1>
+<h2>I 从刚体到质点</h2>
+<h3>系统与质点</h3>
+<p>"系统"是我们希望研究的<span data-en="solide">刚体（solide）</span>（S）。刚体是一个物质系统，其各点彼此之间保持恒定距离。</p>
+<p>在本课程中，所研究的每个刚体（S）都将被简化为一个<span data-en="point matériel">质点（point matériel）</span>。质点是一个几何意义上的点（它没有体积也没有表面），并被赋予质量 $m$。</p>
+<p>通常在研究中，我们把刚体的<span data-en="barycentre">质心（barycentre）</span>（或<span data-en="centre de masse">质量中心（centre de masse）</span>）视为代表该刚体的那个质点。</p>
+<h2>II 参考系与时间标架</h2>
+<h3>★ 运动的相对性</h3>
+<p>运动取决于观察它的位置：这就是所谓的<span data-en="relativité des mouvements">运动的相对性（relativité des mouvements）</span>。</p>
+<h3>参考系</h3>
+<p>我们把<span data-en="référentiel">参考系（référentiel）</span>称为在研究中作为参照的物理系统，它被认为是固定的。我们为其关联一个用于计时的时钟、一个空间原点以及三个参考方向。</p>
+<h3>★ 绝对时间</h3>
+<p>在经典力学中，时间被称为<span data-en="temps absolu">绝对时间（temps absolu）</span>：时间间隔不依赖于测量它们所处的参考系。</p>
+<h3>🕮 惯性原理或牛顿第一定律</h3>
+<p><span data-en="principe d'inertie">惯性原理（principe d'inertie）</span>或<span data-en="première loi de Newton">牛顿第一定律（première loi de Newton）</span>的表述：</p>
+<p>存在一族参考系，称为<span data-en="référentiel galiléen">伽利略参考系（référentiel galiléen）</span>，在这类参考系中，一个孤立的质点作<span data-en="mouvement rectiligne uniforme">匀速直线运动（mouvement rectiligne uniforme）</span>。</p>
+<h4>孤立</h4>
+<p>如果质点在外部不受任何相互作用，则称之为<span data-en="isolé">孤立（isolé）</span>。这是一个在力学中使用的<span data-en="cas limite">极限情况（cas limite）</span>。在物理中，极限情况是一个理想化情形，它通过忽略某些效应来简化对现象的研究。</p>
+<p>实际上，当一个质点与外部之间的相互作用可以被忽略时，就认为它是孤立的。</p>
+<h4>匀速直线运动</h4>
+<p>• 若点 $M$ 在参考系 $R$ 中的轨迹是直线，则它作<span data-en="mouvement rectiligne">直线运动（mouvement rectiligne）</span>。</p>
+<p>• 若点 $M$ 在参考系 $R$ 中的轨迹是直线且速度恒定，则它作匀速直线运动。</p>
+<h3>★ 两个伽利略参考系之间的相对运动</h3>
+<p>伽利略参考系之间彼此作匀速直线平动。</p>
+<h3>★ 关于伽利略参考系的近似</h3>
+<p>只要能忽略某一参考系相对于一个"更大"参考系的运动，就把它视为伽利略参考系。</p>
+<p>几种需要了解的参考系：</p>
+<table>
+<thead>
+<tr>
+<th>参考系</th>
+<th>原点与指向</th>
+<th>适用场景</th>
+<th>成立条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-en="référentiel héliocentrique">日心参考系（référentiel héliocentrique）</span></td>
+<td>原点位于太阳中心，坐标轴指向遥远恒星</td>
+<td>行星的运动</td>
+<td>可忽略太阳在星系中的运动（约 2.3 亿年）</td>
+</tr>
+<tr>
+<td><span data-en="référentiel géocentrique">地心参考系（référentiel géocentrique）</span></td>
+<td>原点位于地球中心，坐标轴指向遥远恒星，不随地球转动</td>
+<td>卫星（月球…）的运动</td>
+<td>可忽略地球绕太阳的运动（1 年）</td>
+</tr>
+<tr>
+<td><span data-en="référentiel terrestre">地球参考系（référentiel terrestre）</span></td>
+<td>与地球固连，并随其转动</td>
+<td>日常生活的运动</td>
+<td>可忽略地球的自转（24 小时）</td>
+</tr>
+</tbody>
+</table>
+<h2>III 运动学矢量</h2>
+<h3>坐标架与笛卡尔坐标架</h3>
+<p>坐标架是用于描述运动的几何工具。</p>
+<p><span data-en="repère cartésien">笛卡尔坐标架（repère cartésien）</span>由原点 $O$ 和一个由单位矢量 $(\vec{e_x}, \vec{e_y}, \vec{e_z})$ 构成的<span data-en="base orthonormée directe">直接标准正交基（base orthonormée directe）</span>组成。笛卡尔坐标架相对于研究参考系是固定的。</p>
+<p>📌 有时也用记号 $(\vec{e_x}, \vec{e_y}, \vec{e_z})$ 或 $(\vec{u_x}, \vec{u_y}, \vec{u_z})$ 表示基矢量。</p>
+<h4>直接标准正交基（BOND）</h4>
+<p>• 基：每个维度包含一个矢量、且足以覆盖整个空间的集合。三维下需要 3 个矢量：$\vec{e_x}, \vec{e_y}, \vec{e_z}$。</p>
+<p>• 正交：矢量两两正交，它们的标量积为零。</p>
+<p>• 归一：矢量的范数等于 1。</p>
+<p>• 直接（右手系）：已知 $\vec{e_x}$ 和 $\vec{e_y}$，根据<span data-en="règle de la main droite">右手定则（règle de la main droite）</span>确定 $\vec{e_z}$。</p>
+<h3>坐标与范数</h3>
+<p>我们把矢量 $\vec{V}$ 在矢量 $\vec{e_x}$ 上的<span data-en="projection">投影（projection）</span>定义为标量积 $\vec{V}\cdot\vec{e_x}$。这定义了沿 $\vec{e_x}$ 的<span data-en="coordonnée">坐标（coordonnée）</span>：$V_x$。矢量 $\vec{V}$ 的<span data-en="norme">范数（norme）</span>可由坐标导出：</p>
+<p>$$V = \|\vec{V}\| = \sqrt{V_x^{2} + V_y^{2} + V_z^{2}}$$</p>
+<p>设 $O$ 是研究参考系 $R$ 中的一个固定点，$M$ 是一个运动点。</p>
+<p>$$\langle \vec{v} \rangle(t) = \frac{\Delta\overrightarrow{OM}}{\Delta t}, \qquad \vec{v}(t) = \frac{\mathrm{d}\overrightarrow{OM}}{\mathrm{d}t}$$</p>
+<h3>位置矢量</h3>
+<p>矢量 $\overrightarrow{OM}$ 就是<span data-en="vecteur position">位置矢量（vecteur position）</span>。</p>
+<h3>基本位移（元位移）</h3>
+<p><span data-en="déplacement élémentaire">基本位移（déplacement élémentaire）</span>或无限小位移为：</p>
+<p>$$\mathrm{d}\overrightarrow{OM} = \overrightarrow{OM}(t + \mathrm{d}t) - \overrightarrow{OM}(t) = \overrightarrow{M(t)M(t + \mathrm{d}t)}$$</p>
+<h3>速度矢量</h3>
+<p><span data-en="vecteur vitesse">速度矢量（vecteur vitesse）</span>（瞬时速度）为：</p>
+<p>$$\vec{v}(t) = \lim_{\Delta t \to 0} \frac{\Delta\overrightarrow{OM}}{\Delta t} = \frac{\mathrm{d}\overrightarrow{OM}}{\mathrm{d}t}$$</p>
+<h3>加速度矢量</h3>
+<p><span data-en="vecteur accélération">加速度矢量（vecteur accélération）</span>（瞬时加速度）为：</p>
+<p>$$\vec{a}(t) = \frac{\mathrm{d}\vec{v}}{\mathrm{d}t} = \frac{\mathrm{d}^{2}\overrightarrow{OM}}{\mathrm{d}t^{2}}$$</p>
+<p>✏ 学会用笛卡尔坐标写出位置矢量、速度矢量和加速度矢量。</p>
+<p>📌 在力学中，对时间求导常采用下面这种记号：$\dot{x} = \frac{\mathrm{d}x}{\mathrm{d}t}$，$\dot{y} = \frac{\mathrm{d}y}{\mathrm{d}t}$，$\dot{z} = \frac{\mathrm{d}z}{\mathrm{d}t}$。</p>
+<h3>★ 基本位移与瞬时速度的性质</h3>
+<p>• 基本位移与<span data-en="trajectoire">轨迹（trajectoire）</span>相切。</p>
+<p>• 速度 $\vec{v}$ 与基本位移 $\mathrm{d}\overrightarrow{OM}$ 共线。</p>
+<p>• 速度 $\vec{v}$ 与轨迹相切。</p>
+<p>• 速度 $\vec{v}$ 的方向与运动方向一致。</p>
+<h3>运动的术语</h3>
+<p>• 若速度矢量的范数增大，运动称为<span data-en="mouvement accéléré">加速运动（mouvement accéléré）</span>：</p>
+<p>$$\text{加速运动} \iff \|\vec{v}\| \text{ 增大} \iff \frac{\mathrm{d}\|\vec{v}\|}{\mathrm{d}t} > 0$$</p>
+<p>• 若速度矢量的范数减小，运动称为<span data-en="mouvement décéléré">减速运动（mouvement décéléré）</span>：</p>
+<p>$$\text{减速运动} \iff \|\vec{v}\| \text{ 减小} \iff \frac{\mathrm{d}\|\vec{v}\|}{\mathrm{d}t} < 0$$</p>
+<p>• 若速度矢量的范数恒定，运动称为<span data-en="mouvement uniforme">匀速运动（mouvement uniforme）</span>：</p>
+<p>$$\text{匀速运动} \iff \|\vec{v}\| = \text{常数} \iff \frac{\mathrm{d}\|\vec{v}\|}{\mathrm{d}t} = 0$$</p>
+<p>• 若速度的范数随时间成正比增大，运动称为<span data-en="mouvement uniformément accéléré">匀加速运动（mouvement uniformément accéléré）</span>，即</p>
+<p>$$\|\vec{v}\| = at + b, \quad a > 0,\ b \ge 0$$</p>
+<p>• 若速度的范数随时间成正比减小，运动称为<span data-en="mouvement uniformément décéléré">匀减速运动（mouvement uniformément décéléré）</span>，即</p>
+<p>$$\|\vec{v}\| = -at + b, \quad a > 0,\ b \ge 0$$</p>
+<h3>方法：分离变量法</h3>
+<p><span data-en="séparation des variables">分离变量法（séparation des variables）</span>能用来求解一阶<span data-en="équation différentielle">微分方程（équation différentielle）</span>。</p>
+<p>考虑如下形式的微分方程：</p>
+<p>$$\frac{\mathrm{d}y}{\mathrm{d}u} = \frac{f(u)}{g(y)}$$</p>
+<p>并给出条件：当 $u = u_0$ 时 $y = y_0$。</p>
+<p>该方法就是先把变量 $u$ 和 $y$ 分离到等号两侧，然后再积分。写成：</p>
+<p>$$\mathrm{d}y \cdot g(y) = \mathrm{d}u \cdot f(u)$$</p>
+<p>再进行积分：</p>
+<p>$$\int_{Y=y_0}^{y} g(Y)\,\mathrm{d}Y = \int_{U=u_0}^{u} f(U)\,\mathrm{d}U$$</p>
+<p>接下来只需计算这些积分即可！</p>
+<h2>重要术语概念汇总表</h2>
+<table>
+<thead>
+<tr>
+<th>外文术语</th>
+<th>中文译名</th>
+<th>简要解释（根据上下文推断）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>solide</td>
+<td>刚体</td>
+<td>各点之间保持恒定距离的物体，是力学研究的基本对象</td>
+</tr>
+<tr>
+<td>point matériel</td>
+<td>质点</td>
+<td>有质量、无体积的几何点，代表被研究的刚体</td>
+</tr>
+<tr>
+<td>barycentre / centre de masse</td>
+<td>质心 / 质量中心</td>
+<td>代表刚体的那个质点</td>
+</tr>
+<tr>
+<td>relativité des mouvements</td>
+<td>运动的相对性</td>
+<td>运动随观察参考系不同而不同</td>
+</tr>
+<tr>
+<td>référentiel</td>
+<td>参考系</td>
+<td>研究运动时作为固定的参照物理系统</td>
+</tr>
+<tr>
+<td>temps absolu</td>
+<td>绝对时间</td>
+<td>经典力学中不随参考系改变的客观时间</td>
+</tr>
+<tr>
+<td>principe d'inertie</td>
+<td>惯性原理</td>
+<td>惯性系中孤立质点作匀速直线运动的规律</td>
+</tr>
+<tr>
+<td>première loi de Newton</td>
+<td>牛顿第一定律</td>
+<td>即惯性原理，牛顿运动定律之一</td>
+</tr>
+<tr>
+<td>référentiel galiléen</td>
+<td>伽利略参考系</td>
+<td>惯性参考系，质点在此系中满足惯性原理</td>
+</tr>
+<tr>
+<td>mouvement rectiligne uniforme</td>
+<td>匀速直线运动</td>
+<td>轨迹为直线且速度恒定的运动</td>
+</tr>
+<tr>
+<td>isolé</td>
+<td>孤立</td>
+<td>与外部无相互作用的状态</td>
+</tr>
+<tr>
+<td>cas limite</td>
+<td>极限情况</td>
+<td>忽略某些效应的理想化情形</td>
+</tr>
+<tr>
+<td>mouvement rectiligne</td>
+<td>直线运动</td>
+<td>轨迹为直线的运动</td>
+</tr>
+<tr>
+<td>référentiel héliocentrique</td>
+<td>日心参考系</td>
+<td>以太阳为原点的参考系</td>
+</tr>
+<tr>
+<td>référentiel géocentrique</td>
+<td>地心参考系</td>
+<td>以地球中心为原点的参考系</td>
+</tr>
+<tr>
+<td>référentiel terrestre</td>
+<td>地球参考系</td>
+<td>与地球固连并随之转动的参考系</td>
+</tr>
+<tr>
+<td>repère cartésien</td>
+<td>笛卡尔坐标架</td>
+<td>由原点与直接标准正交基构成的坐标系</td>
+</tr>
+<tr>
+<td>base orthonormée directe</td>
+<td>直接标准正交基</td>
+<td>正交、归一且满足右手法则的基</td>
+</tr>
+<tr>
+<td>règle de la main droite</td>
+<td>右手定则</td>
+<td>由两个基矢确定第三个基矢方向的法则</td>
+</tr>
+<tr>
+<td>projection</td>
+<td>投影</td>
+<td>矢量在某方向上的标量积分量</td>
+</tr>
+<tr>
+<td>coordonnée</td>
+<td>坐标</td>
+<td>矢量在轴上投影得到的分量</td>
+</tr>
+<tr>
+<td>norme</td>
+<td>范数</td>
+<td>矢量的长度（模）</td>
+</tr>
+<tr>
+<td>vecteur position</td>
+<td>位置矢量</td>
+<td>从原点指向质点的矢量</td>
+</tr>
+<tr>
+<td>déplacement élémentaire</td>
+<td>基本位移（元位移）</td>
+<td>无限小时间内的位移</td>
+</tr>
+<tr>
+<td>vecteur vitesse</td>
+<td>速度矢量</td>
+<td>位置矢量对时间的导数</td>
+</tr>
+<tr>
+<td>vecteur accélération</td>
+<td>加速度矢量</td>
+<td>速度矢量对时间的导数</td>
+</tr>
+<tr>
+<td>trajectoire</td>
+<td>轨迹</td>
+<td>质点在空间运动所走的路径线</td>
+</tr>
+<tr>
+<td>mouvement accéléré</td>
+<td>加速运动</td>
+<td>速度范数随时间增大的运动</td>
+</tr>
+<tr>
+<td>mouvement décéléré</td>
+<td>减速运动</td>
+<td>速度范数随时间减小的运动</td>
+</tr>
+<tr>
+<td>mouvement uniforme</td>
+<td>匀速运动</td>
+<td>速度范数保持恒定的运动</td>
+</tr>
+<tr>
+<td>mouvement uniformément accéléré</td>
+<td>匀加速运动</td>
+<td>速度范数随时间正比增大的运动</td>
+</tr>
+<tr>
+<td>mouvement uniformément décéléré</td>
+<td>匀减速运动</td>
+<td>速度范数随时间正比减小的运动</td>
+</tr>
+<tr>
+<td>séparation des variables</td>
+<td>分离变量法</td>
+<td>将变量分离到等号两侧再积分的求解方法</td>
+</tr>
+<tr>
+<td>équation différentielle</td>
+<td>微分方程</td>
+<td>含有导数（微分）的方程</td>
+</tr>
+<tr>
+<td>vitesse instantanée</td>
+<td>瞬时速度</td>
+<td>某一瞬时的速度</td>
+</tr>
+</tbody>
+</table>
+<!-- DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill -->
+        <footer style="margin-top: 40px; padding-top: 16px; border-top: 2px dashed #d0d7de; text-align: center; color: #8a97a5; font-size: 12px;">
+            欢迎使用 DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill
+        </footer>
+    </main>
+    <aside class="toc-sidebar" id="toc-sidebar">
+        <div class="toc-header">目录</div>
+    </aside>
+</div>
+    <script>
+
+(function () {
+    "use strict";
+    var WATERMARK = "DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill";
+    var SHOW_TABLE = true;
+    var HEADING_SELECTOR = "h1, h2, h3";
+    var HIGHLIGHT = {
+        background: "#fff1d6", padding: "2px 6px", borderRadius: "4px",
+        fontWeight: "600", color: "#8a5a1a", borderBottom: "2px solid #f5b86e"
+    };
+
+    // ===== 1. 术语：暖色高亮；仅正文（非标题内）添加超链接 =====
+    // 括号标注（原文）已在生成 HTML 时自动补全到首次出现的术语上。
+    document.querySelectorAll("span[data-en]").forEach(function (el) {
+        Object.assign(el.style, HIGHLIGHT);
+        var inHeading = el.closest(HEADING_SELECTOR);
+        if (SHOW_TABLE && !inHeading) {
+            var link = document.createElement("a");
+            link.href = "#concept-table";
+            link.style.color = "inherit";
+            link.style.textDecoration = "none";
+            link.style.cursor = "pointer";
+            Object.assign(link.style, HIGHLIGHT);
+            while (el.firstChild) link.appendChild(el.firstChild);
+            el.parentNode.replaceChild(link, el);
+        }
+    });
+
+    // ===== 2. 右侧大纲：章节横线分隔 + 当前阅读位置高亮 =====
+    function buildToc() {
+        var headings = document.querySelectorAll(HEADING_SELECTOR);
+        var sidebar = document.getElementById("toc-sidebar");
+        if (!headings.length || !sidebar) return;
+        var list = document.createElement("ul");
+        list.style.listStyle = "none";
+        list.style.padding = "0";
+        list.style.margin = "0";
+        var firstH2 = true;
+        headings.forEach(function (hd, i) {
+            if (!hd.id) hd.id = "toc-heading-" + i;
+            var li = document.createElement("li");
+            li.className = "toc-item";
+            li.style.margin = "4px 0";
+            li.style.borderRadius = "4px";
+            li.style.transition = "background 0.2s";
+            if (hd.tagName === "H2") {
+                li.style.paddingLeft = "12px";
+                if (!firstH2) {
+                    li.style.borderTop = "1px solid #e3e8ee";
+                    li.style.paddingTop = "8px";
+                    li.style.marginTop = "8px";
+                }
+                firstH2 = false;
+            } else if (hd.tagName === "H3") {
+                li.style.paddingLeft = "26px";
+            }
+            var link = document.createElement("a");
+            link.href = "#" + hd.id;
+            link.textContent = hd.textContent;
+            link.style.textDecoration = "none";
+            link.style.color = "#1a4a8a";
+            link.style.fontSize = "13px";
+            link.style.display = "block";
+            link.style.padding = "3px 8px";
+            link.style.borderRadius = "4px";
+            link.addEventListener("click", function (event) {
+                event.preventDefault();
+                hd.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+            li.appendChild(link);
+            list.appendChild(li);
+        });
+        sidebar.appendChild(list);
+
+        // 滚动时用浅灰半透明色块标记当前阅读章节
+        function updateActive() {
+            var pos = window.scrollY + 140;
+            var idx = -1;
+            headings.forEach(function (hd, i) {
+                if (hd.getBoundingClientRect().top + window.scrollY <= pos) idx = i;
+            });
+            var items = sidebar.querySelectorAll(".toc-item");
+            items.forEach(function (item, i) {
+                item.style.background = (i === idx) ? "rgba(160, 170, 180, 0.30)" : "transparent";
+            });
+        }
+        window.addEventListener("scroll", updateActive, { passive: true });
+        updateActive();
+    }
+
+    // ===== 3. 概念表锚点赋值 =====
+    function assignConceptTable() {
+        if (!SHOW_TABLE) return;
+        var target = null;
+        var heads = document.querySelectorAll("h2, h3");
+        for (var i = 0; i < heads.length; i++) {
+            var text = heads[i].textContent || "";
+            if (text.indexOf("\u6982\u5FF5\u6C47\u603B\u8868") !== -1 || text.indexOf("\u91CD\u8981\u672F\u8BED\u6982\u5FF5") !== -1) {
+                var sib = heads[i].nextElementSibling;
+                while (sib && sib.tagName !== "TABLE") sib = sib.nextElementSibling;
+                if (sib) target = sib;
+                break;
+            }
+        }
+        if (!target) {
+            var tables = document.querySelectorAll("table");
+            if (tables.length) target = tables[tables.length - 1];
+        }
+        if (target) target.id = "concept-table";
+    }
+
+    // ===== 4. 复制劫持水印 =====
+    document.addEventListener("copy", function (event) {
+        try {
+            var selected = window.getSelection ? window.getSelection().toString() : "";
+            if (selected) {
+                event.clipboardData.setData("text/plain", selected + "\n\n\u6B22\u8FCE\u4F7F\u7528 " + WATERMARK);
+                event.preventDefault();
+            }
+        } catch (err) {}
+    });
+
+    // ===== 启动 =====
+    buildToc();
+    assignConceptTable();
+})();
+
+    </script>
+</body>
+</html>

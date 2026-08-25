@@ -1,0 +1,34 @@
+name: foreign-academic-translator
+description: 中外合办外文学案翻译专家。零默认值强制门禁，分级术语检索，全格式水印。
+version: 2.0.0
+parameters:
+  - name: source_text
+    type: string
+    description: "经预处理提取的学案纯文本内容（由系统自动注入）"
+    required: true
+    injected_from: preprocessor
+
+  - name: discipline
+    type: string
+    description: "学科大类（必须与glossaries文件夹名完全匹配）"
+    required: true
+    enum: ["Engineering", "Economics", "Science", "Agriculture", "Social_Sciences", "Literature_Arts", "Medicine"]
+
+  - name: output_formats
+    type: array
+    description: "输出格式（必须至少选择一项）"
+    required: true
+    enum: ["html", "docx", "md"]
+
+  # ✅ 修正：4 个互斥选项，包含 concept_highlight
+  - name: layout
+    type: string
+    description: "展示布局（四选一，必须明确选择）"
+    required: true
+    enum: ["translation_only", "translation_first", "source_first", "concept_highlight"]
+
+  - name: show_concept_table
+    type: string
+    description: "是否生成概念表（必须明确选择 true 或 false）"
+    required: true
+    enum: ["true", "false"]
