@@ -1,0 +1,1064 @@
+﻿ID,英文名稱,中文名稱,圖片,化學式,更新日期
+212956,aroxy;arylox,芳氧基,,ArO-,2012-11-26
+212957,alkoxy,烷氧基,,RO-,2012-11-26
+334713,naphthyridinyl,【口奈】啶基,,N<sub>2</sub>C<sub>8</sub>H<sub>5</sub>－,2012-11-26
+334714,naphthyloxy,萘氧基,,C<sub>10</sub>H<sub>7</sub>O－,2012-11-26
+334715,naphthylmethylidyne,萘次甲基,,C<sub>10</sub>H<sub>7</sub>C≣,2012-11-26
+334716,naphthylmethylene {naphthal},萘亚甲基,,C<sub>10</sub>H<sub>7</sub>CH=,2012-11-26
+334717,naphthylidene,亚二氢萘基,,C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>CH=CHC=,2012-11-26
+334718,naphthylenebisazo,伸萘双偶氮基,,－N=NC<sub>10</sub>H<sub>6</sub>N=N－,2012-11-26
+334719,naphthylene,伸萘基,,－C<sub>10</sub>H<sub>6</sub>－,2012-11-26
+334720,naphthylazo,萘偶氮基,,C<sub>10</sub>H<sub>7</sub>N=N－,2012-11-26
+334721,naphthyl,萘基,,C<sub>10</sub>H<sub>7</sub>－,2012-11-26
+334722,naphthoyloxy,萘甲醯氧基,,C<sub>10</sub>H<sub>7</sub>COO－,2012-11-26
+334723,naphthoxy,萘氧基,,C<sub>10</sub>H<sub>7</sub>O－,2012-11-26
+334724,naphthoyl {naphthalenecarbonyl},萘甲醯基 {萘羰基},,C<sub>10</sub>H<sub>7</sub>CO－,2012-11-26
+334725,"naphtho[2,3-b]thienyl; thiophanthrenyl","萘并[2,3-b]噻吩基",,SC<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+334726,naphthenyl,萘次甲基,,C<sub>10</sub>H<sub>7</sub>C≣,2012-11-26
+334727,naphthalimido,萘二甲醯亚胺基,,C<sub>10</sub>H<sub>6</sub>(CO)<sub>2</sub>N－,2012-11-26
+334728,naphthalenecarbonyl {naphthoyl},萘羰基 {萘甲醯基},,C<sub>10</sub>H<sub>7</sub>CO－,2012-11-26
+334729,naphthaleneazo,萘偶氮基,,C<sub>10</sub>H<sub>7</sub>N=N－,2012-11-26
+334730,naphthal {naphthylmethylene},萘亚甲基,,C<sub>10</sub>H<sub>7</sub>CH=,2012-11-26
+334731,naphthacenyl,稠四苯基,,C<sub>1</sub><sub>8</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+334732,myristyl,肉豆蔻基；十四基,,C<sub>1</sub><sub>4</sub>H<sub>2</sub><sub>9</sub>－,2012-11-26
+334733,myristoyl,肉豆蔻醯基；十四醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>2</sub>CO－,2012-11-26
+334734,myricyl,蜜蜡基；三十基,,C<sub>30</sub>H<sub>6</sub><sub>1</sub>－,2012-11-26
+334735,morpholinyl,【口末】啉基,,NOC<sub>4</sub>H<sub>8</sub>－,2012-11-26
+334736,morpholino,N-【口末】啉基,,C<sub>4</sub>H<sub>8</sub>ON－,2012-11-26
+334737,1-methylvinyl {isopropenyl},1-甲基乙烯基 {异丙烯基},,CH<sub>2</sub>=C(CH<sub>3</sub>)－,2012-11-26
+334738,(methylthio)sulfonyl,(甲硫)磺醯基,,CH<sub>3</sub>SSO<sub>2</sub>－,2012-11-26
+334739,methylthio,甲硫基,,CH<sub>3</sub>S－,2012-11-26
+334740,methylsulfonyl,甲磺醯基,,CH<sub>3</sub>SO<sub>2</sub>－,2012-11-26
+334741,methylsulfonimidoyl,甲磺[醯]亚胺醯基,,CH<sub>3</sub>S(O)(=NH)－,2012-11-26
+334742,methylsulfinylamino,甲亚磺醯胺基,,CH<sub>3</sub>SONH－,2012-11-26
+334743,methylsulfinyl,甲亚磺醯基,,CH<sub>3</sub>SO－,2012-11-26
+334744,methylsulfinohydroximoyl,甲亚磺[醯]肟醯基,,CH<sub>3</sub>S(=NOH)－,2012-11-26
+334745,methylsulfinohydrazonoyl,甲亚磺[醯]腙醯基,,CH<sub>3</sub>S(=NNH<sub>2</sub>)－,2012-11-26
+334746,methylsulfinimidoyl,甲亚磺[醯]亚胺醯基,,CH<sub>3</sub>S(=NH)－,2012-11-26
+334747,2-methylpropenoyl {methacryloyl},2-甲基丙烯醯基 {甲基丙烯醯基},,CH<sub>2</sub>=C(CH<sub>3</sub>)CO－,2012-11-26
+334748,methylol; hydroxymethyl,羟甲基,,HOCH<sub>2</sub>－,2012-11-26
+334749,methylidyne,次甲基,,HC≣,2012-11-26
+334750,5-methylhexyl,5-甲基己基,,(CH<sub>3</sub>)<sub>2</sub>CH(CH<sub>2</sub>)<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+334751,"3,4-methylenedioxybenzoyl {piperonyloyl; heliotropoyl}","3,4-亚甲二氧苯甲醯基 {向日葵醯基}",,"3,4-(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+334752,methylenedioxy,亚甲二氧基,,－OCH<sub>2</sub>O－,2012-11-26
+334753,methylene,亚甲基,,CH<sub>2</sub>=,2012-11-26
+334754,methyldithio,甲二硫基,,CH<sub>3</sub>S<sub>2</sub>－,2012-11-26
+334755,trans-methylbutenedioyl,反-甲基丁烯二醯基,,trans-－COC(CH<sub>3</sub>)CHCO－,2020-09-09
+334756,cis-methylbutenedioyl,顺-甲基丁烯二醯基,,cis-－COC(CH<sub>3</sub>)CHCO－,2020-09-09
+334757,3-methylbutanoyl,3-甲基丁醯基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CO－,2012-11-26
+334758,α-methylbenzyl,α-甲苄基,,C<sub>6</sub>H<sub>5</sub>CH(CH<sub>3</sub>)－,2012-11-26
+334759,methylbenzyl,甲苄基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+334760,methylbenzenecarbonoyl; toluoyl,甲苯甲醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334761,methylazoxy,甲(氧偶氮)基,,CH<sub>3</sub>N(O)N－,2012-11-26
+334762,methylazo,甲偶氮基,,CH<sub>3</sub>N=N－,2012-11-26
+334763,methylamino,甲胺基,,CH<sub>3</sub>NH－,2012-11-26
+334764,methylallyl,甲烯丙基,,CH<sub>2</sub>=C(CH<sub>3</sub>)CH<sub>2</sub>－,2012-11-26
+334765,α-methylacryloyl,α-甲基丙烯醯基,,CH<sub>2</sub>=C(CH<sub>3</sub>)CO－,2012-11-26
+334766,methyl,甲基,,CH<sub>3</sub>－,2012-11-26
+334767,methoxysulfonyl,甲氧磺醯基,,CH<sub>3</sub>OSO<sub>2</sub>－,2012-11-26
+334768,methoxysulfinyl,甲氧亚磺醯基,,CH<sub>3</sub>OSO－,2012-11-26
+334769,o-methoxyphenyl {guaiacyl},邻-甲氧苯基 {愈创木基},,<p>CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>－</p>,2012-11-26
+334770,methoxyphenyl,甲氧苯基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+334771,methoxyimino,甲氧亚胺基,,CH<sub>3</sub>ON=,2012-11-26
+334772,methoxycarbonyl,甲氧羰基,,CH<sub>3</sub>OCO－,2012-11-26
+334773,methoxy(thiosulfonyl),甲氧硫代磺醯基,,CH<sub>3</sub>OS<sub>2</sub>O－,2012-11-26
+334774,methoxybenzylidene {anisal; anisylidene},甲氧亚【草卞】基{大茴香亚甲基；甲氧苯亚甲基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+334775,p-methoxybenzylidene,对甲氧亚苄基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+334776,p-methoxybenzyl,对甲氧苄基；对甲氧苯甲基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+334777,methoxybenzoyl {anisoyl},甲氧苯甲醯基 {大茴香醯基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334778,methoxyanilino {anisidino},甲氧苯胺基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>NH－,2012-11-26
+334779,methoxy,甲氧基,,CH<sub>3</sub>O－,2012-11-26
+334780,methoxalyl,甲氧草醯基,,CH<sub>3</sub>OOCCO－,2012-11-26
+334781,methionyl,甲硫胺醯基,,CH<sub>3</sub>S(CH<sub>2</sub>)<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+334782,methenyl; methylidyne; methine,次甲基,,HC≣,2012-11-26
+334783,methene; methylene,亚甲基,,H<sub>2</sub>C=,2012-11-26
+334784,methanoyl; formyl,甲醯基,,HCO－,2012-11-26
+334785,methanesulfinyl,甲亚磺醯基,,CH<sub>3</sub>SO－,2012-11-26
+334786,methanesulfinamido,甲亚磺醯胺基,,CH<sub>3</sub>SONH－,2012-11-26
+334787,methaneazoxy,甲(氧偶氮)基,,CH<sub>3</sub>N(O)N－,2012-11-26
+334788,methaneazo,甲偶氮基,,CH<sub>3</sub>N=N－,2012-11-26
+334789,methallyl; 2-methylallyl,甲基烯丙基,,CH<sub>2</sub>=C(CH<sub>3</sub>)CH<sub>2</sub>－,2012-11-26
+334790,methacryloyl,甲基丙烯醯基,,CH<sub>2</sub>=C(CH<sub>3</sub>)CO－,2012-11-26
+334791,metanilyl,间胺苯磺醯基,,H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>－,2012-11-26
+334792,mesyl; methanesulfonyl,甲磺醯基,,CH<sub>3</sub>SO<sub>2</sub>－,2012-11-26
+334793,mesoxalyl,中草醯基,,－COCOCO－,2012-11-26
+334794,α-mesityl,"α-【草米】基；3,5-二甲苯甲基；3,5-二甲苄基",,(CH<sub>3</sub>)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+334795,mesoxalo,酸中草醯基,,HOOCCOCO－,2012-11-26
+334796,mesityl,"【草米】基；2,4,6-三甲苯基",,(CH<sub>3</sub>)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+334797,mesaconoyl,中康醯基,,－COC(CH<sub>3</sub>)=CHCO－,2012-11-26
+334798,mercapto,巯基；氢硫基,,HS－,2012-11-26
+334799,menthyl,【草孟】基,,CH<sub>3</sub>CH(CH<sub>2</sub>)<sub>2</sub>CH(CH<sub>3</sub>)<sub>2</sub>CH<sub>2</sub>CH－,2012-11-26
+334800,menthenyl,【艹孟】烯基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+334801,melissyl,蜜蜡基；三十基,,C<sub>30</sub>H<sub>6</sub><sub>1</sub>－,2012-11-26
+334802,mandeloyl,苦杏仁醯基；苯乙醇醯基,,C<sub>6</sub>H<sub>5</sub>CH(OH)CO－,2012-11-26
+334803,maloyl {hydroxybutanedioyl},苹果醯基 {羟丁二醯基},,－OCCH(OH)CH<sub>2</sub>CO－,2012-11-26
+334804,maloyl,苹果醯基；羟丁二醯基,,－COCH(OH)CH<sub>2</sub>CO－,2012-11-26
+334805,malonyl,丙二醯基,,－COCH<sub>2</sub>CO－,2012-11-26
+334806,maleoyl,顺丁烯二醯基,,－COCH=CHCO－,2012-11-26
+334807,lysyl,离胺醯基,,H<sub>2</sub>N(CH<sub>2</sub>)<sub>4</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+334808,linalyl,沉香基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+334809,leucyl,白胺醯基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+334810,lauryl {dodecyl},月桂基 {十二基},,C<sub>1</sub><sub>2</sub>H<sub>2</sub><sub>5</sub>－,2012-11-26
+334811,lauroyl,月桂醯基；十二醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>10</sub>CO－,2012-11-26
+334812,lanthionyl,羊毛硫胺醯基,,－COCH(NH<sub>2</sub>)CH<sub>2</sub>SCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+334813,lactoyl; lactyl {2-hydroxypropanoyl},乳醯基 {2-羟丙醯基},,CH<sub>3</sub>CH(OH)CO－,2012-11-26
+334814,lactoyl,乳醯基,,CH<sub>3</sub>CH(OH)CO－,2012-11-26
+334815,keto,酮基,,O=C<,2012-11-26
+334816,isoxazolyl,异【口咢】唑基,,C<sub>3</sub>H<sub>2</sub>NO－,2012-11-26
+334817,isoviolanthrenyl,异【艹法】基,,C<sub>3</sub><sub>4</sub>H<sub>1</sub><sub>9</sub>－,2012-11-26
+334818,isovaleryl,异戊醯基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CO－,2012-11-26
+334819,isoureido,异脲基,,NH=C(OH)NH－,2012-11-26
+334820,isothioureido,异硫脲基,,NH=C(SH)NH－,2012-11-26
+334821,isothiocyano,异硫氰酸基,,S=C=N－,2012-11-26
+334822,isothiocyanato,异硫氰基,,SCN－,2012-11-26
+334823,isothiazolyl,异噻唑基,,SNC<sub>3</sub>H<sub>2</sub>－,2012-11-26
+334824,isosemicarbazido,异半卡肼,,H<sub>2</sub>NNHC(OH)=N－,2012-11-26
+334825,isoselenocyanato,异硒氰基,,SeCN－,2012-11-26
+334826,isoquinolyl,异喹啉基,,NC<sub>9</sub>H<sub>6</sub>－,2012-11-26
+334827,isopropylphenyl,异丙苯基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+334828,isopropylidene,亚异丙基,,(CH<sub>3</sub>)<sub>2</sub>C=,2012-11-26
+334829,isopropylbenzylidene,异丙亚苄基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+334830,isopropylbenzyl,异丙苄基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+334831,isopropylbenzoyl,异丙苯甲醯基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334832,isopropyl,异丙基,,(CH<sub>3</sub>)<sub>2</sub>CH－,2012-11-26
+334833,isopropoxy,异丙氧基,,(CH<sub>3</sub>)<sub>2</sub>CHO－,2012-11-26
+334834,isopropenyl,异丙烯基,,CH<sub>2</sub>=C(CH<sub>3</sub>)－,2012-11-26
+334835,isoprenyl,异平基,,(CH<sub>3</sub>)<sub>2</sub>CCHCH<sub>2</sub>－,2012-11-26
+334836,isophthalylidene,亚异酞基 {间苯二亚甲基},,=CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+334837,isophthaloyl,异酞醯基 {间苯二甲醯基},,－OCC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334838,isopentyloxy,异戊氧基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>O－,2012-11-26
+334839,isopentylidyne,次异戊基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>C≡,2012-11-26
+334840,isopentyl,异戊基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+334841,isopentylidene,亚异戊基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH=,2012-11-26
+334842,isonitroso {oxyamino; oximino},异亚硝基 {羟亚胺基},,HON=,2012-11-26
+334843,isonitroso,异亚硝基,,HON=,2012-11-26
+334844,isonitro {aci-nitro},异硝基 {酸硝基},,HOON=,2012-11-26
+334845,isonicotinoyl,异烟碱醯基,,NC<sub>5</sub>H<sub>4</sub>CO－,2012-11-26
+334846,isoleucyl,异白胺醯基,,C<sub>4</sub>H<sub>9</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+334847,isoindolyl,异吲哚基,,NC<sub>8</sub>H<sub>6</sub>－,2012-11-26
+334848,isoindolinyl,异二氢吲哚基；异吲哚啉基,,NC<sub>8</sub>H<sub>8</sub>－,2012-11-26
+334849,isohexylidyne,次异己基,,(CH<sub>3</sub>)<sub>2</sub>CH(CH<sub>2</sub>)<sub>2</sub>C≡,2012-11-26
+334850,isohexylidene,亚异己基,,(CH<sub>3</sub>)<sub>2</sub>CH(CH<sub>2</sub>)<sub>2</sub>CH=,2012-11-26
+334851,isocyano,异氰基,,CN－,2012-11-26
+334852,isohexyl,异己基,,(CH<sub>3</sub>)<sub>2</sub>CH(CH<sub>2</sub>)<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+334853,isocyanato,异氰酸基,,O=C=N－,2012-11-26
+334854,isocumarinyl,异香豆素基,,O<sub>2</sub>C<sub>7</sub>H<sub>5</sub>－,2012-11-26
+334855,isocrotonoyl,异巴豆醯基；顺丁烯醯基,,cis-CH<sub>3</sub>C=CCO－,2012-11-26
+334856,isocoumarinyl,异香豆素基,,O<sub>2</sub>C<sub>9</sub>H<sub>5</sub>－,2012-11-26
+334857,isochromanyl,异【口克】基,,OC<sub>7</sub>H<sub>9</sub>－,2012-11-26
+334858,isocarbonohydrazido,异卡肼基,,H<sub>2</sub>NN=C(OH)NHNH－,2012-11-26
+334859,isobutyryl,异丁醯基,,(CH<sub>3</sub>)<sub>2</sub>CHCO－,2012-11-26
+334860,isobutylidyne,次异丁基,,(CH<sub>3</sub>)<sub>2</sub>CHC≡,2012-11-26
+334861,isobutylidene,亚异丁基,,(CH<sub>3</sub>)<sub>2</sub>CHCH=,2012-11-26
+334862,isobutylene,伸异丁基,,－C<sub>4</sub>H<sub>8</sub>－,2012-11-26
+334863,isobutyl,异丁基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>－,2012-11-26
+334864,isobutoxy,异丁氧基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>O－,2012-11-26
+334865,isobutenyl,异丁烯基,,(CH<sub>3</sub>)<sub>2</sub>C=CH－,2012-11-26
+334866,isobornyl,异【草伯】基 {异莰基},,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+334867,isobenzofuranyl,异苯并呋喃基,,OC<sub>8</sub>H<sub>5</sub>－,2012-11-26
+334868,isoamylidene,亚异戊基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH=,2012-11-26
+334869,isoamylene,伸异戊基,,－C<sub>5</sub>H<sub>10</sub>－,2012-11-26
+334870,isoamyl,异戊基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+334871,isoamoxy,异戊氧基,,(CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>O－,2012-11-26
+334872,isoallyl {1-propenyl},异烯丙基 {1-丙烯基},,CH<sub>3</sub>CH=CH－,2012-11-26
+334873,iodyl,二氧碘基,,O<sub>2</sub>I－,2012-11-26
+334874,iodoxy,二氧碘基,,O<sub>2</sub>I－,2012-11-26
+334875,iodosyl,氧碘基,,OI－,2012-11-26
+334876,iodoso,氧碘基,,OI－,2012-11-26
+334877,iodonio,氢碘基,,HI<sup>+</sup>－,2012-11-26
+334878,iodoformyl,碘甲醯基；碘羰基,,ICO－,2012-11-26
+334879,iodo,碘基,,I－,2012-11-26
+334880,indolyl,吲哚基,,NC<sub>8</sub>H<sub>6</sub>－,2012-11-26
+334881,3-indolinylidene,3-亚吲哚啉基,,nan,2012-11-26
+334882,indolinylidene,亚吲哚啉基；亚二氢吲哚基,,NC<sub>8</sub>H<sub>7</sub>=,2012-11-26
+334883,indolinyl,吲哚啉基；二氢吲哚基,,NC<sub>8</sub>H<sub>8</sub>－,2012-11-26
+334884,indenyl,茚基,,C<sub>9</sub>H<sub>7</sub>－,2012-11-26
+334885,indazolyl,吲唑基,,C<sub>7</sub>H<sub>5</sub>N<sub>2</sub>－,2012-11-26
+334886,indanyl,二氢茚基,,C<sub>9</sub>H<sub>9</sub>－,2012-11-26
+334887,indacenyl,二环戊二烯并苯基,,C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+334888,iminomethylamino,亚胺甲胺基,,HN=CHNH－,2012-11-26
+334889,imino,亚胺基,,HN<,2012-11-26
+334890,imido,亚胺基,,HN<,2012-11-26
+334891,imidazolyl,咪唑基,,C<sub>3</sub>H<sub>3</sub>N<sub>2</sub>－,2012-11-26
+334892,imidazolinyl,咪唑啉基；二氢咪唑基,,C<sub>3</sub>H<sub>5</sub>N<sub>2</sub>－,2012-11-26
+334893,imidazolidyl,咪唑啶基；四氢咪唑基,,C<sub>3</sub>H<sub>7</sub>N<sub>2</sub>－,2012-11-26
+334894,imidazolidinyl,四氢咪唑基；咪唑啶基,,C<sub>3</sub>H<sub>7</sub>N<sub>2</sub>－,2012-11-26
+334895,icosyl,二十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+334896,hydroxypropanedioyl; tartronoyl,羟丙二醯基,,－OCCH(OH)CO－,2012-11-26
+334897,hydroxymethyl,羟甲基,,HOCH<sub>2</sub>－,2012-11-26
+334898,hydroxyl {hydroxyl},羟基,,HO－,2012-11-26
+334899,hydroxyethanoyl,羟乙醯基 ,,HOCH<sub>2</sub>CO－,2012-11-26
+334900,2-hydroxypropanoyl {lactoyl},羟丙醯基 {乳醯基},,CH<sub>3</sub>CH(OH)CO－,2012-11-26
+334901,2-hydroxy-3-methoxybenzoyl {vanilloyl},2-羟-3-甲氧苯甲醯基；2-羟-3-甲氧苄醯基 {香草醯基},,HOC<sub>6</sub>H<sub>3</sub>(OCH<sub>3</sub>)CO－,2012-11-26
+334902,hydroxybutanedioyl {maloyl},羟丁二醯基 {苹果醯基},,－OCCH(OH)CH<sub>2</sub>CO－,2012-11-26
+334903,2-hydroxybenzylidene {salicylidene},2-羟亚苄基 {亚柳基},,2-HOC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+334904,2-hydroxybenzyl {salicyl},2-羟苄基 {柳基},,2-HOC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+334905,p-hydroxybenzoyl,对羟苯甲醯基；对羟苄醯基,,p-HOC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334906,o-hydroxybenzoyl {salicyloyl},邻-羟苯甲醯基；邻-羟苄醯基 {柳醯基},,<p>o-HOC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+334907,m-hydroxybenzoyl,间羟苯甲醯基；间羟苄醯基,,m-HOC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+334908,hydroxyamino,羟胺基,,HONH－,2012-11-26
+334909,hydroxy {hydroxyl},羟基,,HO－,2012-11-26
+334910,hydroximino,羟亚胺基,,HON<,2012-11-26
+334911,hydroseleno,氢硒基,,HSe－,2012-11-26
+334912,hydroperoxy,氢过氧基,,HOO－,2012-11-26
+334913,hydrocinnamyl,氢桂皮基 {3-苯丙基},,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+334914,hydrocinnamoyl,氢桂皮醯基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+334915,hydrazono,亚肼基,,H<sub>2</sub>NN=,2012-11-26
+334916,hydrazo,伸肼基；氢偶氮基,,－NHNH－,2012-11-26
+334917,hydrazino,肼基,,H<sub>2</sub>NNH－,2012-11-26
+358410,hydrazi,环肼基,,－NHNH－,2012-11-26
+358411,hydratropoyl,氢阿托醯基；氢龙葵醯基 {2-苯丙醯基},,C<sub>6</sub>H<sub>5</sub>CH(CH<sub>3</sub>)CO－,2012-11-26
+358412,hydnocarpyl,大风子基,,C<sub>5</sub>H<sub>7</sub>(CH<sub>2</sub>)<sub>10</sub>CH<sub>2</sub>－,2012-11-26
+358413,hydnocarpoyl,大风子醯基,,C<sub>5</sub>H<sub>7</sub>(CH<sub>2</sub>)<sub>10</sub>CO－,2012-11-26
+358414,hydantoyl,脲乙醯基,,H<sub>2</sub>NCONHCH<sub>2</sub>CO－,2012-11-26
+358415,"homoveratryl {3,4-dimethoxyphenethyl}","升藜芦基 {3,4-二甲氧苯乙基}",,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358416,"homoveratroyl {3,4-dimethoxyphenylacetyl}","升藜芦醯基 {3,4-二甲氧苯乙醯基}",,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>CO－,2012-11-26
+358417,homoseryl,高丝胺醯基,,HOCH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358418,"homopiperonyl {3,4-methylenedioxyphenethyl}","升胡椒基 {3,4-亚甲二氧苯乙基}",,(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358419,homocysteinyl,高半胱胺醯基,,HSCH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358420,histidyl,组胺醯基,,C<sub>4</sub>H<sub>5</sub>N<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358421,hippuryl {hippuroyl},马尿醯基,,C<sub>6</sub>H<sub>5</sub>CONHCH<sub>2</sub>CO－,2012-11-26
+358422,hippuroyl {hippuryl},马尿醯基,,C<sub>6</sub>H<sub>5</sub>CONHCH<sub>2</sub>CO－,2012-11-26
+358423,hexyloxy,己氧基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>O－,2012-11-26
+358424,hexylidyne,次己基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>C≣,2012-11-26
+358425,hexylidene,亚己基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>CH=,2012-11-26
+358426,n-hexyl,正己基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+358427,hexyl,己基,,C<sub>6</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+358428,hexenoyl,己烯醯基,,C<sub>5</sub>H<sub>9</sub>CO－,2012-11-26
+358429,hexaphenyl,异稠六苯基,,C<sub>2</sub><sub>6</sub>H<sub>1</sub><sub>5</sub>－,2012-11-26
+358430,hexanoylamino,己醯胺基,,C<sub>5</sub>H<sub>1</sub><sub>1</sub>CONH－,2012-11-26
+358431,hexanoyl,己醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>CO－,2012-11-26
+358432,hexanedioyl,己二醯基,,－CO(CH<sub>2</sub>)<sub>4</sub>CO－,2012-11-26
+358433,hexanamido,己醯胺基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>CONH－,2012-11-26
+358434,hexamethylene,"六亚甲基 {1,6伸己基}",,－(CH<sub>2</sub>)<sub>6</sub>－,2012-11-26
+358435,hexadecyl,十六基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>4</sub>CH<sub>2</sub>－,2012-11-26
+358436,hexadecanoyl {palmitoyl},十六醯基 {软脂醯基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>4</sub>CO－,2012-11-26
+358437,hexacosyl,二十六基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub><sub>4</sub>CH<sub>2</sub>－,2012-11-26
+358438,hexacontyl,六十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+358439,hexacenyl,稠六苯基,,C<sub>2</sub><sub>6</sub>H<sub>1</sub><sub>5</sub>－,2012-11-26
+358440,n-heptyl {heptyl},正庚基 {庚基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>CH<sub>2</sub>－,2012-11-26
+358441,heptyl,庚基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>CH<sub>2</sub>－,2012-11-26
+358442,heptaphenyl,异稠七苯基,,C<sub>30</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358443,heptanoyl {enanthyl},庚醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>CO－,2012-11-26
+358444,heptanedioyl,庚二醯基,,－OC(CH<sub>2</sub>)<sub>5</sub>CO－,2012-11-26
+358445,heptanamido,庚醯胺基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>CONH－,2012-11-26
+358446,heptalenyl,并环庚三烯基,,C<sub>1</sub><sub>2</sub>H<sub>9</sub>－,2012-11-26
+358447,heptadecyl,十七基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>5</sub>CH<sub>2</sub>－,2012-11-26
+358448,heptadecanoyl,十七醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>5</sub>CO－,2012-11-26
+358449,heptacosyl,二十七基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub><sub>5</sub>CH<sub>2</sub>－,2012-11-26
+358450,heptacontyl,七十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>6</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+358451,heptacenyl,稠七苯基,,C<sub>30</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358452,hentriacontyl,三十一基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub><sub>9</sub>CH<sub>2</sub>－,2012-11-26
+358453,heneicosyl,二十一基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>9</sub>CH<sub>2</sub>－,2012-11-26
+358454,hendecyl {undecyl},十一基,,C<sub>1</sub><sub>1</sub>H<sub>2</sub><sub>3</sub>－,2012-11-26
+358455,hectyl,一百基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>9</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+358456,guanyl {amidino},甲脒基,,H<sub>2</sub>NC(=NH)－,2012-11-26
+358457,guanyl,甲脒基,,H<sub>2</sub>NC(=NH)－,2012-11-26
+358458,guanido,胍基,,H<sub>2</sub>NC(=NH)NH－,2012-11-26
+358459,guanidino,胍基,,H<sub>2</sub>NC(=NH)NH－,2012-11-26
+358460,guaiacyl {o-methoxyphenyl},愈创木基 {邻-甲氧苯基},,<p>CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>－</p>,2012-11-26
+358461,glyoxylyl,乙醛醯基,,HCOCO－,2012-11-26
+358462,glyoxyloyl,乙醛醯基,,HCOCO－,2012-11-26
+358463,glyoxyl,乙醛醯基,,HCOCO－,2012-11-26
+358464,glycylamino,甘胺醯胺基,,H<sub>2</sub>NCH<sub>2</sub>CONH－,2012-11-26
+358465,glycyl {aminoacetyl},甘胺醯基 {胺乙醯基},,H<sub>2</sub>NCH<sub>2</sub>CO－,2012-11-26
+358466,glycolyl {glycoloyl},羟乙醯基；乙醇醯基,,HOCH<sub>2</sub>CO－,2012-11-26
+358467,glycoloyl,羟乙醯基；乙醇醯基,,HOCH<sub>2</sub>CO－,2012-11-26
+358468,glycidyl,环氧丙基,,(OCH<sub>2</sub>CH)CH<sub>2</sub>－,2012-11-26
+358469,"glyceroyl {2,3-dihydroxypropanoyl}","甘油醯基 {2,3-二羟丙醯基}",,CH<sub>2</sub>(OH)CH(OH)CO－,2012-11-26
+358470,glutaryl,戊二醯基,,－CO(CH<sub>2</sub>)<sub>3</sub>CO－,2012-11-26
+358471,γ-glutamyl,γ-麸胺醯基,,HOOCCH(NH<sub>2</sub>)(CH<sub>2</sub>)<sub>2</sub>CO－,2012-11-26
+358472,α-glutamyl,α-麸胺醯基,,HOOC(CH<sub>2</sub>)<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358473,glutamoyl,麸胺醯基,,－COCH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358474,glutaminyl,麸醯胺醯基,,H<sub>2</sub>NCOCH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358475,glucosyl,葡[萄糖]苷基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>O<sub>5</sub>－,2012-11-26
+358476,geranyl,香叶[草]基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358477,galloyl ,五倍子醯基；没食子醯基,,"3,4,5-(HO)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>CO－",2012-11-26
+358478,furylidene,亚二氢呋喃基,,CH<sub>2</sub>OCH=CHC=,2012-11-26
+358479,3-furylmethyl,3-呋喃甲基,,C<sub>4</sub>H<sub>3</sub>OCH<sub>2</sub>－,2012-11-26
+358480,furyl,呋喃基,,C<sub>4</sub>H<sub>3</sub>O－,2012-11-26
+358481,2-furoyl {pyromucyl},2-呋喃甲醯基；糠醯基 {焦黏醯基},,OCH=CHCH=CCO－,2012-11-26
+358482,furfurylidene,2-呋喃亚甲基；亚糠基,,C<sub>4</sub>H<sub>3</sub>OCH=,2012-11-26
+358483,furfuryl,糠基；2-呋喃甲基,,OCH=CHCH=CCH<sub>2</sub>－,2012-11-26
+358484,furazanyl,呋呫基；呋吖基,,N<sub>2</sub>OC<sub>2</sub>H－,2012-11-26
+358485,furancarbonyl; furoyl,呋喃甲醯基,,OC<sub>4</sub>H<sub>3</sub>CO－,2012-11-26
+358486,fumaroyl {fumaryl},延胡索醯基；反丁烯二醯基,,－COCH=CHCO－,2012-11-26
+358487,fumaryl {fumaroyl},延胡索醯基；反丁烯二醯基,,－COCH=CHCO－,2012-11-26
+358488,formyloxy,甲醯氧基,,HCOO－,2012-11-26
+358489,formylimino,甲醯亚胺基,,HCON=,2012-11-26
+358490,formylamino,甲醯胺基,,HCONH－,2012-11-26
+358491,formyl,甲醯基；醛基,,HCO－,2012-11-26
+358492,formimino,亚胺甲基,,HN=CH－,2012-11-26
+358493,formimidoyl,亚胺甲醯基 {亚胺甲基},,HN=CH－,2012-11-26
+358494,formazyl,二苯甲【月潜】基,,C<sub>6</sub>H<sub>5</sub>N=N(C<sub>6</sub>H<sub>5</sub>HNN=)C－,2012-11-26
+358495,formamido,甲醯胺基,,HCONH－,2012-11-26
+358496,fluoroformyl,氟甲醯基 {氟羰基},,FCO－,2012-11-26
+358497,fluoro,氟基,,F－,2012-11-26
+358498,fluorenylidene,亚茀基,,C<sub>1</sub><sub>3</sub>H<sub>8</sub>=,2012-11-26
+358499,fluorenyl,茀基,,C<sub>1</sub><sub>3</sub>H<sub>9</sub>－,2012-11-26
+358500,fluoranthenyl,丙[二]烯合茀基,,C<sub>1</sub><sub>6</sub>H<sub>9</sub>－,2012-11-26
+358501,fenchyl,葑基,,C<sub>1</sub>0H<sub>1</sub><sub>7</sub>－,2012-11-26
+358502,ethynylene,伸乙炔基,,－C≡C－,2012-11-26
+358503,ethynyl; ethinyl; acetenyl,乙炔基,,CH≡C－,2012-11-26
+358504,ethylthio,乙硫基,,C<sub>2</sub>H<sub>5</sub>S－,2012-11-26
+358505,ethylsulfonylamino,乙磺醯胺基,,C<sub>2</sub>H<sub>5</sub>SO<sub>2</sub>NH－,2012-11-26
+358506,ethylidyne,次乙基,,CH<sub>3</sub>C≣,2012-11-26
+358507,ethylidene,亚乙基,,CH<sub>3</sub>CH=,2012-11-26
+358508,ethylenedioxy,伸乙二氧基,,－OCH<sub>2</sub>CH<sub>2</sub>O－,2012-11-26
+358509,ethylene,伸乙基,,－CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358510,ethylamino,乙胺基,,C<sub>2</sub>H<sub>5</sub>NH－,2012-11-26
+358511,ethyl,乙基,,CH<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+358512,ethoxyphenyl,乙氧苯基,,(C<sub>2</sub>H<sub>5</sub>O)C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+358513,ethoxyl; ethoxy,乙氧基,,C<sub>2</sub>H<sub>5</sub>O－,2012-11-26
+358514,ethoxycarbonyl,乙氧羰基；乙氧甲醯基,,C<sub>2</sub>H<sub>5</sub>OOC－,2012-11-26
+358515,ethoxalyl,乙氧羰甲醯基；乙氧草醯基,,C<sub>2</sub>H<sub>5</sub>OOCCO－,2012-11-26
+358516,ethenyl; vinyl,乙烯基,,CH<sub>2</sub>=CH－,2012-11-26
+358517,ethanoyl,乙醯基,,CH<sub>3</sub>CO－,2012-11-26
+358518,ethanesulfonamido,乙磺醯胺基,,C<sub>2</sub>H<sub>5</sub>SO<sub>2</sub>NH－,2012-11-26
+358519,ethanediylidene,乙二亚基,,=CHCH=,2012-11-26
+358520,ethanedioyl {oxalyl},乙二醯基 {草醯基},,－OCCO－,2012-11-26
+358521,epoxy,环氧基；【口咢】基,,－O－,2012-11-26
+358522,epithio,环硫基；噻基,,－S－,2012-11-26
+358523,episeleno,环硒基,,－Se－,2012-11-26
+358524,epimino,环亚胺基 {桥亚胺基},,－NH－,2012-11-26
+358525,epidithio,环二硫基 {桥二硫基},,－S－S－,2012-11-26
+358526,epidiseleno,环二硒基 {桥二硒基},,－Se－Se－,2012-11-26
+358527,epidioxy,环二氧基 {桥二氧基},,－O－O－,2012-11-26
+358528,enanthyl; enanthoyl; heptanoyl,庚醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>5</sub>CO－,2012-11-26
+358529,elaidoyl ,反油醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH=CH(CH<sub>2</sub>)<sub>7</sub>CO－,2012-11-26
+358530,eicosyl,二十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+358531,durylene,伸荰基 {伸四甲苯基},,－(CH<sub>3</sub>)<sub>4</sub>C<sub>6</sub>－,2012-11-26
+358532,"duryl {2,3,5,6-tetramethylphenyl}","荰基 {2,3,5,6-四甲苯基}",,(CH<sub>3</sub>)<sub>4</sub>C<sub>6</sub>H－,2012-11-26
+358533,dotriacontyl,三十二基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>30</sub>CH<sub>2</sub>－,2012-11-26
+358534,dodecyl {lauryl},十二基 {月桂基},,C<sub>1</sub><sub>2</sub>H<sub>2</sub><sub>5</sub>－,2012-11-26
+358535,dodecanoyl,十二醯基,,C<sub>1</sub><sub>1</sub>H<sub>2</sub><sub>3</sub>CO－,2012-11-26
+358536,docosyl,二十二基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>20</sub>CH<sub>2</sub>－,2012-11-26
+358537,dithiosulfo,二硫代磺酸基,,HOS<sub>3</sub>－,2012-11-26
+358538,dithiocarboxy,二硫羧基,,HSSC－,2012-11-26
+358539,dithio,二硫基,,－S－S－,2012-11-26
+358540,dithianaphthyl,二噻萘基,,S<sub>2</sub>C<sub>6</sub>H<sub>7</sub>－,2012-11-26
+358541,disiloxanyl,二矽氧烷基,,H<sub>3</sub>SiOSiH<sub>2</sub>－,2012-11-26
+358542,disiloxanoxy,二矽氧烷氧基,,H<sub>3</sub>SiOSiH<sub>2</sub>O－,2012-11-26
+358543,disilazanylamino,二矽氮烷胺基,,H<sub>3</sub>SiNHSiH<sub>2</sub>NH－,2012-11-26
+358544,disilazanoxy,二矽氮烷氧基,,H<sub>3</sub>SiNHSiH<sub>2</sub>O－,2012-11-26
+358545,disilanylene,伸二矽烷基,,－H<sub>2</sub>SiSiH<sub>2</sub>－,2012-11-26
+358546,disilanylamino,二矽烷胺基,,H<sub>3</sub>SiSiH<sub>2</sub>NH－,2012-11-26
+358547,disilanyl,二矽烷基,,H<sub>3</sub>SiSiH<sub>2</sub>－,2012-11-26
+358548,disilanoxy,二矽烷氧基,,H<sub>3</sub>SiSiH<sub>2</sub>O－,2012-11-26
+358549,diphenylmethylene,二苯亚甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>C=,2012-11-26
+358550,diphenylmethyl,二苯甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>CH－,2012-11-26
+358551,diphenylene,联伸苯基,,－C<sub>6</sub>H<sub>4</sub>C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+358552,diphenylamino,二苯胺基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>N－,2012-11-26
+358553,dioxy,二氧基,,－O－O－,2012-11-26
+358554,dioxacyclohexyl,二【口咢】环己基；二【口咢】烷基,,O<sub>2</sub>C<sub>4</sub>H<sub>7</sub>－,2012-11-26
+358555,dimethylbenzoyl,二甲苯甲醯基,,(CH<sub>3</sub>)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－,2012-11-26
+358556,dimethylamino,二甲胺基,,(CH<sub>3</sub>)<sub>2</sub>N－,2012-11-26
+358557,"3,4-dimethoxyphenylacetyl","3,4-二甲氧苯乙醯基",,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>CO－,2012-11-26
+358558,"3,4-dimethoxyphenethyl","3,4-二甲氧苯乙基",,"3,4-(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>－",2012-11-26
+358559,"3,4-dimethoxybenzoyl {veratroyl}","3,4-二甲氧苯甲醯基；3,4-二甲氧苄醯基 {藜芦醯基}",,"3,4-(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+358560,"2,3-dihydroxypropanoyl {glyceroyl}","2,3-二羟丙醯基 {甘油醯基}",,CH<sub>2</sub>(OH)CH(OH)CO－,2012-11-26
+358561,dihydroxyiodo,二羟碘基,,(HO)<sub>2</sub>I－,2012-11-26
+358562,"2,3-dihydroxybutanedioyl {tartaroyl}","2,3-二羟丁二醯基 {酒石醯基}",,－OCCH(OH)CH(OH)CO－,2012-11-26
+358563,"3,4-dihydroxybenzoyl {protocatechuoyl}","3,4-二羟苯甲醯基；3,4-二羟苄醯基 {儿茶酚甲醯基}",,"3,4-(HO)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+358564,diethylamino,二乙胺基,,(C<sub>2</sub>H<sub>5</sub>)<sub>2</sub>N－,2012-11-26
+358565,dichloroiodo,二氯碘基,,Cl<sub>2</sub>I－,2012-11-26
+358566,dibenzoylamino {dibenzamido},二(苯甲醯)胺基；二苄醯胺基,,(C<sub>6</sub>H<sub>5</sub>CO)<sub>2</sub>N－,2012-11-26
+358567,dibenzamido {dibenzoylamino},二(苯甲醯)胺基；二苄醯胺基,,(C<sub>6</sub>H<sub>5</sub>CO)<sub>2</sub>N－,2012-11-26
+358568,diazoamino,重氮胺基,,－N=NNH－,2012-11-26
+358569,diazo,重氮基,,N≡N<sup>+</sup>－,2012-11-26
+358570,diazaanthryl,二吖蒽基,,N<sub>2</sub>C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+358571,diaminomethyleneamino,二胺亚甲胺基,,(NH <sub>2</sub>)<sub>2</sub>C=N－,2012-11-26
+358572,diacetylamino,二乙醯胺基,,(CH<sub>3</sub>CO)<sub>2</sub>N－,2012-11-26
+358573,diacetoxyiodo,二(乙醯氧)碘基,,(CH<sub>3</sub>COO)<sub>2</sub>I－,2012-11-26
+358574,diacetamido {diacetylamino},二乙醯胺基,,(CH<sub>3</sub>CO)<sub>2</sub>N－,2012-11-26
+358575,desyl,去氧安息香基,,C<sub>6</sub>H<sub>5</sub>COCH(C<sub>6</sub>H<sub>5</sub>)－,2012-11-26
+358576,decyl,癸基,,C<sub>10</sub>H<sub>2</sub><sub>1</sub>－,2012-11-26
+358577,decanoyl,癸醯基,,C<sub>9</sub>H<sub>1</sub><sub>9</sub>CO－,2012-11-26
+358578,decanedioyl,癸二醯基,,－OC(CH<sub>2</sub>)<sub>8</sub>CO－,2012-11-26
+358579,cystyl,胱胺醯基,,－OCCH(NH<sub>2</sub>)CH<sub>2</sub>SSCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358580,cysteinyl,半胱胺醯基,,HSCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358581,cystathionyl,单硫(亚甲)胱胺醯基,,nan,2012-11-26
+358582,3-p-cymyl {thymyl},3-对莳萝基；3-对【草散】基{瑞香[草]基},,CH<sub>3</sub>(C<sub>3</sub>H<sub>7</sub>)C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+358583,cymyl,【草散】基,,CH<sub>3</sub>(C<sub>3</sub>H<sub>7</sub>)C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+358584,cyclopropyl,环丙基,,C<sub>3</sub>H<sub>5</sub>－,2012-11-26
+358585,cyclopentylidene,亚环戊基,,C<sub>5</sub>H<sub>8</sub>=,2012-11-26
+358586,cyclopentylene,伸环戊基,,－C<sub>5</sub>H<sub>8</sub>－,2012-11-26
+358587,cyclopentyl,环戊基,,C<sub>5</sub>H<sub>9</sub>－,2012-11-26
+358588,2-cyclopentenylidene,2-亚环戊烯基,,nan,2012-11-26
+358589,cyclopentenyl,环戊烯基,,C<sub>5</sub>H<sub>7</sub>－,2012-11-26
+358590,"1,2-cyclopentenophenanthryl","1,2-环戊烯菲基",,C<sub>1</sub><sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+358591,cyclopentanespirocyclobutyl,环戊螺环丁基,,C<sub>8</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+358592,cyclopentadienylidene,亚环戊二烯基,,C<sub>5</sub>H<sub>4</sub>=,2012-11-26
+358593,cyclopentadienyl,环戊二烯基,,C<sub>5</sub>H<sub>5</sub>－,2012-11-26
+358594,cyclopenta[α]phenanthryl,环戊[α]菲基,,C<sub>1</sub><sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+358595,cyclohexylthiocarbonyl,环己硫[代]羰基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>CS－,2012-11-26
+358596,cyclohexylidene,亚环己基,,C<sub>5</sub>H<sub>10</sub>C=,2012-11-26
+358597,cyclohexylene,伸环己基,,－C<sub>6</sub>H<sub>10</sub>－,2012-11-26
+358598,cyclohexylcarbonyl,环己羰基 {环己基甲醯基},,C<sub>6</sub>H<sub>1</sub><sub>1</sub>CO－,2012-11-26
+358599,cyclohexyl,环己基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+358600,cyclohexenyl,环己烯基,,C<sub>6</sub>H<sub>9</sub>－,2012-11-26
+358601,cyclohexanecarboxamido,环己基甲醯胺基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>CONH－,2012-11-26
+358602,cyclohexanecarbothionyl,环己硫[代]羰基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>CS－,2012-11-26
+358603,cyclohexanecarbonyl,环己羰基 {环己基甲醯基},,C<sub>6</sub>H<sub>1</sub><sub>1</sub>CO－,2012-11-26
+358604,cyclohexanecarbohydroximoyl,环己基甲肟醯基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>C(=NOH)－,2012-11-26
+358605,cyclohexanecarbohydrazonoyl,环己基甲腙醯基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>C(=NNH<sub>2</sub>)－,2012-11-26
+358606,cyclohexadienylidene,亚环己二烯基,,C<sub>6</sub>H<sub>6</sub>=,2012-11-26
+358607,cyclohexadienylene,伸环己二烯基,,－C<sub>6</sub>H<sub>6</sub>－,2012-11-26
+358608,"2,4-cyclohexadienyl","2,4-环己二烯基",,C<sub>6</sub>H<sub>7</sub>－,2012-11-26
+358609,cyclohexadienyl,环己二烯基,,C<sub>6</sub>H<sub>7</sub>－,2012-11-26
+358610,cycloheptyl,环庚基,,C<sub>7</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+358611,cyclobutyl,环丁基,,C<sub>4</sub>H<sub>7</sub>－,2012-11-26
+358612,cyano,氰基,,NC－,2012-11-26
+358613,cyanato,氰氧基,,NCO－,2012-11-26
+358614,cumyl; cumenyl {isopropylphenyl},【草久】基 {异丙苯基},,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+358615,cumoyl,茴香醯基；对异丙苯甲醯基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+358616,p-cuminylidene,对异丙亚苄基；【草久】亚甲基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358617,cuminylidene,亚茴香基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358618,cuminyl,对异丙苄基；茴香基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+358619,cumidino,【草久】胺基,,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>NH－,2012-11-26
+358620,cumal,亚茴香基 {对异丙亚苄基；【草久】亚甲基},,(CH<sub>3</sub>)<sub>2</sub>CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358621,crotyl,巴豆基,,CH<sub>3</sub>CH=CHCH<sub>2</sub>－,2012-11-26
+358622,crotonylidene,亚巴豆基,,CH<sub>3</sub>CH=CHCH=,2012-11-26
+358623,crotonyl {crotonoyl},巴豆醯基,,CH<sub>3</sub>CH=CHCO－,2012-11-26
+358624,crotonoyl {crotonyl},巴豆醯基,,CH<sub>3</sub>CH=CHCO－,2012-11-26
+358625,cresylene,伸苄基,,－C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+358626,cresyl,甲苯酚基,,HOC<sub>6</sub>H<sub>3</sub>(CH<sub>3</sub>)－,2012-11-26
+358627,cresoxy,甲苯氧基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>O－,2012-11-26
+358628,cresotyl,甲苯酚甲醯基,,HO(CH<sub>3</sub>)C<sub>6</sub>H<sub>3</sub>CO－,2012-11-26
+358629,coumarinyl,香豆素基,,O<sub>2</sub>C<sub>9</sub>H<sub>5</sub>－,2012-11-26
+358630,coniferyl,松柏基,,HO(CH<sub>3</sub>O)C<sub>6</sub>H<sub>3</sub>CH=CHCH<sub>2</sub>－,2012-11-26
+358631,citronellyl,香茅基,,(CH<sub>3</sub>)<sub>2</sub>C=CHCH<sub>2</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358632,citraconoyl,柠康醯基,,－OC(CH<sub>3</sub>)C=CHCO－,2012-11-26
+358633,cinnolinyl ,【口辛】啉基,,N<sub>2</sub>C<sub>8</sub>H<sub>5</sub>－,2012-11-26
+358634,cinnamyl,桂皮基；肉桂基；苯烯丙基,,<p>C<sub>6</sub>H<sub>5</sub>CH=CHCH<sub>2</sub>－</p>,2012-11-26
+358635,cinnamoyl,桂皮醯基,,C<sub>6</sub>H<sub>5</sub>CH=CHCO－,2012-11-26
+358636,cinnamylidene,苯亚烯丙基,,C<sub>6</sub>H<sub>5</sub>CH=CHCH=,2012-11-26
+358637,cinnamal,亚桂皮基,,C<sub>6</sub>H<sub>5</sub>CH=CHCH=,2012-11-26
+358638,chrysenyl,【草快】基,,C<sub>1</sub><sub>8</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+358639,chromenyl,【口克】烯基 {苯并哌喃基},,OC<sub>9</sub>H<sub>7</sub>－,2012-11-26
+358640,chromanyl,【口克】基 {苯并二氢哌喃基},,OC<sub>9</sub>H<sub>9</sub>－,2012-11-26
+358641,cholanthrenyl,胆蒽基,,C<sub>20</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+358642,chloryl,氯醯基,,O<sub>2</sub>Cl－,2012-11-26
+358643,chlorothio,氯硫基,,ClS－,2012-11-26
+358644,chlorosyl,亚氯醯基,,OCl－,2012-11-26
+358645,chloronio,氢氯基,,HCl<sup>+</sup>－,2012-11-26
+358646,chloromercuri,氯汞基,,ClHg－,2012-11-26
+358647,chloroformyl,氯甲醯基,,ClCO－,2012-11-26
+358648,2-chloroethyl,2-氯乙基,,ClCH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358649,chlorocarbonyl ,氯羰基 {氯甲醯基},,ClOC－,2012-11-26
+358650,chloro,氯基,,Cl－,2012-11-26
+358651,chaulmoogryl,[印]大风子基,,C<sub>5</sub>H<sub>7</sub>(CH<sub>2</sub>)<sub>1</sub><sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358652,chaulmoogroyl,[印]大风子醯基,,C<sub>5</sub>H<sub>7</sub>(CH<sub>2</sub>)<sub>1</sub><sub>2</sub>CO－,2012-11-26
+358653,cetyl,鲸蜡基；十六基,,C<sub>1</sub><sub>6</sub>H<sub>3</sub><sub>3</sub>－,2012-11-26
+358654,ceryl,[虫]蜡基；二十六基,,C<sub>2</sub><sub>6</sub>H<sub>5</sub><sub>3</sub>－,2012-11-26
+358655,caryl,蒈基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358656,carenyl,蒈烯基,,C<sub>10</sub>H<sub>1</sub><sub>5</sub>－,2012-11-26
+358657,carvacryl,香旱芹基,,(CH<sub>3</sub>)<sub>2</sub>CH(CH<sub>3</sub>)C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+358658,carboxymethyl,羧甲基,,HOOCCH<sub>2</sub>－,2012-11-26
+358659,carboxyl,羧基,,HOOC－,2012-11-26
+358660,carboxylato,羧根基,,<sup>－</sup>OOC－,2012-11-26
+358661,carboxy,羧基,,HOOC－,2012-11-26
+358662,carbonyldioxy,羰二氧基,,－OOCO－,2012-11-26
+358663,carbonyl,羰基,,OC<,2012-11-26
+358664,carbonohydrazido,卡肼基,,NH<sub>2</sub>NHCONHNH－,2012-11-26
+358665,carbonimidoyl,伸亚胺醯基；亚胺亚甲基；亚胺羰基,,－C(=NH)－,2012-11-26
+358666,carbomethoxy,甲氧甲醯基；甲氧羰基,,CH<sub>3</sub>OOC－,2012-11-26
+358667,carbolinyl,咔啉基,,N<sub>2</sub>C<sub>1</sub><sub>1</sub>H<sub>7</sub>－,2012-11-26
+358668,carbodiazono,卡二腙基,,NH=NCON=N－,2012-11-26
+358669,carbobenzoxy,苄氧甲醯基；苄氧羰基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>OCO－,2012-11-26
+358670,carbethoxy,乙氧羰基；乙氧甲醯基,,C<sub>2</sub>H<sub>5</sub>OOC－,2012-11-26
+358671,carbazoyl,肼甲醯基,,NH<sub>2</sub>NHCO－,2012-11-26
+358672,carbazono,卡腙基,,NH=NCONHNH－,2012-11-26
+358673,carbazolyl,咔唑基,,(C<sub>6</sub>H<sub>4</sub>)<sub>2</sub>N－,2012-11-26
+358674,carbanilino,苯胺甲醯基；苯胺羰基,,C<sub>6</sub>H<sub>5</sub>NHCO－,2012-11-26
+358675,carbamoyl; carbamyl,胺甲醯基,,H<sub>2</sub>NCO－,2012-11-26
+358676,carbamido {ureido},脲基,,H<sub>2</sub>NCONH－,2012-11-26
+358677,caprylyl {capryloyl},辛醯基,,C<sub>7</sub>H<sub>1</sub><sub>5</sub>CO－,2012-11-26
+358678,capryloyl{caprylyl},辛醯基,,C<sub>7</sub>H<sub>1</sub><sub>5</sub>CO－,2012-11-26
+358679,capryl,癸醯基,,C<sub>9</sub>H<sub>1</sub><sub>9</sub>CO－,2012-11-26
+358680,caproyl,己醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub>CO－,2012-11-26
+358681,caprinoyl,癸醯基 {旧名：capryl},,C<sub>9</sub>H<sub>1</sub><sub>9</sub>CO－,2012-11-26
+358682,camphorylidene,亚樟脑基,,(C<sub>10</sub>H<sub>1</sub><sub>4</sub>O)=,2012-11-26
+358683,camphoryl,樟脑基,,C<sub>10</sub>H<sub>1</sub><sub>5</sub>O－,2012-11-26
+358684,camphoroyl,樟脑二醯基；莰二醯基,,C<sub>8</sub>H<sub>1</sub><sub>4</sub>(CO－)<sub>2</sub>,2012-11-26
+358685,camphanyl,莰基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358686,cacodyl,卡可基；二甲胂基,,(CH<sub>3</sub>)<sub>2</sub>As－,2012-11-26
+358687,butyryl,丁醯基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+358688,butylidyne,次丁基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub>C≣,2012-11-26
+358689,sec-butylidene,二级-亚丁基,,CH<sub>3</sub>CH<sub>2</sub>C(CH<sub>3</sub>)=,2021-09-28
+358690,butylidene,亚丁基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH=,2012-11-26
+358691,"1,4-butylene","1,4-伸丁基",,－CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358692,tert-butyl,三级-丁基,,(CH<sub>3</sub>)<sub>3</sub>C－,2021-09-28
+358693,sec-butyl,二级-丁基,,C<sub>2</sub>H<sub>5</sub>CH(CH<sub>3</sub>)－,2021-09-28
+358694,butyl,丁基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358695,tert-butoxy,三级-丁氧基,,(CH<sub>3</sub>)<sub>3</sub>CO－,2021-09-28
+358696,sec-butoxy,二级-丁氧基,,C<sub>2</sub>H<sub>5</sub>CH(CH<sub>3</sub>)O－,2021-09-28
+358697,butoxy,丁氧基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>O－,2012-11-26
+358698,2-butenylidyne,2-次丁烯基,,CH<sub>3</sub>CH=CHC≣,2012-11-26
+358699,2-butenylidene,2-亚丁烯基,,CH<sub>3</sub>CH=CHCH=,2012-11-26
+358700,2-butenylene,2-伸丁烯基,,－CH<sub>2</sub>CH=CHCH<sub>2</sub>－,2012-11-26
+358701,3-butenyl,3-丁烯基,,CH<sub>2</sub>=CHCH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+358702,2-butenyl ,2-丁烯基,,CH<sub>3</sub>CH=CHCH<sub>2</sub>－,2012-11-26
+358703,1-butenyl,1-丁烯基,,CH<sub>3</sub>CH<sub>2</sub>CH=CH－,2012-11-26
+358704,butanoyl,丁醯基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+358705,butanediylidyne,"1,4-丁二次基",,≣C－CH<sub>2</sub>CH<sub>2</sub>－C≣,2012-11-26
+358706,butanediylidene,"1,4-丁二亚基",,=CH－CH<sub>2</sub>CH<sub>2</sub>－CH=,2012-11-26
+358707,butadienyl,丁二烯基,,C<sub>4</sub>H<sub>5</sub>－,2012-11-26
+358708,"1,3-butadienyl","1,3-丁二烯基",,CH<sub>2</sub>=CHCH=CH－,2012-11-26
+358709,bromonio,氢溴基,,HBr<sup>+</sup>－,2012-11-26
+358710,bromoformyl,溴甲醯基,,BrCO－,2012-11-26
+358711,bromo,溴基,,Br－,2012-11-26
+358712,boryl,氧硼基,,OB－,2012-11-26
+358713,bornyl,【草伯】基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+358714,biphenylyloxy,联苯氧基,,C<sub>6</sub>H<sub>5</sub>C<sub>6</sub>H<sub>4</sub>O－,2012-11-26
+358715,biphenylylcarbonyl,联苯羰基,,C<sub>6</sub>H<sub>5</sub>C<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+358716,biphenylyl,联苯基,,C<sub>6</sub>H<sub>5</sub>C<sub>6</sub>H<sub>4</sub>-,2012-11-26
+358717,biphenylenyl,伸联苯基,,－C<sub>6</sub>H<sub>4</sub>C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+358718,biphenylenebisazo,[伸]联苯双偶氮基,,－N=NC<sub>6</sub>H<sub>4</sub>C<sub>6</sub>H<sub>4</sub>N=N－,2012-11-26
+358719,binaphthylyl,联萘基,,C<sub>10</sub>H<sub>7</sub>C<sub>10</sub>H<sub>6</sub>－,2012-11-26
+358720,binaphthalenyl,联萘基,,C<sub>10</sub>H<sub>7</sub>C<sub>10</sub>H<sub>6</sub>－,2012-11-26
+358721,bicyclo[2.2.1]hept-5-en-2-yl,双环[2.2.1]庚-5-烯-2-基,,C<sub>7</sub>H<sub>9</sub>－,2012-11-26
+358722,bi(cyclohexyl)yl,双环己基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>C<sub>6</sub>H<sub>10</sub>－,2012-11-26
+358723,bi(cyclohexan)yl,双环己基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>C<sub>6</sub>H<sub>10</sub>－,2012-11-26
+358724,benzylthio,苄硫基；苯甲硫基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>S－,2012-11-26
+358725,benzyloxycarbonyl,苄氧羰基；苯甲氧羰基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>OCO－,2012-11-26
+358726,benzyloxy,苄氧基；苯甲氧基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>O－,2012-11-26
+358727,benzylene {benzylidene; benzal},亚苄基；苯亚甲基,,C<sub>6</sub>H<sub>5</sub>CH<,2012-11-26
+358728,benzylidene {benzal; α-tolylene},亚苄基；苯亚甲基,,C<sub>6</sub>H<sub>5</sub>CH<,2012-11-26
+358729,benzyl {α-tolyl},苄基；苯甲基 {α-【草叨】基},,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>－,2012-11-26
+358730,benzoyloxy {benzoxy},苄醯氧基；苯甲醯氧基,,C<sub>6</sub>H<sub>5</sub>COO－,2012-11-26
+358731,benzoylhydrazino ,苯甲醯肼基；苄醯肼基,,C<sub>6</sub>H<sub>5</sub>CONHNH－,2012-11-26
+358732,benzoylene,伸苯甲醯基,,－C<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+358733,benzoylimino,苯甲醯亚胺基；苄醯亚胺基,,C<sub>6</sub>H<sub>5</sub>CON<,2012-11-26
+358734,benzoylamino,苯甲醯胺基；苄醯胺基,,C<sub>6</sub>H<sub>5</sub>CONH－,2012-11-26
+358735,benzoyl,苯甲醯基；苄醯基,,C<sub>6</sub>H<sub>5</sub>CO－,2012-11-26
+358736,benzoxy {benzoyloxy},苯甲醯氧基；苄醯氧基,,C<sub>6</sub>H<sub>5</sub>COO－,2012-11-26
+358737,benzoxazolyl,苯并【口咢】唑基,,ONC<sub>7</sub>H<sub>4</sub>－,2012-11-26
+358738,benzoxazinyl,苯并【口咢】【口井】基,,ONC<sub>8</sub>H<sub>6</sub>－,2012-11-26
+358739,p-benzoquinonyl,对苯醌基,,C<sub>6</sub>H<sub>3</sub>O<sub>2</sub>－,2012-11-26
+358740,4-o-benzoquinonyl,4-邻-苯醌基,,<p>C<sub>6</sub>H<sub>3</sub>O<sub>2</sub>－</p>,2012-11-26
+358741,3-o-benzoquinonyl,3-邻-苯醌基,,<p>C<sub>6</sub>H<sub>3</sub>O<sub>2</sub>－</p>,2012-11-26
+358742,benzopyranyl,苯并哌喃基,,C<sub>9</sub>H<sub>7</sub>O－,2012-11-26
+358743,benzofuryl,苯并呋喃基,,C<sub>8</sub>H<sub>5</sub>O－,2012-11-26
+358744,benzofuranyl,苯并呋喃基；氧茚基,,OC<sub>8</sub>H<sub>5</sub>－,2012-11-26
+358745,benzo[b]thienyl,苯并[b]噻吩基,,SC<sub>8</sub>H<sub>5</sub>－,2012-11-26
+358746,benzimidoyl; benzimidoyle,亚胺苄基,,C<sub>6</sub>H<sub>5</sub>C(=NH)－,2012-11-26
+358747,benzimido; benzoylimino,苯甲醯亚胺基,,C<sub>6</sub>H<sub>5</sub>CON=,2012-11-26
+358748,benzimidazolyl,苯并咪唑基,,C<sub>6</sub>H<sub>4</sub>N<sub>2</sub>HC－,2012-11-26
+358749,benziloyl,二苯羟乙醯基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>C(OH)CO－,2012-11-26
+358750,benzilidene,亚苄基；苯亚甲基,,C<sub>6</sub>H<sub>5</sub>CH=,2012-11-26
+358751,benzidino,[胺]联苯胺基,,H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>C<sub>6</sub>H<sub>4</sub>NH－,2012-11-26
+358752,benzhydrylidene; diphenylmethylene,二苯亚甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>C=,2012-11-26
+358753,benzhydryl; diphenylmethyl,二苯甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>2</sub>CH－,2012-11-26
+358754,benzylidyne {benzenyl},次苄基；苯次甲基,,C<sub>6</sub>H<sub>5</sub>C≣,2012-11-26
+358755,benzenyl,次苄基；苯次甲基,,C<sub>6</sub>H<sub>5</sub>C≣,2012-11-26
+358756,benzenetriyl {benzenyl},次苄基；苯次甲基,,C<sub>6</sub>H<sub>5</sub>C≣,2012-11-26
+358757,benzenesulfonylamino,苯磺醯胺基,,C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>NH－,2012-11-26
+358758,benzenesulfonyl,苯磺醯基,,C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>－,2012-11-26
+358759,benzenesulfonamido,苯磺醯胺基,,C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>NH－,2012-11-26
+358760,benzenesulfinyl; phenylsulfinyl,苯亚磺醯基,,C<sub>6</sub>H<sub>5</sub>SO－,2012-11-26
+358761,benzenecarbonyl,苯甲醯基；苯羰基；苄醯基,,C<sub>6</sub>H<sub>5</sub>CO－,2012-11-26
+358762,benzeneazoxy,苯(氧偶氮)基,,C<sub>6</sub>H<sub>5</sub>N(O)N－,2012-11-26
+358763,benzeneazo,苯偶氮基,,C<sub>6</sub>H<sub>5</sub>N=N－,2012-11-26
+358764,benzamido,苯甲醯胺基；苄醯胺基,,C<sub>6</sub>H<sub>5</sub>CONH－,2012-11-26
+358765,benzal {benzylidene; α-tolylene},亚苄基；苯亚甲基,,C<sub>6</sub>H<sub>5</sub>CH<,2012-11-26
+358766,benzal,苯亚甲基；亚苄基,,C<sub>6</sub>H<sub>5</sub>CH<,2012-11-26
+358767,azulenyl,薁基,,C<sub>10</sub>H<sub>7</sub>－,2012-11-26
+358768,azoxy,氧偶氮基,,－N(O)=N－,2012-11-26
+358769,azo,偶氮基,,－N=N－,2012-11-26
+358770,azino,次偶氮基,,=NN=,2012-11-26
+358771,azimino; azimido,偶氮亚胺基,,－N=NNH－,2012-11-26
+358772,azido {triazo},叠氮基 {三氮基},,N<sub>3</sub>－,2012-11-26
+358773,azelaxyl,壬二醯基,,－CO(CH<sub>2</sub>)<sub>7</sub>CO－,2012-11-26
+358774,atropoyl,阿托醯基；颠茄醯基；2-苯丙烯醯基,,C<sub>6</sub>H<sub>5</sub>(CCH<sub>2</sub>)CO－,2012-11-26
+358775,β-aspartyl,β-天冬胺醯基,,HOOCCH(NH<sub>2</sub>)CH<sub>2</sub>CO－,2012-11-26
+358776,α-aspartyl,α-天冬胺醯基,,HOOCCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358777,aspartyl; aspartoyl,天[门]冬胺醯基,,－COCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358778,asparaginyl; asparagyl,天[门]冬醯胺醯基,,H<sub>2</sub>NCOCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358779,"asaryl {2,4,5-trimethoxyphenyl}","细辛基 {2,4,5-三甲氧苯基}",,(CH<sub>3</sub>O)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+358780,arsylene,亚胂基,,HAs=,2012-11-26
+358781,arsono,胂酸基,,(OH)<sub>2</sub>OAs－,2012-11-26
+358782,arso,二氧砷基,,－AsO<sub>2</sub>,2012-11-26
+358783,arsino,胂基,,H<sub>2</sub>As－,2012-11-26
+358784,arsinico,亚胂酸基,,(HO)OAs－,2012-11-26
+358785,arsenoso,砷氧基；亚砷醯基,,－As=O,2012-11-26
+358786,arseno,偶砷基,,－As=As－,2012-11-26
+358787,arginyl,精胺醯基,,H<sub>2</sub>NC(=NH)NH(CH<sub>2</sub>)<sub>3</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+358788,antimono,偶锑基,,－Sb=Sb－,2012-11-26
+358789,anthrylene,伸蒽基；次蒽基,,－C<sub>1</sub><sub>4</sub>H<sub>8</sub>－,2012-11-26
+358790,anthryl {anthranyl},蒽基,,C<sub>1</sub><sub>4</sub>H<sub>9</sub>－,2012-11-26
+358791,anthraquinonyl,蒽醌基,,C<sub>1</sub><sub>4</sub>H<sub>7</sub>O<sub>2</sub>－,2012-11-26
+358792,anthranyl {anthryl},蒽基,,C<sub>1</sub><sub>4</sub>H<sub>9</sub>－,2012-11-26
+358793,anthranoyl {anthraniloyl},邻胺苄醯基；邻-胺苯甲醯基,,<p>o-H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+358794,anthraniloyl {anthranoyl},邻胺苄醯基；邻-胺苯甲醯基,,<p>o-H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+358795,anisylidene {anisal; methoxybenzylidene},甲氧苯亚甲基 {大茴香亚甲基；甲氧亚【草卞】基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358796,anisylidene,甲氧苯亚甲基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358797,anisyl {methoxyphenyl},大茴香基 {甲氧苯基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+358798,anisoyl,大茴香醯基 {甲氧苯甲醯基；甲氧【草卞】醯基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+358799,anisidino,甲氧苯胺基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>NH－,2012-11-26
+358800,anisal {anisylidene; methoxybenzylidene},大茴香亚甲基 {甲氧苯亚甲基；甲氧亚【草卞】基},,CH<sub>3</sub>OC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+358801,anilino,苯胺基,,C<sub>6</sub>H<sub>5</sub>NH－,2012-11-26
+358802,amylidene,亚戊基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH=,2012-11-26
+358803,amylene,伸戊基,,－(C<sub>5</sub>H<sub>1</sub>0)－,2012-11-26
+365912,sec-amyl,二级-戊基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)－,2021-09-28
+365913,amyl {pentyl},戊基,,C<sub>5</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+365914,ammonio,铵基,,H<sub>3</sub>N+－,2012-11-26
+365915,aminooxy,胺氧基,,H<sub>2</sub>NO－,2012-11-26
+365916,aminomethyleneamino,胺基亚甲胺基,,H<sub>2</sub>NCH=N－,2012-11-26
+365917,aminoacetyl {glycyl},胺乙醯基 {甘胺醯基},,H<sub>2</sub>NCH<sub>2</sub>CO－,2012-11-26
+365918,amino,胺基,,H<sub>2</sub>N－,2012-11-26
+365919,amidoxalyl {oxamoyl},醯胺草醯基 {草醯胺醯基},,H<sub>2</sub>NCOCO－,2012-11-26
+365920,amido,醯胺基,,RCO(NH)－,2012-11-26
+365921,amidino {guanyl},甲脒基,,H<sub>2</sub>NC(=NH)－,2012-11-26
+365922,allyloxy,烯丙氧基,,CH<sub>2</sub>=CHCH<sub>2</sub>O－,2012-11-26
+365923,allylidene,亚烯丙基,,CH<sub>2</sub>=CHCH=,2012-11-26
+365924,allyl,烯丙基,,CH<sub>2</sub>=CHCH<sub>2</sub>－,2012-11-26
+365925,allophanyl {allophanoyl},脲[基]羰基；脲甲醯基,,H<sub>2</sub>NCONHCO－,2012-11-26
+365926,allophanoyl {allophanyl},脲甲醯基；脲[基]羰基,,H<sub>2</sub>NCONHCO－,2012-11-26
+365927,alanyl,丙胺醯基,,CH<sub>3</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+365928,adipyl {adipoyl},己二醯基,,－CO(CH<sub>2</sub>)<sub>4</sub>CO－,2012-11-26
+365929,adipoyl {adipyl},己二醯基,,－CO(CH<sub>2</sub>)<sub>4</sub>CO－,2012-11-26
+365930,acrylyl {acryloyl},丙烯醯基,,CH<sub>2</sub>=CHCO－,2012-11-26
+365931,acryloyl {acrylyl},丙烯醯基,,CH<sub>2</sub>=CHCO－,2012-11-26
+365932,acridinyl,吖啶基,,C<sub>1</sub><sub>3</sub>H<sub>8</sub>N－,2012-11-26
+365933,acetylimino,乙醯亚胺基；醋醯亚胺基,,CH<sub>3</sub>CON=,2012-11-26
+365934,acetylhydrazino,乙醯肼基；醋醯肼基,,CH<sub>3</sub>CONHNH－,2012-11-26
+365935,acetyl,乙醯基,,CH<sub>3</sub>CO－,2012-11-26
+365936,acetoxy,乙醯氧基,,CH<sub>3</sub>COO－,2012-11-26
+365937,acetonylidene,亚丙酮基,,CH<sub>3</sub>COCH=,2012-11-26
+365938,acetonyl,丙酮基,,CH<sub>3</sub>COCH<sub>2</sub>－,2012-11-26
+365939,acetoacetyl,乙醯乙醯基,,CH<sub>3</sub>COCH<sub>2</sub>CO－,2012-11-26
+365940,acetenyl {ethynyl},乙炔基,,HC≣C－,2012-11-26
+365941,acetamino {acetamido},醋醯胺基；乙醯胺基,,CH<sub>3</sub>CONH－,2012-11-26
+365942,acetamido {acetamino},乙醯胺基；醋醯胺基,,CH<sub>3</sub>CONH－,2012-11-26
+365943,acephenanthrylenyl,乙烯合菲基,,C<sub>1</sub><sub>6</sub>H<sub>9</sub>－,2012-11-26
+365944,acephenanthrenyl,乙烷合菲基,,C<sub>1</sub><sub>6</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+365945,acenaphthylenyl,苊基,,C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+365946,acenaphthenylidene,亚二氢苊基；亚乙烷合萘基,,C<sub>1</sub><sub>2</sub>H<sub>8</sub>=,2012-11-26
+365947,acenaphthenylene,伸二氢苊基；伸乙烷合萘基,,－C<sub>1</sub><sub>2</sub>H<sub>8</sub>－,2012-11-26
+365948,acenaphthenyl,二氢苊基；乙烷合萘基,,C<sub>1</sub><sub>2</sub>H<sub>9</sub>－,2012-11-26
+365949,aceanthrylenyl,乙烯合蒽基,,C<sub>1</sub><sub>6</sub>H<sub>9</sub>－,2012-11-26
+365950,aceanthrenyl,乙烷合蒽基,,C<sub>1</sub><sub>6</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535885,neopentyl,新戊基,,(CH<sub>3</sub>)<sub>3</sub>CCH<sub>2</sub>－,2012-11-26
+535886,neryl,橙花基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+535887,nicotinoyl,烟碱醯基,,NC<sub>5</sub>H<sub>4</sub>CO－,2012-11-26
+535888,nitramino,硝胺基,,O<sub>2</sub>NNH－,2012-11-26
+535889,nitrilo,氮基,,N≣,2012-11-26
+535890,nitro,硝基,,O<sub>2</sub>N－,2012-11-26
+535891,aci-nitro,酸硝基,,HO(O)N=,2012-11-26
+535892,aci-nitro {isonitro},酸硝基 {异硝基},,HO(O)N=,2012-11-26
+535893,nitrosamino,亚硝胺基,,ONNH－,2012-11-26
+535894,nitrosimino,亚硝亚胺基,,ONN=,2012-11-26
+535895,nitroso,亚硝基,,ON－,2012-11-26
+535896,nonacontyl,九十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>8</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+535897,nonacosyl,二十九基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub><sub>7</sub>CH<sub>2</sub>－,2012-11-26
+535898,nonadecyl ,十九基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>7</sub>CH<sub>2</sub>－,2012-11-26
+535899,nonamethylene,伸壬基,,－(CH<sub>2</sub>)<sub>9</sub>－,2012-11-26
+535900,nonanedioyl,壬二醯基,,－CO(CH<sub>2</sub>)<sub>7</sub>CO－,2012-11-26
+535901,nonanoyl,壬醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CO－,2012-11-26
+535902,nonyl,壬基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH<sub>2</sub>－,2012-11-26
+535903,norbornenyl,降【艹伯】烯基,,C<sub>7</sub>H<sub>9</sub>－,2012-11-26
+535904,norbornyl; norbornylyl {norcamphanyl},降【草(之上)伯】基 {降莰基},,C<sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535905,norcamphanyl {norbornyl; norbornylyl},降莰基 {降【草(之上)伯】基},,C<sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535906,norcamphyl; norcamphanyl,降莰基,,C<sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535907,norcaryl {norbornyl; norbornylyl},降蒈基 {降【草(之上)伯】基},,C<sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535908,norleucyl,正白胺醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+535909,norpinanyl,降蒎基,,C<sub>7</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535910,norvalyl,正缬胺醯基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+535911,octacontyl,八十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+535912,cis-9-octadecenoyl {oleoyl},顺-9-十八烯醯基 {油醯基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH=CH(CH<sub>2</sub>)<sub>7</sub>CO－,2020-05-07
+535913,octacosyl,二十八基,,C<sub>2</sub><sub>8</sub>H<sub>5</sub><sub>7</sub>－,2012-11-26
+535914,octadecanoyl {stearoyl},十八醯基 {硬脂醯基},,C<sub>1</sub><sub>7</sub>H<sub>3</sub><sub>5</sub>CO－,2012-11-26
+535915,octadecosyl,十八基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>6</sub>CH<sub>2</sub>－,2012-11-26
+535916,octadecyl,十八基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>6</sub>CH<sub>2</sub>－,2012-11-26
+535917,octamethylene,伸辛基,,－(CH<sub>2</sub>)<sub>8</sub>－,2012-11-26
+535918,octanedioyl,辛二醯基,,－CO(CH<sub>2</sub>)<sub>6</sub>CO－,2012-11-26
+535919,octanoyl,辛醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>6</sub>CO－,2012-11-26
+535920,n-octyl,正辛基,,C<sub>8</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+535921,octylene,伸辛基,,－CH<sub>2</sub>(CH<sub>2</sub>)<sub>6</sub>CH<sub>2</sub>－,2012-11-26
+535922,oenanthyl; oenanthoyl; heptanoyl,庚醯基,,C<sub>6</sub>H<sub>1</sub><sub>3</sub>CO－,2012-11-26
+535923,oleoyl {cis-9-octadecenoyl},油醯基 {顺-9-十八烯醯基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CH=CH(CH<sub>2</sub>)<sub>7</sub>CO－,2020-05-07
+535924,ornithyl,鸟胺醯基,,H<sub>2</sub>N(CH<sub>2</sub>)<sub>3</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+535925,ovalenyl,莪基,,C<sub>3</sub><sub>2</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+535926,oxadiethyl,二甘氧基,,－OCH<sub>2</sub>CH<sub>2</sub>OCH<sub>2</sub>CH<sub>2</sub>O－,2012-11-26
+535927,oxalaceto,草醯乙醯基,,HOOCCOCH<sub>2</sub>CO－,2012-11-26
+535928,oxaloacetyl,酸草醯乙醯基,,－COCOCH<sub>2</sub>CO－,2012-11-26
+535929,oxalyl,草醯基,,－COCO－,2012-11-26
+535930,oxalyl {ethanedioyl},草醯基 {乙二醯基} ,,－OCCO－,2012-11-26
+535931,oxamido,草醯胺基；乙二醯胺基,,H<sub>2</sub>NCOCONH－,2012-11-26
+535932,oxamoyl {amidoxalyl},草醯胺醯基 {醯胺草醯基},,H<sub>2</sub>NCOCO－,2012-11-26
+535933,oxamoyl; oxamyl,草醯胺醯基,,H<sub>2</sub>NCOCO－,2012-11-26
+535934,oxapyrenyl,氧代芘基,,OC<sub>1</sub><sub>5</sub>H<sub>9</sub>－,2012-11-26
+535935,oxazinyl,【口咢】【口井】基,,ONC<sub>4</sub>H<sub>4</sub>－,2012-11-26
+535936,oxazolidinyl,【口咢】唑啶基,,ONC<sub>3</sub>H<sub>6</sub>－,2012-11-26
+535937,oxazolinyl,【口咢】唑啉基,,ONC<sub>3</sub>H<sub>4</sub>－,2012-11-26
+535938,oxazolyl,【口咢】唑基,,ONC<sub>3</sub>H<sub>2</sub>－,2012-11-26
+535939,oxido,氧负离子基,,<sup>－</sup>O－,2012-11-26
+535940,oximino {isonitroso},羟亚胺基 {异亚硝基},,HON=,2012-11-26
+535941,oxo,侧氧基,,O=,2012-11-26
+535942,oxonio,氢羟基,,H<sub>2</sub>O<sup>＋</sup>－,2012-11-26
+535943,oxy,[伸]氧基,,－O－,2012-11-26
+535944,oxy,氧基,,－O－,2012-11-26
+535945,oxyamino {isonitroso},羟亚胺基 {异亚硝基},,HON=,2012-11-26
+535946,palmitoyl {hexadecanoyl},棕榈醯基；软脂醯基 {十六醯基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>4</sub>CO－,2012-11-26
+535947,palmityl,棕榈基；软脂基 {十六基},,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>4</sub>CH<sub>2</sub>－,2012-11-26
+535948,pelargonyl,壬醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>7</sub>CO－,2012-11-26
+535949,pentacenyl,稠五苯基,,C<sub>2</sub><sub>2</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+535950,pentacontyl,五十基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>4</sub><sub>8</sub>CH<sub>2</sub>－,2012-11-26
+535951,pentacosyl,二十五基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>2</sub><sub>3</sub>CH<sub>2</sub>－,2012-11-26
+535952,pentadecanoyl,十五醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>1</sub><sub>3</sub>CO－,2012-11-26
+535953,pentadecyl,十五基,,C<sub>1</sub><sub>5</sub>H<sub>3</sub><sub>1</sub>－,2012-11-26
+535954,pentafluorothio,五氟硫基,,F<sub>5</sub>S－,2012-11-26
+535955,pentalenyl,并环戊二烯基,,C<sub>8</sub>H<sub>5</sub>－,2012-11-26
+535956,pentamethylene,五亚甲基；伸戊基,,－CH<sub>2</sub>(CH<sub>2</sub>)<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+535957,pentanedioyl; glutaryl,戊二醯基,,－CO(CH<sub>2</sub>)<sub>3</sub>CO－,2012-11-26
+535958,pentanoyl; valeryl,戊醯基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CO－,2012-11-26
+535959,pentapheneyl,五芬基,,C<sub>2</sub><sub>2</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+535960,2-penten-4-ynyl,2-戊烯-4-炔基,,CH≣C－CH=CH－CH<sub>2</sub>－,2012-11-26
+535961,n-pentadecyl,正十五基,,C<sub>1</sub><sub>5</sub>H<sub>3</sub><sub>1</sub>－,2012-11-26
+535962,pentazolyl,五唑基,,N=N-N=N-N－,2012-11-26
+535963,pentenyl,戊烯基,,H<sub>3</sub>C(CH<sub>2</sub>)<sub>2</sub>HC=CH－,2012-11-26
+535964,n-pentyl,正戊基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+535965,sec-pentyl,二级-戊基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)－,2021-09-28
+535966,pentyl {amyl},戊基,,C<sub>5</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535967,pentylidene,亚戊基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH=,2012-11-26
+535968,pentylidyne,次戊基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>C≣,2012-11-26
+535969,pentyloxy,戊氧基,,CH<sub>3</sub>(CH<sub>2</sub>)<sub>3</sub>CH<sub>2</sub>O－,2012-11-26
+535970,perchloryl,过氯醯基,,O<sub>3</sub>Cl－,2012-11-26
+535971,perimidinyl,【口叵】啶基,,C<sub>1</sub><sub>1</sub>H<sub>7</sub>N<sub>2</sub>－,2012-11-26
+535972,perylenyl,苝基,,C<sub>20</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+535973,phenacyl,苯甲醯甲基,,C<sub>6</sub>H<sub>5</sub>COCH<sub>2</sub>－,2012-11-26
+535974,phenacylidene,苯甲醯亚甲基,,C<sub>6</sub>H<sub>5</sub>COCH=,2012-11-26
+535975,phenalenyl,丙烯合萘基；萉基,,C<sub>1</sub><sub>3</sub>H<sub>9</sub>－,2012-11-26
+535976,phenanthridinyl,啡啶基；5-氮菲基,,C<sub>1</sub><sub>3</sub>H<sub>8</sub>N－,2012-11-26
+535977,phenanthrolinyl,啡啉基,,N<sub>2</sub>C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+535978,phenanthryl,菲基,,C<sub>1</sub><sub>4</sub>H<sub>9</sub>－,2012-11-26
+535979,phenanthrylene,伸菲基,,－C<sub>1</sub><sub>4</sub>H<sub>8</sub>－,2012-11-26
+535980,phenarsazinyl,啡呻【口井】基,,AsNC<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+535981,phenazinyl,啡【口井】基,,N<sub>2</sub>C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+535982,phenenyl,低苯基,,C<sub>6</sub>H<sub>3</sub>≡,2012-11-26
+535983,phenethyl,苯乙基,,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+535984,"phenetidino (o-, m-, or p-)",乙氧苯胺基（邻-、间-、对-）,,<p>C<sub>2</sub>H<sub>5</sub>OC<sub>6</sub>H<sub>4</sub>NH－</p>,2012-11-26
+535985,phenetyl,乙氧苯基,,C<sub>2</sub>H<sub>5</sub>OC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+535986,phenothiazinyl,啡噻【口井】基,,SNC<sub>1</sub><sub>2</sub>H<sub>8</sub>－,2012-11-26
+535987,phenoxathiinyl,啡【口咢】噻基,,OSC<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+535988,phenoxazinyl,啡【口咢】【口井】基,,ONC<sub>1</sub><sub>2</sub>H<sub>8</sub>－,2012-11-26
+535989,phenoxy,苯氧基,,C<sub>6</sub>H<sub>5</sub>O－,2012-11-26
+535990,phenyl,苯基,,C<sub>6</sub>H<sub>5</sub>－,2012-11-26
+535991,phenylacetyl {α-toluoyl},苯乙醯基 {α-【草(之上)叨】甲醯基},,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>CO－,2012-11-26
+535992,phenylazo,苯偶氮基,,C<sub>6</sub>H<sub>5</sub>N＝N－,2012-11-26
+535993,phenylazoxy,苯(氧偶氮)基,,C<sub>6</sub>H<sub>5</sub>N(O)N－,2012-11-26
+535994,phenylcarbamido,苯胺甲醯胺基；苯脲基,,C<sub>6</sub>H<sub>5</sub>NHCONH－,2012-11-26
+535995,phenylcarbamoyl,苯胺甲醯基,,C<sub>6</sub>H<sub>5</sub>NHCO－,2012-11-26
+535996,phenylene,伸苯基,,－C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+535997,phenylenebisazo,伸苯双偶氮基,,－N=NC<sub>6</sub>H<sub>4</sub>N=N－,2012-11-26
+535998,"phenylenedimethylene {α,α’-xylylene}","伸苯二甲基 {α,α’-伸茬基}",,－CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+535999,phenylidene,亚环己二烯基,,C<sub>6</sub>H<sub>6</sub>=,2012-11-26
+536000,phenylimino,苯亚胺基,,C<sub>6</sub>H<sub>5</sub>N=,2012-11-26
+536001,α-phenylphenacyl,α-苯基苯甲醯甲基,,C<sub>6</sub>H<sub>5</sub>COCH(C<sub>6</sub>H<sub>5</sub>)－,2012-11-26
+536002,2-phenylpropanoyl {hydratropoyl},2-苯丙醯基,,C<sub>6</sub>H<sub>5</sub>CH(CH<sub>3</sub>)CO－,2012-11-26
+536003,3-phenylpropenoyl {cinnamoyl},3-苯丙烯醯基 {桂皮醯基},,C<sub>6</sub>H<sub>5</sub>CH＝CHCO－,2012-11-26
+536004,phenylsulfamoyl {phenylsulfamyl},苯胺砜基；苯胺磺醯基,,C<sub>6</sub>H<sub>5</sub>NHSO<sub>2</sub>－,2012-11-26
+536005,phenylsulfamyl {phenylsulfamoyl},苯胺砜基；苯胺磺醯基,,C<sub>6</sub>H<sub>5</sub>NHSO<sub>2</sub>－,2012-11-26
+536006,phenylsulfinyl,苯亚磺醯基,,C<sub>6</sub>H<sub>5</sub>SO－,2012-11-26
+536007,phenylsulfonyl,苯磺醯基,,C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>－,2012-11-26
+536008,phenylsulfonylamino,苯磺醯胺基,,C<sub>6</sub>H<sub>5</sub>SO<sub>2</sub>NH－,2012-11-26
+536009,phenylthio,苯硫基,,C<sub>6</sub>H<sub>5</sub>S－,2012-11-26
+536010,3-phenylureido,苯脲基,,C<sub>6</sub>H<sub>5</sub>NHCONH－,2012-11-26
+536011,phenylthiocarbamyl; phenylthiocarbamoyl,苯胺硫甲醯基,,C<sub>6</sub>H<sub>5</sub>NHCS－,2012-11-26
+536012,phospharseno,磷砷基；磷[代偶]砷基,,－P＝As－,2012-11-26
+536013,phosphazo,磷氮基；磷[代偶]氮基,,－P＝N－,2012-11-26
+536014,phosphinico,异次磷酸亚基,,<p>(HO)OP&lt;</p>,2012-11-26
+536015,phosphino,膦基,,H<sub>2</sub>P－,2012-11-26
+536016,phospho,二氧磷基,,O<sub>2</sub>P－,2012-11-26
+536017,phosphono,异亚磷酸基,,<p>(HO)<sub>2</sub>OP－</p>,2012-11-26
+536018,phosphoro,偶磷基,,－P＝P－,2012-11-26
+536019,phosphoroso,[一]氧磷基,,OP－,2012-11-26
+536020,phthalamoyl,酞醯胺醯基,,o-H<sub>2</sub>NCOC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+536021,phthalazinyl,呔【口井】基,,N<sub>2</sub>C<sub>8</sub>H<sub>5</sub>－,2012-11-26
+536022,phthalidyl,酞基,,nan,2012-11-26
+536023,phthalidylidene,亚酞基,,C<sub>6</sub>H<sub>4</sub>COOC=,2012-11-26
+536024,phthalimido,酞醯亚胺基,,C<sub>8</sub>H<sub>4</sub>O<sub>2</sub>N－,2012-11-26
+536025,phthaloyl,酞醯基；邻-苯二甲醯基,,<p>－COC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+536026,phthalylidene,邻-苯二亚甲基,,<p>=HCC<sub>6</sub>H<sub>4</sub>CH=</p>,2012-11-26
+536027,phytyl,植基,,C<sub>20</sub>H<sub>3</sub><sub>9</sub>－,2012-11-26
+536028,picenyl,苉基,,C<sub>2</sub><sub>2</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+536029,picryl,"苦味[酸]基；2,4,6-三硝苯基",,(O<sub>2</sub>N)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+536030,pimeloyl,庚二醯基,,－CO(CH<sub>2</sub>)<sub>5</sub>CO－,2012-11-26
+536031,pinanyl,蒎基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+536032,pinanylene,伸蒎基,,－C<sub>10</sub>H<sub>1</sub><sub>6</sub>－,2012-11-26
+536033,pinanylidene,亚蒎基,,C<sub>10</sub>H<sub>1</sub><sub>6</sub>＝,2012-11-26
+536034,piperazinyl,六氢吡【口井】基；哌【口井】基,,N<sub>2</sub>C<sub>4</sub>H<sub>9</sub>－,2012-11-26
+536035,piperidino,N-六氢吡啶基,,C<sub>5</sub>H<sub>10</sub>N－,2012-11-26
+536036,piperidyl,哌啶基,,C<sub>5</sub>H<sub>10</sub>N－,2012-11-26
+536037,piperidylidene,亚六氢吡啶基,,NC<sub>5</sub>H<sub>9</sub>＝,2012-11-26
+536038,piperonyl,"向日葵基；3,4-亚甲二氧苄基",,(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+536039,piperonylidene,"亚向日葵基；3,4-亚甲二氧苯亚甲基",,(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CH=,2012-11-26
+536040,piperonyloyl,向日葵醯基,,"3,4-(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+536041,"piperonyloyl; heliotropoyl {3,4-methylenedioxybenzoyl}","向日葵醯基 {3,4-亚甲二氧苯甲醯基}",,"3,4-(CH<sub>2</sub>O<sub>2</sub>)C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+536042,pivaloyl,三甲基乙醯基,,(CH<sub>3</sub>)<sub>3</sub>CCO－,2012-11-26
+536043,pivaloyl {pivalyl},三甲基乙醯基,,(CH<sub>3</sub>)<sub>3</sub>CCO－,2012-11-26
+536044,pivalyl {pivaloyl},三甲基乙醯基,,(CH<sub>3</sub>)<sub>3</sub>CCO－,2012-11-26
+536045,pleiadenyl,【艹卜】基,,C<sub>1</sub><sub>8</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+536046,polythio,多硫基,,－(S)<sub>n</sub>－,2012-11-26
+536047,prolyl,脯胺醯基,,C<sub>4</sub>H<sub>8</sub>NCO－,2012-11-26
+536048,propan-1-yl-3-ylidene,丙-1-基-3-亚基,,=CHCH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+536049,"propane-1,2,3-triyl","丙-1,2,3-三基",,nan,2012-11-26
+536050,"propane-1,3-diyl-2-ylidene","丙-1,3-二基-2-亚基",,nan,2012-11-26
+536051,propanedioyl {malonyl},丙二醯基,,－COCH<sub>2</sub>CO－,2012-11-26
+536052,propanoyl,丙醯基,,CH<sub>3</sub>CH<sub>2</sub>CO－,2012-11-26
+536053,propargyl {2-propynyl},炔丙基 {2-丙炔基},,CH≡CCH<sub>2</sub>－,2012-11-26
+536054,"propene-1,3-diyl {propenylene}","丙烯-1,3-二基 {伸丙烯基}",,－CH<sub>2</sub>CH=CH－,2012-11-26
+536055,1-propenyl,1-丙烯基,,CH<sub>3</sub>CH=CH－,2012-11-26
+536056,"propenylene {propene-1,3-diyl}","伸丙烯基 {丙烯-1,3-二基}",,－CH<sub>2</sub>CH=CH－,2012-11-26
+536057,propenylidene,亚丙烯基,,CH<sub>3</sub>CH=C=,2012-11-26
+536058,propioloyl {propiolyl},丙炔醯基；炔丙醯基,,CH≡CCO－,2012-11-26
+536059,propiolyl {propioloyl},丙炔醯基；炔丙醯基,,CH≡CCO－,2012-11-26
+536060,propionamido,丙醯胺基,,CH<sub>3</sub>CH<sub>2</sub>CONH－,2012-11-26
+536061,propionyl,丙醯基,,CH<sub>3</sub>CH<sub>2</sub>CO－,2012-11-26
+536062,propionylamino,丙醯胺基,,CH<sub>3</sub>CH<sub>2</sub>CONH－,2012-11-26
+536063,propionyloxy,丙醯氧基,,CH<sub>3</sub>CH<sub>2</sub>COO－,2012-11-26
+536064,propoxy,丙氧基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>O－,2012-11-26
+536065,propyl,丙基,,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+536066,propylene,伸丙基,,－CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+536067,propylidene,1-亚丙基,,CH<sub>3</sub>CH<sub>2</sub>CH=,2012-11-26
+536068,propylidyne,次丙基,,CH<sub>3</sub>CH<sub>2</sub>C≣,2012-11-26
+536069,1-propynyl,1-丙炔基,,CH<sub>3</sub>C≡C－,2012-11-26
+536070,2-propynyl {propargyl},2-丙炔基 {炔丙基},,CH≡CCH<sub>2</sub>－,2012-11-26
+536071,protocatechuoyl,[原]儿茶酚甲醯基,,"3,4-(HO)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+536072,"protocatechuoyl {3,4-dihydroxybenzoyl}","儿茶酚甲醯基 {3,4-二羟苯甲醯基；3,4-二羟苄醯基}",,"3,4-(HO)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+536073,"pseudocumyl {2,3,5-trimethylphenyl}","假【草(之上)久】基{2,4,5-三甲苯基}",,(CH<sub>3</sub>)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+536074,pseudoindoyl,假吲哚基,,C<sub>8</sub>H<sub>6</sub>N－,2012-11-26
+536075,pteridinyl,喋啶基,,N<sub>4</sub>C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+536076,purinyl,嘌呤基,,N<sub>4</sub>C<sub>5</sub>H<sub>3</sub>－,2012-11-26
+536077,pyazolidyl; pyrazolidinyl,吡唑啶基,,N<sub>2</sub>C<sub>3</sub>H<sub>7</sub>－,2012-11-26
+536078,pyranthrenyl,苒基；芘蒽基,,C<sub>30</sub>H<sub>1</sub><sub>5</sub>－,2012-11-26
+536079,pyranyl,哌喃基,,C<sub>5</sub>H<sub>5</sub>O－,2012-11-26
+536080,pyranylidene,亚哌喃基,,OC<sub>5</sub>H<sub>4</sub>＝,2012-11-26
+536081,pyrazinyl,吡【口井】基,,C<sub>4</sub>H<sub>3</sub>N<sub>2</sub>－,2012-11-26
+536082,pyrazolinyl,吡唑啉基；二氢吡唑基,,N<sub>2</sub>C<sub>3</sub>H<sub>5</sub>－,2012-11-26
+536083,pyrazolyl,吡唑基,,C<sub>3</sub>H<sub>5</sub>N<sub>2</sub>－,2012-11-26
+536084,pyrenyl,芘基,,C<sub>1</sub><sub>6</sub>H<sub>9</sub>－,2012-11-26
+536085,pyridazinyl,嗒【口井】基,,N<sub>2</sub>C<sub>4</sub>H<sub>3</sub>－,2012-11-26
+536086,2-pyridinecarbonyl {2-pyridylcarbonyl; nicotinoyl},2-吡啶羰基；2-吡啶甲醯基 {烟碱醯基},,NC<sub>5</sub>H<sub>4</sub>CO－,2012-11-26
+536087,4-pyridinecarbonyl {isonicotinoyl},4-吡啶羰基；4-吡啶甲醯基 {异烟碱醯基},,NC<sub>5</sub>H<sub>4</sub>CO－,2012-11-26
+536088,pyridinio,吡锭基,,<sup>+</sup>NC<sub>5</sub>H<sub>5</sub>－,2012-11-26
+536089,2-pyridylcarbonyl,2-吡啶羰基；2-吡啶甲醯基,,NC<sub>5</sub>H<sub>4</sub>CO－,2012-11-26
+536090,pyridyl,吡啶基,,C<sub>5</sub>H<sub>4</sub>N－,2012-11-26
+536091,pyridylidene,伸二氢吡啶基,,NC<sub>5</sub>H<sub>5</sub>=,2012-11-26
+536092,pyridyloxy,吡啶氧基,,NC<sub>5</sub>H<sub>4</sub>O－,2012-11-26
+536093,pyrimidinyl {pyrimidyl},嘧啶基,,C<sub>4</sub>H<sub>3</sub>N<sub>2</sub>－,2012-11-26
+536094,pyrimidyl {pyrimidinyl},嘧啶基,,C<sub>4</sub>H<sub>3</sub>N<sub>2</sub>－,2012-11-26
+536095,pyromucyl {2-furoyl},焦黏醯基；糠醯基{2-呋喃甲醯基},,OCH=CHCH=CCO－,2012-11-26
+536096,pyrrolidinyl,吡咯啶基；四氢吡咯基,,NC<sub>4</sub>H<sub>8</sub>－,2012-11-26
+536097,pyrrolinyl,吡咯啉基；二氢吡咯基,,NC<sub>4</sub>H<sub>6</sub>－,2012-11-26
+536098,pyrrolyl,吡咯基,,NC<sub>4</sub>H<sub>4</sub>－,2012-11-26
+536099,pyruvoyl,丙酮醯基,,CH<sub>3</sub>COCO－,2012-11-26
+536100,quinazolinyl,喹唑啉基,,C<sub>8</sub>H<sub>5</sub>N<sub>2</sub>－,2012-11-26
+536101,quinolinediyl,喹啉二基,,－NC<sub>9</sub>H<sub>5</sub>－,2012-11-26
+536102,quinolizinyl,喹【口井】基,,NC<sub>9</sub>H<sub>8</sub>－,2012-11-26
+536103,quinolyl,喹啉基,,NC<sub>9</sub>H<sub>6</sub>－,2012-11-26
+536104,quinonyl; benzoquinonyl,苯醌基,,C<sub>6</sub>H<sub>3</sub>O<sub>2</sub>－,2012-11-26
+536105,quinoxalinyl,喹【口咢】啉基,,C<sub>8</sub>H<sub>5</sub>N<sub>2</sub>－,2012-11-26
+536106,quinuclidinyl,【口昆】啶基,,C<sub>7</sub>H<sub>1</sub><sub>2</sub>N－,2012-11-26
+536107,resorcyl,间苯二酚基,,(HO)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+536108,rubicenyl,茹基,,C<sub>2</sub><sub>6</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+536109,salicyl,柳基,,2-HOC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+536110,salicyl {o-hydroxybenzyl; 2-hydroxybenzyl},柳基 {邻-羟苄基；2-羟苄基},,<p>HOC<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>－</p>,2012-11-26
+536111,salicylidene,亚柳基,,HOC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+536112,salicylidene {2-hydroxybenzylidene },亚柳基 {2-羟亚苄基},,2-HOC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+536113,salicyloyl,柳醯基；邻-羟苯甲醯基,,<p>HOC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+536114,salicyloyl {o-hydroxybenzoyl},柳醯基 {邻-羟苯甲醯基；邻-羟苄醯基},,<p>o-HOC<sub>6</sub>H<sub>4</sub>CO－</p>,2012-11-26
+536115,santalyl,檀香基,,C<sub>1</sub><sub>5</sub>H<sub>2</sub><sub>3</sub>－,2012-11-26
+536116,sebacoyl,皮脂醯基；癸二醯基,,－CO(CH<sub>2</sub>)<sub>8</sub>CO－,2012-11-26
+536117,seleneno,羟硒基,,HOSe－,2012-11-26
+536118,selenino,亚【酉西】酸基,,HO<sub>2</sub>Se－,2012-11-26
+536119,seleninyl,亚【酉西】醯基；硒亚砜基,,OSe＜,2012-11-26
+536120,seleno,硒基,,－Se－,2012-11-26
+536121,selenocyanato,氰硒基,,NCSe－,2012-11-26
+536122,selenoformyl,硒代甲醯基；硒醛基,,HSeC－,2012-11-26
+536123,selenonio,二氢硒基,,<sup>+</sup>H<sub>2</sub>Se－,2012-11-26
+536124,selenono,【酉西】酸基,,HO<sub>3</sub>Se－,2012-11-26
+536125,selenonyl,【酉西】醯基；硒砜基,,O<sub>2</sub>Se＜,2012-11-26
+536126,selenoureido,硒脲基,,H<sub>2</sub>NCSeNH－,2012-11-26
+536127,selenoxo,硒羰基,,(＞C)=Se,2012-11-26
+536128,semicarbazido,半卡肼基,,H<sub>2</sub>NCONHNH－,2012-11-26
+536129,semicarbazono,半卡腙基,,H<sub>2</sub>NCONHN=,2012-11-26
+536130,senecioyl,异戊烯醯基；二甲烯丙醯基,,(CH<sub>3</sub>)<sub>2</sub>C=CHCO－,2012-11-26
+536131,seryl,丝胺醯基,,HOCH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+536132,silicono,【酉夕】酸基,,(HO)OSi－,2012-11-26
+536133,siloxy,矽[烷]氧基,,H<sub>3</sub>SiO－,2012-11-26
+536134,silyl,矽基,,H<sub>3</sub>Si－,2012-11-26
+536135,silylamino,矽胺基,,H<sub>3</sub>SiNH－,2012-11-26
+536136,1-silyldisilanyl,1-矽二矽烷基；异三矽烷基,,(H<sub>3</sub>Si)<sub>2</sub>SiH－,2012-11-26
+536137,silylene,亚矽基,,H<sub>2</sub>Si=,2012-11-26
+536138,silylidene,次矽基,,HSi≣,2012-11-26
+536139,stannyl,锡烷基,,H<sub>3</sub>Sn－,2012-11-26
+536140,stearoyl {octadecanoyl},硬脂醯基 {十八醯基},,C<sub>1</sub><sub>7</sub>H<sub>3</sub><sub>5</sub>CO－,2012-11-26
+536141,stibarseno,锑砷基,,－Sb=As－,2012-11-26
+536142,stibinico,一元【月弟】酸基,,HOOSb=,2012-11-26
+536143,stibino {stibyl},【月弟】基,,H<sub>2</sub>Sb－,2012-11-26
+536144,stiboso,氧锑基,,OSb－,2012-11-26
+536145,stibyl,【月弟】基,,H<sub>2</sub>Sb－,2012-11-26
+536146,stibylene,亚【月弟】基；亚锑烷基,,HSb=,2012-11-26
+536147,styryl {cinnamenyl},苯乙烯基 {苏合香基},,C<sub>6</sub>H<sub>5</sub>CH=CH－,2012-11-26
+536148,suberoyl,"1,8-辛二醯基",,－CO(CH<sub>2</sub>)<sub>6</sub>CO－,2012-11-26
+536149,suberyl,环庚基,,C<sub>7</sub>H<sub>1</sub><sub>3</sub>－,2012-11-26
+536150,succinamoyl {succinamyl},琥珀醯胺醯基,,H<sub>2</sub>NCOCH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+536151,succinamyl {succinamoyl},琥珀醯胺醯基,,H<sub>2</sub>NCOCH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+536152,succinimido,琥珀醯亚胺基；丁二醯亚胺基,,COCH<sub>2</sub>CH<sub>2</sub>CON－,2012-11-26
+536153,succinimidoyl,琥珀醯亚胺基,,－C(=NH)CH<sub>2</sub>CH<sub>2</sub>C(=NH)－,2012-11-26
+536154,succinyl,琥珀醯基；丁二醯基,,－COCH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+536155,sulfamino,磺酸胺基,,HO<sub>3</sub>SNH－,2012-11-26
+536156,sulfamoyl {sulfamyl},胺磺醯基,,H<sub>2</sub>NSO<sub>2</sub>－,2012-11-26
+536157,sulfamyl {sulfamoyl},胺磺醯基,,H<sub>2</sub>NSO<sub>2</sub>－,2012-11-26
+536158,sulfanilamido,磺胺基；胺苯磺醯胺基,,H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>NH－,2012-11-26
+536159,sulfanilamido,对胺苯磺醯胺基,,p-NH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>NH－,2012-11-26
+536160,sulfanilyl,[对]胺苯磺醯基,,H<sub>2</sub>NC<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>－,2012-11-26
+536161,sulfenamoyl,胺硫基,,NH<sub>2</sub>S－,2012-11-26
+536162,sulfeno,次磺酸基,,HOS－,2012-11-26
+536163,sulfhydryl,氢硫基；硫醇基；巯基,,HS－,2012-11-26
+536164,sulfido,硫离子基,,<sup>－</sup>S－,2012-11-26
+536165,sulfinamoyl,胺亚磺醯基,,NH<sub>2</sub>SO－,2012-11-26
+536166,sulfino,亚磺酸基,,HO<sub>2</sub>S－,2012-11-26
+536167,sulfinyl,亚磺醯基；氧硫基,,RS(O)－,2012-11-26
+536168,sulfo,磺酸基,,HOSO<sub>2</sub>－,2012-11-26
+536169,sulfonamido,磺醯胺基,,－SO<sub>2</sub>NH－,2012-11-26
+536170,sulfonato,磺酸根基,,<sup>－</sup>O<sub>3</sub>S－,2012-11-26
+536171,sulfonio,二氢硫基,,<sup>+</sup>H<sub>2</sub>S－,2012-11-26
+536172,sulfonyl,磺醯基；砜基,,RSO<sub>2</sub>━,2015-09-17
+536173,sulfonyldioxy,磺醯二氧基,,－OSO<sub>2</sub>O－,2012-11-26
+536174,sulfophenyl,磺[酸基]苯基,,HO<sub>3</sub>SC<sub>6</sub>H<sub>4</sub>－,2012-11-26
+536175,sulfuryl,硫醯基,,－SO<sub>2</sub>－,2012-11-26
+536176,tartaroyl ,酒石醯基,,－COCH(OH)CH(OH)CO－,2012-11-26
+536177,"tartaroyl {2,3-dihydroxybutanedioyl}","酒石醯基 {2,3-二羟丁二醯基}",,－OCCH(OH)CH(OH)CO－,2012-11-26
+536178,tartronoyl {tartronyl},羟丙二醯基；丙醇二醯基,,－OCCH(OH)CO－,2012-11-26
+536179,tartronyl {tartronoyl},羟丙二醯基；丙醇二醯基,,－OCCH(OH)CO－,2012-11-26
+536180,tauryl,牛[胆]磺醯基；胺乙磺醯基,,H<sub>2</sub>NCH<sub>2</sub>CH<sub>2</sub>SO<sub>2</sub>－,2012-11-26
+536181,telluro,碲基,,－Te－,2012-11-26
+536182,(tercyclohexan)yl,联三环己基,,C<sub>6</sub>H<sub>1</sub><sub>1</sub>C<sub>6</sub>H<sub>10</sub>C<sub>6</sub>H<sub>10</sub>－,2012-11-26
+536183,terephthalal; terephthalyidene,对苯二亚甲基,,=CHC<sub>6</sub>H<sub>4</sub>CH=,2012-11-26
+536184,terephthaloyl,对酞醯基；对苯二甲醯基,,－OCC<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+536185,terphenylyl,联三苯基,,C<sub>6</sub>H<sub>5</sub>C<sub>6</sub>H<sub>4</sub>C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+536186,(terthiophen)yl,联三噻吩基,,SC<sub>4</sub>H<sub>3</sub>SC<sub>4</sub>H<sub>2</sub>SC<sub>4</sub>H<sub>2</sub>－,2012-11-26
+536187,terpinyl,【草(之上)孟】烯基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+536188,tert-pentyl,三级-戊基,,CH<sub>3</sub>CH<sub>2</sub>C(CH<sub>3</sub>)<sub>2</sub>－,2021-09-28
+536189,tetracontyl,四十基,,C<sub>40</sub>H<sub>8</sub><sub>1</sub>－,2012-11-26
+536190,tetracosyl,二十四基,,C<sub>2</sub><sub>4</sub>H<sub>4</sub><sub>9</sub>－,2012-11-26
+536191,tetradecanoyl,十四醯基 {肉豆蔻醯基},,C<sub>1</sub><sub>3</sub>H<sub>2</sub><sub>7</sub>CO－,2012-11-26
+536192,tetradecyl,十四基,,C<sub>1</sub><sub>4</sub>H<sub>2</sub><sub>9</sub>－,2012-11-26
+536193,tetrahydrofurfuryl,四氢糠基；四氢呋喃甲基,,C<sub>4</sub>H<sub>7</sub>OCH<sub>2</sub>－,2012-11-26
+536194,tetralyl,四氢萘基,,C<sub>10</sub>H<sub>1</sub><sub>1</sub>－,2012-11-26
+536195,tetramethylene,伸丁基；四亚甲基,,－CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+536196,tetramethylphenylene,四甲伸苯基,,(CH<sub>3</sub>)<sub>4</sub>C<sub>6</sub><,2012-11-26
+536197,tetramethyl-p-phenylene,四甲对伸苯基,,(CH<sub>3</sub>)<sub>4</sub>C<sub>6</sub><,2012-11-26
+536198,"2,3,5,6-tetramethylphenyl {duryl}","2,3,5,6-四甲苯基 {荰基}",,(CH<sub>3</sub>)<sub>4</sub>C<sub>6</sub>H－,2012-11-26
+536199,tetraphenylenyl,联四苯基,,C<sub>2</sub><sub>4</sub>H<sub>1</sub><sub>5</sub>－,2012-11-26
+536200,tetrazolyl,四唑基,,N<sub>4</sub>CH－,2012-11-26
+536201,tetrazolyl; tetrazyl,四唑基,,CHN<sub>4</sub>－,2012-11-26
+536202,thenoyl,噻吩甲醯基,,C<sub>4</sub>H<sub>3</sub>SCO－,2012-11-26
+536203,thenyl,噻吩甲基,,C<sub>4</sub>H<sub>3</sub>SCH<sub>2</sub>－,2012-11-26
+536204,thenylidene,噻吩亚甲基,,C<sub>4</sub>H<sub>3</sub>SCH=,2012-11-26
+536205,thianthrenyl,噻嗯基,,S<sub>2</sub>C<sub>1</sub><sub>2</sub>H<sub>7</sub>－,2012-11-26
+536206,thiazinyl,噻【口井】基,,C<sub>4</sub>H<sub>4</sub>NS－,2012-11-26
+536207,thiazolidinyl {thiazolidyl},四氢噻唑基,,C<sub>3</sub>H<sub>6</sub>NS－,2012-11-26
+536208,4-thiazolidonyl,4-四氢噻唑酮基,,C<sub>3</sub>H<sub>4</sub>NOS－,2012-11-26
+536209,thiazolidyl {thiazolidinyl},四氢噻唑基,,C<sub>3</sub>H<sub>6</sub>NS－,2012-11-26
+536210,thiazolyl,噻唑基,,C<sub>3</sub>H<sub>2</sub>NS－,2012-11-26
+536211,thienyl,噻吩基,,C<sub>4</sub>H<sub>3</sub>S－,2012-11-26
+536212,thio,硫基,,－S－,2012-11-26
+536213,thioacetyl,硫乙醯基,,CH<sub>3</sub>CS－,2012-11-26
+536214,thiobenzoyl,硫苄醯基,,C<sub>6</sub>H<sub>5</sub>CS－,2012-11-26
+536215,thiocarbamoyl; thiocarbamyl,胺硫甲醯基,,H<sub>2</sub>NCS－,2012-11-26
+536216,thiocarbazono,硫卡腙基,,NH=N－CSNHNH<sub>2</sub>－,2012-11-26
+536217,thiocarbodiazono,硫卡二腙基,,NH=N－CSN=N－,2012-11-26
+536218,thiocarbonohydrazido,硫卡肼基,,NH<sub>2</sub>NHCSNHNH－,2012-11-26
+536219,thiocarbonyl,硫羰基,,S=C<,2012-11-26
+536220,thiocarboxy,硫羧基,,HSOC－,2012-11-26
+536221,thiocyanato,氰硫基,,NCS－,2012-11-26
+536222,thioformyl,硫甲醯基,,SHC－,2012-11-26
+536223,thionyl,亚硫醯基,,O=S<,2012-11-26
+536224,thiophenecarbonyl {thenoyl},噻吩甲醯基,,SC<sub>4</sub>H<sub>3</sub>CO－,2012-11-26
+536225,thiophenyl,苯硫基,,C<sub>6</sub>H<sub>5</sub>S－,2012-11-26
+536226,thiosemicarbazido,硫半卡肼基,,H<sub>2</sub>NCSNHNH－,2012-11-26
+536227,thiosulfino,硫代亚磺酸基,,HOS<sub>2</sub>－,2012-11-26
+536228,thiosulfo,硫代磺酸基,,HO<sub>2</sub>S<sub>2</sub>－,2012-11-26
+536229,thioureido,硫脲基,,H<sub>2</sub>NCSNH－,2012-11-26
+536230,thioxo; thiono,硫[酮]基,,S=(C<) ,2012-11-26
+536231,threonyl,苏胺醯基,,CH<sub>3</sub>CH(OH)CH(NH<sub>2</sub>)CO－,2012-11-26
+536232,thujyl,【草(之上)丢】基,,C<sub>10</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+536233,thymyl {3-p-cymyl},瑞香[草]基 {3-对莳萝基；3-对【草(之上)散】基},,CH<sub>3</sub>(C<sub>3</sub>H<sub>7</sub>)C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+536234,thyronyl,甲[状]腺胺醯基,,p-(p-HOC<sub>6</sub>H<sub>4</sub>O)C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+536235,toloxy; tolyloxy {cresoxy},【草(之上)叨】氧基；{甲苯氧基},,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>O－,2012-11-26
+536236,toluenesulfonyl,甲苯磺醯基；【草(之上)叨】磺醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>－,2012-11-26
+536237,toluidino; toluido; toluino,【草(之上)叨】胺基； 甲苯胺基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>NH－,2012-11-26
+536238,toluoyl,【草(之上)叨】甲醯基；甲苯甲醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+536239,α-toluoyl {phenylacetyl},α-【草(之上)叨】甲醯基 {苯乙醯基},,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>CO－,2012-11-26
+536240,toluyl,【草(之上)叨】甲醯基；甲苯甲醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>CO－,2012-11-26
+536241,tolyl,【草(之上)叨】基；甲苯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+536242,α-tolyl {benzyl},α-【草(之上)叨】基 {苄基},,C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>－,2012-11-26
+536243,tolylene,甲伸苯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>3</sub><,2012-11-26
+536244,α-tolylene {benzylidene; benzal},苯亚甲基 {亚苄基},,C<sub>6</sub>H<sub>5</sub>CH<,2012-11-26
+536245,tolyloxy,【草(之上)叨】氧基；甲苯氧基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>O－,2012-11-26
+536246,tolylsulfonyl,甲苯磺醯基；【草(之上)叨】磺醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>－,2012-11-26
+536247,tosyl,甲苯磺醯基；【草(之上)叨】磺醯基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>SO<sub>2</sub>－,2012-11-26
+536248,triacontyl,三十基 {蜜蜡基},,C<sub>2</sub><sub>9</sub>H<sub>5</sub><sub>9</sub>CH<sub>2</sub>－,2012-11-26
+536249,triazaphenanthryl,三吖菲基,,N<sub>3</sub>C<sub>1</sub><sub>1</sub>H<sub>6</sub>－,2012-11-26
+536250,triazeno,三氮烯基 {胺偶氮基},,H<sub>2</sub>NN=N－,2012-11-26
+536251,triazinyl,三【口井】基,,C<sub>3</sub>H<sub>2</sub>N<sub>3</sub>－,2012-11-26
+536252,triazo {azido},三氮基 {叠氮基},,N<sub>3</sub>－,2012-11-26
+536253,triazolidinyl,三唑啶基,,C<sub>2</sub>H<sub>6</sub>N<sub>3</sub>－,2012-11-26
+536254,triazolyl,三唑基,,C<sub>2</sub>H<sub>2</sub>N<sub>3</sub>－,2012-11-26
+536255,tricosyl,二十三基,,C<sub>2</sub><sub>3</sub>H<sub>4</sub><sub>7</sub>－,2012-11-26
+536256,tridecanoyl,十三醯基,,C<sub>1</sub><sub>2</sub>H<sub>2</sub><sub>5</sub>CO－,2012-11-26
+536257,tridecyl,十三基,,C<sub>1</sub><sub>3</sub>H<sub>2</sub><sub>7</sub>－,2012-11-26
+536258,trifluorothio,三氟硫基,,F<sub>3</sub>S－,2012-11-26
+536259,"3,4,5-trihydroxybenzoyl {galloyl}","3,4,5-三羟苯甲醯基；3,4,5-三羟苄醯基",,"3,4,5-(HO)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>CO－",2012-11-26
+536260,trimethylammonio,三甲铵基,,(CH<sub>3</sub>)<sub>3</sub>N<sup>+</sup>－,2012-11-26
+536261,trimethylanilino,三甲苯胺基,,(CH<sub>3</sub>)<sub>3C6</sub>H<sub>2</sub>NH－,2012-11-26
+536262,trimethylene,伸丙基,,－CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>－,2012-11-26
+536263,"2,4,5-trimethoxyphenyl {asaryl}","2,4,5-三甲氧苯基 {细辛基}",,(CH<sub>3</sub>O)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+536264,"2,3,5-trimethylphenyl {pseudocumyl}","2,4,5-三甲苯基 {假【草(之上)久】基}",,(CH<sub>3</sub>)<sub>3</sub>C<sub>6</sub>H<sub>2</sub>－,2012-11-26
+536265,trinaphthylenyl,联伸三萘基,,C<sub>30</sub>H<sub>1</sub><sub>7</sub>－,2012-11-26
+536266,triphenylmethyl {trityl},三苯甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>C－,2012-11-26
+536267,triphenylsilyl,三苯矽基,,(C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>Si－,2012-11-26
+536268,trisilanyl,三矽烷基,,H<sub>3</sub>SiSiH<sub>2</sub>SiH<sub>2</sub>－,2012-11-26
+536269,trisilanylene,伸三矽烷基,,－H<sub>2</sub>SiSiH<sub>2</sub>SiH<sub>2</sub>－,2012-11-26
+536270,trithiadiazaindenyl,三噻二吖茚基,,S<sub>3</sub>N<sub>2</sub>C<sub>4</sub>H<sub>7</sub>－,2012-11-26
+536271,trithio,三硫基,,－S<sub>3</sub>－,2012-11-26
+536272,trithiosulfo,三硫代磺酸基,,HSS<sub>3</sub>－,2012-11-26
+536273,tritriacontyl,三十三基,,CH<sub>3</sub> (CH<sub>2</sub>)<sub>3</sub><sub>1</sub>CH<sub>2</sub>－,2012-11-26
+536274,trityl,三苯甲基,,(C<sub>6</sub>H<sub>5</sub>)<sub>3</sub>C－,2012-11-26
+536275,tropoyl,颠茄醇醯基,,C<sub>6</sub>H<sub>5</sub>CH(CH<sub>2</sub>OH)CO－,2012-11-26
+536276,tropyl,【草(之上)卓】基,,C<sub>7</sub>H<sub>7</sub>－,2012-11-26
+536277,tryptophanyl,色胺醯基,,NC<sub>8</sub>H<sub>6</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+536278,tryptophyl,色胺醯基,,NC<sub>8</sub>H<sub>6</sub>CH<sub>2</sub>CH(NH<sub>2</sub>)CO－,2012-11-26
+536279,tyrosyl,酪胺醯基,,p-HOC<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>(NH<sub>2</sub>)CO－,2012-11-26
+536280,undecanoyl,十一醯基,,C<sub>10</sub>H<sub>1</sub><sub>9</sub>CO－,2012-11-26
+536281,undecyl {hendecyl},十一基,,C<sub>1</sub><sub>1</sub>H<sub>2</sub><sub>3</sub>－,2012-11-26
+536282,uramino {carbamido; ureido},脲基,,H<sub>2</sub>NCONH－,2012-11-26
+536283,ureido {carbamido},脲基,,H<sub>2</sub>NCONH－,2012-11-26
+536284,ureylene,伸脲基,,－NHCONH－,2012-11-26
+536285,valeryl,缬草醯基 {戊醯基},,CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>CO－,2012-11-26
+536286,valyl,缬胺醯基,,(CH<sub>3</sub>)<sub>2</sub>CHCH(NH<sub>2</sub>)CO－,2012-11-26
+536287,vanilloyl {2-hydroxy-3-methoxybenzoyl},香草醯基 {2-羟-3-甲氧苯甲醯基；2-羟-3-甲氧苄醯基},,HOC<sub>6</sub>H<sub>3</sub>(OCH<sub>3</sub>)CO－,2012-11-26
+536288,vanillyl,香草基,,CH<sub>3</sub>OC<sub>6</sub>H<sub>3</sub>(OH)CH<sub>2</sub>－,2012-11-26
+536289,vanillylidene,亚香草基,,HOC<sub>6</sub>H<sub>3</sub>(OCH<sub>3</sub>)CH=,2012-11-26
+536290,veraltrylidene {veratral},亚藜芦基,,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH=,2012-11-26
+536291,veratral {veratrylidene},亚藜芦基,,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH=,2012-11-26
+536292,"veratroyl {3,4-dimethoxybenzoyl}","藜芦醯基 {3,4-二甲氧苯甲醯基；3,4-二甲氧苄醯基}",,"3,4-(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－",2012-11-26
+536293,veratryl,藜芦基,,(CH<sub>3</sub>O)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CH<sub>2</sub>－,2012-11-26
+536294,vinyl,乙烯基,,CH<sub>2</sub>=CH－,2012-11-26
+536295,vinylene,伸乙烯基,,－CH=CH－,2012-11-26
+536296,vinylidene,亚乙烯基,,CH<sub>2</sub>=C=,2012-11-26
+536297,violanthrenyl,【艹法】基,,C<sub>3</sub><sub>4</sub>H<sub>1</sub><sub>9</sub>－,2012-11-26
+536298,xanthenyl,【口山】基,,OC<sub>1</sub><sub>3</sub>H<sub>9</sub>－,2012-11-26
+536299,xenyl; biphenylyl,联苯基,,C<sub>6</sub>H<sub>5</sub>C<sub>6</sub>H<sub>4</sub>－,2012-11-26
+536300,xylidino,茬胺基,,(CH<sub>3</sub>)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>NH－,2012-11-26
+536301,xyloyl,茬甲醯基,,(CH<sub>3</sub>)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>CO－,2012-11-26
+536302,xylyl,茬基；二甲苯基,,(CH<sub>3</sub>)<sub>2</sub>C<sub>6</sub>H<sub>3</sub>－,2012-11-26
+536303,α-xylyl,α-茬基；甲苄基,,CH<sub>3</sub>C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+536304,"α,α’-xylylene {phenylenedimethylene}","α,α’-伸茬基 {伸苯二甲基}",,－CH<sub>2</sub>C<sub>6</sub>H<sub>4</sub>CH<sub>2</sub>－,2012-11-26
+2306246,capryl,癸醯基,,C<Sub>9</Sub><Font>H</Font><Sub>19</Sub><Font>CO－</Font>,2015-05-29
+2306247,caproyl,己醯基,,C<Sub>5</Sub><Font>H</Font><Sub>11</Sub><Font>CO－</Font>,2015-05-29
+2460691,sulfanyl,氢硫基,,HS-,2015-09-17
