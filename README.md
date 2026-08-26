@@ -2,6 +2,12 @@
 
 中外合办外文学案翻译专家 Skill。将外文学案（英语/法语等）精准翻译为中文，强制分级术语检索，支持 HTML / DOCX / Markdown 多格式一键导出。
 
+## 效果图 (HTML / DOCX, 选择概念对照模式下)
+
+<img width="2561" height="1393" alt="3d1d82df6bfeb76f98cdc7de13f14a04" src="https://github.com/user-attachments/assets/f152816d-edb6-41d5-ba26-26e9aad1f81a" />
+
+<img width="2451" height="1240" alt="138bab0f5c636d495aef906d06268587" src="https://github.com/user-attachments/assets/120d02bc-84d3-4a5f-8ec7-15feb143d209" />
+
 ## 目录结构
 
 ```text
