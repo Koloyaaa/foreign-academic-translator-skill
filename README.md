@@ -1,10 +1,10 @@
 # 外文讲义翻译 Skill
 
-版本：V2.0
-把外文讲义整理成准确、易读、可继续编辑的中文学习材料。
-该 Skill 支持 HTML / MD / DOCX 等多种文件格式，支持图片提取，支持插入注释（可选注释强度），支持术语表，支持展示阅读目录和阅读进度。
-我们兴奋地宣布，该版本在一定程度上还可以防御提示词注入。
-提供 Trae、Codex 与 Claude Code 三种 Harness 安装包。
+- 版本：V2.0
+- 把外文讲义整理成准确、易读、可继续编辑的中文学习材料。
+- 该 Skill 支持 HTML / MD / DOCX 等多种文件格式，支持图片提取并在原有位置嵌入译文，支持AI注解（可选注释强度），支持专业术语超链接并在最后展示术语表，HTML支持展示阅读目录和阅读进度。
+- 我们兴奋地宣布，该版本在一定程度上还可以防御提示词注入。
+- 提供 Trae、Codex 与 Claude Code 三种 Harness 安装包。
 
 ![Trae Skill](https://img.shields.io/badge/Trae-skill-2B90D9)
 ![Codex Skill](https://img.shields.io/badge/Codex-skill-5B4BDB)
