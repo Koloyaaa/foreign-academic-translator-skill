@@ -1,0 +1,52 @@
+name: foreign-academic-translator
+description: 中外合办外文学案翻译专家。零默认值强制门禁，分级术语检索，全格式水印。
+version: 2.0.0
+parameters:
+  - name: source_text
+    type: string
+    description: "经预处理提取的学案纯文本内容（由系统自动注入）"
+    required: true
+    injected_from: preprocessor
+
+  - name: discipline
+    type: string
+    description: "学科大类（必须与glossaries文件夹名完全匹配）"
+    required: true
+    enum: ["Engineering", "Economics", "Science", "Agriculture", "Social_Sciences", "Literature_Arts", "Medicine"]
+
+  - name: output_formats
+    type: array
+    description: "输出格式（必须至少选择一项）"
+    required: true
+    enum: ["html", "docx", "md"]
+
+  # ✅ 修正：4 个互斥选项，包含 concept_highlight
+  - name: layout
+    type: string
+    description: "展示布局（四选一，必须明确选择）"
+    required: true
+    enum: ["translation_only", "translation_first", "source_first", "concept_highlight"]
+
+  - name: show_concept_table
+    type: string
+    description: "是否生成概念表（必须明确选择 true 或 false）"
+    required: true
+    enum: ["true", "false"]
+
+  - name: annotate_level
+    type: string
+    description: "中文注释注解等级（每次生成必问，无默认值；注释越重 Token 消耗越高）"
+    required: true
+    enum: ["无注释", "轻度注释", "高中生视角", "重度注释"]
+
+  - name: include_images
+    type: string
+    description: "是否提取源 PDF 配图并嵌入产物（true/false）"
+    required: true
+    enum: ["true", "false"]
+
+  - name: glossary_mode
+    type: string
+    description: "词库使用方式（system_glossary 用系统词库 / ai_auto 由 AI 自动识别术语）"
+    required: true
+    enum: ["system_glossary", "ai_auto"]

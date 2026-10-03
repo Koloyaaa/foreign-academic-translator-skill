@@ -1,0 +1,30 @@
+# 许可与署名说明
+
+本仓库公开提供源码，并允许符合下列许可的非商业使用。由于许可限制商业用途，它不属于 OSI 定义下的正式开源软件；OSI 的定义要求不得限制商业等使用领域。
+
+本仓库包含代码、技能说明和第三方材料，按文件类型适用不同许可：
+
+## 软件代码
+
+本项目作者创作的软件代码与配置，包括 Python 脚本、CSS 样式和 YAML 配置，采用 [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0)。该许可允许非商业使用、修改和再分发；分发时须同时提供许可条款和下列 Required Notice：
+
+> Required Notice: Copyright DornGames / Koloyaaa (Léo WEE). Original project: https://github.com/Koloyaaa/foreign-academic-translator-skill
+
+## 技能说明与文档
+
+本项目作者创作的 `SKILL.md`、README、使用说明及其他文档采用 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International（CC BY-NC-SA 4.0）](https://creativecommons.org/licenses/by-nc-sa/4.0/)。分享或二创这些材料时，须注明原作者和来源、附上许可链接、说明修改，并按相同许可分享二创版本。
+
+推荐署名格式：
+
+> 基于 DornGames / Koloyaaa（Léo WEE）的「外文讲义翻译 Skill」改编，原项目：https://github.com/Koloyaaa/foreign-academic-translator-skill。修改内容：<简述修改>。文档许可：CC BY-NC-SA 4.0。
+
+公开宣传、展示或再创作本项目材料时，请保留原作者署名和来源链接，不得暗示原作者为二创内容背书。
+
+## 不包含在以上许可中的材料
+
+- 三种 Harness 安装包内的 `glossaries/` CSV 词库来自第三方资料。原项目 README 将来源标注为台湾教育研究机构乐词网；本仓库许可不授予词库的额外版权或再分发权限。使用和再分发前，请核实来源方的授权条件。
+- `trae/.trae/skills/zwhb/_pylibs/` 下的打包 Python 依赖保留各自上游许可和版权声明。
+- `assets/showcase/` 中的截图和 `references/` 中的示例讲义可能包含第三方教材或界面内容，不在本仓库许可范围内。
+- 其他第三方依赖由其各自的许可证约束。
+
+本说明只授予本项目作者有权许可的内容，不改变第三方材料的权利，也不替代上述标准许可的完整法律文本。商业用途须事先取得相关权利人的书面许可。

@@ -1,0 +1,48 @@
+# Python bytecode and interpreter caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pycache_prefix/
+
+# Local Python environments and package/build caches
+.venv/
+venv/
+env/
+ENV/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.coverage
+.coverage.*
+htmlcov/
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Generated translation outputs from the repository and all three harness packages
+/output/
+**/scripts/output/
+
+# Local source samples and extraction logs at the repository root
+/Test.pdf
+/extracted_test.txt
+/test_extracted.txt
+/pip_log.txt
+/references/
+
+# Log, temporary, and editor swap files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+# Operating system metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
