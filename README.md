@@ -9,7 +9,7 @@
 
 ## 效果预览
 
-术语原文标注、通俗注释与热力学循环示意图，放进同一份讲义里。示例展示了项目生成效果；原项目作者为 DornGames / Koloyaaa（Léo WEE）。
+术语原文标注、通俗注释与热力学循环示意图，放进同一份讲义里。示例展示了项目生成效果；原项目作者为 Koloyaaa（Léo WEE）。
 
 ![法语热力学术语标注、概念解释与循环示意图](assets/showcase/thermodynamics-cycle.png)
 
