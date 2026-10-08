@@ -1,84 +1,73 @@
-# Foreign Academic Translator Skill - 用户使用手册
+# Trae 使用指南
 
-## 概述
-本 Skill 专为中外合办教育机构设计，旨在将外文学案（英语及其他语种）精准翻译为中文。核心优势在于：
-- **学科术语强制匹配**：基于您提供的 CSV 词库，确保专业词汇翻译准确。
-- **灵活的呈现模式**：支持纯译文、双语对照（可自定义先后顺序）、术语括号标注。
-- **多格式导出**：一键生成 HTML、Word (DOCX)、PowerPoint (PPTX)、PDF。
-
----
+本技能将 PDF、DOCX 或 TXT 格式的外文学案整理为中文学习材料，并可导出 HTML、DOCX 或 Markdown。扫描版 PDF 需要先 OCR。PDF 配图功能面向内嵌位图，不能保证提取矢量图。
 
 ## 快速开始
 
-### 1. 前置准备
-- 确保您的 `glossaries/` 目录结构正确，例如：
+1. 在 Trae 中安装并启用本技能。
+2. 首次使用前安装依赖：
 
-```text
-glossaries/
-└── Engineering/
-└── Science/
-```
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
 
-- CSV 文件必须包含 `source_term`（外文）和 `target_term`（中文）列（列名可包含空格或大小写差异，脚本会自动模糊匹配）。
+3. 在对话中选择本技能并附上学案。
+4. 说明学科、输出格式、展示布局、概念表、中文注释等级、是否提取 PDF 配图，以及术语策略。
+5. 在当前项目的 `output/<学案名>/` 中查看成品。
 
-### 2. 触发 Skill
-在 Trae 对话框中，您可以通过以下方式触发：
-- **关键词**：输入“翻译学案”、“翻译外文”或“中外合办翻译”。
-- **上传文件**：直接上传 `.pdf`、`.docx` 或 `.txt` 格式的学案文件。
+如果遗漏选项，技能会把缺少的选项合并后一次询问；已经说明的选项无需重复提供。
 
-### 3. 参数配置
-上传文件后，系统会自动提取文本。您可以通过对话框或 `skill.yaml` 配置以下参数：
+## 可选参数
 
-| 参数名 | 说明 | 可选值 | 默认值 |
-| :--- | :--- | :--- | :--- |
-| `discipline` | 学科分类（用于加载对应词库） | Engineering, Economics, Science, Agriculture, Social_Sciences, Literature_Arts, Medicine | Engineering |
-| `mode` | 翻译展示模式 | `translation_only` (仅译文)<br>`bilingual` (双语对照)<br>`concept_highlight` (术语括号标注) | `bilingual` |
-| `layout_preference` | 双语对照时的段落顺序（仅 mode=bilingual 时生效） | `translation_first` (译文在上/左)<br>`source_first` (原文在上/左) | `translation_first` |
-| `show_concept_table` | 是否生成文末概念汇总表 | `true` / `false` | `true` |
-| `output_formats` | 输出文档格式（可多选） | `html`, `docx`, `md` | `["html", "docx"]` |
+| 参数 | 可选值 | 说明 |
+| --- | --- | --- |
+| `source_text` | 由 Trae 预处理注入 | 学案文本；也可在对话中附上可读取的源文件 |
+| `discipline` | `Engineering`、`Economics`、`Science`、`Agriculture`、`Social_Sciences`、`Literature_Arts`、`Medicine` | 用于筛选相关术语表 |
+| `output_formats` | `html`、`docx`、`md` | 可多选，至少选择一种 |
+| `layout` | `translation_only`、`translation_first`、`source_first`、`concept_highlight` | 仅译文、译文在前、原文在前或术语标注原文 |
+| `show_concept_table` | `true` / `false` | 是否在文末生成重要术语概念汇总表 |
+| `annotate_level` | `无注释`、`轻度注释`、`高中生视角`、`重度注释` | 注释越多，译文越长 |
+| `include_images` | `true` / `false` | 从 PDF 提取并插入内嵌位图 |
+| `glossary_mode` | `system_glossary` / `ai_auto` | 使用随包词库，或由模型结合上下文识别术语 |
 
-### 4. 获取输出
-Skill 执行完成后，会在 `output/docs/` 目录下生成对应的文档文件，并在对话中提供下载链接。
+## 展示布局
 
----
+- **`translation_only`**：只输出中文译文。
+- **`translation_first`**：每段先显示译文，再显示对应原文。
+- **`source_first`**：每段先显示原文，再显示对应译文。
+- **`concept_highlight`**：只输出译文，在术语首次出现处标注原文。
 
-## 模式详解
+## 术语与注释
 
-### 模式 A：仅译文 (translation_only)
-适用于快速阅读，仅输出流畅的中文翻译，不保留原文。
+选择 `system_glossary` 时，技能会根据学科和词表文件名检索相关 CSV，并优先采用查到的译名；没有匹配结果时结合上下文翻译。选择 `ai_auto` 时不查询随包词库。标注术语时保留原文里的原词，法语术语不会改写成英文。
 
-### 模式 B：双语对照 (bilingual)
-适合学习与校对。根据 `layout_preference` 设置：
-- **translation_first（默认）**：每段先显示中文译文，再显示外文原文。
-- **source_first**：每段先显示外文原文，再显示中文译文。
+开启概念表后，技能会按术语在译文中首次出现的顺序整理外文术语、中文译名和简短释义。中文注释分为无、轻度、高中生视角和重度四档；注释主要用于解释定义、公式思路和易错点。
 
-### 模式 C：术语高亮标注 (concept_highlight)
-适用于重点掌握专业词汇。译文中的核心术语会以“中文译名（外文原词）”的格式显示。
+## 输出与文件
 
----
+成品保存在 `output/<学案名>/` 中，目录名根据学案标题或文件名生成。用户未选择 Markdown 时，中间 Markdown 文件会在构建后清理；选择 Markdown 时会作为正式成品保留。若输出引用了提取的图片，`images/` 文件夹需要和 HTML 或 Markdown 一起保留。
 
-## 概念表说明
-当 `show_concept_table` 开启时，系统会自动提取学案中出现的高频核心术语（基于加载的 CSV 词库），并在文档末尾生成一个三列表格：
-| 外文术语 | 中文译名 | 上下文简要解释 |
-| :--- | :--- | :--- |
+## 故障排查
 
-该表格有助于学生快速复习本课重点词汇。
+### 源文件无法读取或内容为空
 
----
+确认文件为 PDF、DOCX 或 TXT。扫描版 PDF 需要先 OCR；文本提取少于 10 个字符时，技能会停止并说明原因。
 
-## 故障排除
+### 找不到术语
 
-### 1. 提示“学科目录不存在”
-- 检查 `glossaries/` 下是否包含与 `discipline` 参数完全一致的子文件夹名称（如 `Engineering`）。
+检查 `glossaries/` 中是否存在对应学科目录和相关 CSV 文件。也可以将术语策略改为 `ai_auto`，让模型按上下文翻译。
 
-### 2. 提示“术语表加载成功但映射为空”
-- 检查对应学科下的 CSV 文件是否包含数据，且列名是否包含 `source` / `外文` 和 `target` / `中文` 关键词。
+### DOCX 或 HTML 未生成
 
-### 3. 生成 DOCX 失败
-- 确保已安装 `python-docx` 库 (`pip install python-docx`)。
+确认已在技能目录安装 `requirements.txt` 中的依赖，并检查最终回复列出的失败格式。技能会核对所选格式对应的文件是否存在且非空；失败时应如实说明。
 
----
+### 配图没有提取
 
-## 自定义样式
-- 修改 `templates/html_style.css` 可自定义 HTML 输出的视觉风格（颜色、字体、布局）。
-- 若要修改 Word 默认样式，可运行 `templates/init_templates.py` 生成占位模板，并将其替换为自定义设计的模板文件（注意保持占位符名称一致）。
+图片提取目前只支持 PDF 内嵌位图。扫描图像、矢量图和其他文档格式中的图片可能无法提取；扫描版 PDF 请先 OCR。
+
+## 相关文件
+
+- [技能行为说明](../SKILL.md)
+- [Trae 参数配置](../skill.yaml)
+- [项目许可说明](../../../../../LICENSE)
+
