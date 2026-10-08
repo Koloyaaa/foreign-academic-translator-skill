@@ -46,7 +46,7 @@ def grep_term_in_csv(csv_path: Path, search_term: str) -> str | None:
 
 if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: python term_matcher.py <csv_path> <search_term>")
+        print("Usage: python term_catcher.py <csv_path> <search_term>")
         sys.exit(1)
     
     result = grep_term_in_csv(Path(sys.argv[1]), sys.argv[2])
