@@ -6,12 +6,18 @@
 import sys
 import argparse
 import json
+import re
 from functools import partial
 from pathlib import Path
 from typing import Dict, List
 
 # 各格式构建器统一从 builders 包导入
 from builders import build_html, build_docx, build_markdown
+
+
+_PDF_LAYOUT_MARKER_RE = re.compile(
+    r"(?m)^[ \t]*<!--\s*PDF_(?:PAGE|BLOCK):[^\r\n]*?-->[ \t]*(?:\r?\n|$)"
+)
 
 
 def build_all(
@@ -24,6 +30,8 @@ def build_all(
     """根据 formats 列表生成多格式文档。"""
     output_dir.mkdir(parents=True, exist_ok=True)
     results = {}
+    # 提取器写入的页码/坐标只用于定位 PDF 图片，不应出现在最终成品中。
+    md_content = _PDF_LAYOUT_MARKER_RE.sub("", md_content)
 
     # 质量门禁：输入非空
     if not md_content or len(md_content.strip()) < 10:
@@ -60,13 +68,25 @@ if __name__ == "__main__":
     parser.add_argument("--output_dir", type=str, default="./output/docs", help="输出目录")
     parser.add_argument("--formats", type=str, default="html,docx", help="逗号分隔的格式列表")
     parser.add_argument("--base_name", type=str, default="translated_doc", help="输出文件名前缀")
+    parser.add_argument(
+        "--concept-table",
+        choices=("true", "false"),
+        default="true",
+        help="HTML 是否显示概念表并为术语添加跳转链接（true/false）",
+    )
     args = parser.parse_args()
 
     try:
         with open(args.input, "r", encoding="utf-8") as f:
             md_content = f.read()
         formats = [f.strip() for f in args.formats.split(",") if f.strip()]
-        results = build_all(md_content, Path(args.output_dir), formats, args.base_name)
+        results = build_all(
+            md_content,
+            Path(args.output_dir),
+            formats,
+            args.base_name,
+            show_concept_table=args.concept_table == "true",
+        )
         print(json.dumps({k: str(v) for k, v in results.items()}, ensure_ascii=False))
     except Exception as e:
         print(f"[ERROR] {e}", file=sys.stderr)

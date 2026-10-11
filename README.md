@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-- 版本：V2.0
+- 版本：V2.1
 - 把外文讲义整理成准确、易读、可继续编辑的中文学习材料。
 - 该 Skill 支持 HTML / MD / DOCX 等多种文件格式，支持图片提取并在原有位置嵌入译文，支持AI注解（可选注释强度），支持专业术语超链接并在最后展示术语表，HTML支持展示阅读目录和阅读进度。
 - 我们兴奋地宣布，该版本在一定程度上还可以防御提示词注入。
@@ -26,7 +26,7 @@
 - 从 PDF、DOCX 和 TXT 中提取文本，保留讲义的章节与练习结构。
 - 按学科检索随包术语表，涵盖 7 个领域和 122 份 CSV 词表。
 - 生成仅译文、双语对照或术语标注版，并按需加入概念表和通俗注释。
-- 导出 HTML、DOCX 和 Markdown；HTML 提供目录与阅读进度，DOCX 可继续编辑。
+- 导出 HTML、DOCX 和 Markdown；HTML 提供目录与阅读进度，DOCX 可继续编辑。HTML 公式渲染需联网加载 MathJax CDN，离线打开时公式可能无法显示。
 - 从 PDF 提取内嵌图片，并按原文位置加入译稿。
 - 考虑到部分学案为了防止学生过度依赖AI，含有提示词注入，这对该Skill的正常执行和学生的正常学习均带来了不利影响。我们在Skill中增强了对提示词注入的相关识别。
 
@@ -36,7 +36,7 @@
 
 | Harness | 安装包 | 技能位置 | 调用方式 |
 | --- | --- | --- | --- |
-| Trae | [Trae 版说明](trae/README.md) | `.trae/skills/zwhb/` | 在技能面板中选择技能 |
+| Trae | [Trae 版说明](trae/README.md) | `.trae/skills/foreign-academic-translator/` | 在技能面板中选择技能 |
 | Codex | [Codex 版说明](codex/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
 | Claude Code | [Claude Code 版说明](claude-code/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
 
@@ -69,7 +69,7 @@
 └── README.md              项目首页
 ```
 
-三种安装包各自独立，原 Trae 技能的文件内容保留在 `trae/.trae/skills/zwhb/`。Codex 与 Claude Code 版本采用 Agent Skills 的 `SKILL.md` 结构，并分别放在各自的技能发现目录中。可查看[Agent Skills 规范](https://agentskills.io/specification)、[Codex 官方文档](https://developers.openai.com/codex/skills)和[Claude Code 官方文档](https://code.claude.com/docs/en/skills)。
+三种安装包各自独立，原 Trae 技能的文件内容保留在 `trae/.trae/skills/foreign-academic-translator/`。Codex 与 Claude Code 版本采用 Agent Skills 的 `SKILL.md` 结构，并分别放在各自的技能发现目录中。可查看[Agent Skills 规范](https://agentskills.io/specification)、[Codex 官方文档](https://developers.openai.com/codex/skills)和[Claude Code 官方文档](https://code.claude.com/docs/en/skills)。
 
 ## 许可与词库
 

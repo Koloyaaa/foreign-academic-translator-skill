@@ -1,6 +1,6 @@
 # Trae 版
 
-本目录提供原有 Trae 技能的独立安装包。原技能文件保留在 `trae/.trae/skills/zwhb/`；安装时只需将 `zwhb` 文件夹复制到目标项目的 `.trae/skills/` 下。
+本目录提供原有 Trae 技能的独立安装包。原技能文件保留在 `trae/.trae/skills/foreign-academic-translator/`；安装时只需将 `foreign-academic-translator` 文件夹复制到目标项目的 `.trae/skills/` 下。
 
 ## 安装
 
@@ -10,20 +10,20 @@
 
 ```powershell
 New-Item -ItemType Directory -Force .trae/skills | Out-Null
-Copy-Item -Recurse -LiteralPath "<本仓库路径>/trae/.trae/skills/zwhb" -Destination .trae/skills
+Copy-Item -Recurse -LiteralPath "<本仓库路径>/trae/.trae/skills/foreign-academic-translator" -Destination .trae/skills
 ```
 
-确认目标项目内存在 `.trae/skills/zwhb/SKILL.md`，然后在 Trae 的「规则与技能」面板中启用该技能。
+确认目标项目内存在 `.trae/skills/foreign-academic-translator/SKILL.md`，然后在 Trae 的「规则与技能」面板中启用该技能。
 
 ### 从技能面板上传
 
-将 `trae/.trae/skills/zwhb/` 内的文件压缩成 ZIP，并确保 `SKILL.md` 位于 ZIP 根目录。然后在 Trae 的「规则与技能」→「技能」中选择上传。
+将 `trae/.trae/skills/foreign-academic-translator/` 内的文件压缩成 ZIP，并确保 `SKILL.md` 位于 ZIP 根目录。然后在 Trae 的「规则与技能」→「技能」中选择上传。
 
 ## 使用
 
 首次使用前，在技能目录安装 `requirements.txt` 中的 Python 依赖。可处理 PDF、DOCX 和 TXT，并生成 HTML、DOCX 或 Markdown。扫描版 PDF 需要先进行 OCR。
 
-原技能包含七个学科目录的 CSV 术语表，以及 PDF 图片提取、术语检索和文档构建脚本。详细参数和流程见[原技能说明](.trae/skills/zwhb/README.md)与[使用指南](.trae/skills/zwhb/docs/usage_guide.md)。
+原技能包含七个学科目录的 CSV 术语表，以及 PDF 图片提取、术语检索和文档构建脚本。详细参数和流程见[原技能说明](.trae/skills/foreign-academic-translator/README.md)与[使用指南](.trae/skills/foreign-academic-translator/docs/usage_guide.md)。
 
 ## 效果预览
 

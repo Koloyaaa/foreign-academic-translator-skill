@@ -23,7 +23,7 @@
 ## 不包含在以上许可中的材料
 
 - 三种 Harness 安装包内的 `glossaries/` CSV 词库来自第三方资料。原项目 README 将来源标注为台湾教育研究机构乐词网；本仓库许可不授予词库的额外版权或再分发权限。使用和再分发前，请核实来源方的授权条件。
-- `trae/.trae/skills/zwhb/_pylibs/` 下的打包 Python 依赖保留各自上游许可和版权声明。
+- `trae/.trae/skills/foreign-academic-translator/_pylibs/` 下的打包 Python 依赖保留各自上游许可和版权声明。
 - `assets/showcase/` 中的截图和 `references/` 中的示例讲义可能包含第三方教材或界面内容，不在本仓库许可范围内。
 - 其他第三方依赖由其各自的许可证约束。
 

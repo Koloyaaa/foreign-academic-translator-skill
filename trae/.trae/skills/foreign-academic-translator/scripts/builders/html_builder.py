@@ -1,8 +1,132 @@
 """HTML 构建器：将 Markdown 译文转换为带目录伸缩 / 阅读进度 / 术语高亮 / MathJax / 水印的 HTML 页面。"""
 
 from pathlib import Path
+from html import escape as escape_html
+from html.parser import HTMLParser
+import re
+from urllib.parse import urlsplit
 
-from .base import WATERMARK, load_css, annotate_first_occurrences, protect_math, restore_math
+from .base import WATERMARK, load_css, annotate_first_occurrences, protect_math
+
+
+_ALLOWED_HTML_TAGS = {
+    "a", "blockquote", "br", "code", "del", "div", "em", "h1", "h2", "h3", "h4", "h5", "h6",
+    "hr", "i", "img", "li", "ol", "p", "pre", "s", "span", "strong", "sub", "sup", "table",
+    "tbody", "td", "th", "thead", "tr", "ul",
+}
+_VOID_HTML_TAGS = {"br", "hr", "img"}
+_DROP_CONTENT_TAGS = {"applet", "embed", "iframe", "object", "script", "style", "svg"}
+
+
+def _safe_url(value: str) -> str | None:
+    """Allow ordinary web, mail, fragment, and relative links; reject executable schemes."""
+    normalized = "".join(char for char in value if char not in "\t\r\n\f").strip()
+    try:
+        scheme = urlsplit(normalized).scheme.lower()
+    except ValueError:
+        return None
+    if scheme and scheme not in {"http", "https", "mailto"}:
+        return None
+    return normalized
+
+
+class _HTMLSanitizer(HTMLParser):
+    """Keep Markdown markup and the skill's term/note tags, while dropping active HTML."""
+
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.parts = []
+        self.skip_stack = []
+
+    @staticmethod
+    def _safe_id(value: str) -> bool:
+        return bool(re.fullmatch(r"[A-Za-z][A-Za-z0-9_.:-]*", value))
+
+    @staticmethod
+    def _safe_class(value: str) -> str | None:
+        tokens = value.split()
+        if not tokens or any(not re.fullmatch(r"[A-Za-z0-9_-]+", token) for token in tokens):
+            return None
+        return " ".join(tokens)
+
+    def handle_starttag(self, tag, attrs):
+        tag = tag.lower()
+        if self.skip_stack:
+            if tag in _DROP_CONTENT_TAGS:
+                self.skip_stack.append(tag)
+            return
+        if tag in _DROP_CONTENT_TAGS:
+            self.skip_stack.append(tag)
+            return
+        if tag not in _ALLOWED_HTML_TAGS:
+            return
+
+        safe_attrs = []
+        attr_map = {name.lower(): value or "" for name, value in attrs if name}
+        for name, value in attr_map.items():
+            if name.startswith("on") or name in {"style", "srcdoc", "formaction"}:
+                continue
+            if name == "id" and tag in {"h1", "h2", "h3", "h4", "h5", "h6", "table"} and self._safe_id(value):
+                safe_attrs.append((name, value))
+            elif name == "class" and tag in {"code", "pre"}:
+                safe_value = self._safe_class(value)
+                if safe_value and all(token.startswith("language-") or token == "nohighlight" for token in safe_value.split()):
+                    safe_attrs.append((name, safe_value))
+            elif name == "class" and tag == "div" and value.strip() == "note":
+                safe_attrs.append((name, "note"))
+            elif name == "data-en" and tag == "span":
+                safe_attrs.append((name, value))
+            elif name in {"href", "src"} and tag in {"a", "img"}:
+                safe_value = _safe_url(value)
+                if safe_value is not None:
+                    safe_attrs.append((name, safe_value))
+            elif name in {"title", "alt"} and tag in {"a", "img"}:
+                safe_attrs.append((name, value))
+            elif name in {"rowspan", "colspan"} and tag in {"td", "th"} and value.isdigit() and 1 <= int(value) <= 100:
+                safe_attrs.append((name, value))
+            elif name == "scope" and tag == "th" and value in {"row", "col", "rowgroup", "colgroup"}:
+                safe_attrs.append((name, value))
+            elif name == "start" and tag == "ol" and value.isdigit() and 1 <= int(value) <= 100000:
+                safe_attrs.append((name, value))
+
+        attr_text = "".join(f' {name}="{escape_html(value, quote=True)}"' for name, value in safe_attrs)
+        self.parts.append(f"<{tag}{attr_text}>")
+
+    def handle_startendtag(self, tag, attrs):
+        self.handle_starttag(tag, attrs)
+        if tag.lower() not in _VOID_HTML_TAGS:
+            self.handle_endtag(tag)
+
+    def handle_endtag(self, tag):
+        tag = tag.lower()
+        if self.skip_stack:
+            if tag in self.skip_stack:
+                index = len(self.skip_stack) - 1 - self.skip_stack[::-1].index(tag)
+                del self.skip_stack[index:]
+            return
+        if tag in _ALLOWED_HTML_TAGS and tag not in _VOID_HTML_TAGS:
+            self.parts.append(f"</{tag}>")
+
+    def handle_data(self, data):
+        if not self.skip_stack:
+            self.parts.append(escape_html(data, quote=False))
+
+    def get_html(self) -> str:
+        return "".join(self.parts)
+
+
+def _sanitize_html(value: str) -> str:
+    sanitizer = _HTMLSanitizer()
+    sanitizer.feed(value)
+    sanitizer.close()
+    return sanitizer.get_html()
+
+
+def _restore_math_as_text(value: str, math_list) -> str:
+    """Restore TeX as escaped HTML text so formula characters cannot add markup."""
+    for index, formula in enumerate(math_list):
+        value = value.replace(f"@@MATH{index}@@", escape_html(formula, quote=False))
+    return value
 
 # 页面内嵌 JS（普通字符串，非 f-string，避免花括号与 Python 格式化冲突）
 # 通过占位符 __WATERMARK__ / __SHOW_CONCEPT_TABLE__ 在运行时替换。
@@ -17,12 +141,30 @@ _BUILD_JS = r"""
         fontWeight: "600", color: "#8a5a1a", borderBottom: "2px solid #f5b86e"
     };
 
-    // ===== 1. 术语：暖色高亮；仅正文（非标题内）添加超链接 =====
+    function findConceptTable() {
+        if (!SHOW_TABLE) return null;
+        var heads = document.querySelectorAll("h2, h3");
+        for (var i = 0; i < heads.length; i++) {
+            var text = heads[i].textContent || "";
+            if (text.indexOf("\u6982\u5FF5\u6C47\u603B\u8868") === -1 && text.indexOf("\u91CD\u8981\u672F\u8BED\u6982\u5FF5") === -1) continue;
+            var sib = heads[i].nextElementSibling;
+            while (sib && !/^H[1-6]$/.test(sib.tagName)) {
+                if (sib.tagName === "TABLE") return sib;
+                sib = sib.nextElementSibling;
+            }
+        }
+        return null;
+    }
+
+    var conceptTable = findConceptTable();
+    if (conceptTable) conceptTable.id = "concept-table";
+
+    // ===== 1. 术语：暖色高亮；仅正文中存在概念表时添加超链接 =====
     // 括号标注（原文）已在生成 HTML 时自动补全到首次出现的术语上。
     document.querySelectorAll("span[data-en]").forEach(function (el) {
         Object.assign(el.style, HIGHLIGHT);
         var inHeading = el.closest(HEADING_SELECTOR);
-        if (SHOW_TABLE && !inHeading) {
+        if (conceptTable && !inHeading) {
             var link = document.createElement("a");
             link.href = "#concept-table";
             link.style.color = "inherit";
@@ -69,27 +211,6 @@ _BUILD_JS = r"""
             list.appendChild(li);
         });
         sidebar.appendChild(list);
-    }
-
-    // ===== 3. 概念表锚点赋值 =====
-    function assignConceptTable() {
-        if (!SHOW_TABLE) return;
-        var target = null;
-        var heads = document.querySelectorAll("h2, h3");
-        for (var i = 0; i < heads.length; i++) {
-            var text = heads[i].textContent || "";
-            if (text.indexOf("\u6982\u5FF5\u6C47\u603B\u8868") !== -1 || text.indexOf("\u91CD\u8981\u672F\u8BED\u6982\u5FF5") !== -1) {
-                var sib = heads[i].nextElementSibling;
-                while (sib && sib.tagName !== "TABLE") sib = sib.nextElementSibling;
-                if (sib) target = sib;
-                break;
-            }
-        }
-        if (!target) {
-            var tables = document.querySelectorAll("table");
-            if (tables.length) target = tables[tables.length - 1];
-        }
-        if (target) target.id = "concept-table";
     }
 
     // ===== 4. 目录伸缩按钮（#toc-btn ☰ 切换、点选收起、Esc 关闭） =====
@@ -146,7 +267,6 @@ _BUILD_JS = r"""
 
     // ===== 启动 =====
     buildToc();
-    assignConceptTable();
 })();
 """
 
@@ -166,7 +286,7 @@ def _render_body(md_content: str) -> str:
     )
     for exts in attempts:
         try:
-            return _markdown.markdown(md_content, extensions=exts)
+            return _sanitize_html(_markdown.markdown(md_content, extensions=exts))
         except (ImportError, KeyError):
             continue
 
@@ -179,7 +299,7 @@ def build_html(md_content: str, output_path: Path, show_concept_table: bool = Tr
     """将 Markdown 转换为带目录伸缩 / 阅读进度 / 术语高亮 / MathJax / 水印的完整 HTML 页面。"""
     protected_md, maths = protect_math(md_content)
     body_html = annotate_first_occurrences(_render_body(protected_md))
-    body_html = restore_math(body_html, maths)
+    body_html = _restore_math_as_text(body_html, maths)
     css = load_css()
 
     js = (

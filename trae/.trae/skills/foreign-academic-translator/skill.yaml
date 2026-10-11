@@ -1,6 +1,6 @@
 name: foreign-academic-translator
 description: 中外合办外文学案翻译专家。零默认值强制门禁，分级术语检索，全格式水印。
-version: 2.0.0
+version: 2.1.0
 parameters:
   - name: source_text
     type: string

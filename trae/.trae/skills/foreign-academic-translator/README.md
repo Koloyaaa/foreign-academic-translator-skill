@@ -22,7 +22,7 @@
 
 ### 方式二：手动安装
 
-将整个 `zwhb` 文件夹复制到目标项目的 `.trae/skills/` 下。安装后应能找到 `.trae/skills/zwhb/SKILL.md`。也可以安装到 Trae 用户目录 `%USERPROFILE%\.trae-cn\skills\`。安装后在 Trae 技能面板中启用。
+将整个 `foreign-academic-translator` 文件夹复制到目标项目的 `.trae/skills/` 下。安装后应能找到 `.trae/skills/foreign-academic-translator/SKILL.md`。也可以安装到 Trae 用户目录 `%USERPROFILE%\.trae-cn\skills\`。安装后在 Trae 技能面板中启用。
 
 首次使用前，在技能目录安装依赖：
 
@@ -66,4 +66,3 @@ python -m pip install -r requirements.txt
 ## 许可
 
 本项目不同部分的许可范围不同。使用或分享前请查看仓库根目录的 [LICENSE](../../../../LICENSE)；词库和随包第三方依赖可能适用各自的许可。
-
