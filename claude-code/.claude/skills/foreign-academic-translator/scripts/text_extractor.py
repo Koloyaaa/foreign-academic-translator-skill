@@ -22,8 +22,14 @@ except ImportError:
 
 try:
     from docx import Document
+    from docx.oxml.ns import qn
+    from docx.table import Table as DocxTable
+    from docx.text.paragraph import Paragraph as DocxParagraph
 except ImportError:
     Document = None
+    qn = None
+    DocxTable = None
+    DocxParagraph = None
 
 from utils import detect_encoding
 
@@ -58,19 +64,33 @@ def extract_from_pdf(file_path: Path) -> str:
     raise RuntimeError(f"无法从 PDF 提取任何文本内容: {file_path}")
 
 def extract_from_docx(file_path: Path) -> str:
-    """从 Word 文档提取文本。"""
+    """按 Word 正文中的实际顺序提取段落和表格。"""
     if Document is None:
         raise ImportError("python-docx 未安装，无法解析 .docx 文件")
     
     doc = Document(file_path)
-    paragraphs = [p.text for p in doc.paragraphs if p.text.strip()]
-    full_text = "\n".join(paragraphs)
-    # 提取表格内容
-    for table in doc.tables:
-        for row in table.rows:
-            row_text = " | ".join(cell.text.strip() for cell in row.cells if cell.text.strip())
-            if row_text:
-                full_text += "\n" + row_text
+    blocks = []
+    for child in doc.element.body.iterchildren():
+        if child.tag == qn("w:p"):
+            text = DocxParagraph(child, doc).text.strip()
+            if text:
+                blocks.append(text)
+        elif child.tag == qn("w:tbl"):
+            table = DocxTable(child, doc)
+            rows = [[cell.text.strip().replace("\n", "<br>") for cell in row.cells] for row in table.rows]
+            rows = [row for row in rows if any(cell for cell in row)]
+            if rows:
+                width = max(len(row) for row in rows)
+                rows = [row + [""] * (width - len(row)) for row in rows]
+                escape_cell = lambda value: value.replace("|", "\\|")
+                table_lines = ["| " + " | ".join(escape_cell(cell) for cell in rows[0]) + " |"]
+                table_lines.append("| " + " | ".join("---" for _ in range(width)) + " |")
+                table_lines.extend(
+                    "| " + " | ".join(escape_cell(cell) for cell in row) + " |"
+                    for row in rows[1:]
+                )
+                blocks.append("\n".join(table_lines))
+    full_text = "\n\n".join(blocks)
     if not full_text.strip():
         raise RuntimeError(f"提取的 .docx 内容为空: {file_path}")
     return full_text.strip()
