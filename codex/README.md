@@ -25,7 +25,7 @@ python -m pip install -r .agents/skills/foreign-academic-translator/requirements
 
 ## 使用
 
-在 Codex 中输入 `$foreign-academic-translator`，附上学案，并说明学科、输出格式、展示布局、注释等级、是否提取图片以及术语策略。技能会对缺失选项一次性提问。
+在 Codex 中输入 `$foreign-academic-translator` 并附上学案。缺少的选项会逐项询问，每条消息只问一个问题；章末测验强度单独询问，若选择了任意难度，再单独询问测验语言。上次确认的参数保存在项目的 `output/.translator_preferences.json`，下次可选择沿用。HTML 还提供配色、明暗、高亮和个人注释设置。
 
 输出保存在目标项目的 `output/<学案名>/` 中。当前支持 HTML、DOCX 和 Markdown 输出；扫描版 PDF 需要先进行 OCR。
 

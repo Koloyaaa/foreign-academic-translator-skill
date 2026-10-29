@@ -1,6 +1,6 @@
 name: foreign-academic-translator
 description: 中外合办外文学案翻译专家。零默认值强制门禁，分级术语检索，全格式水印。
-version: 2.1.0
+version: 3.0.0
 parameters:
   - name: source_text
     type: string
@@ -50,3 +50,21 @@ parameters:
     description: "词库使用方式（system_glossary 用系统词库 / ai_auto 由 AI 自动识别术语）"
     required: true
     enum: ["system_glossary", "ai_auto"]
+
+  - name: quiz_levels
+    type: array
+    description: "章末测验强度，可多选；无测验覆盖同题选择的其他难度，必须单独询问并提示额外 token 消耗"
+    required: true
+    enum: ["无测验", "基础", "中档", "高难"]
+
+  - name: quiz_language
+    type: string
+    description: "仅当 quiz_levels 未选择无测验时单独询问：双语、学案所属语言或中文"
+    required: false
+    enum: ["双语", "学案所属语言", "中文"]
+
+  - name: reuse_preferences
+    type: string
+    description: "仅当项目 output/.translator_preferences.json 已存在且本次没有直接指定参数时，单独询问沿用上次参数或重新选择"
+    required: false
+    enum: ["沿用上次参数", "重新选择"]
