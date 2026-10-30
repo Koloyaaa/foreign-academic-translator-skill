@@ -64,8 +64,8 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 | Harness | 安装说明 | 技能位置 | 调用方式 |
 | --- | --- | --- | --- |
 | Trae | [Trae 版说明](trae/README.md) | `.trae/skills/foreign-academic-translator/` | 在技能面板启用 |
-| Codex | [Codex 版说明](codex/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
-| Claude Code | [Claude Code 版说明](claude-code/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
+| Codex | [Agent Skills 版说明](agent-skills/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
+| Claude Code | [Agent Skills 版说明](agent-skills/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
 
 1. 按对应 Harness 的说明安装技能包。
 2. 安装技能目录 `requirements.txt` 中的 Python 依赖。
@@ -85,14 +85,13 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 ```text
 .
 ├── trae/                  Trae 安装包与说明
-├── codex/                 Codex 安装包与说明
-├── claude-code/           Claude Code 安装包与说明
+├── agent-skills/          Claude Code 与 Codex 共用包与说明
 ├── tests/                 合成提示词注入用例
 ├── assets/showcase/       功能截图
 └── README.md              项目首页
 ```
 
-三种安装包各自包含技能说明、脚本、依赖、样式和词表。Trae 包保留原有技能文件；Codex 与 Claude Code 包采用 Agent Skills 结构。相关规范见 [Agent Skills](https://agentskills.io/specification)、[Codex Skills](https://developers.openai.com/codex/skills) 和 [Claude Code Skills](https://code.claude.com/docs/en/skills)。
+Trae 包保留原有技能文件；Codex 与 Claude Code 共用 `agent-skills/` 下的同一份包，采用 Agent Skills 结构，包含技能说明、脚本、依赖、样式和词表。相关规范见 [Agent Skills](https://agentskills.io/specification)、[Codex Skills](https://developers.openai.com/codex/skills) 和 [Claude Code Skills](https://code.claude.com/docs/en/skills)。
 
 ## 许可与词库
 

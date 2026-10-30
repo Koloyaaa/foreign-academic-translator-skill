@@ -66,8 +66,8 @@ The five test handouts below were written for this project, and each contains se
 | Harness | Install guide | Skill location | How to invoke |
 | --- | --- | --- | --- |
 | Trae | [Trae guide](trae/README.md) | `.trae/skills/foreign-academic-translator/` | Enable it in the skills panel |
-| Codex | [Codex guide](codex/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
-| Claude Code | [Claude Code guide](claude-code/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
+| Codex | [Agent Skills guide](agent-skills/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
+| Claude Code | [Agent Skills guide](agent-skills/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
 
 1. Install the skill package by following the guide for your harness.
 2. Install the Python dependencies listed in `requirements.txt` in the skill directory.
@@ -89,14 +89,13 @@ Each document has an English translation; the Chinese original is authoritative.
 ```text
 .
 ├── trae/                  Trae package and guide
-├── codex/                 Codex package and guide
-├── claude-code/           Claude Code package and guide
+├── agent-skills/          Shared package and guide for Claude Code and Codex
 ├── tests/                 Synthetic prompt injection cases
 ├── assets/showcase/       Screenshots
 └── README.md              Project home page
 ```
 
-Each of the three packages contains the skill instructions, scripts, dependencies, styles, and glossaries. The Trae package keeps the original skill layout; the Codex and Claude Code packages follow the Agent Skills structure. See the [Agent Skills specification](https://agentskills.io/specification), [Codex Skills](https://developers.openai.com/codex/skills), and [Claude Code Skills](https://code.claude.com/docs/en/skills) for details.
+The Trae package keeps the original skill layout. Codex and Claude Code share a single package under `agent-skills/` that follows the Agent Skills structure and contains the skill instructions, scripts, dependencies, styles, and glossaries. See the [Agent Skills specification](https://agentskills.io/specification), [Codex Skills](https://developers.openai.com/codex/skills), and [Claude Code Skills](https://code.claude.com/docs/en/skills) for details.
 
 ## License and glossaries
 
