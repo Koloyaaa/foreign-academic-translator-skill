@@ -76,13 +76,13 @@ The five test handouts below were written for this project, and each contains se
 
 ## Project documents
 
-- [Contributing](CONTRIBUTING.md)
-- [Security policy](SECURITY.md)
-- [Code of conduct](CODE_OF_CONDUCT.md)
-- [Support](SUPPORT.md)
-- [Changelog](CHANGELOG.md)
+Each document has an English translation; the Chinese original is authoritative.
 
-These documents are currently written in Chinese.
+- [Contributing](CONTRIBUTING.md) · [English](CONTRIBUTING.en.md)
+- [Security policy](SECURITY.md) · [English](SECURITY.en.md)
+- [Code of conduct](CODE_OF_CONDUCT.md) · [English](CODE_OF_CONDUCT.en.md)
+- [Support](SUPPORT.md) (Chinese only)
+- [Changelog](CHANGELOG.md) (Chinese only)
 
 ## Repository layout
 
@@ -103,6 +103,8 @@ Each of the three packages contains the skill instructions, scripts, dependencie
 The code in this project is licensed under PolyForm Noncommercial 1.0.0; the skill instructions and documentation are under CC BY-NC-SA 4.0. If you share or adapt the project publicly, keep the attribution to DornGames / Koloyaaa (Léo WEE), the link to this repository, and the license notice, and state what you changed. See [LICENSE](LICENSE) for details.
 
 The CSV glossaries, the Python dependencies bundled in the Trae package, the screenshots, and the sample handouts are not covered by those licenses. Check the rights for each before use. Repository: [Koloyaaa/foreign-academic-translator-skill](https://github.com/Koloyaaa/foreign-academic-translator-skill).
+
+The Chinese [LICENSE](LICENSE) is authoritative. An English translation of the notice is in [LICENSE.en.md](LICENSE.en.md); it is provided for convenience and has no legal effect.
 
 ## Where the glossaries come from
 
