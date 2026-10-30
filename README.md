@@ -74,9 +74,9 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 
 ## 项目文档
 
-- [贡献指南](CONTRIBUTING.md)
-- [安全问题报告](SECURITY.md)
-- [行为准则](CODE_OF_CONDUCT.md)
+- [贡献指南](CONTRIBUTING.md)（[English](CONTRIBUTING.en.md)）
+- [安全问题报告](SECURITY.md)（[English](SECURITY.en.md)）
+- [行为准则](CODE_OF_CONDUCT.md)（[English](CODE_OF_CONDUCT.en.md)）
 - [使用支持](SUPPORT.md)
 - [更新记录](CHANGELOG.md)
 
