@@ -2,9 +2,9 @@
 
 ## 安装与调用
 
-- **Codex：**按 [Agent Skills 安装说明](agent-skills/README.md) 将技能放到项目的 `.agents/skills/`。
-- **Claude Code：**按 [Agent Skills 安装说明](agent-skills/README.md) 将技能放到 `.claude/skills/`。
-- **Trae：**按 [Trae 安装说明](trae/README.md) 将技能放到 `.trae/skills/`。
+- **Trae：**把 [skills/foreign-academic-translator](skills/foreign-academic-translator/README.md) 复制到项目的 `.trae/skills/`，在技能面板启用。
+- **Claude Code：**复制到 `.claude/skills/`，用 `/foreign-academic-translator` 调用。
+- **Codex：**复制到 `.agents/skills/`，用 `$foreign-academic-translator` 调用。
 
 安装后按对应 Harness 的步骤安装 `requirements.txt` 依赖，并重新载入项目技能。
 

@@ -6,7 +6,7 @@
 
 - 先查看 [README](README.md)、[安全说明](SECURITY.md) 和相应 Harness 下的 `SKILL.md`。
 - 请用合成文本或已获授权的材料复现问题。不要公开真实学生讲义、姓名、学校账号、成绩或其他个人信息。
-- 保持 Codex、Claude Code 与 Trae 三个安装包的行为一致；若只修改一个版本，请在说明中解释原因。
+- 三个 Harness 共用 `skills/foreign-academic-translator` 一份技能包；改动脚本或规则时不需要同步多个版本。
 
 ## 提交内容
 
