@@ -1,5 +1,10 @@
 # 更新记录
 
+## V3.0.1
+
+- 将 Codex 与 Claude Code 两份逐字节相同的包合并为 `agent-skills/`，两个 Harness 共用一个技能包和一篇安装说明。
+- `agent-skills/` 版的 `SKILL.md` 补齐 Trae 版已有的规则：PDF 页码与坐标标记、整库词库加载、按坐标落图、`--concept-table` 参数、HTML 清理与 MathJax 说明。
+
 ## V3
 
 - 要求对缺失参数逐项提问；新增章末测验难度和语言选项。
