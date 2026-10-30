@@ -4,7 +4,7 @@
 
 [中文](README.md) | [English](README.en.md)
 
-把英语、法语等外文学案整理成中文学习材料，保留章节结构、术语、公式、练习和图表位置。项目提供 Trae、Codex 与 Claude Code 三种安装包。
+把英语、法语等外文学案整理成中文学习材料，保留章节结构、术语、公式、练习和图表位置。同一份技能包可装入 Trae、Codex 与 Claude Code。
 
 ![Trae Skill](https://img.shields.io/badge/Trae-skill-2B90D9)
 ![Codex Skill](https://img.shields.io/badge/Codex-skill-5B4BDB)
@@ -61,13 +61,15 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 
 ## 安装与使用
 
-| Harness | 安装说明 | 技能位置 | 调用方式 |
-| --- | --- | --- | --- |
-| Trae | [Trae 版说明](trae/README.md) | `.trae/skills/foreign-academic-translator/` | 在技能面板启用 |
-| Codex | [Agent Skills 版说明](agent-skills/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
-| Claude Code | [Agent Skills 版说明](agent-skills/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
+三个 Harness 共用 [skills/foreign-academic-translator](skills/foreign-academic-translator/) 这一份技能包，区别只有安装目录和调用方式。
 
-1. 按对应 Harness 的说明安装技能包。
+| Harness | 技能位置 | 调用方式 | 官方说明 |
+| --- | --- | --- | --- |
+| Trae | `.trae/skills/foreign-academic-translator/` | 在技能面板启用 | [Trae Skills](https://docs.trae.cn/ide/skills) |
+| Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
+| Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
+
+1. 把技能包整个复制到上表对应的位置，详见[安装说明](skills/foreign-academic-translator/README.md)。
 2. 安装技能目录 `requirements.txt` 中的 Python 依赖。
 3. 附上学案并逐项确认选项。每条提问只包含一个待回答的问题。
 4. 成品保存在项目的 `output/<学案名>/`。当项目内已有 `output/.translator_preferences.json` 时，技能会先单独询问是否沿用上次设置。
@@ -84,14 +86,13 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 
 ```text
 .
-├── trae/                  Trae 安装包与说明
-├── agent-skills/          Claude Code 与 Codex 共用包与说明
+├── skills/                唯一技能包：说明、脚本、词表、模板与依赖
 ├── tests/                 合成提示词注入用例
 ├── assets/showcase/       功能截图
 └── README.md              项目首页
 ```
 
-Trae 包保留原有技能文件；Codex 与 Claude Code 共用 `agent-skills/` 下的同一份包，采用 Agent Skills 结构，包含技能说明、脚本、依赖、样式和词表。相关规范见 [Agent Skills](https://agentskills.io/specification)、[Codex Skills](https://developers.openai.com/codex/skills) 和 [Claude Code Skills](https://code.claude.com/docs/en/skills)。
+技能包采用 Agent Skills 结构：`SKILL.md` 加脚本、样式和词表；Trae 还会读取同目录的 `skill.yaml` 获取参数定义。三者共用同一套脚本，不再各自维护副本。相关规范见 [Agent Skills](https://agentskills.io/specification)、[Codex Skills](https://developers.openai.com/codex/skills) 和 [Claude Code Skills](https://code.claude.com/docs/en/skills)。
 
 ## 许可与词库
 

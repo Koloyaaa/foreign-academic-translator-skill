@@ -1,5 +1,12 @@
 # 更新记录
 
+## V3.0.2
+
+- 把 Trae 包与 Agent Skills 包合并为 `skills/foreign-academic-translator`，三个 Harness 共用同一份技能包；`trae/` 与 `agent-skills/` 目录随之移除。
+- 统一采用 Trae 版脚本：PDF 页码与坐标标记、整库词库合并、`--concept-table` 参数和 HTML 清理。共用包不再落后于 Trae 包。
+- 修正 V3.0.1 里 SKILL.md 已写入、但共用包脚本尚未实现的规则。
+- 安装说明并入技能包内 README，根目录 README、README.en.md 与 SUPPORT.md 同步更新。
+
 ## V3.0.1
 
 - 将 Codex 与 Claude Code 两份逐字节相同的包合并为 `agent-skills/`，两个 Harness 共用一个技能包和一篇安装说明。

@@ -6,7 +6,7 @@
 
 > This is a translation of [README.md](README.md). The Chinese version is authoritative; if the two disagree, follow the Chinese one.
 
-Turns course materials in English, French, and other languages into Chinese study notes while keeping chapter structure, terminology, formulas, exercises, and figure placement. Packages are provided for Trae, Codex, and Claude Code.
+Turns course materials in English, French, and other languages into Chinese study notes while keeping chapter structure, terminology, formulas, exercises, and figure placement. One skill package works with Trae, Codex, and Claude Code.
 
 ![Trae Skill](https://img.shields.io/badge/Trae-skill-2B90D9)
 ![Codex Skill](https://img.shields.io/badge/Codex-skill-5B4BDB)
@@ -63,13 +63,15 @@ The five test handouts below were written for this project, and each contains se
 
 ## Install and use
 
-| Harness | Install guide | Skill location | How to invoke |
-| --- | --- | --- | --- |
-| Trae | [Trae guide](trae/README.md) | `.trae/skills/foreign-academic-translator/` | Enable it in the skills panel |
-| Codex | [Agent Skills guide](agent-skills/README.md) | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` |
-| Claude Code | [Agent Skills guide](agent-skills/README.md) | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` |
+All three harnesses share the single package in [skills/foreign-academic-translator](skills/foreign-academic-translator/); only the install directory and invocation differ.
 
-1. Install the skill package by following the guide for your harness.
+| Harness | Skill location | How to invoke | Documentation |
+| --- | --- | --- | --- |
+| Trae | `.trae/skills/foreign-academic-translator/` | Enable it in the skills panel | [Trae Skills](https://docs.trae.cn/ide/skills) |
+| Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
+| Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
+
+1. Copy the whole package to the location for your harness; see the [install guide](skills/foreign-academic-translator/README.md).
 2. Install the Python dependencies listed in `requirements.txt` in the skill directory.
 3. Attach your course material and confirm each setting. Every prompt asks exactly one question.
 4. Output goes to `output/<material-name>/` in your project. If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings.
@@ -88,14 +90,13 @@ Each document has an English translation; the Chinese original is authoritative.
 
 ```text
 .
-├── trae/                  Trae package and guide
-├── agent-skills/          Shared package and guide for Claude Code and Codex
+├── skills/                The single skill package: instructions, scripts, glossaries, templates
 ├── tests/                 Synthetic prompt injection cases
 ├── assets/showcase/       Screenshots
 └── README.md              Project home page
 ```
 
-The Trae package keeps the original skill layout. Codex and Claude Code share a single package under `agent-skills/` that follows the Agent Skills structure and contains the skill instructions, scripts, dependencies, styles, and glossaries. See the [Agent Skills specification](https://agentskills.io/specification), [Codex Skills](https://developers.openai.com/codex/skills), and [Claude Code Skills](https://code.claude.com/docs/en/skills) for details.
+The package follows the Agent Skills structure: `SKILL.md` plus scripts, styles, and glossaries. Trae also reads the `skill.yaml` beside it for parameter definitions. Every harness runs the same scripts, so there is no second copy to keep in sync. See the [Agent Skills specification](https://agentskills.io/specification), [Codex Skills](https://developers.openai.com/codex/skills), and [Claude Code Skills](https://code.claude.com/docs/en/skills) for details.
 
 ## License and glossaries
 
