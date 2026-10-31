@@ -1,6 +1,6 @@
 name: foreign-academic-translator
 description: 外文学案翻译助手：把英语、法语等学案整理成中文学习材料，逐项确认参数后导出 HTML、DOCX 或 Markdown。
-version: 3.0.2
+version: 3.0.3
 parameters:
   - name: source_text
     type: string

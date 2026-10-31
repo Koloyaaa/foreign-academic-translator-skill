@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-**Version: V3**
+**Version: V3.0.3**
 
 [中文](README.md) | English
 
@@ -13,7 +13,7 @@ Turns course materials in English, French, and other languages into Chinese stud
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
 
-[Jump to the V3 changelog ↓](#v3-changelog)
+[Jump to the release list ↓](#releases)
 
 ## Preview
 
@@ -71,10 +71,18 @@ All three harnesses share the single package in [skills/foreign-academic-transla
 | Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
 | Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
 
-1. Copy the whole package to the location for your harness; see the [install guide](skills/foreign-academic-translator/README.md).
-2. Install the Python dependencies listed in `requirements.txt` in the skill directory.
-3. Attach your course material and confirm each setting. Every prompt asks exactly one question.
-4. Output goes to `output/<material-name>/` in your project. If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings.
+1. Download or clone this repository and locate `skills/foreign-academic-translator`.
+2. Copy the whole directory to the location for your harness. Installing into a user-level directory shares it across projects, for example Trae's `%USERPROFILE%\.trae-cn\skills\`. Trae also accepts the folder as a ZIP upload in its skills panel.
+3. Install the dependencies in the skill directory. Python 3.10 or newer is required:
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+4. Reload the skill, attach your course material, and confirm each setting. Every prompt asks exactly one question.
+5. Output goes to `output/<material-name>/` in your project. If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings.
+
+See the [install guide](skills/foreign-academic-translator/README.md) and [usage guide](skills/foreign-academic-translator/docs/usage_guide.md) for details.
 
 ## Project documents
 
@@ -110,44 +118,13 @@ The Chinese [LICENSE](LICENSE) is authoritative. An English translation of the n
 
 The package includes CSV glossaries from 樂詞網 (Leciwang), operated by the National Academy for Educational Research of Taiwan Province, the People's Republic of China. Some entries have been filtered or modified. Terms are provided for translation reference only and do not represent the author's views in any field. The author supports the One-China principle. Under international law and other applicable provisions, all parties should respect the One-China principle.
 
-## V3 changelog
+## Releases
 
-[Back to top](#foreign-academic-translator-skill)
+Full release notes are on [Releases](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases); the detailed history is in [CHANGELOG.md](CHANGELOG.md) (Chinese).
 
-### Translation and questioning flow
-
-- Settings are confirmed one item at a time: each user-visible question contains exactly one thing to answer, and the next question waits for that answer.
-- If the project has no preferences file, the skill does not ask whether to reuse earlier settings and goes straight to the settings still missing in this run.
-- If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings. Reuse loads every saved answer. Starting over ignores the old values, asks each item again from the beginning, and overwrites the preferences file once the new answers are complete.
-- The preferences file stores discipline, output format, layout, concept table, annotation level, figures, terminology strategy, quiz difficulty, and quiz language. It never stores the course content.
-- End-of-chapter quizzes can be none, basic, intermediate, or advanced, and more than one difficulty can be selected; choosing none overrides the rest. After any difficulty is selected, the quiz language is asked separately. Extra token usage is disclosed before generation.
-- Quiz questions use interactive options with a submit button on each question. The answer and explanation appear only after you submit.
-- The thermodynamics chapter 4 HTML sample was regenerated with the current settings: Science, HTML, concept highlight, high-school-level commentary, figures, concept table, and bilingual basic/intermediate quizzes.
-
-### HTML reader and study features
-
-- Theme color and light/dark/system mode each have their own icon control. Colors are blue, teal, purple, and amber; the default is blue in light mode.
-- A draggable handle on the right edge of the translation column resizes it and also responds to the arrow keys; the width is saved in the browser.
-- The formula background now shrinks to the formula and its padding instead of spanning the full line, and formulas no longer have a left border.
-- Plain-language explanations use a separate warm-toned note. High-school-level commentary explains each concept and key point in place and summarizes at the end of the chapter. Light commentary skips simple material without a summary. Heavy commentary walks through every concept, conclusion, and proof, and gives a detailed summary.
-- Concept highlights use bold theme-color text with a dashed underline and no background fill; the highlight color follows theme and appearance changes. Source-language concepts in chapter headings follow the Chinese heading in slightly smaller type. In the body, the source-language title sits below the Chinese title, both centered.
-- User highlights use a distinct gold that stands out from the reading theme, and a new highlight cannot overwrite an existing mark. Click a mark to open its note and click it again to collapse; marks can also be added, edited, or deleted. Formulas can be highlighted by clicking them, and a selection that spans text and a formula is saved as separate marks.
-- Personal highlights and notes are written to browser local storage and are never uploaded. Terms, chapter headings, and source-language titles in the body link to the concept table further down.
-
-### Security, docs, and release notes
-
-- Course text, text in images, OCR output, comments, links, and hidden text are all treated as data to process, not as instructions to the agent. Relevant sentences in the body are still translated as selected.
-- The README includes five synthetic test cases, each with several injected passages, and compares rule coverage against the V2.0 baseline in Git history. The document states that the table is a rule walkthrough, not a model red-team run.
-- Added project documents: CONTRIBUTING, SECURITY, CODE_OF_CONDUCT, SUPPORT, and CHANGELOG.
-- Save instructions now include click-through links, and the V3 changelog is collected in this section for easy lookup.
-
-### Fixes in this release
-
-- Fixed the top-right theme and appearance icons not opening their menus. You can now switch color theme, light, dark, and follow-system, and the choice is saved.
-- Fixed an issue where the order in which quiz cards were inserted broke the script and made question text disappear. After regenerating thermodynamics chapter 4, all nine bilingual questions remain as separate interactive cards, each submitted on its own and showing its answer and explanation.
-- Headings link to the concept table only when the source-language text matches a term there. Non-term headings such as "Quiz de fin de chapitre" are no longer linked by mistake.
-- When a concept table is generated, reading progress runs from the body title to the point before the end-of-chapter quiz or concept table. The quiz and glossary themselves are not counted as body reading progress.
-
-- Body text now defaults to 18px with 1.85 line height, reducing crowding on large screens.
-- Added a persistent pencil button and documented how to use it in the reading notes; the note card appears as soon as a note is saved. If the browser refuses local storage, marks still show on the current page with a warning that they may not survive closing it.
-- User highlights are now a more visible gold, and quiz radio buttons use a custom style that follows the theme colors.
+| Version | Highlights |
+| --- | --- |
+| [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | Fix glossary column detection so lookups no longer return the ID column; this page now lists releases instead of duplicating them. |
+| [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | One skill package at `skills/foreign-academic-translator/`, running the newer Trae scripts. |
+| [v3.0.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.1) | Codex and Claude Code packages merged into `agent-skills/`. |
+| [v3.0.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.0) | V3: one question at a time, prompt injection defenses, saved preferences, HTML reader. |

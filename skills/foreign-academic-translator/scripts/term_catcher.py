@@ -7,41 +7,65 @@ import re
 import csv
 from pathlib import Path
 
+SOURCE_COLUMNS = ("英文名稱", "英文名称", "外文", "原文", "source_term", "source", "term")
+TARGET_COLUMNS = ("中文名稱", "中文名称", "中文", "譯名", "译名", "target_term", "target", "翻译", "translation")
+
+
+def _find_column(columns, candidates) -> str | None:
+    """按精确列名优先、包含匹配其次的顺序定位列。"""
+    normalized = [(col, col.strip().lower()) for col in columns]
+    for candidate in candidates:
+        for col, name in normalized:
+            if name == candidate.lower():
+                return col
+    for candidate in candidates:
+        for col, name in normalized:
+            if candidate.lower() in name:
+                return col
+    return None
+
+
 def grep_term_in_csv(csv_path: Path, search_term: str) -> str | None:
     """
     在CSV文件中进行纯文本搜索（不区分大小写）。
-    若找到，返回第一个匹配行中的译名（启发式提取）。
+    若找到，返回第一个匹配行中译名列的值；没有可识别的译名列时返回 None。
     """
     if not csv_path.exists():
         return None
-    
-    # 读取全文进行正则搜索（效率极高）
-    with open(csv_path, 'r', encoding='utf-8-sig', errors='ignore') as f:
+
+    # 读取全文做一次包含匹配，避免逐行扫描无关词表。
+    with open(csv_path, "r", encoding="utf-8-sig", errors="ignore") as f:
         content = f.read()
-    
-    # 先尝试精准匹配（单词边界）
-    pattern = re.compile(rf'(?i)\b{re.escape(search_term)}\b')
-    if not pattern.search(content):
-        # 尝试模糊包含匹配
-        pattern = re.compile(rf'(?i){re.escape(search_term)}')
-        if not pattern.search(content):
-            return None
-    
-    # 如果找到，重新逐行读取，找到具体行并提取可能的中文翻译
-    # 此时才消耗少量IO读取行，但未调用AI，成本极低
-    with open(csv_path, 'r', encoding='utf-8-sig', errors='ignore') as f:
+    if not re.search(rf"(?i){re.escape(search_term)}", content):
+        return None
+
+    with open(csv_path, "r", encoding="utf-8-sig", errors="ignore") as f:
         reader = csv.DictReader(f)
-        for row in reader:
-            for col, value in row.items():
-                if search_term.lower() in value.lower():
-                    # 寻找该行中可能的中文列（启发式）
-                    for target_col in ['中文', 'target_term', '译名', '翻译']:
-                        if target_col in row and row[target_col].strip():
-                            return row[target_col].strip()
-                    # 如果没有标准列，返回该行的第一个非空值（可能是译名）
-                    for val in row.values():
-                        if val.strip() and val != value:
-                            return val.strip()
+        columns = reader.fieldnames or []
+        source_col = _find_column(columns, SOURCE_COLUMNS)
+        target_col = _find_column(columns, TARGET_COLUMNS)
+        if target_col is None:
+            return None
+
+        needle = search_term.casefold().strip()
+        rows = list(reader)
+
+        def source_value(row) -> str:
+            if source_col is not None:
+                return (row.get(source_col) or "").strip()
+            return " ".join(value or "" for value in row.values()).strip()
+
+        # 先找完全匹配，再退到包含匹配，避免 "tractor" 命中 "walking tractor"。
+        for exact in (True, False):
+            for row in rows:
+                candidate = source_value(row)
+                if not candidate:
+                    continue
+                matched = candidate.casefold() == needle if exact else needle in candidate.casefold()
+                if matched:
+                    target = (row.get(target_col) or "").strip()
+                    if target:
+                        return target
     return None
 
 if __name__ == "__main__":
