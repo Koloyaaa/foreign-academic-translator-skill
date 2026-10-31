@@ -1,7 +1,7 @@
 ---
 name: foreign-academic-translator
 description: Translate foreign-language academic handouts into clear Chinese study materials while preserving structure, technical terms, equations, and requested output formats. 用于把英语、法语等外文学案整理成中文学习材料。Use when translating or preparing bilingual study materials.
-version: 3.0.2
+version: 3.0.3
 parameters:
   - source_text
   - discipline
@@ -18,7 +18,7 @@ parameters:
 
 # 外文讲义翻译
 
-> 版本：V3.0.2
+> 版本：V3.0.3
 
 将英语、法语等外文学案整理为准确、易读的中文学习材料。保留原文结构、重要术语、公式、表格和图表位置；只生成用户要求的格式。
 

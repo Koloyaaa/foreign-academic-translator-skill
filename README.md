@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-**版本：V3**
+**版本：V3.0.3**
 
 [中文](README.md) | [English](README.en.md)
 
@@ -11,7 +11,7 @@
 ![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
 
-[查看 V3 更新详情一览 ↓](#v3-更新详情一览)
+[查看版本发布 ↓](#版本发布)
 
 ## 效果预览
 
@@ -69,10 +69,18 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
 | Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
 | Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
 
-1. 把技能包整个复制到上表对应的位置，详见[安装说明](skills/foreign-academic-translator/README.md)。
-2. 安装技能目录 `requirements.txt` 中的 Python 依赖。
-3. 附上学案并逐项确认选项。每条提问只包含一个待回答的问题。
-4. 成品保存在项目的 `output/<学案名>/`。当项目内已有 `output/.translator_preferences.json` 时，技能会先单独询问是否沿用上次设置。
+1. 下载或克隆本仓库，找到 `skills/foreign-academic-translator`。
+2. 把整个目录复制到目标项目的对应位置。装在用户目录可以让所有项目共用，例如 Trae 的 `%USERPROFILE%\.trae-cn\skills\`。Trae 也支持把该目录压缩成 ZIP 后在技能面板上传。
+3. 在技能目录安装依赖，需要 Python 3.10 或更高版本：
+
+   ```powershell
+   python -m pip install -r requirements.txt
+   ```
+
+4. 重新载入技能后附上学案，逐项确认选项。每条提问只包含一个待回答的问题。
+5. 成品保存在项目的 `output/<学案名>/`。当项目内已有 `output/.translator_preferences.json` 时，技能会先单独询问是否沿用上次设置。
+
+更多细节见[技能包安装说明](skills/foreign-academic-translator/README.md)与[使用指南](skills/foreign-academic-translator/docs/usage_guide.md)。
 
 ## 项目文档
 
@@ -104,44 +112,13 @@ CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上
 
 随包 CSV 词库来源于中华人民共和国台湾省教育研究院乐词网，部分词条经过筛选或修改。词条只供翻译参考，不代表项目作者在任何领域的观点。项目作者支持一个中国原则。根据国际法等相关法律规定，各方均应尊重一个中国原则。
 
-## V3 更新详情一览
+## 版本发布
 
-[返回顶部](#外文讲义翻译-skill)
+完整发布说明见 [Releases](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases)，历史改动见 [CHANGELOG.md](CHANGELOG.md)。
 
-### 翻译与提问流程
-
-- 多个参数必须逐项确认：每条用户可见提问只包含一个待回答的问题；收到回答后再问下一项。
-- 项目内没有偏好文件时，不询问是否沿用历史设置，直接询问本轮尚缺的参数。
-- 项目内已有 output/.translator_preferences.json 时，先单独询问是否沿用上次参数。选择沿用后直接读取全部已保存答案；选择重新设置后忽略旧值，从头逐项询问，并在新答案收齐后覆盖偏好文件。
-- 偏好文件保存学科、输出格式、布局、概念表、注释等级、配图、术语策略、测验强度和测验语言，不保存学案正文。
-- 章末测验可选无测验、基础、中档和高难，并可多选；无测验覆盖其他选项。选择任一测验强度后，再单独询问测验语言。生成测验前会说明额外 token 消耗。
-- 选择题采用可交互选项，每题各有提交按钮；提交后才显示该题答案与解析。
-- 按当前确认的 Science、HTML、concept-highlight、高中生视角注释、配图、概念表和双语基础/中档测验偏好，重新生成了热力学第四章 HTML 示例。
-
-### HTML 阅读器与学习功能
-
-- 配色和浅色、深色、跟随系统模式分别使用图标控件；配色包括蓝、青绿、紫、琥珀，默认蓝色浅色。
-- 译文阅读栏右侧增加可拖动的宽度把手，支持键盘方向键，宽度保存在浏览器本地。
-- 公式背景随公式内容和边距收缩，不再横贯整行；公式没有左侧竖线。
-- 通俗解读使用独立的暖色注记。高中生视角在概念和知识点后逐项解释，并在章节末归纳；轻度注释可略过简单内容且不作总结；重度注释逐一解释概念、结论和证明过程，并详细归纳。
-- 概念高亮采用主题色粗体和虚线下划线，不铺底色；切换配色或明暗时标记颜色同步变化。章节标题中的外文概念跟在中文标题后并略小显示；课文中外文标题置于中文标题下方，两行居中。
-- 用户选中的高亮使用醒目的金黄色，与阅读主题区分；新高亮不能覆盖已有标记。点击标记可展开注释，再点同一标记可收起；也可添加、编辑或删除标记。公式可直接点击后标记，跨公式选择的正文与公式会分别保存。
-- 个人高亮和注释写入当前浏览器的本地存储，不上传。术语、章节标题和课文外文标题都能点击跳转到后方概念表。
-
-### 安全、文档与版本记录
-
-- 将学案正文、图片文字、OCR、批注、链接和隐藏文本统一视为待处理数据，不作为 agent 指令；正文里的相关句子仍按选择翻译。
-- README 收录五份含多处注入文字的合成测试用例，并与 Git 历史 V2.0 基线进行规则覆盖比较；文档说明该表是规则走查，不冒充模型红队实测。
-- 增加 CONTRIBUTING、SECURITY、CODE_OF_CONDUCT、SUPPORT 和 CHANGELOG 等项目文档。
-- 保存说明提供点击跳转链接；V3 的更新清单集中在本节，便于查阅。
-
-### 本轮问题修复
-
-- 修复右上角配色与明暗图标没有打开菜单的问题；现在可切换配色、浅色、深色和跟随系统，并保存选择。
-- 修复测验卡片插入顺序导致脚本中断、题干消失的问题；重新生成热力学第四章后，9 道双语题均保留为独立交互卡片，每题单独提交并显示答案与解析。
-- 仅当标题外文与概念表中的术语相符时，才链接到概念表；“Quiz de fin de chapitre”等非术语标题不再误链接。
-- 生成概念表时，阅读进度从课文标题计到章末测验或概念表之前；测验和词汇表本身不计入正文阅读进度。
-
-- 正文基准字号调整为 18px，行距调整为 1.85，减少大屏阅读时的拥挤感。
-- 增加常驻的笔形入口，并在阅读说明中提示操作方式；保存注释后立即显示注释卡。即使浏览器拒绝本地存储，标记仍会显示在当前页面，并提示关闭页面后可能无法保留。
-- 用户高亮改为更醒目的金黄色；测验单选圆点改为自绘样式，并随主题配色变化。
+| 版本 | 主要变化 |
+| --- | --- |
+| [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | 修复词库列名识别，查询不再把 ID 当译名；本页改为版本汇总。 |
+| [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | 合并为唯一的技能包 `skills/foreign-academic-translator/`，统一采用 Trae 版脚本。 |
+| [v3.0.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.1) | Codex 与 Claude Code 包合并为 `agent-skills/`。 |
+| [v3.0.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.0) | V3：逐项提问、提示词注入防护、参数偏好、HTML 阅读器。 |

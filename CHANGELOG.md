@@ -1,5 +1,11 @@
 # 更新记录
 
+## V3.0.3
+
+- 修复 `term_catcher.py` 的词库列名识别：支持 `英文名稱` / `中文名稱` 等列名，只从译名列取值，查不到时输出 `NOT_FOUND`，不再把 ID 列当作译名。
+- 术语查询改为完全匹配优先、包含匹配其次，`tractor` 不会再先命中 `walking type tractor`。
+- README 的「V3 更新详情一览」改为版本发布列表，完整说明指向 Releases 与 CHANGELOG；「安装与使用」补上完整步骤和依赖安装命令。README.en.md 同步。
+
 ## V3.0.2
 
 - 把 Trae 包与 Agent Skills 包合并为 `skills/foreign-academic-translator`，三个 Harness 共用同一份技能包；`trae/` 与 `agent-skills/` 目录随之移除。
