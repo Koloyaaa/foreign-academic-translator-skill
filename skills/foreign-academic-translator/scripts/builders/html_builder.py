@@ -625,6 +625,62 @@ def _render_body(md_content: str) -> str:
     return "<pre>" + escape(md_content) + "</pre>"
 
 
+_QUIZ_LANGUAGE_LABEL_RE = re.compile(
+    r"(?:中文|汉语|Chinese|法语|法文|Français|French|英语|英文|English|"
+    r"西班牙语|西班牙文|Español|Spanish|德语|Deutsch|German|"
+    r"意大利语|Italiano|Italian|日语|日本語|Japanese)\s*[:：]\s*",
+    re.I,
+)
+_QUIZ_CJK_RE = re.compile(r"[\u3400-\u9fff]")
+_QUIZ_LATIN_RE = re.compile(r"[A-Za-zÀ-ÖØ-öø-ÿ]")
+
+
+def _split_quiz_languages(text: str):
+    """识别测验中按语言标注或斜线分隔的双语内容。"""
+    text = (text or "").strip()
+    lines = [line.strip() for line in text.splitlines() if line.strip()]
+    if len(lines) > 1:
+        has_language_labels = any(_QUIZ_LANGUAGE_LABEL_RE.match(line) for line in lines)
+        has_cjk_line = any(_QUIZ_CJK_RE.search(line) for line in lines)
+        has_latin_only_line = any(
+            _QUIZ_LATIN_RE.search(line) and not _QUIZ_CJK_RE.search(line) for line in lines
+        )
+        if has_language_labels or (has_cjk_line and has_latin_only_line):
+            return lines
+        text = " ".join(lines)
+
+    labels = list(_QUIZ_LANGUAGE_LABEL_RE.finditer(text))
+    if labels:
+        segments = []
+        if text[:labels[0].start()].strip():
+            segments.append(text[:labels[0].start()].strip())
+        for index, label in enumerate(labels):
+            end = labels[index + 1].start() if index + 1 < len(labels) else len(text)
+            segment = text[label.start():end].strip()
+            if segment:
+                segments.append(segment)
+        if len(segments) > 1:
+            return segments
+
+    slash_segments = re.split(r"\s+[/／]\s+", text)
+    if len(slash_segments) == 2:
+        first, second = slash_segments
+        if (
+            (_QUIZ_CJK_RE.search(first) and _QUIZ_LATIN_RE.search(second))
+            or (_QUIZ_LATIN_RE.search(first) and _QUIZ_CJK_RE.search(second))
+        ):
+            return [first.strip(), second.strip()]
+    return [text]
+
+
+def _render_quiz_text(text: str) -> str:
+    """双语内容按语言拆成独立段落；单语内容沿用普通 Markdown 渲染。"""
+    segments = _split_quiz_languages(text)
+    if len(segments) == 1:
+        return _render_body(segments[0])
+    return '<div class="quiz-bilingual">' + _render_body("\n\n".join(segments)) + "</div>"
+
+
 _QUIZ_TITLE_RE = re.compile(r"(?:章末测验|测验题|测验|quiz|qcm|évaluation|evaluation|test)", re.I)
 _ANSWER_TITLE_RE = re.compile(r"(?:答案|解析|answer|correction|réponse|reponse)", re.I)
 _DIFFICULTY_TITLES = (
@@ -699,9 +755,9 @@ def _parse_quiz_question_lines(lines, start_number: int, level: str):
             raise ValueError("测验难度标题下出现无法识别的内容；题目请用连续编号，选项请各占一行。")
         if current["choices"]:
             last_letter = next(reversed(current["choices"]))
-            current["choices"][last_letter] += " " + line
+            current["choices"][last_letter] += "\n" + line
         else:
-            current["prompt"] += " " + line
+            current["prompt"] += "\n" + line
 
     finish()
     return questions
@@ -721,7 +777,7 @@ def _parse_quiz_answers(lines):
                 "explanation": (match.group(3) or "").strip(),
             })
         elif answers:
-            answers[-1]["explanation"] += " " + line
+            answers[-1]["explanation"] += "\n" + line
         else:
             raise ValueError("答案区格式无法识别；每题请写成“题号. 正确选项 — 解析”。")
     return answers
@@ -823,7 +879,7 @@ def _build_quiz_html(md_content: str, required: bool = False):
             chunks.append(
                 '<section class="quiz-question" data-level="' + question["level"] +
                 '" data-answer="' + answer["letter"] + '">'
-                '<div class="quiz-prompt">' + _render_body(question["prompt"]) + '</div>'
+                '<div class="quiz-prompt">' + _render_quiz_text(question["prompt"]) + '</div>'
                 '<fieldset class="quiz-options" aria-label="选择答案">'
                 '<legend class="quiz-options-legend">请选择一个答案</legend>'
             )
@@ -831,12 +887,12 @@ def _build_quiz_html(md_content: str, required: bool = False):
                 chunks.append(
                     '<label class="quiz-option"><input type="radio" value="' + letter + '">'
                     '<span class="quiz-option-letter">' + letter + '.</span>'
-                '<div class="quiz-option-text">' + _render_body(choice) + '</div></label>'
+                '<div class="quiz-option-text">' + _render_quiz_text(choice) + '</div></label>'
                 )
             chunks.append(
                 '</fieldset><button type="button" class="quiz-submit">提交答案</button>'
                 '<div class="quiz-feedback" role="status" aria-live="polite" hidden></div>'
-                '<template class="quiz-explanation">' + _render_body(answer["explanation"]) + '</template>'
+                '<template class="quiz-explanation">' + _render_quiz_text(answer["explanation"]) + '</template>'
                 '</section>'
             )
             question_index += 1
@@ -1417,10 +1473,12 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
 .content-area .quiz-options-legend { margin-bottom: 3px; color: var(--muted); font-size: 13px; }
 .content-area .quiz-option-text { min-width: 0; flex: 1; }
 .content-area .quiz-option-text p { margin: 0 !important; text-align: left !important; }
-.content-area .quiz-option input { flex: 0 0 auto; margin-top: .45em; accent-color: var(--accent-strong); }
+.content-area .quiz-bilingual > p { margin: 0 !important; text-align: left !important; }
+.content-area .quiz-bilingual > p + p { margin-top: .18em !important; }
+.content-area .quiz-option input { flex: 0 0 auto; margin: 0 1px 0 0; accent-color: var(--accent-strong); }
 .content-area .quiz-option input[type="radio"] {
   appearance: none; -webkit-appearance: none; box-sizing: border-box; width: 19px; height: 19px;
-  min-width: 19px; flex: 0 0 19px; margin: .18em 1px 0 0; display: grid; place-content: center;
+  min-width: 19px; flex: 0 0 19px; align-self: center; margin: 0 1px 0 0; display: grid; place-content: center;
   border: 2px solid var(--accent); border-radius: 50%; background: var(--surface-bg); cursor: pointer;
   transition: border-color .16s ease, box-shadow .16s ease, background .16s ease;
 }
@@ -1469,6 +1527,12 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
         or "initTocTracking();" not in js
     ):
         raise ValueError("HTML 质量门禁未通过：导航栏缺少当前阅读位置高亮或根目录折叠状态样式。")
+    if (
+        ".content-area .quiz-bilingual > p + p" not in layout_css
+        or "align-self: center" not in layout_css
+        or "margin: 0 1px 0 0" not in layout_css
+    ):
+        raise ValueError("HTML 质量门禁未通过：双语测验没有分行显示，或选项选择器没有垂直居中。")
     content_area_css = re.search(r"\.content-area\s*\{([^}]*)\}", layout_css, re.I | re.S)
     if (
         not content_area_css

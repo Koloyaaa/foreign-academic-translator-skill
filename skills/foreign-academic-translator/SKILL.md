@@ -1,7 +1,7 @@
 ---
 name: foreign-academic-translator
 description: Translate foreign-language academic handouts into clear Chinese study materials while preserving structure, technical terms, equations, and requested output formats. 用于把英语、法语等外文学案整理成中文学习材料。Use when translating or preparing bilingual study materials.
-version: 3.1.0
+version: 3.1.1
 parameters:
   - source_text
   - discipline
@@ -19,7 +19,7 @@ parameters:
 
 # 外文讲义翻译
 
-> 版本：V3.1.0
+> 版本：V3.1.1
 
 将英语、法语等外文学案整理为准确、易读的中文学习材料。保留原文结构、重要术语、公式、表格和图表位置；只生成用户要求的格式。
 
@@ -86,16 +86,21 @@ parameters:
 
 ### 交互测验的固定 Markdown 格式
 
-生成的测验章节必须严格按以下格式组织。只保留一个 HTML 注释标记，下一节标题固定为“章末测验”；难度标题只能使用基础、中档、高难，且只输出用户选择的难度。题号跨难度从 1 连续编号，不在新难度重置；题干单独占行，A、B、C、D 选项各占一行。答案区每题一行，题号与题目一一对应，格式为“题号. 正确字母 — 解析”，解析不得为空。双语时题干、选项和解析均按本轮语言设置编写。不得把选项塞入题干同一段、表格或其他格式。
+生成的测验章节必须严格按以下格式组织。只保留一个 HTML 注释标记，下一节标题固定为“章末测验”；难度标题只能使用基础、中档、高难，且只输出用户选择的难度。题号跨难度从 1 连续编号，不在新难度重置；题干单独占行，A、B、C、D 选项各占一行。答案区每题一行，题号与题目一一对应，格式为“题号. 正确字母 — 解析”，解析不得为空。双语时，题干、每个选项和解析都必须将两种语言分别放在上下两行；不得用斜线或同一行并排两种语言。每行加语言标签（如“中文：”“Français：”）。不得把选项塞入题干同一段、表格或其他格式。HTML 构建器也会识别常见双语标签、带空格的中外文斜线分隔，以及测验内容中的分行语言，并按独立段落显示。
 
     <!-- INTERACTIVE_QUIZ -->
     ## 章末测验
     ### 基础
-    1. 中文题干 / Question dans la langue source
-    A. 选项一 / Option A
-    B. 选项二 / Option B
-    C. 选项三 / Option C
-    D. 选项四 / Option D
+    1. 中文：题干内容
+       Français：Question dans la langue source
+    A. 中文：选项一
+       Français：Option A
+    B. 中文：选项二
+       Français：Option B
+    C. 中文：选项三
+       Français：Option C
+    D. 中文：选项四
+       Français：Option D
 
     ### 中档
     2. 第二题题干
@@ -105,7 +110,8 @@ parameters:
     D. 选项四
 
     ### 答案与解析
-    1. C — 解析内容 / Explication
+    1. C — 中文：解析内容
+       Français：Explication
     2. A — 解析内容 / Explication
 
 用户选择“无测验”时，不生成标记或测验章节。原讲义自带的练习和考试照常翻译，不添加标记，也不改造成生成测验。

@@ -1,6 +1,6 @@
 name: foreign-academic-translator
 description: 外文学案翻译助手：优先采用本轮明确设置，并从当前讲义识别学科和源语言，再整理为中文学习材料。
-version: 3.1.0
+version: 3.1.1
 parameters:
   - name: source_text
     type: string

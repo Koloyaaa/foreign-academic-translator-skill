@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-**Version: V3.1.0**
+**Version: V3.1.1**
 
 [中文](README.md) | English
 
@@ -124,6 +124,7 @@ Full release notes are on [Releases](https://github.com/Koloyaaa/foreign-academi
 
 | Version | Highlights |
 | --- | --- |
+| [v3.1.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.1) | Split bilingual quiz text by language and vertically center option selectors. |
 | [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | Improve the HTML reader layout, side navigation, and heading hierarchy; strengthen interactive quiz and page quality gates. |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | Current-request settings take priority; infer discipline and main source language from each handout. |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | Fix glossary column detection so lookups no longer return the ID column; this page now lists releases instead of duplicating them. |

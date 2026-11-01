@@ -475,7 +475,10 @@ html[data-theme="dark"] .content-area mark.user-highlight[data-note] { text-deco
   border: 1px solid var(--border); border-radius: 8px; background: var(--surface-bg); cursor: pointer;
 }
 .content-area .quiz-option:hover { border-color: var(--accent); background: var(--accent-soft); }
-.content-area .quiz-option input { flex: 0 0 auto; margin-top: .45em; accent-color: var(--accent-strong); }
+.content-area .quiz-bilingual > p { margin: 0 !important; text-align: left !important; }
+.content-area .quiz-bilingual > p + p { margin-top: .18em !important; }
+.content-area .quiz-option input { flex: 0 0 auto; margin: 0 1px 0 0; accent-color: var(--accent-strong); }
+.content-area .quiz-option input[type="radio"] { align-self: center; margin: 0 1px 0 0; }
 .content-area .quiz-submit {
   border: 0; border-radius: 8px; padding: 9px 15px; color: #fff;
   background: var(--accent-strong); cursor: pointer; font: 650 14px/1.2 'Segoe UI', Arial, sans-serif;

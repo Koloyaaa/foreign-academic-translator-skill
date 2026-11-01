@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-**版本：V3.1.0**
+**版本：V3.1.1**
 
 [中文](README.md) | [English](README.en.md)
 
@@ -118,6 +118,7 @@ CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上
 
 | 版本 | 主要变化 |
 | --- | --- |
+| [v3.1.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.1) | 双语测验按语言分行显示，选项选择器垂直居中。 |
 | [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | 改进 HTML 阅读器布局、双侧大纲与标题排版；加入更严格的交互测验和页面质量门禁。 |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | 本轮明确参数优先；从当前讲义推断学科和主要源语言。 |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | 修复词库列名识别，查询不再把 ID 当译名；本页改为版本汇总。 |
