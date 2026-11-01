@@ -35,11 +35,12 @@ python -m pip install -r requirements.txt
 
 ## 开始使用
 
-选中本技能、附上学案，并说明下表中的选项。已经说明的选项不会重复询问；缺少的选项会逐项提问，每条消息只问一个问题。
+选中本技能并附上学案。本轮明确指定的设置优先；未指定时，技能从当前讲义正文推断学科和主要源语言，不沿用上一份讲义的这两项。其他无法从讲义判断的缺少项仍逐项询问，每条消息只问一个问题。
 
 | 选项 | 可选值 |
 | --- | --- |
-| 学科 | `Engineering`、`Economics`、`Science`、`Agriculture`、`Social_Sciences`、`Literature_Arts`、`Medicine` |
+| 学科 | `Engineering`、`Economics`、`Science`、`Agriculture`、`Social_Sciences`、`Literature_Arts`、`Medicine` | 根据当前讲义推断，无法可靠判断时再询问 |
+| 源语言 | 当前讲义正文的主要语言 | 自动识别；无法可靠判断时再询问 |
 | 输出格式 | `html`、`docx`、`md`，至少选择一种 |
 | 展示布局 | `translation_only`、`translation_first`、`source_first`、`concept_highlight` |
 | 概念表 | `true`（生成）或 `false`（不生成） |
@@ -48,7 +49,7 @@ python -m pip install -r requirements.txt
 | 术语策略 | `system_glossary`（使用随包词库）或 `ai_auto`（模型识别术语） |
 | 章末测验 | `无测验`、`基础`、`中档`、`高难`，可多选 |
 
-选择任意测验难度后，还会单独询问测验语言：`双语`、`学案所属语言` 或 `中文`。
+选择任意测验难度后，还会单独询问测验语言：`双语`、`学案所属语言` 或 `中文`；选择“学案所属语言”时，会使用当前讲义识别出的主要源语言。
 
 示例：
 

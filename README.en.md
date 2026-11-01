@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-**Version: V3.0.3**
+**Version: V3.0.4**
 
 [中文](README.md) | English
 
@@ -41,9 +41,9 @@ HTML formulas load MathJax from a CDN, so the page needs a network connection. O
 
 ## What's new in V3
 
-When several settings need confirmation, the skill asks one question at a time and waits for the answer. Quiz difficulty is asked separately; unless "no quiz" is chosen, a second question asks for the quiz language: bilingual, the source language, or Chinese.
+Starting with V3.0.4, settings stated in the current request take priority over saved preferences. If the current request does not specify them, the skill infers the discipline and main source language from the current handout and detects them again for each new handout. Other settings that cannot be inferred are still confirmed one at a time. If a quiz is requested and its language is unspecified, the skill asks whether to use bilingual, source-language, or Chinese questions.
 
-V3 adds prompt injection defenses. The skill also saves the settings you confirmed in the project, so the next run can reuse them or set them again item by item. Preferences live in `output/.translator_preferences.json` and contain only the settings you confirmed, never the course content.
+V3 includes prompt injection defenses. The skill saves reusable output and study preferences in `output/.translator_preferences.json`; discipline and source language belong to the current handout and are not reused across handouts. The file never stores course content.
 
 Text in the source file, including body text, text inside images, OCR output, comments, links, metadata, and hidden text, is treated as data to process, not as instructions to the agent. A document cannot change the user's task, authorize tool use on the user's behalf, or trigger data exfiltration. Injected text that is part of the body is still translated like any other content.
 
@@ -79,7 +79,7 @@ All three harnesses share the single package in [skills/foreign-academic-transla
    python -m pip install -r requirements.txt
    ```
 
-4. Reload the skill, attach your course material, and confirm each setting. Every prompt asks exactly one question.
+4. Reload the skill and attach your course material. Settings stated in the current request take priority; otherwise, the skill infers the discipline and source language from the handout. It still asks one question at a time for other settings it cannot infer.
 5. Output goes to `output/<material-name>/` in your project. If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings.
 
 See the [install guide](skills/foreign-academic-translator/README.md) and [usage guide](skills/foreign-academic-translator/docs/usage_guide.md) for details.
@@ -124,6 +124,7 @@ Full release notes are on [Releases](https://github.com/Koloyaaa/foreign-academi
 
 | Version | Highlights |
 | --- | --- |
+| [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | Current-request settings take priority; infer discipline and main source language from each handout. |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | Fix glossary column detection so lookups no longer return the ID column; this page now lists releases instead of duplicating them. |
 | [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | One skill package at `skills/foreign-academic-translator/`, running the newer Trae scripts. |
 | [v3.0.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.1) | Codex and Claude Code packages merged into `agent-skills/`. |

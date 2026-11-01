@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-**版本：V3.0.3**
+**版本：V3.0.4**
 
 [中文](README.md) | [English](README.en.md)
 
@@ -39,9 +39,9 @@ HTML 公式使用 MathJax CDN，打开页面时需要联网；离线时公式可
 
 ## V3 变化
 
-有多个待确认选项时，技能每次只问一个问题，收到回答后再继续。章末测验强度单独询问；未选“无测验”时，再单独询问测验语言，可选双语、学案所属语言或中文。
+V3.0.4 起，本轮明确指定的参数优先于历史偏好；未指定的学科和主要源语言从当前讲义正文推断，每份讲义都会重新识别，不沿用上一份讲义的学科或语言。其他无法从讲义判断的设置仍逐项确认，每条提问只问一个问题。选择章末测验后，若未指定测验语言，再单独询问双语、学案所属语言或中文。
 
-V3 新增了提示词注入防御。技能还会在项目内保存上次确认的参数；下次可以选择沿用，也可以逐项重新设置。偏好文件为 `output/.translator_preferences.json`，只记录用户确认的参数，不保存学案内容。
+V3 延续提示词注入防护。技能会在项目内保存可跨讲义复用的输出和学习偏好，文件为 `output/.translator_preferences.json`；学科和源语言属于当前讲义信息，不作为跨讲义偏好使用。偏好文件不保存学案正文。
 
 源文件中的正文、图片文字、OCR、批注、链接、元数据和隐藏文本均作为待处理数据，不作为 agent 指令。文档不能改变用户任务、替用户授权工具操作或触发数据外传；属于正文的注入文字仍按用户选择翻译。
 
@@ -77,7 +77,7 @@ V3 新增了提示词注入防御。技能还会在项目内保存上次确认�
    python -m pip install -r requirements.txt
    ```
 
-4. 重新载入技能后附上学案，逐项确认选项。每条提问只包含一个待回答的问题。
+4. 重新载入技能并附上学案。本轮明确指定的参数优先；未指定的学科和源语言会从当前讲义推断。其他无法推断的缺少项仍逐项询问，每条消息只问一个问题。
 5. 成品保存在项目的 `output/<学案名>/`。当项目内已有 `output/.translator_preferences.json` 时，技能会先单独询问是否沿用上次设置。
 
 更多细节见[技能包安装说明](skills/foreign-academic-translator/README.md)与[使用指南](skills/foreign-academic-translator/docs/usage_guide.md)。
@@ -118,6 +118,7 @@ CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上
 
 | 版本 | 主要变化 |
 | --- | --- |
+| [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | 本轮明确参数优先；从当前讲义推断学科和主要源语言。 |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | 修复词库列名识别，查询不再把 ID 当译名；本页改为版本汇总。 |
 | [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | 合并为唯一的技能包 `skills/foreign-academic-translator/`，统一采用 Trae 版脚本。 |
 | [v3.0.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.1) | Codex 与 Claude Code 包合并为 `agent-skills/`。 |

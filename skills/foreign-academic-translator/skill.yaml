@@ -1,6 +1,6 @@
 name: foreign-academic-translator
-description: 外文学案翻译助手：把英语、法语等学案整理成中文学习材料，逐项确认参数后导出 HTML、DOCX 或 Markdown。
-version: 3.0.3
+description: 外文学案翻译助手：优先采用本轮明确设置，并从当前讲义识别学科和源语言，再整理为中文学习材料。
+version: 3.0.4
 parameters:
   - name: source_text
     type: string
@@ -10,9 +10,14 @@ parameters:
 
   - name: discipline
     type: string
-    description: "学科大类（必须与glossaries文件夹名完全匹配）"
-    required: true
+    description: "学科大类；本轮未指定时从当前讲义正文推断，仅在无法可靠判断时询问"
+    required: false
     enum: ["Engineering", "Economics", "Science", "Agriculture", "Social_Sciences", "Literature_Arts", "Medicine"]
+
+  - name: source_language
+    type: string
+    description: "正文主要源语言；本轮未指定时从当前讲义正文推断，仅在无法可靠判断时询问"
+    required: false
 
   - name: output_formats
     type: array
@@ -59,12 +64,12 @@ parameters:
 
   - name: quiz_language
     type: string
-    description: "仅当 quiz_levels 未选择无测验时单独询问：双语、学案所属语言或中文"
+    description: "仅当生成测验时询问；若选择学案所属语言，使用当前讲义正文识别出的主要源语言"
     required: false
     enum: ["双语", "学案所属语言", "中文"]
 
   - name: reuse_preferences
     type: string
-    description: "仅当项目 output/.translator_preferences.json 已存在且本次没有直接指定参数时，单独询问沿用上次参数或重新选择"
+    description: "仅当项目 output/.translator_preferences.json 已存在且本次没有直接指定沿用或重设时，单独询问是否复用；本轮明确值及当前讲义识别出的学科、源语言优先"
     required: false
     enum: ["沿用上次参数", "重新选择"]
