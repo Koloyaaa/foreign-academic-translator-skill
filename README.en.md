@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-**Version: V3.0.4**
+**Version: V3.1.0**
 
 [中文](README.md) | English
 
@@ -17,13 +17,13 @@ Turns course materials in English, French, and other languages into Chinese stud
 
 ## Preview
 
-The screenshots show French terminology annotations, plain-language notes, a thermodynamics diagram, formulas, and a reading table of contents. Sample material by the project author, Koloyaaa (Léo WEE).
+The screenshots show the HTML reader's side navigation, centered lesson title, terminology annotations, formulas, and table of contents. Sample material by the project author, Koloyaaa (Léo WEE).
 
-![French thermodynamics terminology annotations, concept explanations, and a cycle diagram](assets/showcase/thermodynamics-cycle.png)
+![Thermodynamics HTML reader with file explorer, lesson outline, and centered title](assets/showcase/thermodynamics-reader-overview.png)
+
+![Thermodynamics HTML reader with entropy formulas and a live lesson outline](assets/showcase/thermodynamics-reader-formulas.png)
 
 ![Math formulas, figures, and a collapsible table of contents](assets/showcase/math-and-reading-progress.png)
-
-![Thermodynamics chapter 4 in the HTML reader: formula marks, personal notes, and theme controls](assets/showcase/thermodynamics-chapter4-reader-v3.png)
 
 ## Features
 
@@ -124,6 +124,7 @@ Full release notes are on [Releases](https://github.com/Koloyaaa/foreign-academi
 
 | Version | Highlights |
 | --- | --- |
+| [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | Improve the HTML reader layout, side navigation, and heading hierarchy; strengthen interactive quiz and page quality gates. |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | Current-request settings take priority; infer discipline and main source language from each handout. |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | Fix glossary column detection so lookups no longer return the ID column; this page now lists releases instead of duplicating them. |
 | [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | One skill package at `skills/foreign-academic-translator/`, running the newer Trae scripts. |

@@ -1,7 +1,7 @@
 ---
 name: foreign-academic-translator
 description: Translate foreign-language academic handouts into clear Chinese study materials while preserving structure, technical terms, equations, and requested output formats. 用于把英语、法语等外文学案整理成中文学习材料。Use when translating or preparing bilingual study materials.
-version: 3.0.4
+version: 3.1.0
 parameters:
   - source_text
   - discipline
@@ -19,7 +19,7 @@ parameters:
 
 # 外文讲义翻译
 
-> 版本：V3.0.4
+> 版本：V3.1.0
 
 将英语、法语等外文学案整理为准确、易读的中文学习材料。保留原文结构、重要术语、公式、表格和图表位置；只生成用户要求的格式。
 
@@ -34,7 +34,8 @@ parameters:
 - 源语言：本轮未指定时，识别当前讲义正文的主要语言；若无法可靠判断，再询问。`学案所属语言`指本次识别出的源语言。
 - 输出格式：`html`、`docx`、`md`，可多选，至少选一种。
 - 展示布局：`translation_only`（仅译文）、`translation_first`（译文在前）、`source_first`（原文在前）或 `concept_highlight`（译文中标注术语原文）。
-- 标题排版：在 `translation_first` / `source_first` 模式中，将课文中文标题与外文标题上下排列并居中；依布局顺序决定先后。`concept_highlight` 模式中文大标题在上，外文小标题在下并居中。若章节标题出现重要概念，术语标注跟在中文标题后同一行，以稍小字号显示；正文术语维持正文大小。
+- 标题内容与层级：先判断信息用途。学年、学院、课程代码、课程名等组合属于紧凑页眉，不得充当学案标题或进入知识大纲；用 `<p class="course-header">…</p>` 展示。真正的章节知识主题作为 H1。若原题带有“第 X 章总结/小结：”“Résumé du chapitre X —”等结构前缀，且后面还有具体知识主题，则主标题只保留知识主题，不翻入“第 X 章总结”等话术；正文中的章节序号和小节层级仍照原文保留。
+- 标题排版：`translation_first` / `source_first` 模式按所选顺序将真实章节标题与外文原题上下排列并居中。`concept_highlight` 模式将中文知识主题作为大号 H1，原文主题放在 `<span class="source-title">` 中并显示为居中的小号下一行。术语本身可按较小字号跟在章节标题同一行；正文术语维持正文大小。
 - 概念表：`true`（生成）或 `false`（不生成）。
 - 中文注释：`无注释`、`轻度注释`、`高中生视角`或`重度注释`。注释越多，译文篇幅越长。
 - 提取配图：`true` 或 `false`。当前图片提取脚本只处理 PDF。
@@ -43,6 +44,12 @@ parameters:
 - 若未选择`无测验`，再用下一条单独消息询问测验语言：`双语`、`学案所属语言`或`中文`。必须等用户回答后再生成测验；选择`学案所属语言`时，使用当前讲义识别出的主要源语言。
 
 ## 参数偏好与 HTML 阅读器
+
+- HTML 固定显示双侧导航：左栏为 VS Code Explorer 风格的 output 文件树，列出并链接其他 HTML 学案；根目录 `output` 和子目录均可折叠。左栏文件、文件夹和折叠箭头使用在线 Font Awesome 图标。右栏为当前学案的知识大纲，直接写入页面且始终常开；随正文滚动实时高亮当前标题，并自动滚动列表使其可见。桌面布局下两栏贴住窗口左右边缘并占满可视高度，与中间知识页面无水平间隙；窄屏时导航移到正文上方。右栏没有展开/收起按钮。DOCX 不增加这项功能。
+- 桌面 HTML 正文顶部保持紧凑：正文容器上外边距 16px、上内边距 24px；不要叠加大段空白页眉间距。
+- HTML 中课程页眉使用紧凑的非标题段落，不进入右栏大纲；真正的学案知识主题作为 H1。构建器检测到学年和课程代码误放在 H1 时，会将其移入页眉并提升其后的首个 H2 为主标题。
+- concept_highlight 布局的 H1 必须是中文知识主题，并包含原文主题 span，class 为 source-title；原文主题显示在下一行，字号明显小于中文标题。标题不得保留可省略的章节总结前缀。
+- 生成的章末测验必须使用固定 Markdown 结构，供 HTML 构建器逐题校验并生成交互卡片。
 
 - 每次开始一项新的翻译任务前，先检查当前项目 output/.translator_preferences.json。
 - 如果文件不存在，不得询问是否沿用历史偏好；先采用本轮明确值，并从当前讲义推断学科和主要源语言，再询问其余尚缺且无法推断的参数。
@@ -77,18 +84,45 @@ parameters:
 10. `include_images=true` 且源文件为 PDF 时，运行 `<技能根目录>/scripts/image_extractor.py`，参考输出的 `placement.json` 按 `page` 和 `top` 定位图片；坐标单位为 PDF 页面顶部起算的点数，与 `PDF_BLOCK` 的 `TOP` 一致。将图片放到同页纵坐标最接近的文字块旁，按页面和纵坐标排序；若 `TOP:unknown`，只能按页码和上下文估计，并避免声称位置精确。只对能从正文上下文确认的图片编写说明；无法确认时使用中性说明，不猜测图意。
 11. 在 Markdown 成品开头和结尾各保留一行原作者署名：`<!-- DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill -->`。不得删除或改写构建器自动加入的署名水印。
 
+### 交互测验的固定 Markdown 格式
+
+生成的测验章节必须严格按以下格式组织。只保留一个 HTML 注释标记，下一节标题固定为“章末测验”；难度标题只能使用基础、中档、高难，且只输出用户选择的难度。题号跨难度从 1 连续编号，不在新难度重置；题干单独占行，A、B、C、D 选项各占一行。答案区每题一行，题号与题目一一对应，格式为“题号. 正确字母 — 解析”，解析不得为空。双语时题干、选项和解析均按本轮语言设置编写。不得把选项塞入题干同一段、表格或其他格式。
+
+    <!-- INTERACTIVE_QUIZ -->
+    ## 章末测验
+    ### 基础
+    1. 中文题干 / Question dans la langue source
+    A. 选项一 / Option A
+    B. 选项二 / Option B
+    C. 选项三 / Option C
+    D. 选项四 / Option D
+
+    ### 中档
+    2. 第二题题干
+    A. 选项一
+    B. 选项二
+    C. 选项三
+    D. 选项四
+
+    ### 答案与解析
+    1. C — 解析内容 / Explication
+    2. A — 解析内容 / Explication
+
+用户选择“无测验”时，不生成标记或测验章节。原讲义自带的练习和考试照常翻译，不添加标记，也不改造成生成测验。
+
 ## 构建与交付
 
 1. 在当前项目的 `output/<学案名>/` 下保存 `translated_doc.md`。目录名取源文件名或标题，移除路径分隔符和 Windows 不允许的文件名字符；同名目录已存在时改用新名称，避免覆盖用户文件。
 2. 运行 `<技能根目录>/scripts/builder.py`，将 `--input` 指向 Markdown 文件，`--output_dir` 指向该学案目录，`--formats` 只列出用户选择的格式。例如，执行前把 `<技能根目录>` 替换为本 `SKILL.md` 所在目录的绝对路径：
 
    ```bash
-   python <技能根目录>/scripts/builder.py --input output/<学案名>/translated_doc.md --output_dir output/<学案名> --formats html,docx --concept-table true
+   python <技能根目录>/scripts/builder.py --input output/<学案名>/translated_doc.md --output_dir output/<学案名> --formats html,docx --concept-table true --layout concept_highlight --interactive-quiz-required true
    ```
 
    将 `--concept-table` 的值设为用户选择的 `true` 或 `false`。不生成概念表时使用 `false`；HTML 只会在找到概念表标题及其表格时为术语添加跳转链接。
 
-3. 逐项确认用户要求的文件确实存在且非空。生成 HTML 时检查目录按钮、大纲、阅读进度和原作者署名水印均已写入。HTML 正文只保留安全的 Markdown 标签、术语标注和注释块；原始脚本、事件处理器等不安全 HTML 会被清理。HTML 公式通过 MathJax CDN 在线渲染，打开时需要联网；离线时公式可能显示为 LaTeX 源码。若某种格式生成失败，只重试缺失格式；仍失败时如实报告。
+   将 layout 参数设为本轮选择的布局。只有用户选择测验且输出格式含 HTML 时，interactive-quiz-required 设为 true；否则设为 false。概念表开关也必须与用户选择一致。
+3. 若构建器报告质量门禁失败，先按报错修复 Markdown 再重新构建，不交付未通过门禁的 HTML。逐项确认用户要求的文件存在且非空。HTML 需核对：课程元信息不占 H1 且不进入右栏大纲；主标题只表达知识主题，不带可省略的“第 X 章总结”等前缀；concept_highlight 的中文 H1 居中，原文主题在下一行且字号明显更小；桌面正文容器顶部外边距为 16px、上内边距为 24px；右栏目录项数等于正文一级至四级标题数、无折叠按钮，滚动时当前项会高亮并保持可见；左栏根目录和子目录均可折叠，图标为 Font Awesome；用户选择测验时题目、交互卡片和答案数量一致，每题有四个选项、有效答案、非空解析及单独提交按钮；阅读进度和原作者署名水印已写入。HTML 公式和 Font Awesome 图标通过 CDN 在线加载，打开时需要联网；离线时公式可能显示为 LaTeX 源码且图标可能不显示。若某种格式生成失败，只重试缺失格式；仍失败时如实报告。
 4. 用户未选择 `md` 时，构建成功后删除本次生成的 `translated_doc.md` 过程文件；用户选择 `md` 时保留正式 Markdown 成品。图片被产物引用时保留 `images/`，移除本次生成且不再需要的 `placement.json`。
 5. 最终回复列出每个成品的格式、绝对路径和文件大小，并说明失败或未验证的项目。不要只给文字内容，也不要声称未实际生成的文件已经交付。
 

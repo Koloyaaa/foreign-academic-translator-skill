@@ -26,6 +26,8 @@ def build_all(
     formats: List[str],
     base_name: str = "translated_doc",
     show_concept_table: bool = True,
+    layout: str = "translation_only",
+    require_interactive_quiz: bool = False,
 ) -> Dict[str, Path]:
     """根据 formats 列表生成多格式文档。"""
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -36,10 +38,16 @@ def build_all(
     # 质量门禁：输入非空
     if not md_content or len(md_content.strip()) < 10:
         raise ValueError("Markdown 内容为空或过短，无法构建文档")
+    require_interactive_quiz = bool(require_interactive_quiz and "html" in {fmt.lower().strip() for fmt in formats})
 
     # 格式名 -> 可调用构建器 的映射；html 需透传 show_concept_table
     format_map = {
-        "html": partial(build_html, show_concept_table=show_concept_table),
+        "html": partial(
+            build_html,
+            show_concept_table=show_concept_table,
+            layout=layout,
+            require_interactive_quiz=require_interactive_quiz,
+        ),
         "docx": build_docx,
         "md": build_markdown,
     }
@@ -57,6 +65,9 @@ def build_all(
             print(f"[ERROR] 生成 {fmt} 失败: {e}", file=sys.stderr)
             # 不中断其他格式
 
+    requested_formats = {fmt.lower().strip() for fmt in formats}
+    if "html" in requested_formats and "html" not in results:
+        raise RuntimeError("HTML 未通过质量门禁或生成失败；请修复报错后再交付。")
     if not results:
         raise RuntimeError("所有格式生成均失败，请检查依赖库和源内容")
     return results
@@ -74,6 +85,18 @@ if __name__ == "__main__":
         default="true",
         help="HTML 是否显示概念表并为术语添加跳转链接（true/false）",
     )
+    parser.add_argument(
+        "--layout",
+        choices=("translation_only", "translation_first", "source_first", "concept_highlight"),
+        default="translation_only",
+        help="HTML 展示布局；用于执行对应的标题质量门禁",
+    )
+    parser.add_argument(
+        "--interactive-quiz-required",
+        choices=("true", "false"),
+        default="false",
+        help="本次是否要求生成并校验完整的 HTML 交互测验",
+    )
     args = parser.parse_args()
 
     try:
@@ -86,6 +109,8 @@ if __name__ == "__main__":
             formats,
             args.base_name,
             show_concept_table=args.concept_table == "true",
+            layout=args.layout,
+            require_interactive_quiz=args.interactive_quiz_required == "true",
         )
         print(json.dumps({k: str(v) for k, v in results.items()}, ensure_ascii=False))
     except Exception as e:

@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-**版本：V3.0.4**
+**版本：V3.1.0**
 
 [中文](README.md) | [English](README.en.md)
 
@@ -15,13 +15,13 @@
 
 ## 效果预览
 
-示例展示法语术语标注、通俗注释、热力学示意图、公式和阅读目录。示例由项目作者 Koloyaaa（Léo WEE）制作。
+示例展示 HTML 阅读器的左右导航、居中学案标题、术语标注、公式与阅读目录。示例由项目作者 Koloyaaa（Léo WEE）制作。
 
-![法语热力学术语标注、概念解释与循环示意图](assets/showcase/thermodynamics-cycle.png)
+![热力学学案 HTML 阅读器：文件资源管理器、学案知识大纲与居中标题](assets/showcase/thermodynamics-reader-overview.png)
+
+![热力学学案 HTML 阅读器：熵公式与右侧实时知识大纲](assets/showcase/thermodynamics-reader-formulas.png)
 
 ![数学公式、图像与可折叠目录](assets/showcase/math-and-reading-progress.png)
-
-![热力学第四章 HTML 阅读器：公式标记、个人注释与配色控件](assets/showcase/thermodynamics-chapter4-reader-v3.png)
 
 ## 功能
 
@@ -118,6 +118,7 @@ CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上
 
 | 版本 | 主要变化 |
 | --- | --- |
+| [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | 改进 HTML 阅读器布局、双侧大纲与标题排版；加入更严格的交互测验和页面质量门禁。 |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | 本轮明确参数优先；从当前讲义推断学科和主要源语言。 |
 | [v3.0.3](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.3) | 修复词库列名识别，查询不再把 ID 当译名；本页改为版本汇总。 |
 | [v3.0.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.2) | 合并为唯一的技能包 `skills/foreign-academic-translator/`，统一采用 Trae 版脚本。 |

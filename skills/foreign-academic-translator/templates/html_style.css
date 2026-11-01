@@ -284,49 +284,6 @@ hr {
     box-shadow: 0 2px 10px rgba(15, 35, 60, 0.18);
     user-select: none;
 }
-#toc-btn {
-    position: fixed;
-    right: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    background: #1a3c5e;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 21px;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 14px rgba(15, 35, 60, 0.28);
-    z-index: 1002;
-    user-select: none;
-    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.18s ease;
-}
-#toc-outline {
-    position: fixed !important;
-    top: 50% !important;
-    right: 78px !important;
-    transform: translateY(-50%) !important;
-    display: none !important;
-    margin: 0 !important;
-    width: min(260px, 44vw);
-    max-height: 74vh;
-    overflow-y: auto;
-    background: #ffffff;
-    border: 1px solid #e3e8ee;
-    border-radius: 10px;
-    box-shadow: 0 8px 28px rgba(15, 35, 60, 0.14);
-    padding: 14px 12px;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.18s ease;
-}
-#toc-outline.open { display: block !important; opacity: 1; }
-
 /* V3 阅读器：颜色由右上角控件切换 */
 :root {
   color-scheme: light;
@@ -376,8 +333,6 @@ body, .content-area { background:var(--page-bg); color:var(--text); }
 .reader-menu-item { width:100%; text-align:left; border:0; border-radius:8px; padding:8px 10px; background:transparent; color:var(--text); cursor:pointer; font-family:Segoe UI,Roboto,Arial,sans-serif; font-size:14px; line-height:1.3; }
 .reader-menu-item[aria-checked="true"] { color:var(--accent-strong); font-weight:700; background:var(--accent-soft); }
 #reading-progress { color:var(--text); background:var(--surface-bg); border-color:var(--border); box-shadow:var(--control-shadow); font-size:15px; }
-#toc-btn { background:var(--accent-strong); color:#fff; }
-#toc-btn:hover { background:var(--accent); }
 #toc-outline { background:var(--surface-bg); border-color:var(--border); box-shadow:var(--control-shadow); }
 .toc-header { color:var(--heading); border-bottom-color:var(--accent); }
 .toc-outline a { color:var(--accent-strong) !important; }
@@ -388,7 +343,7 @@ body, .content-area { background:var(--page-bg); color:var(--text); }
 mark.user-highlight { background:color-mix(in srgb, var(--accent) 20%, transparent); color:inherit; border-radius:2px; cursor:pointer; }
 mark.user-highlight[data-note] { text-decoration:underline dotted var(--accent); text-underline-offset:2px; }
 @media (max-width:700px) { #reader-controls { top:8px; right:8px; } .reader-control-button { padding:7px 10px; } .content-area { padding-top:68px !important; } .content-area .document-title h1 { font-size:1.7em; } }
-@media print { #reader-controls,.selection-toolbar,#toc-btn,#toc-outline,#reading-progress { display:none !important; } .content-area mjx-container[display="true"] { background:transparent; } }
+@media print { #reader-controls,.selection-toolbar,#toc-outline,#file-outline,#reading-progress { display:none !important; } .content-area mjx-container[display="true"] { background:transparent; } }
 
 
 
@@ -401,7 +356,9 @@ html[data-theme="dark"] .content-area span[data-en], html[data-theme="dark"] .co
 @media (prefers-color-scheme: dark) { html[data-theme="system"] .content-area span[data-en], html[data-theme="system"] .content-area a.term-link { color: #b8e0ee !important; } }
 .content-area .document-title { text-align: center; margin: 12px auto 30px; }
 .content-area .document-title h1 { color: var(--heading); border: 0; background: transparent; box-shadow: none; padding: 0; margin: 0 0 6px; font-size: 2.15em; }
-.content-area .document-title .source-title { color: var(--muted); font-size: 1.04em; margin: 0; font-family: Georgia, "Times New Roman", serif; }
+.content-area .document-title .source-title { display: block; color: var(--muted); font-size: .42em; font-weight: 500; line-height: 1.45; margin-top: .35em; font-family: Georgia, "Times New Roman", serif; }
+.content-area h1.document-title { text-align: center; font-size: 2.15em; line-height: 1.28; }
+.content-area h1.document-title .source-title { display: block; font-size: .42em !important; }
 .content-area .document-meta { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: .88em; border-top: 3px solid var(--accent); padding-top: 18px; margin: 24px 0 20px; }
 .content-area .reading-guide { padding: 14px 20px; background: var(--accent-soft); border: 1px solid var(--border); border-left: 5px solid var(--accent); border-radius: 0 12px 12px 0; color: var(--text); font-size: .88em; }
 .content-area mjx-container[display="true"] { display: block; max-width: 100%; overflow-x: auto; overflow-y: hidden; margin: 1.25em auto !important; padding: 14px 16px; border: 0 !important; border-left: 0 !important; background: var(--formula-bg); border-radius: 8px; text-align: center !important; }

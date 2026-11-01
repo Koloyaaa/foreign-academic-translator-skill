@@ -3,8 +3,12 @@
 from pathlib import Path
 import re
 from html import escape, unescape
+from os.path import relpath
+from urllib.parse import quote
 
 from .base import WATERMARK, load_css, annotate_first_occurrences, protect_math, restore_math
+
+FONT_AWESOME_CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
 
 # 页面内嵌 JS（普通字符串，非 f-string，避免花括号与 Python 格式化冲突）
 # 通过占位符 __WATERMARK__ / __SHOW_CONCEPT_TABLE__ 在运行时替换。
@@ -17,7 +21,7 @@ _BUILD_JS = r"""
     var main = document.querySelector(".content-area");
     var prefKey = "foreign-academic-translator:reader-settings:v1";
     var notesKey = "foreign-academic-translator:notes:v1:" + location.pathname;
-    var readerConfig = { palette: "blue", theme: "light", width: 1830 };
+    var readerConfig = { palette: "blue", theme: "light", width: 10000 };
     var toastTimer = 0;
     function readJSON(key, fallback) {
         try { var value = localStorage.getItem(key); return value ? JSON.parse(value) : fallback; }
@@ -66,7 +70,9 @@ _BUILD_JS = r"""
         var themeLabels = { light: "浅色", dark: "深色", system: "跟随系统" };
         if (["blue", "teal", "violet", "amber"].indexOf(saved.palette) !== -1) readerConfig.palette = saved.palette;
         if (["light", "dark", "system"].indexOf(saved.theme) !== -1) readerConfig.theme = saved.theme;
-        if (typeof saved.width === "number" && isFinite(saved.width)) readerConfig.width = Math.max(720, Math.min(2400, saved.width));
+        if (typeof saved.width === "number" && isFinite(saved.width)) {
+            readerConfig.width = saved.width === 1830 ? 10000 : Math.max(720, Math.min(10000, saved.width));
+        }
         var bar = document.createElement("div"); bar.id = "reader-controls"; bar.setAttribute("aria-label", "阅读显示设置");
         var paletteWrap = document.createElement("div"); paletteWrap.className = "reader-control-wrap";
         var themeWrap = document.createElement("div"); themeWrap.className = "reader-control-wrap";
@@ -171,34 +177,55 @@ _BUILD_JS = r"""
             linkElementToGlossary(element, "term-link");
         });
     }
-    function initTocButton() {
-        var toc = document.getElementById("toc-outline"); if (!toc) return;
-        var button = createButton("☰", "目录", "toc-button"); button.id = "toc-btn";
-        document.body.appendChild(button); toc.setAttribute("role", "navigation");
-        function setOpen(open) { toc.classList.toggle("open", open); button.textContent = open ? "×" : "☰"; }
-        button.addEventListener("click", function () { setOpen(!toc.classList.contains("open")); });
-        toc.addEventListener("click", function (event) { if (event.target.tagName === "A") setOpen(false); });
-        document.addEventListener("keydown", function (event) { if (event.key === "Escape") setOpen(false); });
-    }
-    function buildToc() {
-        var headings = document.querySelectorAll(HEADING_SELECTOR), sidebar = document.getElementById("toc-outline");
-        if (!headings.length || !sidebar) return;
-        var list = document.createElement("ul");
-        list.style.listStyle = "none"; list.style.padding = "0"; list.style.margin = "0";
-        headings.forEach(function (heading, index) {
-            if (!heading.id) heading.id = "toc-heading-" + index;
-            var item = document.createElement("li"); item.className = "toc-item";
-            item.style.margin = "4px 0"; item.style.borderRadius = "4px";
-            if (heading.tagName === "H2") item.style.marginTop = "10px";
-            else if (heading.tagName === "H3") item.style.paddingLeft = "18px";
-            var link = document.createElement("a"); link.href = "#" + heading.id;
-            link.textContent = heading.textContent; link.style.textDecoration = "none";
-            link.addEventListener("click", function (event) {
-                event.preventDefault(); heading.scrollIntoView({ behavior: "smooth", block: "start" });
+    function initTocTracking() {
+        var toc = document.getElementById("toc-outline");
+        if (!main || !toc) return;
+        var headings = Array.prototype.slice.call(main.querySelectorAll(HEADING_SELECTOR));
+        var links = Array.prototype.slice.call(toc.querySelectorAll(".toc-item a[href^='#']"));
+        var header = toc.querySelector(".toc-header");
+        if (!headings.length || !links.length) return;
+        var activeId = "";
+        var scheduled = false;
+        function keepLinkVisible(link) {
+            var rail = toc.getBoundingClientRect();
+            var item = link.getBoundingClientRect();
+            var top = header ? header.getBoundingClientRect().bottom + 6 : rail.top + 8;
+            var bottom = rail.bottom - 8;
+            if (item.top < top) toc.scrollTop -= top - item.top;
+            else if (item.bottom > bottom) toc.scrollTop += item.bottom - bottom;
+        }
+        function update() {
+            var marker = Math.max(100, Math.min(220, window.innerHeight * .24));
+            var current = headings[0];
+            for (var i = 0; i < headings.length; i++) {
+                if (headings[i].getBoundingClientRect().top <= marker) current = headings[i];
+                else break;
+            }
+            if (window.pageYOffset + window.innerHeight >= document.documentElement.scrollHeight - 3) {
+                current = headings[headings.length - 1];
+            }
+            if (!current || current.id === activeId) return;
+            activeId = current.id;
+            var activeLink = null;
+            links.forEach(function (link) {
+                var selected = link.getAttribute("href") === "#" + activeId;
+                link.classList.toggle("is-active", selected);
+                if (selected) { link.setAttribute("aria-current", "location"); activeLink = link; }
+                else link.removeAttribute("aria-current");
             });
-            item.appendChild(link); list.appendChild(item);
-        });
-        sidebar.appendChild(list);
+            if (activeLink) keepLinkVisible(activeLink);
+        }
+        function scheduleUpdate() {
+            if (scheduled) return;
+            scheduled = true;
+            window.requestAnimationFrame(function () { scheduled = false; update(); });
+        }
+        window.addEventListener("scroll", scheduleUpdate, { passive: true });
+        window.addEventListener("resize", scheduleUpdate);
+        window.addEventListener("load", scheduleUpdate);
+        if (window.ResizeObserver) new window.ResizeObserver(scheduleUpdate).observe(main);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleUpdate);
+        update();
     }
     function initProgress() {
         var chip = document.createElement("div"); chip.id = "reading-progress";
@@ -223,21 +250,33 @@ _BUILD_JS = r"""
     }
     function initResizableReader() {
         if (!main) return;
+        var fileOutline = document.getElementById("file-outline");
+        var tocOutline = document.getElementById("toc-outline");
+        function reservedWidth() {
+            return (fileOutline ? fileOutline.getBoundingClientRect().width : 0) +
+                (tocOutline ? tocOutline.getBoundingClientRect().width : 0);
+        }
+        function readerCenter() {
+            var left = fileOutline ? fileOutline.getBoundingClientRect().width : 0;
+            var right = tocOutline ? tocOutline.getBoundingClientRect().width : 0;
+            return (left + window.innerWidth - right) / 2;
+        }
+        function maxReaderWidth() { return Math.max(720, window.innerWidth - reservedWidth()); }
         var handle = document.createElement("div"); handle.id = "reader-resize-handle";
         handle.className = "reader-resize-handle"; handle.setAttribute("role", "separator");
         handle.setAttribute("aria-label", "拖动调整译文阅读栏宽度"); handle.setAttribute("aria-orientation", "vertical");
         handle.setAttribute("aria-valuemin", "720"); handle.setAttribute("tabindex", "0"); document.body.appendChild(handle);
         function updatePosition() {
-            if (window.innerWidth <= 740) { handle.hidden = true; return; }
+            if (window.innerWidth <= 1280) { handle.hidden = true; return; }
             handle.hidden = false;
             var rect = main.getBoundingClientRect();
             handle.style.left = Math.max(8, Math.min(window.innerWidth - 8, rect.right - 6)) + "px";
             handle.style.top = Math.max(56, Math.min(window.innerHeight - 148, window.innerHeight / 2 - 64)) + "px";
             handle.setAttribute("aria-valuenow", String(Math.round(rect.width)));
-            handle.setAttribute("aria-valuemax", String(Math.max(720, window.innerWidth - 24)));
+            handle.setAttribute("aria-valuemax", String(Math.round(maxReaderWidth())));
         }
         function updateWidth(clientX) {
-            var width = Math.max(720, Math.min(window.innerWidth - 24, (clientX - window.innerWidth / 2) * 2));
+            var width = Math.max(720, Math.min(maxReaderWidth(), (clientX - readerCenter()) * 2));
             readerConfig.width = width; document.documentElement.style.setProperty("--reader-width", width + "px");
             writeJSON(prefKey, readerConfig); updatePosition(); window.dispatchEvent(new Event("readerwidthchange"));
         }
@@ -253,7 +292,7 @@ _BUILD_JS = r"""
         handle.addEventListener("keydown", function (event) {
             if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
             event.preventDefault(); var rect = main.getBoundingClientRect();
-            updateWidth(window.innerWidth / 2 + (rect.width + (event.key === "ArrowRight" ? 40 : -40)) / 2);
+            updateWidth(readerCenter() + (rect.width + (event.key === "ArrowRight" ? 40 : -40)) / 2);
         });
         window.addEventListener("resize", updatePosition); window.addEventListener("scroll", updatePosition, { passive: true });
         window.addEventListener("readerwidthchange", updatePosition); updatePosition();
@@ -366,9 +405,7 @@ _BUILD_JS = r"""
         var toolbar = document.createElement("div"); toolbar.className = "selection-toolbar"; toolbar.setAttribute("role", "toolbar");
         var markButton = createButton("高亮", "保存选中文字或公式的高亮", "selection-action");
         var noteButton = createButton("加注释", "给选中文字或公式添加个人注释", "selection-action");
-        var helpButton = createButton("✎ 标注", "选中文字或点击公式，再点这里添加高亮或注释", "mark-help-button"); helpButton.id = "mark-help-button";
         toolbar.appendChild(markButton); toolbar.appendChild(noteButton); toolbar.hidden = true; document.body.appendChild(toolbar);
-        document.body.appendChild(helpButton);
         var guide = main && main.querySelector(".reading-guide");
         if (guide && !guide.dataset.markHelpAdded) {
             guide.dataset.markHelpAdded = "true";
@@ -391,18 +428,6 @@ _BUILD_JS = r"""
             if (!rect) return;
             toolbar.style.left = Math.max(8, rect.left + rect.width / 2 - 70) + "px";
             toolbar.style.top = Math.max(8, rect.top - 46) + "px"; toolbar.hidden = false;
-        }
-        function revealToolbarForSelection() {
-            var selection = window.getSelection(), range = selection && selection.rangeCount ? selection.getRangeAt(0) : null;
-            var hasText = !!(selection && selection.toString().trim());
-            var formulas = range && main.contains(range.commonAncestorContainer) ? mathNodesForRange(range) : [];
-            if (!hasText && !formulas.length) formulas = activeFormulaSelection.filter(function (item) { return item.isConnected; });
-            if (!hasText && !formulas.length) { showNotice("先选中正文或点击一个公式，再添加高亮或注释。"); return; }
-            if (range && hasText && !main.contains(range.commonAncestorContainer)) { showNotice("请在正文区域选择文字或公式。"); return; }
-            activeFormulaSelection = formulas;
-            var rect = range && range.getBoundingClientRect ? range.getBoundingClientRect() : null;
-            if ((!rect || (!rect.width && !rect.height)) && formulas.length) rect = formulas[0].getBoundingClientRect();
-            placeToolbar(rect);
         }
         function showPopover(mark, item) {
             activeMark = mark; activeRecord = item;
@@ -450,10 +475,8 @@ _BUILD_JS = r"""
         }
         markButton.addEventListener("mousedown", function (event) { event.preventDefault(); });
         noteButton.addEventListener("mousedown", function (event) { event.preventDefault(); });
-        helpButton.addEventListener("mousedown", function (event) { event.preventDefault(); });
         markButton.addEventListener("click", function () { saveSelection(false); });
         noteButton.addEventListener("click", function () { saveSelection(true); });
-        helpButton.addEventListener("click", revealToolbarForSelection);
         editButton.addEventListener("click", function () {
             if (!activeRecord || !activeMark) return;
             var updated = window.prompt("编辑这条个人注释：", activeRecord.note || "");
@@ -513,7 +536,7 @@ _BUILD_JS = r"""
         });
         document.addEventListener("click", function (event) {
             if (popover.contains(event.target)) return;
-            if (toolbar.contains(event.target) || helpButton.contains(event.target)) return;
+            if (toolbar.contains(event.target)) return;
             if (event.target.closest && event.target.closest(".user-highlight")) return;
             closePopover();
         });
@@ -532,107 +555,6 @@ _BUILD_JS = r"""
         }
         window.setTimeout(function () { syncMathIds(); records.forEach(applyFormulaRecord); }, 0);
     }
-    function parseChoices(text) {
-        var starts = [], re = /([A-D])\.\s*/g, match;
-        while ((match = re.exec(text)) !== null) {
-            if (match.index > 0 && !/[\s\u3000]/.test(text.charAt(match.index - 1))) continue;
-            starts.push({ letter: match[1], start: match.index, end: re.lastIndex });
-        }
-        var choices = [];
-        for (var i = 0; i < starts.length; i++) {
-            var end = i + 1 < starts.length ? starts[i + 1].start : text.length;
-            choices.push({ letter: starts[i].letter, text: text.slice(starts[i].end, end).trim() });
-        }
-        return choices;
-    }
-    function initInteractiveQuiz() {
-        if (!main) return;
-        var quizTitle = null;
-        main.querySelectorAll("h2").forEach(function (heading) {
-            if (/(测验|quiz|test)/i.test(heading.textContent || "")) quizTitle = heading;
-        });
-        if (!quizTitle) return;
-        var sectionHeadings = [], cursor = quizTitle.nextElementSibling;
-        while (cursor && cursor.tagName !== "H2") {
-            if (cursor.tagName === "H3") sectionHeadings.push(cursor);
-            cursor = cursor.nextElementSibling;
-        }
-        var answerHeading = null;
-        sectionHeadings.forEach(function (heading) {
-            if (/(答案|réponses|answers?|answer key)/i.test(heading.textContent || "")) answerHeading = heading;
-        });
-        var answerData = [], answerNode = answerHeading ? answerHeading.nextElementSibling : null;
-        while (answerNode && answerNode.tagName !== "H2") {
-            if (answerNode.tagName === "OL" || answerNode.tagName === "UL") {
-                Array.prototype.forEach.call(answerNode.children, function (item) {
-                    var raw = (item.textContent || "").trim();
-                    var match = raw.match(/^\s*([A-D])(?:\s*[,.\uFF0C\u3001\uFF1A:])?\s*([\s\S]*)$/);
-                    if (match) answerData.push({ letter: match[1], explanation: match[2].trim() });
-                });
-            }
-            answerNode = answerNode.nextElementSibling;
-        }
-        if (!answerData.length) return;
-        var quizIndex = 0;
-        sectionHeadings.forEach(function (heading) {
-            var title = heading.textContent || "";
-            if (heading === answerHeading) {
-                var hiddenNode = heading;
-                while (hiddenNode && hiddenNode.tagName !== "H2") { hiddenNode.hidden = true; hiddenNode = hiddenNode.nextElementSibling; }
-                return;
-            }
-            var level = (title.indexOf("中档") !== -1 || /intermédiaire|intermediate|medium/i.test(title)) ? "medium" :
-                ((title.indexOf("高难") !== -1 || /advanced|difficult|hard/i.test(title)) ? "advanced" : "basic");
-            var questions = [], node = heading.nextElementSibling;
-            while (node && node.tagName !== "H2" && node.tagName !== "H3") {
-                if (node.tagName === "P" && /^\s*\d+\s*[.、]\s*/.test(node.textContent || "")) {
-                    var optionNode = node.nextElementSibling;
-                    if (optionNode && optionNode.tagName === "P" && parseChoices(optionNode.textContent || "").length >= 2) {
-                        questions.push({ prompt: node, options: optionNode });
-                    }
-                }
-                node = node.nextElementSibling;
-            }
-            questions.forEach(function (question) {
-                var answer = answerData[quizIndex++];
-                var choices = parseChoices(question.options.textContent || "");
-                if (!answer || choices.length < 2) return;
-                var card = document.createElement("section"); card.className = "quiz-question"; card.dataset.level = level;
-                var fieldset = document.createElement("fieldset"); fieldset.className = "quiz-options";
-                fieldset.setAttribute("aria-label", "选择答案");
-                choices.forEach(function (choice) {
-                    var label = document.createElement("label"); label.className = "quiz-option";
-                    var input = document.createElement("input"); input.type = "radio";
-                    input.name = "quiz-" + quizIndex; input.value = choice.letter;
-                    label.appendChild(input); label.appendChild(document.createTextNode(choice.letter + ". " + choice.text));
-                    fieldset.appendChild(label);
-                });
-                var submit = createButton("提交答案", "提交本题并查看答案", "quiz-submit");
-                var feedback = document.createElement("p"); feedback.className = "quiz-feedback";
-                feedback.setAttribute("role", "status"); feedback.setAttribute("aria-live", "polite"); feedback.hidden = true;
-                submit.addEventListener("click", function () {
-                    var selected = fieldset.querySelector("input:checked");
-                    if (!selected) { feedback.textContent = "请先选择一个选项。"; feedback.hidden = false; return; }
-                    fieldset.querySelectorAll("input").forEach(function (input) { input.disabled = true; });
-                    submit.disabled = true; submit.textContent = "已提交";
-                    var correct = selected.value === answer.letter;
-                    feedback.classList.toggle("correct", correct); feedback.classList.toggle("incorrect", !correct);
-                    feedback.textContent = (correct ? "正确。" : "已提交。") + "答案 / Réponse：" + answer.letter +
-                        (answer.explanation ? "。解析：" + answer.explanation : "。");
-                    feedback.hidden = false;
-                    if (window.MathJax && window.MathJax.typesetPromise) window.MathJax.typesetPromise([feedback]);
-                });
-                var parent = question.prompt.parentNode;
-                parent.insertBefore(card, question.prompt);
-                card.appendChild(question.prompt); card.appendChild(fieldset); card.appendChild(submit); card.appendChild(feedback);
-                question.options.parentNode.removeChild(question.options);
-            });
-        });
-        var instruction = document.createElement("p"); instruction.className = "quiz-instructions";
-        instruction.textContent = "每题选择后单独提交；提交后才会显示正确答案与解析。";
-        quizTitle.parentNode.insertBefore(instruction, quizTitle.nextElementSibling);
-        if (window.MathJax && window.MathJax.typesetPromise) window.MathJax.typesetPromise([main]).catch(function () {});
-    }
     function addWatermarkOnCopy() {
         document.addEventListener("copy", function (event) {
             try {
@@ -641,9 +563,40 @@ _BUILD_JS = r"""
             } catch (err) {}
         });
     }
-    assignConceptTable(); linkGlossaryTerms(); buildToc(); initTocButton();
-    initReaderSettings(); initProgress(); initResizableReader(); initPersonalMarks();
-    initInteractiveQuiz(); addWatermarkOnCopy();
+    function wireStaticQuiz() {
+        document.querySelectorAll(".quiz-question").forEach(function (card, index) {
+            var fieldset = card.querySelector(".quiz-options");
+            var submit = card.querySelector(".quiz-submit");
+            var feedback = card.querySelector(".quiz-feedback");
+            var explanation = card.querySelector("template.quiz-explanation");
+            if (!fieldset || !submit || !feedback || !card.dataset.answer) return;
+            fieldset.querySelectorAll('input[type="radio"]').forEach(function (input) {
+                input.name = "quiz-" + (index + 1);
+            });
+            submit.addEventListener("click", function () {
+                var selected = fieldset.querySelector('input[type="radio"]:checked');
+                if (!selected) {
+                    feedback.textContent = "请先选择一个选项。";
+                    feedback.hidden = false;
+                    return;
+                }
+                fieldset.querySelectorAll("input").forEach(function (input) { input.disabled = true; });
+                submit.disabled = true;
+                submit.textContent = "已提交";
+                var correct = selected.value === card.dataset.answer;
+                feedback.classList.toggle("correct", correct);
+                feedback.classList.toggle("incorrect", !correct);
+                feedback.textContent = (correct ? "正确。" : "已提交。") +
+                    "答案 / Réponse：" + card.dataset.answer + "。解析：";
+                if (explanation) feedback.appendChild(explanation.content.cloneNode(true));
+                feedback.hidden = false;
+                if (window.MathJax && window.MathJax.typesetPromise) window.MathJax.typesetPromise([feedback]);
+            });
+        });
+    }
+    assignConceptTable(); linkGlossaryTerms();
+    initReaderSettings(); initTocTracking(); initProgress(); initResizableReader(); initPersonalMarks();
+    wireStaticQuiz(); addWatermarkOnCopy();
 })();
 
 """
@@ -672,14 +625,560 @@ def _render_body(md_content: str) -> str:
     return "<pre>" + escape(md_content) + "</pre>"
 
 
-def build_html(md_content: str, output_path: Path, show_concept_table: bool = True) -> Path:
-    """将 Markdown 转换为带目录伸缩 / 阅读进度 / 术语高亮 / MathJax / 水印的完整 HTML 页面。"""
+_QUIZ_TITLE_RE = re.compile(r"(?:章末测验|测验题|测验|quiz|qcm|évaluation|evaluation|test)", re.I)
+_ANSWER_TITLE_RE = re.compile(r"(?:答案|解析|answer|correction|réponse|reponse)", re.I)
+_DIFFICULTY_TITLES = (
+    (re.compile(r"(?:基础|basic|easy|de base)", re.I), "basic"),
+    (re.compile(r"(?:中档|intermediate|medium|intermédiaire|intermediaire)", re.I), "medium"),
+    (re.compile(r"(?:高难|advanced|difficult|hard|difficile)", re.I), "advanced"),
+)
+_QUESTION_LINE_RE = re.compile(r"^\s*(\d+)\s*[.、)）]\s*(.+?)\s*$")
+_OPTION_LINE_RE = re.compile(r"^\s*(?:[-*+]\s*)?([A-D])\s*[.)、．]\s*(.*?)\s*$", re.I)
+_ANSWER_LINE_RE = re.compile(
+    r"^\s*(?:[-*+]\s*)?(\d+)\s*[.、)）]\s*(?:\*\*)?([A-D])(?:\*\*)?"
+    r"(?:\s*(?:[.、:：—–-]\s*|\s+)(.*?))?\s*$",
+    re.I,
+)
+
+
+def _parse_quiz_question_lines(lines, start_number: int, level: str):
+    questions = []
+    current = None
+
+    def finish():
+        nonlocal current
+        if current is None:
+            return
+        if not current["prompt"].strip():
+            raise ValueError(f"测验第 {current['number']} 题缺少题干。")
+        choices = current["choices"]
+        if list(choices) != ["A", "B", "C", "D"]:
+            found = "、".join(choices) if choices else "无选项"
+            raise ValueError(
+                f"测验第 {current['number']} 题选项必须按 A、B、C、D 各出现一次；当前为：{found}。"
+            )
+        if any(not value.strip() for value in choices.values()):
+            raise ValueError(f"测验第 {current['number']} 题有空选项。")
+        questions.append({
+            "number": current["number"],
+            "level": level,
+            "prompt": current["prompt"].strip(),
+            "choices": choices,
+        })
+        current = None
+
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+        question_match = _QUESTION_LINE_RE.match(line)
+        option_match = _OPTION_LINE_RE.match(line)
+        if question_match:
+            finish()
+            number = int(question_match.group(1))
+            expected = start_number + len(questions)
+            if number != expected:
+                raise ValueError(
+                    f"测验题号应从 1 开始连续编号；此处应为第 {expected} 题，却写成第 {number} 题。"
+                )
+            current = {
+                "number": number,
+                "prompt": question_match.group(2).strip(),
+                "choices": {},
+            }
+            continue
+        if option_match:
+            if current is None:
+                raise ValueError("测验选项前没有对应题目，请检查 A、B、C、D 的位置。")
+            letter = option_match.group(1).upper()
+            if letter in current["choices"]:
+                raise ValueError(f"测验第 {current['number']} 题重复出现 {letter} 选项。")
+            current["choices"][letter] = option_match.group(2).strip()
+            continue
+        if current is None:
+            raise ValueError("测验难度标题下出现无法识别的内容；题目请用连续编号，选项请各占一行。")
+        if current["choices"]:
+            last_letter = next(reversed(current["choices"]))
+            current["choices"][last_letter] += " " + line
+        else:
+            current["prompt"] += " " + line
+
+    finish()
+    return questions
+
+
+def _parse_quiz_answers(lines):
+    answers = []
+    for raw_line in lines:
+        line = raw_line.strip()
+        if not line:
+            continue
+        match = _ANSWER_LINE_RE.match(line)
+        if match:
+            answers.append({
+                "number": int(match.group(1)),
+                "letter": match.group(2).upper(),
+                "explanation": (match.group(3) or "").strip(),
+            })
+        elif answers:
+            answers[-1]["explanation"] += " " + line
+        else:
+            raise ValueError("答案区格式无法识别；每题请写成“题号. 正确选项 — 解析”。")
+    return answers
+
+
+def _build_quiz_html(md_content: str, required: bool = False):
+    lines = md_content.splitlines()
+    markers = [
+        index for index, line in enumerate(lines)
+        if re.fullmatch(r"\s*<!--\s*INTERACTIVE_QUIZ\s*-->\s*", line)
+    ]
+    if not markers:
+        if required:
+            raise ValueError("已要求生成交互测验，但 Markdown 中缺少 <!-- INTERACTIVE_QUIZ --> 标记。")
+        return md_content, 0
+    if len(markers) > 1:
+        raise ValueError("发现多个交互测验标记；请将测验合并为一个章节。")
+
+    start = markers[0]
+    heading_index = start + 1
+    while heading_index < len(lines) and not lines[heading_index].strip():
+        heading_index += 1
+    if (
+        heading_index >= len(lines)
+        or not re.match(r"^##\s+", lines[heading_index])
+        or not _QUIZ_TITLE_RE.search(re.sub(r"^##\s+", "", lines[heading_index]))
+    ):
+        raise ValueError("交互测验标记后必须紧跟“## 章末测验”一级章节标题。")
+    end = next(
+        (index for index in range(heading_index + 1, len(lines)) if re.match(r"^##\s+", lines[index])),
+        len(lines),
+    )
+    section = lines[heading_index:end]
+    heading = re.sub(r"^##\s+", "", section[0]).strip()
+    subsections = []
+    for index, line in enumerate(section[1:], start=1):
+        match = re.match(r"^###\s+(.+?)\s*#*\s*$", line)
+        if match:
+            subsections.append((index, match.group(1).strip()))
+
+    answer_index = next(
+        (index for index, (_, title) in enumerate(subsections) if _ANSWER_TITLE_RE.search(title)),
+        None,
+    )
+    if answer_index is None:
+        raise ValueError("测验章节缺少“答案与解析”小标题，无法保证每题都能交互判分。")
+
+    questions = []
+    for sub_index, (line_index, title) in enumerate(subsections[:answer_index]):
+        level = next((value for pattern, value in _DIFFICULTY_TITLES if pattern.search(title)), None)
+        if level is None:
+            raise ValueError(f"无法识别测验难度标题“{title}”；请使用基础、中档或高难。")
+        next_line_index = (
+            subsections[sub_index + 1][0]
+            if sub_index + 1 < len(subsections)
+            else len(section)
+        )
+        level_questions = _parse_quiz_question_lines(
+            section[line_index + 1:next_line_index],
+            start_number=len(questions) + 1,
+            level=level,
+        )
+        if not level_questions:
+            raise ValueError(f"测验难度“{title}”下没有题目。")
+        questions.extend(level_questions)
+
+    answer_line_index = subsections[answer_index][0]
+    answers = _parse_quiz_answers(section[answer_line_index + 1:])
+    if not questions:
+        raise ValueError("测验章节没有可识别的题目。")
+    if len(answers) != len(questions):
+        raise ValueError(
+            f"测验题目与答案数量不一致：{len(questions)} 道题、{len(answers)} 条答案。"
+        )
+    for expected, (question, answer) in enumerate(zip(questions, answers), start=1):
+        if answer["number"] != expected:
+            raise ValueError(f"答案区题号应为 {expected}，当前为 {answer['number']}。")
+        if answer["letter"] not in question["choices"]:
+            raise ValueError(f"第 {expected} 题答案必须是 A、B、C、D 之一。")
+        if not answer["explanation"]:
+            raise ValueError(f"测验第 {expected} 题缺少解析。")
+
+    chunks = [_render_body("## " + heading), '<p class="quiz-instructions">每题选择后单独提交；提交后显示正确答案与解析。</p>']
+    question_index = 0
+    for sub_index, (line_index, title) in enumerate(subsections[:answer_index]):
+        next_line_index = (
+            subsections[sub_index + 1][0]
+            if sub_index + 1 < len(subsections)
+            else len(section)
+        )
+        chunk_questions = _parse_quiz_question_lines(
+            section[line_index + 1:next_line_index],
+            start_number=question_index + 1,
+            level=questions[question_index]["level"] if question_index < len(questions) else "basic",
+        )
+        chunks.append(_render_body("### " + title))
+        for question in chunk_questions:
+            answer = answers[question_index]
+            chunks.append(
+                '<section class="quiz-question" data-level="' + question["level"] +
+                '" data-answer="' + answer["letter"] + '">'
+                '<div class="quiz-prompt">' + _render_body(question["prompt"]) + '</div>'
+                '<fieldset class="quiz-options" aria-label="选择答案">'
+                '<legend class="quiz-options-legend">请选择一个答案</legend>'
+            )
+            for letter, choice in question["choices"].items():
+                chunks.append(
+                    '<label class="quiz-option"><input type="radio" value="' + letter + '">'
+                    '<span class="quiz-option-letter">' + letter + '.</span>'
+                '<div class="quiz-option-text">' + _render_body(choice) + '</div></label>'
+                )
+            chunks.append(
+                '</fieldset><button type="button" class="quiz-submit">提交答案</button>'
+                '<div class="quiz-feedback" role="status" aria-live="polite" hidden></div>'
+                '<template class="quiz-explanation">' + _render_body(answer["explanation"]) + '</template>'
+                '</section>'
+            )
+            question_index += 1
+
+    replacement = "\n\n" + "\n\n".join(chunks) + "\n\n"
+    return "\n".join(lines[:start]) + replacement + "\n".join(lines[end:]), len(questions)
+
+
+def _heading_label_text(content: str) -> str:
+    content = re.sub(
+        r"<span\b(?=[^>]*\bclass\s*=\s*([\"'])[^\"']*\b(?:source-title|heading-source)\b[^\"']*\1)[^>]*>.*?</span\s*>",
+        " ",
+        content,
+        flags=re.I | re.S,
+    )
+    label = re.sub(r"<[^>]+>", " ", content)
+    return unescape(re.sub(r"\s+", " ", label)).strip()
+
+
+def _add_heading_ids_and_toc(body_html: str):
+    heading_re = re.compile(
+        r"<h([1-4])\b([^>]*)>(.*?)</h\1\s*>",
+        re.I | re.S,
+    )
+    used_ids = set()
+    toc_items = []
+    heading_index = 0
+
+    def add_id(match):
+        nonlocal heading_index
+        level, attributes, content = match.groups()
+        id_match = re.search(r'\bid\s*=\s*(["\'])(.*?)\1', attributes, re.I | re.S)
+        base_id = id_match.group(2) if id_match else "lesson-heading-" + str(heading_index + 1)
+        candidate = base_id
+        suffix = 2
+        while candidate in used_ids:
+            candidate = base_id + "-" + str(suffix)
+            suffix += 1
+        used_ids.add(candidate)
+        escaped_id = escape(candidate, quote=True)
+        if id_match:
+            attributes = attributes[:id_match.start()] + ' id="' + escaped_id + '"' + attributes[id_match.end():]
+        else:
+            attributes += ' id="' + escaped_id + '"'
+        label = _heading_label_text(content)
+        if label:
+            toc_items.append(
+                '<li class="toc-item toc-level-' + level + '"><a href="#' + escaped_id + '">' +
+                escape(label) + '</a></li>'
+            )
+        heading_index += 1
+        return "<h" + level + attributes + ">" + content + "</h" + level + ">"
+
+    updated = heading_re.sub(add_id, body_html)
+    toc_html = (
+        '<ul class="toc-list" role="list" aria-label="本学案知识大纲">'
+        + "".join(toc_items) + "</ul>"
+    )
+    return updated, toc_html, len(toc_items)
+
+
+def _add_document_title_class(body_html: str, layout: str):
+    heading_re = re.compile(r"<h1\b([^>]*)>(.*?)</h1\s*>", re.I | re.S)
+    match = heading_re.search(body_html)
+    if not match:
+        raise ValueError("HTML 质量门禁未通过：译文必须有一个一级标题。")
+    attributes, content = match.groups()
+    if layout == "concept_highlight":
+        source_title = re.search(
+            r"<span\b[^>]*class\s*=\s*([\"'])[^\"']*\bsource-title\b[^\"']*\1",
+            content,
+            re.I,
+        )
+        if not source_title:
+            raise ValueError(
+                "concept_highlight 标题格式不符合要求：一级标题中需要包含 "
+                '<span class=\"source-title\">原文标题</span>。'
+            )
+    class_match = re.search(r'\bclass\s*=\s*(["\'])(.*?)\1', attributes, re.I | re.S)
+    if class_match:
+        classes = class_match.group(2).split()
+        if "document-title" not in classes:
+            classes.append("document-title")
+        attributes = attributes[:class_match.start(2)] + " ".join(classes) + attributes[class_match.end(2):]
+    else:
+        attributes += ' class="document-title"'
+    replacement = "<h1" + attributes + ">" + content + "</h1>"
+    return body_html[:match.start()] + replacement + body_html[match.end():]
+
+
+def _looks_like_course_header(content: str) -> bool:
+    """识别由学年和课程编号组成的课程页眉，避免它占用学案标题层级。"""
+    visible = unescape(re.sub(r"<[^>]+>", " ", content))
+    has_course_code = re.search(r"\b[A-Z]{2,}-?\d{3,}[A-Z]?\b", visible, re.I)
+    has_academic_year = re.search(
+        r"\b(?:19|20)\d{2}\s*[-–—]\s*(?:19|20)\d{2}\b", visible
+    )
+    has_header_separator = re.search(r"[|｜•·]", visible)
+    has_institution_marker = re.search(r"\bSPEIT\b|\bcourse\b|课程|学年", visible, re.I)
+    return bool(has_course_code and (has_academic_year or has_header_separator or has_institution_marker))
+
+
+def _ensure_class(attributes: str, class_name: str) -> str:
+    class_match = re.search(r'\bclass\s*=\s*(["\'])(.*?)\1', attributes, re.I | re.S)
+    if class_match:
+        classes = class_match.group(2).split()
+        if class_name not in classes:
+            classes.append(class_name)
+        return attributes[:class_match.start(2)] + " ".join(classes) + attributes[class_match.end(2):]
+    return attributes + ' class="' + class_name + '"'
+
+
+def _normalize_course_header(body_html: str) -> str:
+    """把误作 H1 的课程元信息移入页眉，并将其后的首个 H2 提升为学案标题。"""
+    first_h1 = re.search(r"<h1\b([^>]*)>(.*?)</h1\s*>", body_html, re.I | re.S)
+    if not first_h1 or not _looks_like_course_header(first_h1.group(2)):
+        return body_html
+
+    header_html = '<p class="course-header">' + first_h1.group(2) + "</p>"
+    body_html = body_html[:first_h1.start()] + header_html + body_html[first_h1.end():]
+    first_h2 = re.search(r"<h2\b([^>]*)>(.*?)</h2\s*>", body_html[first_h1.start() + len(header_html):], re.I | re.S)
+    if not first_h2:
+        raise ValueError(
+            "HTML 质量门禁未通过：检测到课程信息页眉，但其后没有学案主题标题。"
+        )
+
+    attributes, content = first_h2.groups()
+    span_re = re.compile(r"<span\b([^>]*)>(.*?)</span\s*>", re.I | re.S)
+
+    def mark_source_title(match):
+        span_attributes, span_content = match.groups()
+        class_match = re.search(r'\bclass\s*=\s*(["\'])(.*?)\1', span_attributes, re.I | re.S)
+        if not class_match or "heading-source" not in class_match.group(2).split():
+            return match.group(0)
+        span_attributes = _ensure_class(span_attributes, "source-title")
+        return "<span" + span_attributes + ">" + span_content + "</span>"
+
+    content = span_re.sub(mark_source_title, content)
+    attributes = _ensure_class(attributes, "document-title")
+    start = first_h1.start() + len(header_html) + first_h2.start()
+    end = first_h1.start() + len(header_html) + first_h2.end()
+    lesson_title = "<h1" + attributes + ">" + content + "</h1>"
+    return body_html[:start] + lesson_title + body_html[end:]
+
+
+def _has_redundant_summary_prefix(content: str) -> bool:
+    """识别标题中可省略的章节类型前缀，保留真正的知识主题。"""
+    source_spans = []
+    for match in re.finditer(r"<span\b([^>]*)>(.*?)</span\s*>", content, re.I | re.S):
+        class_match = re.search(r'\bclass\s*=\s*(["\'])(.*?)\1', match.group(1), re.I | re.S)
+        if class_match and re.search(r"\b(?:source-title|heading-source)\b", class_match.group(2), re.I):
+            source_spans.append(unescape(re.sub(r"<[^>]+>", " ", match.group(2))).strip())
+
+    translated = re.sub(
+        r"<span\b(?=[^>]*\bclass\s*=\s*([\"'])[^\"']*\b(?:source-title|heading-source)\b[^\"']*\1)[^>]*>.*?</span\s*>",
+        " ",
+        content,
+        flags=re.I | re.S,
+    )
+    translated = unescape(re.sub(r"<[^>]+>", " ", translated))
+    candidates = [re.sub(r"\s+", " ", translated).strip()] + source_spans
+    prefix_patterns = (
+        r"^第[0-9零一二三四五六七八九十百]+章\s*(?:总结|小结|概要|摘要)\s*[:：—–-]\s*\S",
+        r"^本章(?:总结|小结|概要|摘要)\s*[:：—–-]\s*\S",
+        r"^(?:Résumé|Bilan)\s+du\s+chapitre\s+\d+\s*[—–:-]\s*\S",
+        r"^Chapter\s+\d+\s+(?:summary|review|recap)\s*[:—–-]\s*\S",
+    )
+    return any(
+        re.search(pattern, candidate, re.I)
+        for pattern in prefix_patterns
+        for candidate in candidates
+    )
+
+
+def _build_file_outline(output_path: Path) -> str:
+    """生成 VS Code Explorer 风格的 output HTML 文件树，目录默认展开。"""
+    output_path = Path(output_path)
+    current_path = output_path.resolve()
+    output_root = next(
+        (parent for parent in output_path.parents if parent.name.casefold() == "output"),
+        None,
+    )
+    root_resolved = output_root.resolve() if output_root else None
+    entries = {}
+    if output_root and output_root.is_dir():
+        for path in output_root.rglob("*.html"):
+            try:
+                resolved = path.resolve()
+                relative = resolved.relative_to(root_resolved)
+            except (ValueError, OSError):
+                continue
+            if path.is_file():
+                entries[resolved] = (relative, path)
+    if root_resolved:
+        try:
+            relative_current = current_path.relative_to(root_resolved)
+            entries.setdefault(current_path, (relative_current, output_path))
+        except ValueError:
+            pass
+    if not entries:
+        entries[current_path] = (Path(output_path.name), output_path)
+
+    tree = {"directories": {}, "files": []}
+    for resolved, (relative, display_path) in entries.items():
+        parts = relative.parts
+        node = tree
+        for folder in parts[:-1]:
+            node = node["directories"].setdefault(
+                folder, {"directories": {}, "files": []}
+            )
+        node["files"].append((parts[-1], resolved, display_path, relative))
+
+    def render_tree(node):
+        pieces = ['<ul class="file-tree-group" role="group">']
+        for folder in sorted(node["directories"], key=str.casefold):
+            child = node["directories"][folder]
+            pieces.append(
+                '<li class="file-tree-folder"><details open>'
+                '<summary><span class="file-tree-chevron" aria-hidden="true"><i class="fa-solid fa-angle-down"></i></span>'
+                '<span class="file-tree-icon folder-icon" aria-hidden="true">'
+                '<i class="fa-solid fa-folder-open folder-open-icon"></i>'
+                '<i class="fa-solid fa-folder folder-closed-icon"></i></span>'
+                '<span class="file-tree-name">' + escape(folder) + '</span></summary>'
+                + render_tree(child) + '</details></li>'
+            )
+        for name, resolved, display_path, relative in sorted(
+            node["files"], key=lambda item: item[0].casefold()
+        ):
+            try:
+                href_path = relpath(resolved, current_path.parent).replace("\\", "/")
+            except ValueError:
+                href_path = display_path.name
+            href = quote(href_path, safe="/")
+            current = resolved == current_path
+            current_class = " current" if current else ""
+            current_attr = ' aria-current="page"' if current else ""
+            title = "output/" + relative.as_posix() if root_resolved else display_path.name
+            pieces.append(
+                '<li class="file-tree-file' + current_class + '">'
+                '<a role="treeitem" href="' + escape(href, quote=True) + '" title="' +
+                escape(title, quote=True) + '"' + current_attr + '>'
+                '<span class="file-tree-indent" aria-hidden="true"></span>'
+                '<span class="file-tree-icon html-icon" aria-hidden="true"><i class="fa-solid fa-file-code"></i></span>'
+                '<span class="file-tree-name">' + escape(name) + '</span></a></li>'
+            )
+        pieces.append("</ul>")
+        return "".join(pieces)
+
+    root_label = output_root.name if output_root else "当前文件"
+    return (
+        '<div class="file-tree" role="tree" aria-label="学案文件路径">'
+        '<details class="file-tree-root-folder" open>'
+        '<summary class="file-tree-root"><span class="file-tree-chevron" aria-hidden="true">'
+        '<i class="fa-solid fa-angle-down"></i></span>'
+        '<span class="file-tree-icon folder-icon" aria-hidden="true">'
+        '<i class="fa-solid fa-folder-open folder-open-icon"></i>'
+        '<i class="fa-solid fa-folder folder-closed-icon"></i></span>'
+        '<span class="file-tree-name">' + escape(root_label) + '</span></summary>'
+        + render_tree(tree) + "</details></div>"
+    )
+
+
+def build_html(
+    md_content: str,
+    output_path: Path,
+    show_concept_table: bool = True,
+    layout: str = "translation_only",
+    require_interactive_quiz: bool = False,
+) -> Path:
+    """生成带静态双侧导航、可交互测验、阅读进度和水印的 HTML 页面。"""
+    allowed_layouts = {"translation_only", "translation_first", "source_first", "concept_highlight"}
+    if layout not in allowed_layouts:
+        raise ValueError("不支持的 HTML 展示布局：" + str(layout))
     protected_md, maths = protect_math(md_content)
-    body_html = annotate_first_occurrences(_render_body(protected_md))
+    prepared_md, expected_quiz_count = _build_quiz_html(
+        protected_md,
+        required=require_interactive_quiz,
+    )
+    body_html = annotate_first_occurrences(_render_body(prepared_md))
     body_html = restore_math(body_html, maths)
+    body_html = _normalize_course_header(body_html)
+    body_html = _add_document_title_class(body_html, layout)
+    body_html, toc_html, toc_count = _add_heading_ids_and_toc(body_html)
+
+    heading_count = len(re.findall(r"<h[1-4]\b", body_html, re.I))
+    if heading_count == 0 or toc_count != heading_count:
+        raise ValueError(
+            f"HTML 质量门禁未通过：发现 {heading_count} 个标题，但右侧知识大纲只有 {toc_count} 项。"
+        )
+    first_h1 = re.search(r"<h1\b([^>]*)>(.*?)</h1\s*>", body_html, re.I | re.S)
+    if first_h1 and _has_redundant_summary_prefix(first_h1.group(2)):
+        raise ValueError(
+            "HTML 质量门禁未通过：学案主标题含有‘第 X 章总结 / Résumé du chapitre’等结构前缀；"
+            "请只保留具体知识主题。"
+        )
+    if layout == "concept_highlight" and first_h1:
+        if not re.search(r"class=[\"'][^\"']*\bcourse-header\b", body_html, re.I):
+            first_h1_content = unescape(re.sub(r"<[^>]+>", " ", first_h1.group(2))).strip()
+            if _looks_like_course_header(first_h1_content):
+                raise ValueError(
+                    "HTML 质量门禁未通过：课程代码或学年信息误占学案主标题，请移入 course-header 页眉。"
+                )
+    if show_concept_table and re.search(r"<span\b[^>]*\bdata-en\s*=", body_html, re.I):
+        has_table_heading = re.search(r"(?:重要术语概念汇总表|概念汇总表)", body_html)
+        if not has_table_heading or not re.search(r"<table\b", body_html, re.I):
+            raise ValueError("HTML 质量门禁未通过：已标注术语，但缺少概念表标题或表格。")
+    quiz_cards = re.findall(
+        r'<section\b(?=[^>]*class=["\'][^"\']*\bquiz-question\b)(.*?)</section\s*>',
+        body_html,
+        re.I | re.S,
+    )
+    if len(quiz_cards) != expected_quiz_count:
+        raise ValueError(
+            f"HTML 质量门禁未通过：测验源文有 {expected_quiz_count} 题，"
+            f"交互卡片只有 {len(quiz_cards)} 题。"
+        )
+    for index, card in enumerate(quiz_cards, start=1):
+        option_count = len(re.findall(r'<label\b[^>]*class=["\']quiz-option["\']', card, re.I))
+        radio_values = re.findall(
+            r'<input\b[^>]*type=["\']radio["\'][^>]*value=["\']([A-D])["\']',
+            card,
+            re.I,
+        )
+        submit_count = len(re.findall(r'class=["\'][^"\']*\bquiz-submit\b', card, re.I))
+        explanation_count = len(re.findall(r"<template\b[^>]*class=", card, re.I))
+        answer_match = re.search(r'data-answer=["\']([A-D])["\']', card, re.I)
+        if (
+            option_count != 4
+            or sorted(letter.upper() for letter in radio_values) != ["A", "B", "C", "D"]
+            or submit_count != 1
+            or explanation_count != 1
+            or not answer_match
+            or answer_match.group(1).upper() not in radio_values
+        ):
+            raise ValueError(
+                f"HTML 质量门禁未通过：第 {index} 道测验卡片必须含 A-D 四个单选项、"
+                "一个提交按钮、正确答案和解析模板。"
+            )
+
     css = load_css()
     title_match = re.search(r"<h1\b[^>]*>(.*?)</h1>", body_html, re.I | re.S)
-    page_title = unescape(re.sub(r"<[^>]+>", "", title_match.group(1))).strip() if title_match else "学案译文"
+    page_title = _heading_label_text(title_match.group(1)) if title_match else "学案译文"
 
     js = (
         _BUILD_JS.replace("__WATERMARK__", WATERMARK)
@@ -688,37 +1187,84 @@ def build_html(md_content: str, output_path: Path, show_concept_table: bool = Tr
 
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    file_outline_html = _build_file_outline(output_path)
+    if (
+        'class="file-tree-root-folder" open' not in file_outline_html
+        or "fa-angle-down" not in file_outline_html
+        or "fa-folder-open" not in file_outline_html
+        or "fa-file-code" not in file_outline_html
+    ):
+        raise ValueError("HTML 质量门禁未通过：左侧文件树必须可折叠且使用 Font Awesome 图标。")
+    if "function initTocTracking()" not in js or 'classList.toggle("is-active"' not in js:
+        raise ValueError("HTML 质量门禁未通过：右侧知识大纲缺少阅读位置跟踪。")
 
     layout_css = (
+        "html { --outline-width: clamp(190px, 17vw, 250px); }\n"
         "html, body { height: 100%; margin: 0; padding: 0; }\n"
         "html { scroll-behavior: smooth; }\n"
         "body { max-width: none; min-height: 100vh; margin: 0; padding: 0; background: var(--page-bg); color: var(--text); box-shadow: none; border-radius: 0; }\n"
-        ".content-area { width: min(var(--reader-width, 1830px), calc(100% - 84px)); max-width: 1830px; box-sizing: border-box; margin: 42px auto; padding: 62px 46px 96px; background: var(--surface-bg); border-radius: 14px; box-shadow: 0 2px 28px rgba(15,35,60,.06); font-size: 18px; line-height: 1.85; }\n"
+        ".content-area { width: min(var(--reader-width, 10000px), calc(100vw - var(--outline-width) - var(--outline-width))); max-width: none; box-sizing: border-box; margin: 16px auto; padding: 24px 46px 96px; background: var(--surface-bg); border-radius: 0; box-shadow: none; font-size: 18px; line-height: 1.85; }\n"
         "table { border-collapse: collapse; width: 100%; margin: 20px 0; }\n"
         "th, td { border: 1px solid #d8e0e8; padding: 8px 12px; }\n"
         "img { max-width: 100%; height: auto; display: block; margin: 15px 0; }\n"
         "span[data-en] { background: transparent; padding: 0; border-radius: 0; font-weight: 750; "
         "color: var(--accent-strong); text-decoration: underline dotted; text-underline-offset: 3px; cursor: help; }\n"
-        "/* 目录伸缩 */\n"
-        "#toc-btn { position: fixed; right: 14px; top: 50%; transform: translateY(-50%); width: 46px; "
-        "height: 46px; border-radius: 50%; background: #1a3c5e; color: #fff; border: none; cursor: pointer; "
-        "font-size: 21px; line-height: 1; display: flex; align-items: center; justify-content: center; "
-        "box-shadow: 0 4px 14px rgba(15,35,60,.28); z-index: 1002; user-select: none; "
-        "transition: background .2s ease, box-shadow .2s ease, transform .18s ease; }\n"
-        "#toc-btn:hover { background: #2a5a8a; box-shadow: 0 6px 18px rgba(15,35,60,.36); }\n"
-        "#toc-btn:active { transform: translateY(-50%) scale(.94); }\n"
-        "#toc-outline { position: fixed !important; top: 50% !important; right: 78px !important; "
-        "transform: translateY(-50%) !important; display: none !important; margin: 0 !important; "
-        "width: min(260px, 44vw); max-height: 74vh; overflow-y: auto; background: #ffffff; "
-        "border: 1px solid #e3e8ee; border-radius: 10px; box-shadow: 0 8px 28px rgba(15,35,60,.14); "
-        "padding: 14px 12px; box-sizing: border-box; opacity: 0; transition: opacity .18s ease, transform .18s ease; }\n"
-        "#toc-outline.open { display: block !important; opacity: 1; }\n"
-        ".toc-outline a { display: block; padding: 4px 8px; border-radius: 6px; "
-        "border-left: 2px solid transparent; transition: background .15s ease, color .15s ease, "
-        "padding-left .15s ease, border-color .15s ease; }\n"
-        ".toc-outline a:hover { background: #eef4fb; padding-left: 14px; border-left-color: #2a7a9c; }\n"
-        ".toc-header { font-weight: 700; color: #1a3c5e; font-size: 15px; margin-bottom: 10px; "
-        "padding-bottom: 8px; border-bottom: 2px solid #2a7a9c; }\n"
+        "/* 左侧文件树与右侧学案大纲固定常开 */\n"
+        "#file-outline, #toc-outline { position: fixed !important; top: 0 !important; bottom: 0 !important; z-index: 1000; "
+        "width: var(--outline-width) !important; height: 100vh; height: 100dvh; max-height: none; overflow: auto; margin: 0 !important; "
+        "transform: none !important; display: block !important; box-sizing: border-box; "
+        "padding: 10px 0; color: var(--text); background: var(--surface-bg); border: 1px solid var(--border); "
+        "border-radius: 0; box-shadow: none; font: 13px/1.55 'Segoe UI','Roboto',Arial,sans-serif; }\n"
+        "#file-outline { left: 0 !important; border-left: 0; }\n"
+        "#toc-outline { right: 0 !important; padding: 12px 8px; border-right: 0; }\n"
+        ".toc-header { position: sticky; top: 0; z-index: 2; padding: 0 12px 9px; margin-bottom: 6px; "
+        "border-bottom: 1px solid var(--border); background: var(--surface-bg); "
+        "font-weight: 700; color: var(--accent-strong); font-size: 13px; }\n"
+        ".toc-list, .file-tree-group { list-style: none; margin: 0; padding: 0; }\n"
+        ".toc-item a { display: block; padding: 4px 9px; border-left: 2px solid transparent; border-radius: 3px; "
+        "color: var(--text); text-decoration: none; overflow-wrap: anywhere; }\n"
+        ".toc-item a:hover { color: var(--accent-strong); background: var(--accent-soft); border-left-color: var(--accent); }\n"
+        ".toc-item a.is-active { color: var(--accent-strong); background: var(--accent-soft); "
+        "border-left-color: var(--accent); font-weight: 700; }\n"
+        ".toc-level-2 a { padding-left: 18px; }\n"
+        ".toc-level-3 a { padding-left: 30px; font-size: 12px; }\n"
+        ".toc-level-4 a { padding-left: 42px; font-size: 12px; }\n"
+        ".file-tree { user-select: none; }\n"
+        ".file-tree-root, .file-tree-folder summary, .file-tree-file a { min-height: 24px; display: flex; "
+        "align-items: center; gap: 6px; box-sizing: border-box; padding: 2px 9px; color: var(--text); "
+        "text-decoration: none; white-space: nowrap; }\n"
+        ".file-tree-root, .file-tree-folder summary { cursor: pointer; list-style: none; }\n"
+        ".file-tree-root::-webkit-details-marker, .file-tree-folder summary::-webkit-details-marker { display: none; }\n"
+        ".file-tree-root { padding-left: 11px; font-weight: 700; }\n"
+        ".file-tree-root:hover, .file-tree-folder summary:hover, .file-tree-file a:hover { background: var(--accent-soft); }\n"
+        ".file-tree-chevron { width: 12px; flex: 0 0 12px; color: var(--muted); text-align: center; }\n"
+        ".file-tree-chevron i { display: block; font-size: 11px; transition: transform .16s ease; }\n"
+        ".file-tree-folder details:not([open]) > summary .file-tree-chevron i, "
+        ".file-tree-root-folder:not([open]) > .file-tree-root .file-tree-chevron i { transform: rotate(-90deg); }\n"
+        ".file-tree-icon { width: 16px; flex: 0 0 16px; font-size: 13px; text-align: center; }\n"
+        ".folder-icon { color: #d8ad45; } .html-icon { color: #4c9bd6; }\n"
+        ".folder-open-icon { display: none; } .folder-closed-icon { display: inline-block; }\n"
+        ".file-tree-folder details[open] > summary .folder-open-icon, "
+        ".file-tree-root-folder[open] > .file-tree-root .folder-open-icon { display: inline-block; }\n"
+        ".file-tree-folder details[open] > summary .folder-closed-icon, "
+        ".file-tree-root-folder[open] > .file-tree-root .folder-closed-icon { display: none; }\n"
+        ".file-tree-name { overflow: hidden; text-overflow: ellipsis; }\n"
+        ".file-tree-group { padding-left: 15px; }\n"
+        ".file-tree-file a { padding-left: 25px; }\n"
+        ".file-tree-file.current a { color: var(--accent-strong); background: var(--accent-soft); font-weight: 650; }\n"
+        ".file-tree-file.current .html-icon { filter: saturate(1.25); }\n"
+        ".file-tree-indent { width: 4px; flex: 0 0 4px; }\n"
+        ".content-area p.course-header { margin: 0 0 24px !important; text-align: center !important; "
+        "color: var(--muted) !important; font-size: 1.05em; font-weight: 650; line-height: 1.45; }\n"
+        ".content-area p.course-header .source-title { display: inline !important; width: auto !important; "
+        "margin: 0 0 0 .55em !important; color: var(--muted) !important; font-size: .82em !important; "
+        "font-weight: 400 !important; }\n"
+        ".content-area h1.document-title { text-align: center !important; font-size: 2.25em; line-height: 1.28; "
+        "margin: 18px auto 30px !important; padding: 0 0 16px !important; border-left: 0 !important; "
+        "border-bottom: 4px solid var(--accent) !important; background: transparent !important; box-shadow: none !important; }\n"
+        ".content-area h1.document-title .source-title { display: block !important; width: 100%; margin-top: .35em; "
+        "text-align: center !important; color: var(--muted) !important; font-size: .42em !important; "
+        "font-weight: 500 !important; line-height: 1.45; letter-spacing: 0; }\n"
         "/* 注释样式：通俗解读注记 + 提示框 */\n"
         ".note { background: #fff7e8; border-left: 4px solid #f2b34c; border-radius: 0 8px 8px 0; "
         "padding: 10px 16px; margin: 12px 0 22px; font-family: 'KaiTi','STKaiti','楷体',serif; "
@@ -732,11 +1278,18 @@ def build_html(md_content: str, output_path: Path, show_concept_table: bool = Tr
         "font-weight: 600; line-height: 1; letter-spacing: .5px; color: #1a3c5e; background: rgba(255,255,255,.92); "
         "border: 1px solid #dfe6ef; border-radius: 20px; padding: 6px 14px; "
         "box-shadow: 0 2px 10px rgba(15,35,60,.18); user-select: none; }\n"
-        "@media (max-width: 700px) { #toc-outline { right: 70px !important; width: min(240px, 60vw) !important; } }\n"
+        "@media (max-width: 1280px) { body { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); "
+        "grid-template-areas: 'left right' 'content content'; align-items: start; gap: 14px; padding: 14px; box-sizing: border-box; } "
+        "#file-outline, #toc-outline { position: static !important; top: auto !important; left: auto !important; right: auto !important; "
+        "bottom: auto !important; transform: none !important; width: 100% !important; height: auto !important; max-height: 30vh; "
+        "border: 1px solid var(--border); border-radius: 8px; } #file-outline { grid-area: left; } "
+        "#toc-outline { grid-area: right; } .content-area { grid-area: content; width: min(var(--reader-width,1830px),100%); margin: 0 auto; } }\n"
+        "@media (max-width: 700px) { body { display: flex; flex-direction: column; align-items: stretch; gap: 10px; padding: 10px; } "
+        "#file-outline, #toc-outline { width: 100% !important; height: auto !important; max-height: 24vh; } #file-outline { order: 1; } "
+        "#toc-outline { order: 2; } .content-area { order: 3; width: 100%; margin: 0; padding: 36px 22px 80px; } }\n"
     )
 
     layout_css += """
-.content-area { width: min(var(--reader-width, 1830px), calc(100% - 84px)); }
 .content-area span[data-en], .content-area a.term-link, .content-area .heading-term-link {
   color: var(--accent-strong) !important;
 }
@@ -745,6 +1298,10 @@ def build_html(md_content: str, output_path: Path, show_concept_table: bool = Tr
 .content-area .document-title { text-align: center !important; }
 .content-area .document-title .source-title {
   display: block !important; width: 100%; text-align: center !important;
+}
+.content-area p.course-header { overflow-wrap: anywhere; }
+@media (max-width: 700px) {
+  .content-area h1.document-title { font-size: 1.7em !important; }
 }
 .content-area mjx-container[display="true"] {
   display: block !important; width: fit-content; max-width: calc(100% - 24px) !important;
@@ -807,15 +1364,6 @@ html[data-theme="dark"] .annotation-popover {
 }
 html[data-theme="dark"] .annotation-title { color: #ffdda0; }
 html[data-theme="dark"] .annotation-action { color: #f0dfb6; background: #403720; border-color: #76633a; }
-.mark-help-button {
-  position: fixed; left: 16px; bottom: 16px; z-index: 1101; min-width: 92px; height: 44px; padding: 0 14px;
-  display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 999px;
-  color: var(--accent-strong); background: var(--surface-bg); box-shadow: var(--control-shadow);
-  cursor: pointer; font: 650 15px/1.1 'Segoe UI','Roboto',Arial,sans-serif;
-  transition: transform .16s ease, background .16s ease;
-}
-.mark-help-button:hover { transform: translateY(-2px); background: var(--accent-soft); }
-.mark-help-button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 .selection-toolbar { gap: 6px; padding: 7px; border-color: var(--accent); }
 .selection-action { color: var(--accent-strong); background: var(--accent-soft); font-weight: 700; }
 .selection-action:hover { color: #fff; background: var(--accent-strong); }
@@ -866,6 +1414,9 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
   border: 1px solid var(--border); border-radius: 8px; background: var(--surface-bg); cursor: pointer;
 }
 .content-area .quiz-option:hover { border-color: var(--accent); background: var(--accent-soft); }
+.content-area .quiz-options-legend { margin-bottom: 3px; color: var(--muted); font-size: 13px; }
+.content-area .quiz-option-text { min-width: 0; flex: 1; }
+.content-area .quiz-option-text p { margin: 0 !important; text-align: left !important; }
 .content-area .quiz-option input { flex: 0 0 auto; margin-top: .45em; accent-color: var(--accent-strong); }
 .content-area .quiz-option input[type="radio"] {
   appearance: none; -webkit-appearance: none; box-sizing: border-box; width: 19px; height: 19px;
@@ -898,12 +1449,69 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
   .content-area .quiz-question { padding: 14px; }
 }
 @media print {
-  #reader-resize-handle, #reader-toast, #mark-help-button, .annotation-popover { display: none !important; }
+  #reader-resize-handle, #reader-toast, .annotation-popover { display: none !important; }
   .content-area .quiz-submit { display: none !important; }
   .content-area .quiz-feedback[hidden] { display: none !important; }
 }
+#reader-controls { right: calc(var(--outline-width) + 16px) !important; }
+#reading-progress, .reader-toast { right: calc(var(--outline-width) + 16px) !important; }
+@media (max-width: 1280px) {
+  #reader-controls { right: 16px !important; }
+  #reading-progress, .reader-toast { right: 16px !important; }
+}
 
 """
+
+    if (
+        ".toc-item a.is-active" not in layout_css
+        or ".file-tree-root-folder:not([open])" not in layout_css
+        or ".file-tree-root-folder[open] > .file-tree-root .folder-open-icon" not in layout_css
+        or "initTocTracking();" not in js
+    ):
+        raise ValueError("HTML 质量门禁未通过：导航栏缺少当前阅读位置高亮或根目录折叠状态样式。")
+    content_area_css = re.search(r"\.content-area\s*\{([^}]*)\}", layout_css, re.I | re.S)
+    if (
+        not content_area_css
+        or "margin: 16px auto" not in content_area_css.group(1)
+        or "padding: 24px 46px 96px" not in content_area_css.group(1)
+    ):
+        raise ValueError("HTML 质量门禁未通过：桌面正文顶部留白超出紧凑版式要求。")
+
+    if re.search(r'<h[1-6]\b(?=[^>]*class=["\'][^"\']*\bcourse-header\b)[^>]*>', body_html, re.I):
+        raise ValueError("HTML 质量门禁未通过：课程信息页眉不能占用正文标题层级。")
+    if re.search(r'<p\b(?=[^>]*class=["\'][^"\']*\bcourse-header\b)[^>]*>', body_html, re.I):
+        header_css = re.search(r"\.content-area p\.course-header\s*\{([^}]*)\}", layout_css, re.I | re.S)
+        header_source_css = re.search(
+            r"\.content-area p\.course-header \.source-title\s*\{([^}]*)\}", layout_css, re.I | re.S
+        )
+        if (
+            not header_css
+            or "text-align: center !important" not in header_css.group(1)
+            or not header_source_css
+            or "display: inline !important" not in header_source_css.group(1)
+            or "font-size: .82em !important" not in header_source_css.group(1)
+        ):
+            raise ValueError("HTML 质量门禁未通过：课程信息页眉缺少紧凑排版样式。")
+    if layout == "concept_highlight":
+        lesson_title_css = re.search(
+            r"\.content-area h1\.document-title\s*\{([^}]*)\}", layout_css, re.I | re.S
+        )
+        lesson_source_css = re.search(
+            r"\.content-area h1\.document-title \.source-title\s*\{([^}]*)\}",
+            layout_css,
+            re.I | re.S,
+        )
+        if (
+            not lesson_title_css
+            or "text-align: center !important" not in lesson_title_css.group(1)
+            or not lesson_source_css
+            or "display: block !important" not in lesson_source_css.group(1)
+            or "text-align: center !important" not in lesson_source_css.group(1)
+            or "font-size: .42em !important" not in lesson_source_css.group(1)
+        ):
+            raise ValueError(
+                "HTML 质量门禁未通过：concept_highlight 主标题必须居中，原文标题必须换行并显著缩小。"
+            )
 
     full_html = (
         "<!DOCTYPE html>\n"
@@ -912,6 +1520,7 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
         '    <meta charset="UTF-8">\n'
         '    <meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
         '    <title>' + escape(page_title) + '</title>\n'
+        '    <link rel="stylesheet" href="' + FONT_AWESOME_CSS_URL + '" crossorigin="anonymous" referrerpolicy="no-referrer">\n'
         "    <style>\n"
         + css
         + "\n    </style>\n"
@@ -928,6 +1537,10 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
         '        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>\n'
         "</head>\n"
         "<body>\n"
+        '    <nav class="file-outline" id="file-outline" aria-label="学案文件路径">\n'
+        '        <div class="toc-header">资源管理器</div>\n'
+        + file_outline_html + "\n"
+        '    </nav>\n'
         '    <main class="content-area">\n'
         + body_html
         + "\n"
@@ -936,15 +1549,18 @@ html[data-theme="dark"] .content-area mjx-container.user-highlight[data-note] { 
         "            欢迎使用 " + WATERMARK + "\n"
         "        </footer>\n"
         "    </main>\n"
-        '    <aside class="toc-outline" id="toc-outline">\n'
-        '        <div class="toc-header">\u76EE\u5F55</div>\n'
-        "    </aside>\n"
+        '    <nav class="toc-outline" id="toc-outline" aria-label="本学案知识大纲">\n'
+        '        <div class="toc-header">本学案知识大纲</div>\n'
+        + toc_html + "\n"
+        '    </nav>\n'
         "    <script>\n"
         + js
         + "\n    </script>\n"
         "</body>\n"
         "</html>\n"
     )
+    if FONT_AWESOME_CSS_URL not in full_html:
+        raise ValueError("HTML 质量门禁未通过：左侧文件树缺少 Font Awesome 在线样式表。")
 
     with open(output_path, "w", encoding="utf-8") as f:
         f.write(full_html)
