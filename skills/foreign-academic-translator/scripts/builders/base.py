@@ -3,7 +3,7 @@
 import re
 from pathlib import Path
 
-WATERMARK = "DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill"
+WATERMARK = "DornGames @Koloyaaa Léo WEE 出品: foreign-academic-translator-skill"
 
 # 匹配带 data-en 的术语 span（保留原开/闭标签与属性，只在内层内容上补括号）
 _SPAN_RE = re.compile(r'(<span\b[^>]*data-en="([^"]+)"[^>]*>)(.*?)(</span>)', re.DOTALL)

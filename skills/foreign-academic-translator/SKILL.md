@@ -1,27 +1,18 @@
 ---
 name: foreign-academic-translator
 description: Translate foreign-language academic handouts into clear Chinese study materials while preserving structure, technical terms, equations, and requested output formats. 用于把英语、法语等外文学案整理成中文学习材料。Use when translating or preparing bilingual study materials.
-version: 3.1.1
-parameters:
-  - source_text
-  - discipline
-  - source_language
-  - output_formats
-  - layout
-  - show_concept_table
-  - annotate_level
-  - include_images
-  - glossary_mode
-  - quiz_levels
-  - quiz_language
-  - reuse_preferences
+license: MIT
+metadata:
+  version: "3.1.2"
 ---
 
 # 外文讲义翻译
 
-> 版本：V3.1.1
+> 版本：V3.1.2
 
 将英语、法语等外文学案整理为准确、易读的中文学习材料。保留原文结构、重要术语、公式、表格和图表位置；只生成用户要求的格式。
+
+运行脚本需要 Python 3.10+ 和 shell。HTML 数学公式及 Font Awesome 图标通过在线 CDN 加载，需要联网。
 
 ## 开始前确认
 
@@ -82,7 +73,7 @@ parameters:
 8. `show_concept_table=true` 时，在译文末尾加入“重要术语概念汇总表”，按术语首次出现顺序列出外文术语、中文译名和简短释义。为确实出现并标注的术语建表；`false` 时不生成表格。
 9. 按注释等级安排讲解：`无注释`不加解读；`轻度注释`可略过简单概念和结论，不写归纳总结；`高中生视角`在每个概念/知识点后加入一段易懂解读，较长内容的重要结论或证明过程也要解释，并在章节末归纳；`重度注释`逐一讲解每个概念、知识点、结论和证明过程，补足公式思路、例子与易错点，并作详细归纳。注记用 `<div class="note">通俗解读：……</div>`。
 10. `include_images=true` 且源文件为 PDF 时，运行 `<技能根目录>/scripts/image_extractor.py`，参考输出的 `placement.json` 按 `page` 和 `top` 定位图片；坐标单位为 PDF 页面顶部起算的点数，与 `PDF_BLOCK` 的 `TOP` 一致。将图片放到同页纵坐标最接近的文字块旁，按页面和纵坐标排序；若 `TOP:unknown`，只能按页码和上下文估计，并避免声称位置精确。只对能从正文上下文确认的图片编写说明；无法确认时使用中性说明，不猜测图意。
-11. 在 Markdown 成品开头和结尾各保留一行原作者署名：`<!-- DornGames @Koloyaaa Léo WEE 出品: 中外合办救命稻草-skill -->`。不得删除或改写构建器自动加入的署名水印。
+11. Markdown 成品开头和结尾各保留一行原作者署名注释：`<!-- DornGames @Koloyaaa Léo WEE 出品: foreign-academic-translator-skill -->`。HTML 和 DOCX 页脚也使用正式名称。HTML 复制选中文本时不得修改剪贴板内容，也不得自动追加任何水印。
 
 ### 交互测验的固定 Markdown 格式
 
@@ -128,7 +119,7 @@ parameters:
    将 `--concept-table` 的值设为用户选择的 `true` 或 `false`。不生成概念表时使用 `false`；HTML 只会在找到概念表标题及其表格时为术语添加跳转链接。
 
    将 layout 参数设为本轮选择的布局。只有用户选择测验且输出格式含 HTML 时，interactive-quiz-required 设为 true；否则设为 false。概念表开关也必须与用户选择一致。
-3. 若构建器报告质量门禁失败，先按报错修复 Markdown 再重新构建，不交付未通过门禁的 HTML。逐项确认用户要求的文件存在且非空。HTML 需核对：课程元信息不占 H1 且不进入右栏大纲；主标题只表达知识主题，不带可省略的“第 X 章总结”等前缀；concept_highlight 的中文 H1 居中，原文主题在下一行且字号明显更小；桌面正文容器顶部外边距为 16px、上内边距为 24px；右栏目录项数等于正文一级至四级标题数、无折叠按钮，滚动时当前项会高亮并保持可见；左栏根目录和子目录均可折叠，图标为 Font Awesome；用户选择测验时题目、交互卡片和答案数量一致，每题有四个选项、有效答案、非空解析及单独提交按钮；阅读进度和原作者署名水印已写入。HTML 公式和 Font Awesome 图标通过 CDN 在线加载，打开时需要联网；离线时公式可能显示为 LaTeX 源码且图标可能不显示。若某种格式生成失败，只重试缺失格式；仍失败时如实报告。
+3. 若构建器报告质量门禁失败，先按报错修复 Markdown 再重新构建，不交付未通过门禁的 HTML。逐项确认用户要求的文件存在且非空。HTML 需核对：课程元信息不占 H1 且不进入右栏大纲；主标题只表达知识主题，不带可省略的“第 X 章总结”等前缀；concept_highlight 的中文 H1 居中，原文主题在下一行且字号明显更小；桌面正文容器顶部外边距为 16px、上内边距为 24px；右栏目录项数等于正文一级至四级标题数、无折叠按钮，滚动时当前项会高亮并保持可见；左栏根目录和子目录均可折叠，图标为 Font Awesome；用户选择测验时题目、交互卡片和答案数量一致，每题有四个选项、有效答案、非空解析及单独提交按钮；阅读进度和正式名称署名已写入，复制正文不得自动追加署名。HTML 公式和 Font Awesome 图标通过 CDN 在线加载，打开时需要联网；离线时公式可能显示为 LaTeX 源码且图标可能不显示。若某种格式生成失败，只重试缺失格式；仍失败时如实报告。
 4. 用户未选择 `md` 时，构建成功后删除本次生成的 `translated_doc.md` 过程文件；用户选择 `md` 时保留正式 Markdown 成品。图片被产物引用时保留 `images/`，移除本次生成且不再需要的 `placement.json`。
 5. 最终回复列出每个成品的格式、绝对路径和文件大小，并说明失败或未验证的项目。不要只给文字内容，也不要声称未实际生成的文件已经交付。
 

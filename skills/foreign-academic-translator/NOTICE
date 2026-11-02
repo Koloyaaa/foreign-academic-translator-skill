@@ -1,6 +1,10 @@
-Required Notice: Copyright DornGames / Koloyaaa (Léo WEE). Original project: https://github.com/Koloyaaa/foreign-academic-translator-skill
+# 第三方材料与署名说明
 
-Software license: PolyForm Noncommercial License 1.0.0 — https://polyformproject.org/licenses/noncommercial/1.0.0
-Skill and documentation license: CC BY-NC-SA 4.0 — https://creativecommons.org/licenses/by-nc-sa/4.0/
+仓库根目录的 [MIT License](../../LICENSE) 仅适用于本项目作者拥有版权或有权许可的项目材料，不改变第三方内容的权利与许可。下列材料继续适用各自条款：
 
-When sharing this skill or adapted skill documentation, keep the author and source attribution, identify your changes, and follow the applicable license. CSV glossaries, bundled third-party dependencies, and other excluded materials keep their own rights and licenses; see the repository LICENSE.
+- `glossaries/` 中的 CSV 词库来自第三方资料。仓库 README 将其来源标注为乐词网；本项目许可不额外授予词库的版权或再分发权。使用、修改或再分发前请核实来源方的授权条件。
+- `requirements.txt` 引用的第三方 Python 依赖保留各自上游许可和版权声明；若某个发行包另附预装库副本，该副本也沿用上游许可。
+- `../../assets/showcase/` 中的截图和仓库中的示例讲义可能包含第三方教材或界面内容，应按其权利状态处理。
+- 其他第三方素材和依赖均由各自的许可约束。
+
+项目作者：DornGames / Koloyaaa（Léo WEE）。项目地址：https://github.com/Koloyaaa/foreign-academic-translator-skill

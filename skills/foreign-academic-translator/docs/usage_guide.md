@@ -4,7 +4,7 @@
 
 ## 快速开始
 
-1. 按 [安装说明](../README.md) 把本技能装进 Trae、Claude Code 或 Codex，并启用它。
+1. 按 [安装说明](../README.md) 把本技能安装到支持 Agent Skills 标准的 Harness，并启用它。Aider 和 Continue 目前需要手动加载或改写规则，详见[兼容说明](../README.md#兼容边界)。
 2. 首次使用前安装依赖：
 
    ```powershell
@@ -21,7 +21,7 @@
 
 | 参数 | 可选值 | 说明 |
 | --- | --- | --- |
-| `source_text` | 由 Trae 预处理注入 | 学案文本；也可在对话中附上可读取的源文件 |
+| `source_text` | 若宿主支持则由预处理注入 | 否则从用户附加的源文件读取；Agent Skills 标准本身不定义参数注入 |
 | `discipline` | `Engineering`、`Economics`、`Science`、`Agriculture`、`Social_Sciences`、`Literature_Arts`、`Medicine` | 从当前讲义推断，用于筛选相关术语表；无法可靠判断时询问 |
 | `source_language` | 当前讲义正文的主要语言 | 自动识别；用于“学案所属语言”测验选项 |
 | `output_formats` | `html`、`docx`、`md` | 可多选，至少选择一种 |
@@ -86,5 +86,5 @@ PDF 提取文本中的页码和块坐标用于对照 `placement.json` 的图片�
 ## 相关文件
 
 - [技能行为说明](../SKILL.md)
-- [Trae 参数配置](../skill.yaml)（仅 Trae 读取）
+- [可选参数扩展](../skill.yaml)（非 Agent Skills 标准字段，宿主需明确支持才会读取）
 - [项目许可说明](../../../LICENSE)

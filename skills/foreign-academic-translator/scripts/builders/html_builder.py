@@ -1,4 +1,4 @@
-"""HTML 构建器：将 Markdown 译文转换为带目录伸缩 / 阅读进度 / 术语高亮 / MathJax / 水印的 HTML 页面。"""
+"""HTML 构建器：将 Markdown 译文转换为带双侧目录、阅读进度、术语高亮和 MathJax 的 HTML 页面。"""
 
 from pathlib import Path
 import re
@@ -11,11 +11,10 @@ from .base import WATERMARK, load_css, annotate_first_occurrences, protect_math,
 FONT_AWESOME_CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
 
 # 页面内嵌 JS（普通字符串，非 f-string，避免花括号与 Python 格式化冲突）
-# 通过占位符 __WATERMARK__ / __SHOW_CONCEPT_TABLE__ 在运行时替换。
+# 通过占位符 __SHOW_CONCEPT_TABLE__ 在运行时替换。
 _BUILD_JS = r"""
 (function () {
     "use strict";
-    var WATERMARK = "__WATERMARK__";
     var SHOW_TABLE = __SHOW_CONCEPT_TABLE__;
     var HEADING_SELECTOR = "h1, h2, h3, h4";
     var main = document.querySelector(".content-area");
@@ -555,14 +554,6 @@ _BUILD_JS = r"""
         }
         window.setTimeout(function () { syncMathIds(); records.forEach(applyFormulaRecord); }, 0);
     }
-    function addWatermarkOnCopy() {
-        document.addEventListener("copy", function (event) {
-            try {
-                var selected = window.getSelection ? window.getSelection().toString() : "";
-                if (selected) { event.clipboardData.setData("text/plain", selected + "\n\n欢迎使用 " + WATERMARK); event.preventDefault(); }
-            } catch (err) {}
-        });
-    }
     function wireStaticQuiz() {
         document.querySelectorAll(".quiz-question").forEach(function (card, index) {
             var fieldset = card.querySelector(".quiz-options");
@@ -596,7 +587,7 @@ _BUILD_JS = r"""
     }
     assignConceptTable(); linkGlossaryTerms();
     initReaderSettings(); initTocTracking(); initProgress(); initResizableReader(); initPersonalMarks();
-    wireStaticQuiz(); addWatermarkOnCopy();
+    wireStaticQuiz();
 })();
 
 """
@@ -1236,10 +1227,15 @@ def build_html(
     title_match = re.search(r"<h1\b[^>]*>(.*?)</h1>", body_html, re.I | re.S)
     page_title = _heading_label_text(title_match.group(1)) if title_match else "学案译文"
 
-    js = (
-        _BUILD_JS.replace("__WATERMARK__", WATERMARK)
-        .replace("__SHOW_CONCEPT_TABLE__", "true" if show_concept_table else "false")
+    js = _BUILD_JS.replace(
+        "__SHOW_CONCEPT_TABLE__", "true" if show_concept_table else "false"
     )
+    if (
+        "addWatermarkOnCopy" in js
+        or 'addEventListener("copy"' in js
+        or "clipboardData.setData" in js
+    ):
+        raise ValueError("HTML 质量门禁未通过：复制文本不得自动追加署名水印。")
 
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)

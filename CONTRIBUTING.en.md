@@ -10,7 +10,7 @@ Contributions are welcome in translation quality, terminology, accessibility, pa
 
 - Read the [README](README.md), the [security notes](SECURITY.md), and the `SKILL.md` for the harness you are changing.
 - Reproduce the problem with synthetic text or material you are allowed to use. Do not publish real student handouts, names, school accounts, grades, or other personal information.
-- Keep the Codex, Claude Code, and Trae packages behaving the same way. If you change only one version, explain why.
+- Keep the shared `skills/foreign-academic-translator` package consistent across Agent Skills-compatible harnesses. Do not maintain separate package copies; use `SKILL.md` and the harness documentation linked in the README as the compatibility source of truth.
 
 ## What to include
 
@@ -22,4 +22,4 @@ Contributions are welcome in translation quality, terminology, accessibility, pa
 
 ## Compatibility
 
-Do not change user-facing parameters, output formats, or license notices unless the task requires it. Glossary entries and sample material may carry their own licenses; check the source and the rights before adding any. Keep the original author's attribution and the applicable license when sharing adaptations.
+Do not change user-facing parameters or output formats unless the task requires it. Project-authored files that the author is entitled to license use MIT. Glossary entries, dependencies, and sample material may carry separate licenses; check the source and rights before adding any. Follow the applicable license and attribution requirements when adapting those materials.

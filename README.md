@@ -1,14 +1,13 @@
 # 外文讲义翻译 Skill
 
-**版本：V3.1.1**
+**版本：V3.1.2**
 
 [中文](README.md) | [English](README.en.md)
 
-把英语、法语等外文学案整理成中文学习材料，保留章节结构、术语、公式、练习和图表位置。同一份技能包可装入 Trae、Codex 与 Claude Code。
+把英语、法语等外文学案整理成中文学习材料，保留章节结构、术语、公式、练习和图表位置。技能按开放的 Agent Skills `SKILL.md` 格式编写，可安装到多种支持该标准的 Harness。
 
-![Trae Skill](https://img.shields.io/badge/Trae-skill-2B90D9)
-![Codex Skill](https://img.shields.io/badge/Codex-skill-5B4BDB)
-![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)
+![Agent Skills compatible](https://img.shields.io/badge/Agent%20Skills-compatible-4B8BBE)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
 
 [查看版本发布 ↓](#版本发布)
@@ -61,13 +60,20 @@ V3 延续提示词注入防护。技能会在项目内保存可跨讲义复用�
 
 ## 安装与使用
 
-三个 Harness 共用 [skills/foreign-academic-translator](skills/foreign-academic-translator/) 这一份技能包，区别只有安装目录和调用方式。
+本项目只维护一份 [skills/foreign-academic-translator](skills/foreign-academic-translator/) 技能包。支持 Agent Skills 标准的 Harness 可发现并加载同一份 `SKILL.md`；安装目录依 Harness 而异。
 
-| Harness | 技能位置 | 调用方式 | 官方说明 |
-| --- | --- | --- | --- |
-| Trae | `.trae/skills/foreign-academic-translator/` | 在技能面板启用 | [Trae Skills](https://docs.trae.cn/ide/skills) |
-| Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
-| Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
+| Harness（原生支持 Agent Skills） | 项目级技能目录 | 文档 |
+| --- | --- | --- |
+| Codex | `.agents/skills/foreign-academic-translator/` | [Codex](https://developers.openai.com/codex/skills) |
+| Claude Code | `.claude/skills/foreign-academic-translator/` | [Claude Code](https://code.claude.com/docs/en/skills) |
+| Trae | `.trae/skills/foreign-academic-translator/` | [Trae](https://docs.trae.cn/ide_skills) |
+| GitHub Copilot | `.github/skills/foreign-academic-translator/` 或 `.agents/skills/foreign-academic-translator/` | [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) |
+| Cursor | `.cursor/skills/foreign-academic-translator/` | [Cursor](https://cursor.com/docs/skills) |
+| Gemini CLI | `.gemini/skills/foreign-academic-translator/` 或 `.agents/skills/foreign-academic-translator/` | [Gemini CLI](https://geminicli.com/docs/cli/skills/) |
+| Kiro | `.kiro/skills/foreign-academic-translator/` | [Kiro](https://kiro.dev/docs/skills/) |
+| OpenCode | `.opencode/skills/foreign-academic-translator/` 或 `.agents/skills/foreign-academic-translator/` | [OpenCode](https://docs.opencode.ai/docs/skills/) |
+| Cline | `.cline/skills/foreign-academic-translator/` | [Cline](https://docs.cline.bot/customization/skills) |
+| Roo Code | `.roo/skills/foreign-academic-translator/` 或 `.agents/skills/foreign-academic-translator/` | [Roo Code](https://roocodeinc.github.io/Roo-Code/features/skills/) |
 
 1. 下载或克隆本仓库，找到 `skills/foreign-academic-translator`。
 2. 把整个目录复制到目标项目的对应位置。装在用户目录可以让所有项目共用，例如 Trae 的 `%USERPROFILE%\.trae-cn\skills\`。Trae 也支持把该目录压缩成 ZIP 后在技能面板上传。
@@ -79,6 +85,12 @@ V3 延续提示词注入防护。技能会在项目内保存可跨讲义复用�
 
 4. 重新载入技能并附上学案。本轮明确指定的参数优先；未指定的学科和源语言会从当前讲义推断。其他无法推断的缺少项仍逐项询问，每条消息只问一个问题。
 5. 成品保存在项目的 `output/<学案名>/`。当项目内已有 `output/.translator_preferences.json` 时，技能会先单独询问是否沿用上次设置。
+
+上述产品的技能加载目录和入口各不相同；实际能否完整执行还取决于 Harness 是否允许读取用户提供的文件、调用 Python 3.10+ 脚本，以及访问网络 CDN。`skill.yaml` 是项目附带的参数扩展文件，不属于 Agent Skills 标准字段，其他 Harness 可以忽略它；标准流程以 `SKILL.md` 为准。
+
+### 需要手动适配的 Harness
+
+截至 2026-11，Aider 官方提供的是 `CONVENTIONS.md` 配合 `/read` 或 `--read` 加载约定，不具备 Agent Skills 的按需目录发现；Continue 官方提供 `.continue/rules`，用于常驻注入规则，也不是按需加载的 Agent Skill。两者可以手动把本技能说明作为只读上下文或改写成规则，但不会原生执行这套技能包的发现流程。[Aider](https://aider.chat/docs/usage/conventions.html)、[Continue](https://docs.continue.dev/customize/rules)。
 
 更多细节见[技能包安装说明](skills/foreign-academic-translator/README.md)与[使用指南](skills/foreign-academic-translator/docs/usage_guide.md)。
 
@@ -100,13 +112,13 @@ V3 延续提示词注入防护。技能会在项目内保存可跨讲义复用�
 └── README.md              项目首页
 ```
 
-技能包采用 Agent Skills 结构：`SKILL.md` 加脚本、样式和词表；Trae 还会读取同目录的 `skill.yaml` 获取参数定义。三者共用同一套脚本，不再各自维护副本。相关规范见 [Agent Skills](https://agentskills.io/specification)、[Codex Skills](https://developers.openai.com/codex/skills) 和 [Claude Code Skills](https://code.claude.com/docs/en/skills)。
+技能包采用 Agent Skills 结构：标准元数据和流程说明位于 `SKILL.md`，脚本、样式和词表作为配套资源。`skill.yaml` 是本项目的可选参数扩展，不是标准字段。通用 Harness 按 Agent Skills 规范加载 `SKILL.md`，其余输入和参数通过对话及 Harness 可用的文件/命令工具处理。相关规范见 [Agent Skills](https://agentskills.io/specification)。
 
 ## 许可与词库
 
-本项目代码采用 PolyForm Noncommercial 1.0.0；技能说明与文档采用 CC BY-NC-SA 4.0。公开分享或改编时，请保留原作者 DornGames / Koloyaaa（Léo WEE）的署名、项目来源及许可信息，并标明修改内容。详情见 [LICENSE](LICENSE)。
+本项目作者有权授权的代码、技能说明及文档采用 MIT License，详见 [LICENSE](LICENSE)。
 
-CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上述许可授权，使用前请核实各自权利。项目地址：[Koloyaaa/foreign-academic-translator-skill](https://github.com/Koloyaaa/foreign-academic-translator-skill)。
+CSV 词库、第三方 Python 依赖、示例图片和示例讲义仍按各自权利和许可处理，不因本项目采用 MIT 而被重新授权；详见 [NOTICE](skills/foreign-academic-translator/NOTICE)。项目地址：[Koloyaaa/foreign-academic-translator-skill](https://github.com/Koloyaaa/foreign-academic-translator-skill)。
 
 ## 词库来源说明
 
@@ -118,6 +130,7 @@ CSV 词库、Trae 包内的 Python 依赖、示例图片和示例讲义不由上
 
 | 版本 | 主要变化 |
 | --- | --- |
+| [v3.1.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.2) | 移除复制时追加水印，采用正式技能名称与 MIT 许可，补全主流 Agent Skills Harness 兼容说明。 |
 | [v3.1.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.1) | 双语测验按语言分行显示，选项选择器垂直居中。 |
 | [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | 改进 HTML 阅读器布局、双侧大纲与标题排版；加入更严格的交互测验和页面质量门禁。 |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | 本轮明确参数优先；从当前讲义推断学科和主要源语言。 |

@@ -1,5 +1,12 @@
 # 更新记录
 
+## V3.1.2
+
+- 移除 HTML 复制文本时自动追加署名水印的事件处理，并加入对应质量门禁；保留并更名 HTML/DOCX 页脚及 Markdown 署名为 `foreign-academic-translator-skill`。
+- 将 Agent Skills `SKILL.md` 元数据规范化为标准字段，移除非标准的顶层 `version` 与 `parameters`，并把版本放入 `metadata.version`。
+- 将作者有权授权的项目代码、技能说明与文档改为 MIT；更新贡献指南、NOTICE 和中英文许可说明，明确第三方词库与素材仍受各自许可约束。
+- 更新 README、使用指南和支持范围，列出原生支持 Agent Skills 的主流 Harness，并说明 Aider 与 Continue 需要手动适配。
+
 ## V3.1.1
 
 - 双语测验的题干、选项和解析按语言分行显示；构建器识别语言标签、分行文本和中外文斜线分隔。

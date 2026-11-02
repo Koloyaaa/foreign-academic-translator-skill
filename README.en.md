@@ -1,16 +1,15 @@
 # Foreign Academic Translator Skill
 
-**Version: V3.1.1**
+**Version: V3.1.2**
 
 [中文](README.md) | English
 
 > This is a translation of [README.md](README.md). The Chinese version is authoritative; if the two disagree, follow the Chinese one.
 
-Turns course materials in English, French, and other languages into Chinese study notes while keeping chapter structure, terminology, formulas, exercises, and figure placement. One skill package works with Trae, Codex, and Claude Code.
+Turns course materials in English, French, and other languages into Chinese study notes while keeping chapter structure, terminology, formulas, exercises, and figure placement. The skill follows the open Agent Skills `SKILL.md` format and can be installed in harnesses that support the standard.
 
-![Trae Skill](https://img.shields.io/badge/Trae-skill-2B90D9)
-![Codex Skill](https://img.shields.io/badge/Codex-skill-5B4BDB)
-![Claude Code Skill](https://img.shields.io/badge/Claude%20Code-skill-D97757)
+![Agent Skills compatible](https://img.shields.io/badge/Agent%20Skills-compatible-4B8BBE)
+![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB)
 
 [Jump to the release list ↓](#releases)
@@ -63,13 +62,20 @@ The five test handouts below were written for this project, and each contains se
 
 ## Install and use
 
-All three harnesses share the single package in [skills/foreign-academic-translator](skills/foreign-academic-translator/); only the install directory and invocation differ.
+The project maintains one package in [skills/foreign-academic-translator](skills/foreign-academic-translator/). Harnesses that support Agent Skills can discover and load the same `SKILL.md`; install directories vary by harness.
 
-| Harness | Skill location | How to invoke | Documentation |
-| --- | --- | --- | --- |
-| Trae | `.trae/skills/foreign-academic-translator/` | Enable it in the skills panel | [Trae Skills](https://docs.trae.cn/ide/skills) |
-| Codex | `.agents/skills/foreign-academic-translator/` | `$foreign-academic-translator` | [Codex Skills](https://developers.openai.com/codex/skills) |
-| Claude Code | `.claude/skills/foreign-academic-translator/` | `/foreign-academic-translator` | [Claude Code Skills](https://code.claude.com/docs/en/skills) |
+| Harness (native Agent Skills support) | Project skill directory | Documentation |
+| --- | --- | --- |
+| Codex | `.agents/skills/foreign-academic-translator/` | [Codex](https://developers.openai.com/codex/skills) |
+| Claude Code | `.claude/skills/foreign-academic-translator/` | [Claude Code](https://code.claude.com/docs/en/skills) |
+| Trae | `.trae/skills/foreign-academic-translator/` | [Trae](https://docs.trae.cn/ide_skills) |
+| GitHub Copilot | `.github/skills/foreign-academic-translator/` or `.agents/skills/foreign-academic-translator/` | [GitHub Copilot](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/customize-cloud-agent/add-skills) |
+| Cursor | `.cursor/skills/foreign-academic-translator/` | [Cursor](https://cursor.com/docs/skills) |
+| Gemini CLI | `.gemini/skills/foreign-academic-translator/` or `.agents/skills/foreign-academic-translator/` | [Gemini CLI](https://geminicli.com/docs/cli/skills/) |
+| Kiro | `.kiro/skills/foreign-academic-translator/` | [Kiro](https://kiro.dev/docs/skills/) |
+| OpenCode | `.opencode/skills/foreign-academic-translator/` or `.agents/skills/foreign-academic-translator/` | [OpenCode](https://docs.opencode.ai/docs/skills/) |
+| Cline | `.cline/skills/foreign-academic-translator/` | [Cline](https://docs.cline.bot/customization/skills) |
+| Roo Code | `.roo/skills/foreign-academic-translator/` or `.agents/skills/foreign-academic-translator/` | [Roo Code](https://roocodeinc.github.io/Roo-Code/features/skills/) |
 
 1. Download or clone this repository and locate `skills/foreign-academic-translator`.
 2. Copy the whole directory to the location for your harness. Installing into a user-level directory shares it across projects, for example Trae's `%USERPROFILE%\.trae-cn\skills\`. Trae also accepts the folder as a ZIP upload in its skills panel.
@@ -81,6 +87,12 @@ All three harnesses share the single package in [skills/foreign-academic-transla
 
 4. Reload the skill and attach your course material. Settings stated in the current request take priority; otherwise, the skill infers the discipline and source language from the handout. It still asks one question at a time for other settings it cannot infer.
 5. Output goes to `output/<material-name>/` in your project. If `output/.translator_preferences.json` already exists, the skill first asks whether to reuse the previous settings.
+
+These products use different discovery paths and entry points. Full execution also requires the harness to read user-provided files, run Python 3.10+ scripts, and access online CDNs. `skill.yaml` is an optional project-specific parameter extension, not part of the Agent Skills standard; other harnesses may ignore it. The standard workflow is in `SKILL.md`.
+
+### Harnesses that need manual adaptation
+
+As of November 2026, Aider documents `CONVENTIONS.md` loaded with `/read` or `--read`, rather than native on-demand Agent Skills discovery. Continue documents `.continue/rules`, which inject persistent rules rather than loading Agent Skills on demand. You can manually load or adapt this skill's instructions for those tools, but they do not natively run the package's discovery flow. [Aider](https://aider.chat/docs/usage/conventions.html), [Continue](https://docs.continue.dev/customize/rules).
 
 See the [install guide](skills/foreign-academic-translator/README.md) and [usage guide](skills/foreign-academic-translator/docs/usage_guide.md) for details.
 
@@ -104,15 +116,15 @@ Each document has an English translation; the Chinese original is authoritative.
 └── README.md              Project home page
 ```
 
-The package follows the Agent Skills structure: `SKILL.md` plus scripts, styles, and glossaries. Trae also reads the `skill.yaml` beside it for parameter definitions. Every harness runs the same scripts, so there is no second copy to keep in sync. See the [Agent Skills specification](https://agentskills.io/specification), [Codex Skills](https://developers.openai.com/codex/skills), and [Claude Code Skills](https://code.claude.com/docs/en/skills) for details.
+The package follows the Agent Skills structure: standard metadata and instructions live in `SKILL.md`, with scripts, styles, and glossaries as supporting resources. `skill.yaml` is an optional project-specific parameter extension, not a standard field. Compatible harnesses load `SKILL.md`; other inputs and parameters are handled through conversation and the file/command tools the harness provides. See the [Agent Skills specification](https://agentskills.io/specification).
 
 ## License and glossaries
 
-The code in this project is licensed under PolyForm Noncommercial 1.0.0; the skill instructions and documentation are under CC BY-NC-SA 4.0. If you share or adapt the project publicly, keep the attribution to DornGames / Koloyaaa (Léo WEE), the link to this repository, and the license notice, and state what you changed. See [LICENSE](LICENSE) for details.
+Code, skill instructions, and documentation that the project author is entitled to license are released under the MIT License. See [LICENSE](LICENSE).
 
-The CSV glossaries, the Python dependencies bundled in the Trae package, the screenshots, and the sample handouts are not covered by those licenses. Check the rights for each before use. Repository: [Koloyaaa/foreign-academic-translator-skill](https://github.com/Koloyaaa/foreign-academic-translator-skill).
+CSV glossaries, third-party Python dependencies, screenshots, and sample handouts remain subject to their own rights and licenses; the project MIT license does not relicense them. See [NOTICE](skills/foreign-academic-translator/NOTICE). Repository: [Koloyaaa/foreign-academic-translator-skill](https://github.com/Koloyaaa/foreign-academic-translator-skill).
 
-The Chinese [LICENSE](LICENSE) is authoritative. An English translation of the notice is in [LICENSE.en.md](LICENSE.en.md); it is provided for convenience and has no legal effect.
+The standard MIT license text is in English; [LICENSE.en.md](LICENSE.en.md) contains the same text.
 
 ## Where the glossaries come from
 
@@ -124,6 +136,7 @@ Full release notes are on [Releases](https://github.com/Koloyaaa/foreign-academi
 
 | Version | Highlights |
 | --- | --- |
+| [v3.1.2](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.2) | Remove the copy watermark, adopt the formal skill name and MIT license, and document compatibility with mainstream Agent Skills harnesses. |
 | [v3.1.1](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.1) | Split bilingual quiz text by language and vertically center option selectors. |
 | [v3.1.0](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.1.0) | Improve the HTML reader layout, side navigation, and heading hierarchy; strengthen interactive quiz and page quality gates. |
 | [v3.0.4](https://github.com/Koloyaaa/foreign-academic-translator-skill/releases/tag/v3.0.4) | Current-request settings take priority; infer discipline and main source language from each handout. |

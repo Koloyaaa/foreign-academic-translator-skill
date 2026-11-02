@@ -2,11 +2,10 @@
 
 ## 安装与调用
 
-- **Trae：**把 [skills/foreign-academic-translator](skills/foreign-academic-translator/README.md) 复制到项目的 `.trae/skills/`，在技能面板启用。
-- **Claude Code：**复制到 `.claude/skills/`，用 `/foreign-academic-translator` 调用。
-- **Codex：**复制到 `.agents/skills/`，用 `$foreign-academic-translator` 调用。
+- **原生支持 Agent Skills 的 Harness：**安装目录和启用方式见 [兼容列表](README.md#安装与使用)，包括 Trae、Codex、Claude Code、GitHub Copilot、Cursor、Gemini CLI、Kiro、OpenCode、Cline 和 Roo Code。
+- **需手动适配：**Aider 使用 `CONVENTIONS.md`，Continue 使用 `.continue/rules`；它们不原生发现本项目的 Agent Skill。详情见 [兼容边界](skills/foreign-academic-translator/README.md#兼容边界)。
 
-安装后按对应 Harness 的步骤安装 `requirements.txt` 依赖，并重新载入项目技能。
+安装后按对应 Harness 的步骤安装 `requirements.txt` 依赖，并重新载入项目技能。运行完整构建还需 Python 3.10+、文件读取与 shell 权限；HTML 数学公式和图标需要网络。
 
 ## 常见情况
 
