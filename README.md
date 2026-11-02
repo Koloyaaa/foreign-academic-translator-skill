@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-**版本：V3.1.2**
+**版本：V3.1.3**
 
 [中文](README.md) | [English](README.en.md)
 

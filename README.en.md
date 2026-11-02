@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-**Version: V3.1.2**
+**Version: V3.1.3**
 
 [中文](README.md) | English
 
