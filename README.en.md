@@ -1,6 +1,6 @@
 # Foreign Academic Translator Skill
 
-> 🎉 This project is included in [VoltAgent](https://github.com/VoltAgent)'s [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills).
+> 🎉 This project is included in [VoltAgent](https://github.com/VoltAgent)'s [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) and [StudentSuite](https://github.com/StudentSuite)'s [awesome-skills-plugins-for-students](https://github.com/StudentSuite/awesome-skills-plugins-for-students).
 
 **Version: V3.1.3**
 

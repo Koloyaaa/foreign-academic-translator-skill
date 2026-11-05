@@ -1,6 +1,6 @@
 # 外文讲义翻译 Skill
 
-> 🎉 本项目已收录于 [VoltAgent](https://github.com/VoltAgent) 的 [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)。
+> 🎉 本项目已收录于 [VoltAgent](https://github.com/VoltAgent) 的 [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)，以及 [StudentSuite](https://github.com/StudentSuite) 的 [awesome-skills-plugins-for-students](https://github.com/StudentSuite/awesome-skills-plugins-for-students)。
 
 **版本：V3.1.3**
 
