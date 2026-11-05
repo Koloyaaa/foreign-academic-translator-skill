@@ -1,5 +1,7 @@
 # 外文讲义翻译 Skill
 
+> 🎉 本项目已收录于 [VoltAgent](https://github.com/VoltAgent) 的 [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills)。
+
 **版本：V3.1.3**
 
 [中文](README.md) | [English](README.en.md)

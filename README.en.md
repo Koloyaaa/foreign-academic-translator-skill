@@ -1,5 +1,7 @@
 # Foreign Academic Translator Skill
 
+> 🎉 This project is included in [VoltAgent](https://github.com/VoltAgent)'s [awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills).
+
 **Version: V3.1.3**
 
 [中文](README.md) | English
