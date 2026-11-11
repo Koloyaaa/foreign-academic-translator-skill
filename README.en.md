@@ -30,13 +30,14 @@ The screenshots show the HTML reader's side navigation, centered lesson title, t
 
 - Reads PDF, DOCX, and TXT. Scanned PDFs need OCR first.
 - Looks up bundled glossaries by discipline: Engineering, Economics, Science, Agriculture, Social_Sciences, Literature_Arts, and Medicine, 122 CSV files in total.
+- Settings stated in the current request take priority. Otherwise the skill infers the discipline and main source language from the current handout, again for each new handout.
 - Supports translation only, original alongside translation, and terminology annotation. Concept tables and tiered Chinese annotations can be added.
-- Exports to HTML, DOCX, and Markdown. HTML output includes a table of contents and reading progress; DOCX can be edited further.
+- Exports to HTML, DOCX, and Markdown. HTML has an output file tree on the left and a knowledge outline on the right that highlights the current heading as you scroll, plus reading progress and theme and appearance controls; DOCX can be edited further.
 - Extracts embedded raster images from the PDF and places them where they appear in the original. Vector graphics are not guaranteed to be extracted.
-- The top-right corner of the HTML output lets you pick a color theme (blue, teal, purple, amber) and an appearance mode (light, dark, follow system). The default is blue in light mode.
 - Select text in the HTML output to save a highlight or add a personal note. Marks, notes, and reading display settings are stored in the current browser and are not uploaded.
 - Generates end-of-chapter quizzes at basic, intermediate, and advanced levels. Multiple levels can be selected and are ordered by difficulty; choosing "no quiz" produces none. Extra token usage is disclosed before generation.
-- Chapter headings can show Chinese and source-language text according to the chosen layout. In concept-highlight mode, the main title puts Chinese on top and the source language below, and source-language concepts inside chapter headings follow the Chinese heading.
+- Chapter headings show Chinese and source-language text according to the chosen layout; course metadata goes into a compact header instead of the knowledge heading and the outline.
+- Long handouts are translated and built in segments within the current turn, not split into work that waits for a later turn.
 
 HTML formulas load MathJax from a CDN, so the page needs a network connection. Offline, formulas may appear as raw LaTeX.
 
@@ -65,6 +66,8 @@ The five test handouts below were written for this project, and each contains se
 ## Install and use
 
 The project maintains one package in [skills/foreign-academic-translator](skills/foreign-academic-translator/). Harnesses that support Agent Skills can discover and load the same `SKILL.md`; install directories vary by harness.
+
+Once installed, the skill reads PDF, DOCX, or TXT handouts, translates them into Chinese in the chosen layout, and exports HTML, DOCX, or Markdown, with glossaries, tiered annotations, and chapter quizzes written into the output. See [Features](#features) for the full list.
 
 | Harness (native Agent Skills support) | Project skill directory | Documentation |
 | --- | --- | --- |
