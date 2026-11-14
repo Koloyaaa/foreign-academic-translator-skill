@@ -1,0 +1,19 @@
+# 核心文档解析与格式转换
+markdown==3.5.1
+python-docx==1.1.0
+lxml==6.1.2               # XML/HTML 解析（docx 样式编辑）
+Pillow==10.3.0            # 图片处理（docx 插图）
+pypdf==4.0.1              # PDF 文本提取备选
+pdfplumber==0.10.3        # 高精度 PDF 文本提取
+
+# 数据处理与编码检测
+pandas==2.2.0             # 处理 CSV 术语表
+chardet==5.2.0            # 检测文件编码
+openpyxl==3.1.2           # 若 CSV 转为 Excel 备用
+
+# 工具
+python-magic==0.4.27      # 检测 MIME 类型（可选）
+
+# PPTX 结构提取与渲染 PDF 页图；PPTX 页面转换本身还需要系统级 LibreOffice
+python-pptx==1.0.2
+pypdfium2==5.15.1

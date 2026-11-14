@@ -10,7 +10,7 @@ Contributions are welcome in translation quality, terminology, accessibility, pa
 
 - Read the [README](README.md), the [security notes](SECURITY.md), and the `SKILL.md` for the harness you are changing.
 - Reproduce the problem with synthetic text or material you are allowed to use. Do not publish real student handouts, names, school accounts, grades, or other personal information.
-- Keep the shared `skills/foreign-academic-translator` package consistent across Agent Skills-compatible harnesses. Do not maintain separate package copies; use `SKILL.md` and the harness documentation linked in the README as the compatibility source of truth.
+- The project provides four independent tiers: Lite, Plus, Pro, and Max. Lite and Plus use the legacy monolithic workflow; Pro and Max each include eleven sibling Skills. Identify the affected tiers before editing, and update their entry points, scripts, and documentation separately. A tier must not depend on another tier's runtime resources. The PPTX Reader includes its extraction script and requires LibreOffice for rendering. See the README for installation.
 
 ## What to include
 
@@ -18,6 +18,8 @@ Contributions are welcome in translation quality, terminology, accessibility, pa
 - For prompt injection issues, provide a synthetic sample with no real credentials and describe the expected handling.
 - Update the README, harness guides, or usage docs affected by the change.
 - Run the relevant skill structure checks. If you change the document generation scripts, also verify the corresponding HTML, DOCX, or Markdown output.
+- Run the automated regression suite: `python -m unittest discover -s tests -v`.
+- If you change Pro's state management or routing, also run `python -m unittest discover -s skills/pro/tests -v`.
 - Check that the diff contains only this change, with no sample handouts, generated files, or scratch material.
 
 ## Compatibility

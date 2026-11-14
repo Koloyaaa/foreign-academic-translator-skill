@@ -25,7 +25,16 @@ pip-wheel-metadata/
 
 # Generated translation outputs from the repository and all three harness packages
 /output/
+/skills/legacy/
 **/scripts/output/
+
+# Local development prompts and task state
+/prompts/development/
+**/.translator-cache*/
+**/.translation-task*.json
+**/.translation-state*.json
+**/.pro-decisions-*.jsonl
+**/.translator_preferences.json
 
 # Local source samples and extraction logs at the repository root
 /Test.pdf
