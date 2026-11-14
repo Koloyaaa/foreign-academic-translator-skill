@@ -13,7 +13,7 @@
 
 例如，使用 Lite 时，把模板首句中的 `[档位]` 填为 `Lite`、`[入口 Skill 名称]` 填为 `foreign-academic-translator-lite`。Pro 和 Max 的入口同名，但各自使用所安装档位的独立技能组；切换档位时请按安装说明更换完整套件。
 
-Lite、Plus 适合旧版可处理的 PDF、DOCX、TXT 或纯文本；旧版配图提取仅支持 PDF。PPTX、扫描件和结构复杂的材料建议选 Pro 或 Max。Plus 需要独立审阅者；如果宿主无法提供独立审阅上下文，会报告阻塞，不能声称审计通过。
+Lite、Plus 适合旧版可处理的 PDF、DOCX、TXT 或纯文本；旧版配图提取仅支持 PDF。PPTX、扫描件和结构复杂的材料建议选 Pro 或 Max。Plus 需要在独立审阅上下文中运行质量审计 Skill；如果宿主无法提供该能力，会报告阻塞，不能声称审计通过。
 
 ## 提示词模板
 

@@ -21,11 +21,13 @@ Each tier is a separate package. Install the one that fits your task; the packag
 | Tier | Best suited to | Entry Skill | Checks |
 | --- | --- | --- | --- |
 | [Lite](skills/lite/README.md) | Short, simple material | `foreign-academic-translator-lite` | Legacy translation with basic file readability checks. |
-| [Plus](skills/plus/README.md) | Legacy workflow with an independent review | `foreign-academic-translator-plus` | An independent auditor compares the source and translation and checks the selected outputs. If independent review is unavailable, the task is blocked rather than reported as passed. |
+| [Plus](skills/plus/README.md) | Legacy workflow with a separate audit Skill | `foreign-academic-translator-plus` | The separate quality-auditor Skill compares the source and translation and checks the selected outputs. If it cannot run in an independent review context, the task is blocked rather than reported as passed. |
 | [Pro](skills/pro/README.md) | Tasks that benefit from selecting stages as work progresses | `translation-orchestrator` | The full modular Skill group; the orchestrator records a decision after each Skill finishes and enforces stage dependencies and audits. |
 | [Max](skills/max/README.md) | The established full workflow | `translation-orchestrator` | The full modular Skill group, following the existing workflow and its audits and publishing checks. |
 
 Lite and Plus use the V3.1.3 monolithic workflow. Pro and Max each contain their own copy of the newer eleven-Skill group.
+
+Higher tiers may run more stages and checks, so processing can take longer. Download and use the tier that fits the material and review needs; you do not need to install all four.
 
 Download V4.0.0: [Lite](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-lite.zip) · [Plus](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-plus.zip) · [Pro](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-pro.zip) · [Max](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-max.zip) · [All tiers](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-all.zip).
 
@@ -55,7 +57,7 @@ Pro and Max use identical Skill names. Installing them in the same host can caus
 
 ## Workflow
 
-Lite and Plus use their local legacy translator. Lite checks the delivered files; Plus also requires a separate auditor to review the source, translation, and selected deliverables. Plus requires an independent review context and records limitations when visual content cannot be inspected.
+Lite and Plus use their local legacy translator. Lite checks the delivered files; Plus also runs a separate quality-auditor Skill to review the source, translation, and selected deliverables. The Skill must run in an independent review context; Plus records limitations when visual content cannot be inspected.
 
 Pro and Max contain PDF and PPTX readers, translation Skills, an optional visual explainer, quiz and answer Skills, publishers, and a quality auditor. They process the source, translate the material, run requested quiz work, audit the content, and build the selected formats. Pro makes and records a new decision after each Skill; Max follows the established full workflow for the stages that apply. Neither tier creates a quiz or output format the user did not request.
 

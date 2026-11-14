@@ -3,13 +3,13 @@
 此目录是一个独立的 Plus 套件，包含两个入口：
 
 - 主入口：`foreign-academic-translator-plus`，基于完整旧版 V3.1.3 单体翻译流程。
-- 审计入口：`foreign-academic-quality-auditor-plus`，由没有参与翻译起草的另一审阅者单独运行。
+- 审计入口：`foreign-academic-quality-auditor-plus`，这是在独立审阅上下文中运行的质量审计 Skill。
 
 ## 安装与调用
 
-将 `skills/` 下的两个 Skill 文件夹都复制到所用宿主的技能目录，例如 Codex 项目的 `.agents/skills/`。保留各自整个文件夹，以便脚本、词库、模板和审计说明都能通过相对路径找到。通过 `foreign-academic-translator-plus` 启动翻译；宿主需要能提供独立审阅上下文，并调用 `foreign-academic-quality-auditor-plus`。
+将 `skills/` 下的两个 Skill 文件夹都复制到所用宿主的技能目录，例如 Codex 项目的 `.agents/skills/`。保留各自整个文件夹，以便脚本、词库、模板和审计说明都能通过相对路径找到。通过 `foreign-academic-translator-plus` 启动翻译；宿主需要能提供独立审阅上下文，并在其中运行 `foreign-academic-quality-auditor-plus` 质量审计 Skill。
 
-如果宿主不能启动独立审阅者，Plus 入口会把任务标记为 `BLOCKED` 或 `FAIL`，不会把作者自检包装为审计通过。审计者必须直接读取完整源文、译文核心 Markdown 和每个用户选择的成品。图像未能实际查看时标记为 `PARTIAL_TEXT_ONLY`，不能称 Plus 整体审计通过。
+如果宿主不能在独立上下文中运行质量审计 Skill，Plus 入口会把任务标记为 `BLOCKED` 或 `FAIL`，不会把作者自检包装为审计通过。该 Skill 必须直接读取完整源文、译文核心 Markdown 和每个用户选择的成品。图像未能实际查看时标记为 `PARTIAL_TEXT_ONLY`，不能称 Plus 整体审计通过。
 
 脚本需要 Python 3.10+。按[安装说明](skills/foreign-academic-translator-plus/README.md)安装主入口 `requirements.txt` 中的依赖。检查脚本和其他资源均随各自入口独立复制。
 

@@ -23,13 +23,15 @@
 | 档位 | 适用场景 | 工作方式 | V4.0.0 下载 |
 | --- | --- | --- | --- |
 | [Lite](skills/lite/README.md) | 短小、结构简单的材料 | 使用旧版单体翻译流程，检查成品是否存在、非空且可读取。 | [Lite](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-lite.zip) |
-| [Plus](skills/plus/README.md) | 需要独立审计的普通讲义 | 使用旧版翻译流程，由独立审阅者核对译文和所选成品。无法独立审阅时，不能报告审计通过。 | [Plus](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-plus.zip) |
+| [Plus](skills/plus/README.md) | 需要独立审计的普通讲义 | 使用旧版翻译流程，由独立质量审计 Skill 核对原文、译文和所选成品。无法完成审计时，不能报告审计通过。 | [Plus](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-plus.zip) |
 | [Pro](skills/pro/README.md) | 材料和输出需求各不相同的任务 | 包含完整新版技能组；每个 Skill 完成后，编排器根据结果和依赖决定下一步。 | [Pro](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-pro.zip) |
 | [Max](skills/max/README.md) | 希望使用现有完整新版流程的任务 | 包含完整新版技能组，按既有规则执行适用阶段。 | [Max](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-max.zip) |
 
 [下载四档全家桶](https://github.com/Koloyaaa/academic-translation-skills/releases/download/v4.0.0/academic-translation-skills-v4.0.0-all.zip) · [查看 V4.0.0 发布说明](https://github.com/Koloyaaa/academic-translation-skills/releases/tag/v4.0.0)
 
-Lite 和 Plus 基于 V3.1.3 单体流程，支持 PDF、DOCX、TXT 和纯文本，旧版配图提取仅支持 PDF。PPTX、扫描页或结构复杂的材料建议使用 Pro 或 Max。Plus 审计需要独立审阅上下文，宿主不能提供时会报告阻塞。
+通常情况下，档位越高，可能运行的环节和检查越多，处理时间也可能更长。请按材料复杂度和检查需求下载、使用所需档位；不需要把四档全部安装。
+
+Lite 和 Plus 基于 V3.1.3 单体流程，支持 PDF、DOCX、TXT 和纯文本，旧版配图提取仅支持 PDF。PPTX、扫描页或结构复杂的材料建议使用 Pro 或 Max。Plus 需要在独立审阅上下文中运行质量审计 Skill；宿主不能提供该能力时会报告阻塞。
 
 ## 安装
 
@@ -72,11 +74,11 @@ Pro、Max 使用相同的新版 Skill 名称。切换时先备份并移出宿主
 
 安装一档所需的完整目录后，宿主按本轮任务加载需要执行的 Skill。Pro 和 Max 的入口负责选择读取、翻译、测验、审计和发布阶段；例如，没有选择测验时不加载出题与解析 Skill，只发布用户选择的格式。Pro 在每个 Skill 完成后重新决策；Max 按现有完整流程执行适用阶段。
 
-安装完整目录是为了让编排器能够找到依赖，并不表示每次都执行全部 Skill。Lite 是单个 Skill；Plus 包含翻译入口和独立审计入口。详细参数和示例见[使用指南](skills/max/skills/translation-orchestrator/docs/usage_guide.md)与 [Prompt 库](prompts/README.md)。
+安装完整目录是为了让编排器能够找到依赖，并不表示每次都执行全部 Skill。Lite 是单个 Skill；Plus 包含翻译入口和独立质量审计 Skill。详细参数和示例见[使用指南](skills/max/skills/translation-orchestrator/docs/usage_guide.md)与 [Prompt 库](prompts/README.md)。
 
 ## 工作流
 
-Lite 和 Plus 使用旧版单体流程处理讲义；Plus 在交付前增加独立审计。Pro 和 Max 根据材料选择读取方式，翻译正文，按需生成测验，经独立审计后发布所选格式。
+Lite 和 Plus 使用旧版单体流程处理讲义；Plus 在交付前调用独立质量审计 Skill。Pro 和 Max 根据材料选择读取方式，翻译正文，按需生成测验，经质量审计 Skill 审计后发布所选格式。
 
 ```text
 选择档位与输出要求
@@ -84,7 +86,7 @@ Lite 和 Plus 使用旧版单体流程处理讲义；Plus 在交付前增加独�
 读取材料 → 翻译正文 → 可选测验与解析
         ↓
 Lite：成品可读性检查
-Plus、Pro、Max：独立质量审计与所选格式检查
+Plus、Pro、Max：质量审计 Skill 与所选格式检查
         ↓
 交付文件与处理限制
 ```
@@ -95,7 +97,7 @@ Plus、Pro、Max：独立质量审计与所选格式检查
 
 Pro 和 Max 支持 PDF、PPTX、DOCX、TXT 和纯文本。处理 PDF/PPTX 时，如果当前模型支持图像输入且宿主能传递页图像素，必须逐页核对；只有明确没有图像输入能力时，才记录 `SKIPPED_NO_VISION`，继续处理可提取文本并列出未审核页。OCR 不能代替视觉核对。
 
-配图只在用户选择插图、且页图经过视觉核对并选中时导出。来源页码以居中的浅色细线夹注显示。Plus 的独立审计若未实际查看图像，会标明视觉内容未审核；Lite 的检查不等同于独立内容审计。
+配图只在用户选择插图、且页图经过视觉核对并选中时导出。来源页码以居中的浅色细线夹注显示。Plus 的质量审计 Skill 若未实际查看图像，会标明视觉内容未审核；Lite 的检查不等同于独立内容审计。
 
 ## 输出与数据
 

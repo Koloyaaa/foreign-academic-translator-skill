@@ -10,7 +10,7 @@ Plus 基于旧版 V3.1.3 单体翻译流程，并在交付前增加独立审计�
 python -m pip install -r requirements.txt
 ```
 
-重新加载 Skills 后，调用 `foreign-academic-translator-plus` 并附上讲义。审计由没有参与翻译起草的审阅者使用 `foreign-academic-quality-auditor-plus` 执行。宿主无法提供独立审阅上下文时，Plus 会报告阻塞或失败，不会声称审计通过。
+重新加载 Skills 后，调用 `foreign-academic-translator-plus` 并附上讲义。审计由独立质量审计 Skill `foreign-academic-quality-auditor-plus` 在未参与翻译起草的审阅上下文中执行。宿主无法提供独立审阅上下文时，Plus 会报告阻塞或失败，不会声称审计通过。
 
 ## 兼容边界
 
